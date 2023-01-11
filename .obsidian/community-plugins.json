@@ -1,4 +1,10 @@
 [
   "obsidian-image-auto-upload-plugin",
-  "obsidian-git"
+  "obsidian-git",
+  "table-editor-obsidian",
+  "obsidian-admonition",
+  "obsidian-auto-link-title",
+  "better-word-count",
+  "obsidian-footnotes",
+  "editing-toolbar"
 ]

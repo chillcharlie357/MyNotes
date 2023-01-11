@@ -1,4 +1,8 @@
 {
   "accentColor": "",
-  "theme": "system"
+  "theme": "system",
+  "cssTheme": "Things",
+  "interfaceFontFamily": "",
+  "textFontFamily": "Fira Code Retina",
+  "monospaceFontFamily": "Fira Code Retina"
 }
