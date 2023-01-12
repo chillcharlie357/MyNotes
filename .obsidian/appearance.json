@@ -1,8 +1,9 @@
 {
   "accentColor": "",
   "theme": "system",
-  "cssTheme": "Things",
+  "cssTheme": "GitHub theme",
   "interfaceFontFamily": "",
   "textFontFamily": "Fira Code Retina",
-  "monospaceFontFamily": "Fira Code Retina"
+  "monospaceFontFamily": "Fira Code Retina",
+  "baseFontSize": 17
 }

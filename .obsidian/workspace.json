@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022Fall/计算机组织与结构/1_计算机系统概述.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cc48a5d410e5af79",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2022Fall/计算机组织与结构/1_计算机系统概述.md",
+                "file": "2022Fall/计算机组织与结构/2_计算机顶层视图.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022Fall/计算机组织与结构/1_计算机系统概述.md",
+                "file": "2022Fall/计算机组织与结构/2_计算机顶层视图.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022Fall/计算机组织与结构/1_计算机系统概述.md",
+                "file": "2022Fall/计算机组织与结构/2_计算机顶层视图.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2022Fall/计算机组织与结构/1_计算机系统概述.md"
+                "file": "2022Fall/计算机组织与结构/2_计算机顶层视图.md"
               }
             }
           },
@@ -172,8 +159,11 @@
   },
   "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
-    "2022Fall/计算机组织与结构/2_计算机顶层视图.md",
     "2022Fall/计算机组织与结构/1_计算机系统概述.md",
+    "2022Fall/计算机组织与结构/2_计算机顶层视图.md",
+    "未命名.canvas",
+    "2.md",
+    "2023-01-11.md",
     "().md"
   ]
 }
