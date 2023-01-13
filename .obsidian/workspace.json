@@ -18,8 +18,57 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e6b5308517ddec5e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022Fall/计算机组织与结构/4_数据校验码.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "78ecab2d206c4994",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022Fall/计算机组织与结构/5_整数运算.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1c655bd92ee6acec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022Fall/计算机组织与结构/6_浮点数运算.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "68295d2b6bfeb422",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022Fall/计算机组织与结构/3_数据的机器级表示.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -157,14 +206,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9cb0452532d6ebcc",
+  "active": "68295d2b6bfeb422",
   "lastOpenFiles": [
+    "2022Fall/计算机组织与结构/7_二进制编码的十进制数运算.md",
+    "2022Fall/计算机组织与结构/6_浮点数运算.md",
+    "2022Fall/计算机组织与结构/5_整数运算.md",
+    "2022Fall/计算机组织与结构/3_数据的机器级表示.md",
+    "2022Fall/计算机组织与结构/4_数据校验码.md",
     "2022Fall/计算机组织与结构/1_计算机顶层视图.md",
     "2022Fall/计算机组织与结构/2_计算机系统概述.md",
-    "2022Fall/计算机组织与结构/3_数据的机器级表示.md",
     "未命名.canvas",
     "2.md",
-    "2023-01-11.md",
-    "().md"
+    "2023-01-11.md"
   ]
 }
