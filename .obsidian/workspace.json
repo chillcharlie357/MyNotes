@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022Fall/C++高级程序设计/1_函数_function.md",
+                "file": "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022Fall/C++高级程序设计/2_程序结构_multiFile.md",
+                "file": "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -99,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022Fall/C++高级程序设计/2_程序结构_multiFile.md",
+                "file": "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022Fall/C++高级程序设计/2_程序结构_multiFile.md",
+                "file": "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2022Fall/C++高级程序设计/2_程序结构_multiFile.md"
+                "file": "2022Fall/C++高级程序设计/2_程序结构_multifile.md"
               }
             }
           },
@@ -178,10 +176,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9cb0452532d6ebcc",
+  "active": "1121528d3cd93780",
   "lastOpenFiles": [
     "2022Fall/C++高级程序设计/1_函数_function.md",
-    "2022Fall/C++高级程序设计/2_程序结构_multiFile.md",
+    "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
     "2022Fall/C++高级程序设计/类.md",
     "2022Fall/C++高级程序设计/虚函数.md",
     "README.md",
