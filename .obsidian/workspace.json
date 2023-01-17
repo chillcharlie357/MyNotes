@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "75aad110d43726c0",
+        "id": "bde8418c25f2549a",
         "type": "tabs",
         "children": [
           {
-            "id": "1121528d3cd93780",
+            "id": "ae91528e6ed05300",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6f5d0671d590553b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -97,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2022Fall/C++高级程序设计/2_程序结构_multifile.md"
-              }
+              "state": {}
             }
           },
           {
@@ -176,17 +156,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1121528d3cd93780",
+  "active": "ae91528e6ed05300",
   "lastOpenFiles": [
-    "2022Fall/C++高级程序设计/1_函数_function.md",
+    "其它/“南星梦想计划”招生宣讲.md",
+    "2022Fall/计算机组织与结构/5_整数运算.md",
+    "2022Fall/计算机组织与结构/6_浮点数运算.md",
+    "2022Fall/计算机组织与结构/7_二进制编码的十进制数运算.md",
+    "2022Fall/C++高级程序设计/3_数组.md",
     "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
+    "2022Fall/C++高级程序设计/1_函数_function.md",
     "2022Fall/C++高级程序设计/类.md",
     "2022Fall/C++高级程序设计/虚函数.md",
-    "README.md",
-    "2022Fall/计算机组织与结构/6_浮点数运算.md",
-    "2022Fall/计算机组织与结构/5_整数运算.md",
-    "2022Fall/计算机组织与结构/3_数据的机器级表示.md",
-    "2022Fall/计算机组织与结构/7_二进制编码的十进制数运算.md",
-    "2022Fall/计算机组织与结构/4_数据校验码.md"
+    "README.md"
   ]
 }
