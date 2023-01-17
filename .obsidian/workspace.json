@@ -11,8 +11,12 @@
             "id": "ae91528e6ed05300",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "other/“南星梦想计划”招生宣讲.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "other/“南星梦想计划”招生宣讲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "other/“南星梦想计划”招生宣讲.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "other/“南星梦想计划”招生宣讲.md"
+              }
             }
           },
           {
@@ -156,7 +164,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ae91528e6ed05300",
+  "active": "083ae430f266d1e9",
   "lastOpenFiles": [
     "其它/“南星梦想计划”招生宣讲.md",
     "2022Fall/计算机组织与结构/5_整数运算.md",
