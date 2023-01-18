@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "other/“南星梦想计划”招生宣讲.md",
+                "file": "2022Fall/计算机组织与结构/6_浮点数运算.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "other/“南星梦想计划”招生宣讲.md",
+                "file": "2022Fall/计算机组织与结构/6_浮点数运算.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "other/“南星梦想计划”招生宣讲.md",
+                "file": "2022Fall/计算机组织与结构/6_浮点数运算.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "other/“南星梦想计划”招生宣讲.md"
+                "file": "2022Fall/计算机组织与结构/6_浮点数运算.md"
               }
             }
           },
@@ -164,17 +165,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "083ae430f266d1e9",
+  "active": "ae91528e6ed05300",
   "lastOpenFiles": [
-    "其它/“南星梦想计划”招生宣讲.md",
     "2022Fall/计算机组织与结构/5_整数运算.md",
+    "other/“南星梦想计划”招生宣讲.md",
+    "其它/“南星梦想计划”招生宣讲.md",
     "2022Fall/计算机组织与结构/6_浮点数运算.md",
     "2022Fall/计算机组织与结构/7_二进制编码的十进制数运算.md",
     "2022Fall/C++高级程序设计/3_数组.md",
     "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
     "2022Fall/C++高级程序设计/1_函数_function.md",
     "2022Fall/C++高级程序设计/类.md",
-    "2022Fall/C++高级程序设计/虚函数.md",
-    "README.md"
+    "2022Fall/C++高级程序设计/虚函数.md"
   ]
 }
