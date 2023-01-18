@@ -8,12 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ae91528e6ed05300",
+            "id": "f2dfa58d040e21f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "2022Fall/计算机组织与结构/6_浮点数运算.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b32d9aba2be13bb6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022Fall/计算机组织与结构/3_数据的机器级表示.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0175315b1839499d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022Fall/计算机组织与结构/5_整数运算.md",
                 "mode": "source",
                 "source": false
               }
@@ -104,8 +128,8 @@
               "type": "outgoing-link",
               "state": {
                 "file": "2022Fall/计算机组织与结构/6_浮点数运算.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -165,17 +189,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ae91528e6ed05300",
+  "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
+    "2022Fall/计算机组织与结构/3_数据的机器级表示.md",
+    "2022Fall/计算机组织与结构/6_浮点数运算.md",
     "2022Fall/计算机组织与结构/5_整数运算.md",
+    "2022Fall/计算机组织与结构/4_数据校验码.md",
     "other/“南星梦想计划”招生宣讲.md",
     "其它/“南星梦想计划”招生宣讲.md",
-    "2022Fall/计算机组织与结构/6_浮点数运算.md",
     "2022Fall/计算机组织与结构/7_二进制编码的十进制数运算.md",
     "2022Fall/C++高级程序设计/3_数组.md",
     "2022Fall/C++高级程序设计/2_程序结构_multifile.md",
-    "2022Fall/C++高级程序设计/1_函数_function.md",
-    "2022Fall/C++高级程序设计/类.md",
-    "2022Fall/C++高级程序设计/虚函数.md"
+    "2022Fall/C++高级程序设计/1_函数_function.md"
   ]
 }
