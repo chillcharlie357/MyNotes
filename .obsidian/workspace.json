@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f115fcde8e8ca5d2",
+        "id": "bfa1f826d5ad1216",
         "type": "tabs",
         "children": [
           {
-            "id": "7d7dc1c796fbea14",
+            "id": "a248a1f7c9608f61",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,7 +138,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -159,15 +159,15 @@
   },
   "active": "083ae430f266d1e9",
   "lastOpenFiles": [
+    "2022Fall/互联网计算/2.md",
+    "2022Fall/数据结构/考试重点.md",
+    "2022Fall/计算机组织与结构/12_虚拟存储器.md",
     "2022Fall/计算机组织与结构/9_高速缓冲存储器（Cache）.md",
+    "2022Fall/计算机组织与结构/10_外部存储器.md",
     "2022Fall/计算机组织与结构/8_内部存储器.md",
+    "大创/cuda.md",
     "2022Fall/计算机组织与结构/7_二进制编码的十进制数运算.md",
     "2022Fall/计算机组织与结构/4_数据校验码.md",
-    "2022Fall/计算机组织与结构/6_浮点数运算.md",
-    "2022Fall/计算机组织与结构/5_整数运算.md",
-    "大创/cuda.md",
-    "other/“南星梦想计划”招生宣讲.md",
-    "other/ppt大纲.md",
-    "README.md"
+    "2022Fall/计算机组织与结构/6_浮点数运算.md"
   ]
 }
