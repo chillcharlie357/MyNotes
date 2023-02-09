@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "bfa1f826d5ad1216",
+        "id": "71e0c42c38a8a30d",
         "type": "tabs",
         "children": [
           {
-            "id": "a248a1f7c9608f61",
+            "id": "fbe0a2feaf711d9c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "2022Fall/C++高级程序设计/指针和引用.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2022Fall/C++高级程序设计/指针和引用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2022Fall/C++高级程序设计/指针和引用.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2022Fall/C++高级程序设计/指针和引用.md"
+              }
             }
           },
           {
@@ -138,12 +147,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,17 +165,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "083ae430f266d1e9",
+  "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
-    "2022Fall/互联网计算/2.md",
-    "2022Fall/数据结构/考试重点.md",
-    "2022Fall/计算机组织与结构/12_虚拟存储器.md",
-    "2022Fall/计算机组织与结构/9_高速缓冲存储器（Cache）.md",
-    "2022Fall/计算机组织与结构/10_外部存储器.md",
-    "2022Fall/计算机组织与结构/8_内部存储器.md",
-    "大创/cuda.md",
-    "2022Fall/计算机组织与结构/7_二进制编码的十进制数运算.md",
-    "2022Fall/计算机组织与结构/4_数据校验码.md",
-    "2022Fall/计算机组织与结构/6_浮点数运算.md"
+    "2022Fall/互联网计算/Lecture04-网络层.md",
+    "2022Fall/C++高级程序设计/指针和引用.md",
+    "2022Fall/C++高级程序设计/switch.md",
+    "2022Fall/数据结构/数据考试重点.md",
+    "2022Fall/数据结构/未命名.md",
+    "2022Fall/计算机组织与结构/09_高速缓冲存储器（Cache）.md",
+    "2022Fall/计算机组织与结构/08_内部存储器.md",
+    "2022Fall/C++高级程序设计/虚函数.md",
+    "2022Fall/C++高级程序设计/类.md",
+    "2022Fall/C++高级程序设计/2_程序结构_multifile.md"
   ]
 }

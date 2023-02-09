@@ -19,7 +19,7 @@ Lib：一堆obj的组合
 	- 限制在本文件中使用，其他文件加extern也不行
 	- 进一步解决了全局变量/函数的名冲突
 - **staic和main中全局变量**：函数第一次调用时放入内存，程序结束时归还
-## 2.1namespace两种形式
+## 2.1 namespace两种形式
 ```cpp
 namespace L{
 	int k;
