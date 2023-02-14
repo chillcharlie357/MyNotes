@@ -1,8 +1,8 @@
-# Lecture05-第四层传输层
+# 1. Lecture05-第四层传输层
 
 第四层运输层主要是实现了主机之间的通信。数据通信是服务于主机上的**进程**(Session)。
 
-## 第四层概述
+## 1.1. 第四层概述
 
 ![第5讲：传输层原理与技术_页面_03](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_03.jpg)
 
@@ -46,7 +46,7 @@ UDP: 不可靠
 4. 不进行流量控制
 5. 直接丢弃错误的报文，而不进行其他操作。
 
-### 服务模型
+### 1.1.1. 服务模型
 
 ![第5讲：传输层原理与技术_页面_06](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_06.jpg)
 
@@ -60,7 +60,7 @@ UDP: 不可靠
 
    1024-49151的端口号进行登记使用，有的是应用程序已经的使用端口号，避免冲突
 
-### 套接字
+### 1.1.2. 套接字
 
 ![第5讲：传输层原理与技术_页面_07](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_07.jpg)
 
@@ -70,7 +70,7 @@ UDP: 不可靠
 
 
 
-## TCP
+## 1.2. TCP
 
 ![第5讲：传输层原理与技术_页面_09](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_09.jpg)
 
@@ -82,23 +82,23 @@ UDP: 不可靠
    1. 建立连接——**三次**握手
    2. 断开连接——**四次**握手
 
-### TCP数据段格式
+### 1.2.1. TCP数据段格式
 
-#### 源端口 目的端口
+#### 1.2.1.1. 源端口 目的端口
 
 ![第5讲：传输层原理与技术_页面_10](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_10.jpg)
 
 socket
 
-#### 序号
+#### 1.2.1.2. 序号
 
 ![第5讲：传输层原理与技术_页面_11](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_11.jpg)
 
-我们从小向大进行使用，如果使用到最大之后，我们会从小再次重新开始分配。
+我们**从小向大**进行使用，如果使用到最大之后，我们会从小再次重新开始分配。
 
 
 
-#### 确认号
+#### 1.2.1.3. 确认号
 
 ![第5讲：传输层原理与技术_页面_12](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_12.jpg)
 
@@ -106,71 +106,71 @@ socket
 
 
 
-#### 数据偏移
+#### 1.2.1.4. 数据偏移
 
 ![第5讲：传输层原理与技术_页面_13](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_13.jpg)
 
 
 
-#### 保留
+#### 1.2.1.5. 保留
 
 ![第5讲：传输层原理与技术_页面_14](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_14.jpg)
 
 
 
-#### 标记位——URG
+#### 1.2.1.6. 标记位——URG
 
 ![第5讲：传输层原理与技术_页面_15](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_15.jpg)
 
 比如说按Ctrl+C终止程序的信息可能会将URG置为1
 
-#### 标记位——ACK
+#### 1.2.1.7. 标记位——ACK
 
 ![第5讲：传输层原理与技术_页面_16](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_16.jpg)
 
 
 
-#### 标记位——PSH
+#### 1.2.1.8. 标记位——PSH
 
 ![第5讲：传输层原理与技术_页面_17](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_17.jpg)
 
 根据网络条件调整，正常情况下缓存满了才会传输
 
-#### 标记位——RST
+#### 1.2.1.9. 标记位——RST
 
 ![第5讲：传输层原理与技术_页面_18](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_18.jpg)
 
 连接失败
 
-#### 标记位——SYN
+#### 1.2.1.10. 标记位——SYN
 
 ![第5讲：传输层原理与技术_页面_19](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_19.jpg)
 
 
 
-#### 标记位——FIN
+#### 1.2.1.11. 标记位——FIN
 
 ![第5讲：传输层原理与技术_页面_20](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_20.jpg)
 
 
 
-#### 窗口
+#### 1.2.1.12. 窗口
 
 ![第5讲：传输层原理与技术_页面_21](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_21.jpg)
 
 
 
-#### 检验和
+#### 1.2.1.13. 检验和
 
 ![第5讲：传输层原理与技术_页面_22](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_22.jpg)
 
 
 
-#### 紧急指针
+#### 1.2.1.14. 紧急指针
 
 ![第5讲：传输层原理与技术_页面_23](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_23.jpg)
 
-#### 可选部分
+#### 1.2.1.15. 可选部分
 
 ![第5讲：传输层原理与技术_页面_24](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_24.jpg)
 
@@ -178,13 +178,13 @@ MSS Maximum Segment Size最大报文段长度
 
 
 
-#### 填充
+#### 1.2.1.16. 填充
 
 ![第5讲：传输层原理与技术_页面_25](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_25.jpg)
 
 
 
-### TCP协议
+### 1.2.2. TCP协议
 
 ![第5讲：传输层原理与技术_页面_26](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_26.jpg)
 
@@ -202,7 +202,7 @@ MSS Maximum Segment Size最大报文段长度
 
 每个字节都有一个32位序号
 
-### 可靠连接——两军问题
+### 1.2.3. 可靠连接——两军问题
 
 ![第5讲：传输层原理与技术_页面_27](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_27.jpg)
 
@@ -212,16 +212,16 @@ MSS Maximum Segment Size最大报文段长度
 
 结论：无论通信多少次，都不能有一个完全可信的消息（进入死循环）
 
-### 建立连接
+### 1.2.4. 建立连接
 
-#### 第一次握手
+#### 1.2.4.1. 第一次握手
 
 ![第5讲：传输层原理与技术_页面_28](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_28.jpg)
 
 1. 服务器：执行LISTEN和ACCEPT原语，并进行被动监视
 2. 客户端：执行CONNECT原语，生成SYN = 1和ACK = 0的TCP段，代表连接请求
 
-#### 第二次握手
+#### 1.2.4.2. 第二次握手
 
 ![第5讲：传输层原理与技术_页面_29](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_29.jpg)
 
@@ -231,7 +231,7 @@ MSS Maximum Segment Size最大报文段长度
 2. 如果存在进程，则决定拒绝或接受请求
 3. 如果接受连接请求，则发送SYN = 1和ACK = 1的网段
 
-#### 第三次握手
+#### 1.2.4.3. 第三次握手
 
 ![第5讲：传输层原理与技术_页面_30](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_30.jpg)
 
@@ -247,7 +247,7 @@ MSS Maximum Segment Size最大报文段长度
 
 ![第5讲：传输层原理与技术_页面_33](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_33.jpg)
 
-### 传输控制
+### 1.2.5. 传输控制
 
 数据传输——停止等待协议
 
@@ -261,7 +261,7 @@ MSS Maximum Segment Size最大报文段长度
 
 ![第5讲：传输层原理与技术_页面_36](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_36.jpg)
 
-### 可靠通信ARQ
+### 1.2.6. 可靠通信ARQ
 
 ![第5讲：传输层原理与技术_页面_37](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_37.jpg)
 
@@ -289,7 +289,7 @@ ARQ (Automatic Repeat reQuest) 自动重传请求：这表示"重新发送请求
 
 
 
-### TCP 释放连接
+### 1.2.7. TCP 释放连接
 
 ![第5讲：传输层原理与技术_页面_43](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_43.jpg)
 
@@ -313,7 +313,7 @@ FIN = 1，表示数据处理完成
 
 
 
-### 为什么必须等待2MSL
+### 1.2.8. 为什么必须等待2MSL
 
 ![第5讲：传输层原理与技术_页面_48](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_48.jpg)
 
@@ -325,7 +325,7 @@ FIN = 1，表示数据处理完成
 
 
 
-### Tcp中的计时器
+### 1.2.9. Tcp中的计时器
 
 ![第5讲：传输层原理与技术_页面_49](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_49.jpg)
 
@@ -345,7 +345,7 @@ FIN = 1，表示数据处理完成
 
 
 
-### TCP的有限状态机
+### 1.2.10. TCP的有限状态机
 
 ![第5讲：传输层原理与技术_页面_50](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_50.jpg)
 
@@ -355,9 +355,9 @@ FIN = 1，表示数据处理完成
 
 
 
-## UDP
+## 1.3. UDP
 
-### 概述
+### 1.3.1. 概述
 
 ![第5讲：传输层原理与技术_页面_52](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_52.jpg)
 
@@ -389,7 +389,7 @@ UDP用于：
 3. SNMP:SNMP：拥塞时(congestion)，SNMP必须仍然可运行。在没有拥塞和可靠性控制机制的情况下，UDP在这种情况下的性能要优于TCP。(主播和多播，大量信息传输)
 4. 其他协议包括TFTP，DHCP
 
-### UDP帧结构
+### 1.3.2. UDP帧结构
 
 ![第5讲：传输层原理与技术_页面_54](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_54.jpg)
 
@@ -399,9 +399,9 @@ UDP用于：
 4. 校验也要对data一并校验，如果出现错误，直接丢弃。
 5. 应用层进行数据切片，决定如何进行发送，UDP直接发送
 
-## 应用：NAT和PAT
+## 1.4. 应用：NAT和PAT
 
-### 什么是NAT？
+### 1.4.1. 什么是NAT？
 
 ![第5讲：传输层原理与技术_页面_56](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_56.jpg)
 
@@ -418,13 +418,13 @@ UDP用于：
 
 ![第5讲：传输层原理与技术_页面_57](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_57.jpg)
 
-### NAT类型
+### 1.4.2. NAT类型
 
 ![第5讲：传输层原理与技术_页面_58](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_58.jpg)
 
 
 
-### NAT地址类型
+### 1.4.3. NAT地址类型
 
 ![第5讲：传输层原理与技术_页面_59](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_59.jpg)
 
@@ -436,7 +436,7 @@ UDP用于：
 
 ![第5讲：传输层原理与技术_页面_62](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_62.jpg)
 
-### NAT优缺点
+### 1.4.4. NAT优缺点
 
 ![第5讲：传输层原理与技术_页面_63](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第5讲：传输层原理与技术_页面_63.jpg)
 

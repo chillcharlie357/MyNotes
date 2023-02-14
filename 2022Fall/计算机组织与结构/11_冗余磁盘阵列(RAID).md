@@ -123,7 +123,7 @@
 # 8.RAID 6
 - 采用**两种不同的校验码**，并将校验码以分开的块存于不同的磁盘中
 - 优点
-	- 提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故 障，才会造成数据丢失
+	- 提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故障，才会造成数据丢失
 - 缺点
 	- 写损失:每次写影响到两个校验块
 ![71_VoIPSCreencastCoverWnd (2).png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/81ceda6a5d81fd50326e531d313bac7d_71_VoIPSCreencastCoverWnd%20-2-.png)

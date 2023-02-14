@@ -15,15 +15,15 @@
   "slash-command": false,
   "editor-status": true,
   "starred": true,
-  "markdown-importer": false,
+  "markdown-importer": true,
   "zk-prefixer": false,
-  "random-note": false,
+  "random-note": true,
   "outline": true,
-  "word-count": true,
+  "word-count": false,
   "slides": false,
   "audio-recorder": false,
   "workspaces": true,
   "file-recovery": true,
   "publish": false,
-  "sync": true
+  "sync": false
 }

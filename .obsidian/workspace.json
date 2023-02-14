@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "71e0c42c38a8a30d",
+        "id": "c0e4c9bb63eab826",
         "type": "tabs",
         "children": [
           {
-            "id": "fbe0a2feaf711d9c",
+            "id": "fda5ad983c1fdd93",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022Fall/C++高级程序设计/指针和引用.md",
+                "file": "2023Spring/数据管理基础/00_课程概要.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b7275076265b398a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/数据管理基础/01_计算、数据和数据管理.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022Fall/C++高级程序设计/指针和引用.md",
+                "file": "2023Spring/数据管理基础/01_计算、数据和数据管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022Fall/C++高级程序设计/指针和引用.md",
+                "file": "2023Spring/数据管理基础/01_计算、数据和数据管理.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2022Fall/C++高级程序设计/指针和引用.md"
+                "file": "2023Spring/数据管理基础/01_计算、数据和数据管理.md"
               }
             }
           },
@@ -162,20 +175,22 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "workspaces:管理工作区布局": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "random-note:开始漫游笔记": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
   "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
-    "2022Fall/互联网计算/Lecture04-网络层.md",
-    "2022Fall/C++高级程序设计/指针和引用.md",
-    "2022Fall/C++高级程序设计/switch.md",
+    "2023Spring/数据管理基础/00_课程概要.md",
+    "2023Spring/数据管理基础/01_计算、数据和数据管理.md",
     "2022Fall/数据结构/数据考试重点.md",
-    "2022Fall/数据结构/未命名.md",
-    "2022Fall/计算机组织与结构/09_高速缓冲存储器（Cache）.md",
-    "2022Fall/计算机组织与结构/08_内部存储器.md",
-    "2022Fall/C++高级程序设计/虚函数.md",
-    "2022Fall/C++高级程序设计/类.md",
-    "2022Fall/C++高级程序设计/2_程序结构_multifile.md"
+    "2022Fall/C++高级程序设计/5_结构化程序设计.md",
+    "2022Fall/互联网计算/Lecture03-链路层.md",
+    "2022Fall/互联网计算/Lecture04-网络层.md",
+    "2022Fall/互联网计算/Lecture05-传输层.md",
+    "2022Fall/计算机组织与结构/10_外部存储器.md",
+    "2022Fall/计算机组织与结构/03_数据的机器级表示.md",
+    "2022Fall/互联网计算/Lecture6-会话、表示、应用层.md"
   ]
 }

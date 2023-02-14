@@ -14,9 +14,9 @@
   "command-palette",
   "editor-status",
   "starred",
+  "markdown-importer",
+  "random-note",
   "outline",
-  "word-count",
   "workspaces",
-  "file-recovery",
-  "sync"
+  "file-recovery"
 ]

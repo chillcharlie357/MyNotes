@@ -109,7 +109,7 @@ T1 A[c1]
 ```
 
 
-### RAII
+### 4.2.1. RAII
 - Resource Acquisition Is Initialization 资源获取即初始化
 - 意义：利用构造函数和析构函数强制保障内存安全
 - 例子：封装一个指针，**生命周期结束时强制调用析构函数**
@@ -124,7 +124,7 @@ public:
 ```
 
 
-### 动态数组
+### 4.2.2. 动态数组
 ```cpp
 int *p = new int[10]; //一维数组
 int (*p2)[5] = (int (*)[5])p;//强制类型转换成[2][5]
@@ -149,14 +149,14 @@ for (int j=0;j<2;j++)
 ```
 
 
-# Struct
+# 5. Struct
 - 特征
 	- 赋值同一类型
 	- 对齐(alignment)，可在编译选项关闭
 	- 参数传递
 	- 默认public
 
-## 占用空间
+## 5.1. 占用空间
 ```cpp
 stuct B
 {
@@ -168,7 +168,7 @@ cout << sizeof(B); //4*3 = 12 对齐
 ```
 
 
-# Union
+# 6. Union
 - 特征
 	- 共享空间
 
@@ -182,7 +182,7 @@ cout << sizeof(B); //4*3 = 12 对齐
    cout << sizeof(A); //
 ```
 
-## 例: matrix
+## 6.1. 例: matrix
 
 ```cpp
 union Matrix 
@@ -235,13 +235,19 @@ for(i=0;i<3;i++){
 - 同时提供struct和数组**两种访问方式**
 ![99_VoIPSCreencastCoverWnd.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/08/3c03e755748f960d85928ed407de6092_3c03e755748f960d85928ed407de6092_99_VoIPSCreencastCoverWnd.png)
 
-## 例：定义数组，存储100个图形(直线、矩形、圆)
+## 6.2. 例：定义数组，存储100个图形(直线、矩形、圆)
 
-![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/08/e785b0c229b365b9310bed6d5bb057ec_e785b0c229b365b9310bed6d5bb057ec_20230208103752.png)
+![b1_NVIDIA_GeForce_Overlay_DT.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/11/96cc81c2200a3c80b30d456a0fa3f892_b1_NVIDIA_GeForce_Overlay_DT.png)
+
+
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/08/80368652242e9c3762b977d64ec9d028_20230208103858.png)
+
+### 在内存中：
 ![9a_VoIPSCreencastCoverWnd.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/08/57027db7b0bc5d541dbea7f5a993780e_9a_VoIPSCreencastCoverWnd.png)
 - 不同union中的t都重叠
-
-### 多态性
+### 解释
+- union figure与struct关系类似父类和子类
+- 
+### 6.2.1. 多态性
 - 多态不是OO独有的，而是语言特征
 ![9b_VoIPSCreencastCoverWnd.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/08/3e05b8ec99e4d39ec59623ec7dd2754f_9b_VoIPSCreencastCoverWnd.png)
