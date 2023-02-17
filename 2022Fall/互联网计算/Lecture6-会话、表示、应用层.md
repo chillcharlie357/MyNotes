@@ -19,7 +19,7 @@
 
 ![第6讲：会话、表示、应用层_页面_05](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第6讲：会话、表示、应用层_页面_05.jpg)
 
-**同步点(CheckPoint)**用于分隔会话的各个部分，以前称为对话(dialogues)
+**同步点(CheckPoint)** 用于分隔会话的各个部分，以前称为对话(dialogues)
 
 1. 同步点:发送一定数据后设置同步点
 2. 次同步点:作为同步点的一个子集，进行数据校验
@@ -59,7 +59,7 @@
 
 1. 想象两个不同(dissimilar)的系统。
    1. 一种使用扩展二进制编码的十进制交换码(EBCDIC,Extended Binary Coded Decimal Interchange Code)格式化文本
-   2. 另一种使用**美国信息交换标准码(ASCII)**格式化文本
+   2. 另一种使用**美国信息交换标准码(ASCII)** 格式化文本
    3. 选择大家都能识别的编码形式传输，保证大家都能理解
 2. 第6层提供了这两种不同类型的代码之间的转换
 
@@ -344,7 +344,7 @@ Client先Discover去搜索
 
 Server返回一个Offer报文
 
-Client选择优先返回的Offer来优先服务
+Client选择**优先返回**的Offer来优先服务
 
 Client进行广播，告知到底服务了谁
 
