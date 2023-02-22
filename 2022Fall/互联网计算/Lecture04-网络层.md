@@ -245,7 +245,7 @@ IP地址耗尽（IP address delpetion）
 
 ![第4讲：网络层原理与技术20200416_页面_037](https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/第4讲：网络层原理与技术20200416_页面_037.jpg)
 
-我们必须在所需的子网数，每个子网可接受的主机以及地址的浪费之间取得平衡(strike a balance)。
+我们必须在所需的子网数，每个子网可接受的主机以及地址的浪费之间取得平衡(strike a balance)。b
 
 #### 1.2.5.4. 子网掩码
 
@@ -651,7 +651,7 @@ Link State
 1. 思科知识产权的。
 2. 内部网关协议。
 3. 距离矢量协议
-4. 指标由**带宽(bandwidth)，负载(load)，延迟(delay)和可靠性(reliability)**组成。加权进行运算。
+4. 指标由**带宽(bandwidth)，负载(load)，延迟(delay)和可靠性(reliability)** 组成。加权进行运算。
 5. IGRP最大跳数为255。
 6. 每90秒更新一次。
 7. EIGRP是IGRP的高级版本，它是**混合**路由协议(不全是根据跳数来计算)。

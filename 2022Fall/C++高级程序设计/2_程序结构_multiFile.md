@@ -117,7 +117,8 @@ void g(){
 6.向前兼容：新的语言成分不应该对以前的程序的影响
 - 优先考虑使用using-declaration
 - .h与非.h文件：如果使用stdio需要写`using namespace std`;
-	```cpp
+
+```cpp
 //stdio  
 namespace std {  
 	int printf( const char *, …);  

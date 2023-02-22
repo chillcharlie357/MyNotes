@@ -177,6 +177,11 @@ public:
 - const 成员/reference 成员/对象成员
 	- const 成员/reference 成员/对象成员
 
+- 必须使用成员初始化表
+	-  初始化引用成员
+	- const成员
+	- 调用基类构造函数，并且带参数
+	- 调用成员类构造函数，带参数
 
 
 # 4. 析构函数
@@ -193,6 +198,7 @@ public:
 - const成员函数
 	- const实例只能调用const成员函数
 	- 不能改变成员变量的**值**
+
 ```cpp
 class A
 {    int x,y;

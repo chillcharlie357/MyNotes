@@ -172,5 +172,6 @@ f(1,,4)//error:必须从右到左严格匹配
 	- ![3_NVIDIA_GeForce_Overlay_DT.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/15/3d32157c486b2fa1b0d00df3e1781b56_3_NVIDIA_GeForce_Overlay_DT.png)
 注意：inline只是向编译器发出**请求**，可能被拒绝。inline被拒绝后的调用过程与常规函数不同。
 # 8.ROP
+Return-oriented programming
 基于return的攻击
 解决方法：写/执行正交
