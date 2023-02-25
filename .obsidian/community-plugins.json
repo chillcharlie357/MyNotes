@@ -9,5 +9,7 @@
   "editing-toolbar",
   "cm-editor-syntax-highlight-obsidian",
   "oz-image-plugin",
-  "obsidian-title-index"
+  "obsidian-title-index",
+  "templater-obsidian",
+  "dataview"
 ]

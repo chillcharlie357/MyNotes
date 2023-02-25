@@ -136,6 +136,8 @@ On declaring the new object and assigning it with the r-value, firstly a tempora
 
 ## 2.5. 左值和右值的区别
 [l-values references and rvalues references in C++ with Examples - GeeksforGeeks](https://www.geeksforgeeks.org/lvalues-references-and-rvalues-references-in-c-with-examples/)
+
+
 # 3. 成员初始化表
 - 作用
 	- 构造函数补充

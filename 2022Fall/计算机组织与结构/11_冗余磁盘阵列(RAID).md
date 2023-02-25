@@ -1,3 +1,12 @@
+---
+title: 11_冗余磁盘阵列(RAID)
+tags: 2022Fall_计算机组织与结构 课程
+categories: 2022Fall_计算机组织与结构
+date:  2023-02-03 21:57
+modified:  星期五 24日 二月 2023 15:48:46
+---
+
+
 - 冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)
 - 基本思想
 	- 将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量

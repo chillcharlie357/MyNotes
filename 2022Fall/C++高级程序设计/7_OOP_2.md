@@ -261,7 +261,10 @@ p->f(); //B::f(),B::g()
 
 ```
 
-
+- 规则
+	-  当一个对象调用一个非虚函数时， 与对象的**声明类型**绑定的， 并不是与实际的对象的类型绑定的
+	- 在虚函数中调用非虚函数的时候， 调用的非虚函数是与虚函数所在的类是一致的
+	- 在非虚函数中调用虚函数的时候， 调用的虚函数是与对象的实际类一致的
 ### 2.3.3. final,override
 ```cpp
 struct B {
@@ -308,6 +311,47 @@ class AbstractClass
 - 动态查找函数表，参数没地方存
 - 默认参数都是静态绑定
 - 编译：先确定函数版本，再绑定变量常量
+
+```cpp
+class A
+{
+public:
+     virtual void f(int x=0) =0;
+};
+
+class B: public A
+{
+public:
+     virtual void f(int x=1) 
+     { cout << x << endl;}
+};
+class C: public A
+{
+public:
+     virtual void f(int x) { cout<< x << endl;}
+};
+
+
+int main(){
+    A *p_a;
+B b;
+p_a = &b; 
+p_a->f();
+
+A *p_a1;
+C c;
+p_a1 = &c; 
+p_a1->f();
+
+}
+```
+output
+```cpp
+0
+0
+```
+
+
 ## 虚函数应用场景
 - 不鼓励非虚函数
 - 最提倡纯虚函数

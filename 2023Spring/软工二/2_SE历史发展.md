@@ -1,3 +1,16 @@
+---
+title: 2_SE历史发展
+tags: 课程 2023_Spring软件工程与计算2
+categories: 2023_Spring软件工程与计算2 
+date:  2023-02-17 10:10
+modified:  星期五 17日 二月 2023 11:59:27
+sticky:
+thumbnail:
+cover: 
+excerpt: false
+---
+
+
 - 《软件⼯程通史:1930-2019》，Capers Jones
 - 《Software Pioneers:Contributions to Software Engineering》，Springer
 
