@@ -88,7 +88,7 @@ modified:  星期五 24日 二月 2023 17:02:09
 	- ![51_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/cc116d97518818902f99364e684336a6_51_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png)
 
 - 假设s为cache组号，j为主存块号，S为组数，C为cache行数
-	- s= j mode S
+	- s= j mod S
 	- K路组关联映射：K=C/S
 
 

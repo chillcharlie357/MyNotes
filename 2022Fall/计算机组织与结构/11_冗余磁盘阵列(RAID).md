@@ -26,10 +26,11 @@ modified:  星期五 24日 二月 2023 15:48:46
 	- Eg：按照0、1、2、3顺序
 - 不采用冗余来改善性能（不是RAID家族中的真正成员）
 ## 2.1 优点
-	- 高数据传输率
-	- 高速响应I/O请求：两个I/O请求所需要的数据块可能在不同的磁盘
+- 高数据传输率
+- 高速响应I/O请求：两个I/O请求所需要的数据块可能在不同的磁盘
 ## 2.2 缺点
-	- 任何一个盘损坏文件就不可用
+- 任何一个盘损坏文件就不可用
+
 ![69_VoIPSCreencastCoverWnd (2).png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png)
 # 3.RAID 1
 - 采用了数据**条带**
@@ -53,6 +54,7 @@ modified:  星期五 24日 二月 2023 15:48:46
 - RAID 10 = RAID 1+0：先做RAID 1，再做RAID 0
 - 两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的**容错能力**
 	-  RAID 10容错率更高
+
 ![6b_VoIPSCreencastCoverWnd (2).png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/32b5edd92194b0423e9afced26069f4a_6b_VoIPSCreencastCoverWnd%20-2-.png)
 
 # 4.RAID 2
@@ -80,7 +82,7 @@ modified:  星期五 24日 二月 2023 15:48:46
 # 5.RAID 3
 - 采用并行存取技术
 	- 各个驱动器的轴同步旋转
-	- 采用非常小的数据条带
+	- 采用**非常小**的数据条带
 
 ## 5.1 校验
 - 对所有数据盘上**同一位置**的数据计算奇偶校验码
@@ -126,7 +128,7 @@ modified:  星期五 24日 二月 2023 15:48:46
 ## 7.1 RAID 50
 - 先作RAID 5，再作RAID 0,也就 是对多组RAID 5彼此构成条带访问
 - RAID 50在底层的任一组或多组RAID 5中出现1颗硬盘损坏时，仍能维持运作；如果任一组RAID 5中出现2颗或2颗以上硬盘 损毁，整组RAID 50就会失效
-- RAID 50由于在上层把多组RAID 5进行条带化，性能比起单 纯的RAID 5高，但容量利用率比RAID5要低
+- RAID 50由于在上层把多组RAID 5进行条带化，性能比起单纯的RAID 5高，但容量利用率比RAID5要低
 
 
 # 8.RAID 6
