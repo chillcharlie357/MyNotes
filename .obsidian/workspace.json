@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/操作系统/02_.md",
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b5931f1063d6bbb8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "其他/ubuntu.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/操作系统/02_.md",
+                "file": "其他/ubuntu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/操作系统/02_.md",
+                "file": "其他/ubuntu.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/操作系统/02_.md"
+                "file": "其他/ubuntu.md"
               }
             }
           },
@@ -167,11 +181,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "067eeb9364574298",
+  "active": "b5931f1063d6bbb8",
   "lastOpenFiles": [
-    "2023Spring/操作系统/01_介绍.md",
+    "README.md",
+    "其他/ubuntu.md",
+    "其他",
     "Pasted image 20230213204945.png",
     "2023Spring/操作系统/02_.md",
+    "2023Spring/操作系统/01_介绍.md",
     "2022Fall/计算机组织与结构/17_输入输出.md",
     "2022Fall/计算机组织与结构/11_冗余磁盘阵列(RAID).md",
     "2022Fall/计算机组织与结构/10_外部存储器.md",
@@ -194,7 +211,6 @@
     "2023Spring/软工二/1_Overview.md",
     "2023Spring/数据管理基础/作业/HW_1_P34_4.md",
     "模板/note_template.md",
-    "2023Spring/编译原理/01_编译原理概述.md",
     "2022Fall/数据结构/~$结构重点提纲.docx",
     "msedge_1089_331.png",
     "msedge_1089_331 1.png"
