@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/软工二/3.md",
+                "file": "2023Spring/数据管理基础/02_数据模型.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "503bc7d27ea8ea5c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/数据管理基础/03_数据库结构与组成.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6b0e56897076e3f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/数据管理基础/04_.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -69,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -85,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/软工二/3.md",
+                "file": "2023Spring/数据管理基础/04_.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/软工二/3.md",
+                "file": "2023Spring/数据管理基础/04_.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/软工二/3.md"
+                "file": "2023Spring/数据管理基础/04_.md"
               }
             }
           },
@@ -167,12 +193,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5b2e4fa0fb41b092",
+  "active": "6b0e56897076e3f3",
   "lastOpenFiles": [
+    "2023Spring/数据管理基础/03_数据库结构与组成.md",
+    "2023Spring/数据管理基础/04_.md",
+    "2023Spring/数据管理基础/02_数据模型.md",
+    "2023Spring/软工二/3.md",
     "未命名.md",
     "未命名.canvas",
     "2023Spring/软工二/1_Overview.md",
-    "2023Spring/软工二/3.md",
     "西方音乐通论/西方音乐通论.md",
     "你学不完了嘻嘻.png",
     "2023Spring/西方音乐通论/西方音乐通论.md",
@@ -198,8 +227,6 @@
     "2022Fall/计算机组织与结构/06_浮点数运算.md",
     "2022Fall/计算机组织与结构/03_数据的机器级表示.md",
     "2022Fall/计算机组织与结构/05_整数运算.md",
-    "2022Fall/计算机组织与结构/04_数据校验码.md",
-    "大创/cuda.md",
     "2022Fall/数据结构/~$结构重点提纲.docx",
     "msedge_1089_331.png",
     "msedge_1089_331 1.png"
