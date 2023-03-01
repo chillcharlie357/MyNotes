@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/数据管理基础/作业/HW_2_P70_03.md",
+                "file": "其他/ubuntu.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/数据管理基础/作业/HW_2_P70_03.md",
+                "file": "其他/ubuntu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/数据管理基础/作业/HW_2_P70_03.md",
+                "file": "其他/ubuntu.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/数据管理基础/作业/HW_2_P70_03.md"
+                "file": "其他/ubuntu.md"
               }
             }
           },
@@ -170,10 +169,11 @@
   },
   "active": "1a3f1b7d7cbe918c",
   "lastOpenFiles": [
-    "2023Spring/编译原理/02_.md",
-    "2023Spring/数据管理基础/作业/HW_2_P70_03.md",
-    "2023Spring/编译原理/02_词法分析器.md",
     "2023Spring/编译原理/01_编译原理概述.md",
+    "2023Spring/编译原理/00_介绍.md",
+    "2023Spring/数据管理基础/作业/HW_2_P70_03.md",
+    "2023Spring/编译原理/02_.md",
+    "2023Spring/编译原理/02_词法分析器.md",
     "2023Spring/数据管理基础/04_.md",
     "2023Spring/数据管理基础/03_数据库结构与组成.md",
     "2023Spring/数据管理基础/02_数据模型.md",
@@ -201,7 +201,6 @@
     "2022Fall/计算机组织与结构/15_控制器.md",
     "2022Fall/计算机组织与结构/14_指令周期和指令流水线.md",
     "2022Fall/计算机组织与结构/08_内部存储器.md",
-    "2022Fall/计算机组织与结构/13_指令系统.md",
     "2022Fall/数据结构/~$结构重点提纲.docx",
     "msedge_1089_331.png",
     "msedge_1089_331 1.png"
