@@ -10,7 +10,8 @@ tar -zxvf <包的文件名> -C <解压目录>
 `apt install `
 
 ## APPImage
-文档[[总结 - AppImage中文文档](https://doc.appimage.cn/docs/wiki/)]
+文档
+[[总结 - AppImage中文文档](https://doc.appimage.cn/docs/wiki/)]
 ### AppImage应用安放在哪里比较合适？
 如果你不想把它们放在`$HOME/Downloads`中，那么 `$HOME/.local/bin 和 $HOME/bin `是很好的选择：
 
