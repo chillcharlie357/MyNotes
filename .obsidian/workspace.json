@@ -13,25 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "大创/cuda.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "356bf549781db3d1",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "2023Spring/编译原理/01_编译原理概述.md",
-                "staged": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -134,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           },
           {
@@ -175,38 +167,37 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "356bf549781db3d1",
+  "active": "acb43c4e7f1ac8e9",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "大创/cuda.md",
     "Pasted image 20230301210813.png",
-    "2023Spring/数据管理基础/作业/HW_2_P70_03.md",
     "().md",
+    "other/ppt大纲.md",
+    "other/“南星梦想计划”招生宣讲.md",
+    "大创/cuda.md",
     "模板/note_template.md",
     "2023Spring/数据管理基础/04_.md",
     "2023Spring/数据管理基础/03_数据库结构与组成.md",
+    "2023Spring/软工二/3.md",
+    "2023Spring/软工二/2_SE历史发展.md",
+    "2023Spring/软工二/1_Overview.md",
+    "2023Spring/毛概/1.md",
+    "2023Spring/操作系统/02_.md",
+    "2023Spring/操作系统/01_介绍.md",
+    "2023Spring/编译原理/02_词法分析.md",
+    "2023Spring/编译原理/01_编译原理概述.md",
+    "2023Spring/编译原理/00_介绍.md",
+    "conflict-files-obsidian-git.md",
+    "2023Spring/数据管理基础/作业/HW_2_P70_03.md",
     "2023Spring/数据管理基础/02_数据模型.md",
     "2023Spring/数据管理基础/01_计算、数据和数据管理.md",
     "2023Spring/数据管理基础/00_课程概要.md",
     "2023Spring/数据管理基础/作业/HW_1_P34_15.md",
     "2023Spring/数据管理基础/作业/HW_1_P34_4.md",
     "其他/ubuntu.md",
-    "2023Spring/编译原理/01_编译原理概述.md",
-    "2023Spring/编译原理/02_词法分析.md",
-    "2023Spring/软工二/3.md",
     "2023Spring/编译原理/02_词法分析器.md",
     "未命名.canvas",
-    "2023Spring/软工二/2_SE历史发展.md",
-    "2023Spring/软工二/1_Overview.md",
-    "2022Fall/计算机组织与结构/06_浮点数运算.md",
-    "2022Fall/计算机组织与结构/11_冗余磁盘阵列(RAID).md",
-    "2022Fall/计算机组织与结构/10_外部存储器.md",
-    "2022Fall/计算机组织与结构/16_总线.md",
-    "2022Fall/计算机组织与结构/08_内部存储器.md",
     "你学不完了嘻嘻.png",
-    "2023Spring/西方音乐通论/西方音乐通论.md",
     "2023Spring/西方音乐通论",
-    "西方音乐通论/西方音乐通论.md",
     "西方音乐通论",
     "其他",
     "2022Fall/数据结构/~$结构重点提纲.docx",
