@@ -5,7 +5,7 @@
   "interfaceFontFamily": "思源黑体 CN,微软雅黑",
   "textFontFamily": "思源黑体 CN,Fira Code Retina",
   "monospaceFontFamily": "Fira Code,Fira Code Retina,ROG Fonts",
-  "baseFontSize": 16,
+  "baseFontSize": 15,
   "nativeMenus": false,
   "translucency": false
 }
