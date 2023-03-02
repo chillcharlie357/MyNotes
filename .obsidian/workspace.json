@@ -18,8 +18,20 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "356bf549781db3d1",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": "2023Spring/编译原理/01_编译原理概述.md",
+                "staged": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +97,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "大创/cuda.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "大创/cuda.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -124,9 +134,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "大创/cuda.md"
-              }
+              "state": {}
             }
           },
           {
@@ -167,8 +175,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "acb43c4e7f1ac8e9",
+  "active": "356bf549781db3d1",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "大创/cuda.md",
+    "Pasted image 20230301210813.png",
+    "2023Spring/数据管理基础/作业/HW_2_P70_03.md",
+    "().md",
     "模板/note_template.md",
     "2023Spring/数据管理基础/04_.md",
     "2023Spring/数据管理基础/03_数据库结构与组成.md",
@@ -196,10 +209,6 @@
     "西方音乐通论/西方音乐通论.md",
     "西方音乐通论",
     "其他",
-    "2023Spring/操作系统/02_.md",
-    "2022Fall/计算机组织与结构/17_输入输出.md",
-    "2022Fall/计算机组织与结构/12_虚拟存储器.md",
-    "2022Fall/计算机组织与结构/09_高速缓冲存储器（Cache）.md",
     "2022Fall/数据结构/~$结构重点提纲.docx",
     "msedge_1089_331.png",
     "msedge_1089_331 1.png"
