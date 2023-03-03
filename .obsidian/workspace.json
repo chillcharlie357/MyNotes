@@ -23,11 +23,10 @@
             "id": "8378d42c601779c8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
-                "mode": "source",
-                "source": false
+                "file": "2023Spring/数据管理基础/04_关系.md",
+                "staged": false
               }
             }
           }
@@ -82,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -98,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -137,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md"
-              }
+              "state": {}
             }
           },
           {
@@ -180,7 +176,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9cb0452532d6ebcc",
+  "active": "8378d42c601779c8",
   "lastOpenFiles": [
     "2023Spring/数据管理基础/04_关系.md",
     "2023Spring/数据管理基础/05_SQL.md",
