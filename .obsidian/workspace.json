@@ -8,30 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "acb43c4e7f1ac8e9",
+            "id": "f3ace43aff05f544",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "2023Spring/数据管理基础/04_关系.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
-          },
-          {
-            "id": "8378d42c601779c8",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "2023Spring/数据管理基础/04_关系.md",
-                "staged": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2023Spring/数据管理基础/04_关系.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2023Spring/数据管理基础/04_关系.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -135,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2023Spring/数据管理基础/04_关系.md"
+              }
             }
           },
           {
@@ -176,12 +168,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8378d42c601779c8",
+  "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
+    "2023Spring/软工二/3_前端开发基础.md",
     "2023Spring/数据管理基础/04_关系.md",
-    "2023Spring/数据管理基础/05_SQL.md",
-    "2023Spring/数据管理基础/03_数据库结构与组成.md",
+    "2023Spring/数据管理基础/作业/HW_4_P70_6.md",
+    "2023Spring/软工二/4_后端开发基础.md",
     "2023Spring/数据管理基础/02_数据模型.md",
+    "2023Spring/数据管理基础/03_数据库结构与组成.md",
+    "2023Spring/软工二/3.md",
+    "2023Spring/数据管理基础/05_SQL.md",
     "2023Spring/数据管理基础/01_计算、数据和数据管理.md",
     "模板/note_template.md",
     "2023Spring/数据管理基础/00_课程概要.md",
@@ -202,11 +198,7 @@
     "().md",
     "other/ppt大纲.md",
     "other/“南星梦想计划”招生宣讲.md",
-    "2023Spring/软工二/3.md",
     "2023Spring/软工二/2_SE历史发展.md",
-    "2023Spring/软工二/1_Overview.md",
-    "2023Spring/毛概/1.md",
-    "conflict-files-obsidian-git.md",
     "未命名.canvas",
     "2023Spring/西方音乐通论",
     "西方音乐通论",
