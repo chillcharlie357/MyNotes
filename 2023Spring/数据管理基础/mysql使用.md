@@ -15,9 +15,9 @@
 
 ## 加载数据库
 假设数据库为employees.sql
-`mysql -uroot -p<passwd> < employees.sql`
+先登陆mysql服务器
+再`source employees.sql`
 
-其中` -t`选项是一个命令行参数，用于在mysql客户端中以表格格式显示查询结果
 
 
 # vscode中连接mysql
