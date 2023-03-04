@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -151,7 +150,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,7 +168,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9cb0452532d6ebcc",
+  "active": "f3ace43aff05f544",
   "lastOpenFiles": [
     "2023Spring/软工二/3_前端开发基础.md",
     "2023Spring/数据管理基础/04_关系.md",
