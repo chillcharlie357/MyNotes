@@ -18,7 +18,7 @@
 先登陆mysql服务器
 再`source employees.sql`
 
-
+在命令行中导入数据比较快
 
 # vscode中连接mysql
 这个感觉比较方便
@@ -58,3 +58,8 @@ Version: 1.3.1
 Publisher: Jake Bathman
 VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=jakebathman.mysql-syntax
 ```
+
+
+
+反引号 \` 用于标识符，如表名、列名等,当没有歧义时，并且表/列名称没有特殊字符或空格时，可以省略 。
+单引号 `´` 用于字符串常量
