@@ -4,47 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1e9fe26b028017bf",
+        "id": "98af5352cdbcbc19",
         "type": "tabs",
         "children": [
           {
-            "id": "091ff7c04b01a26b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "其他/ubuntu.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2620f82e36e77ad7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/数据管理基础/mysql使用.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4ee9d191dc5aa61f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/数据管理基础/02_数据模型.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2d7497dc2f2e7e6d",
+            "id": "96f1c3379f583562",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -55,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -204,10 +167,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2d7497dc2f2e7e6d",
+  "active": "96f1c3379f583562",
   "lastOpenFiles": [
-    "2023Spring/数据管理基础/mysql使用.md",
+    "2023Spring/数据管理基础/lab/assert/db4.png",
+    "2023Spring/数据管理基础/lab/assert/db3.png",
+    "2023Spring/数据管理基础/lab/assert/db2.png",
+    "2023Spring/数据管理基础/lab/assert/db1.png",
+    "2023Spring/数据管理基础/lab/assert",
     "2023Spring/数据管理基础/lab/la01.md",
+    "2023Spring/数据管理基础/mysql使用.md",
     "2023Spring/数据管理基础/02_数据模型.md",
     "2023Spring/数据管理基础/lab",
     "2023Spring/数据管理基础/05_SQL.md",
@@ -235,7 +203,6 @@
     "2023Spring/软工二/1_Overview.md",
     "西方音乐通论/西方音乐通论.md",
     "你学不完了嘻嘻.png",
-    "2023Spring/西方音乐通论/西方音乐通论.md",
     "2023Spring/西方音乐通论",
     "西方音乐通论",
     "其他",
