@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/数据管理基础/lab/la01.md",
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/数据管理基础/lab/la01.md",
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/数据管理基础/lab/la01.md",
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/数据管理基础/lab/la01.md"
+                "file": "2023Spring/编译原理/02_词法分析.md"
               }
             }
           },
@@ -169,12 +170,15 @@
   },
   "active": "96f1c3379f583562",
   "lastOpenFiles": [
+    "2023Spring/编译原理/01_编译原理概述.md",
+    "2023Spring/编译原理/02_词法分析.md",
+    "2023Spring/数据管理基础/lab/la01.md",
+    "2023Spring/数据管理基础/lab/assert/db5.png",
     "2023Spring/数据管理基础/lab/assert/db4.png",
     "2023Spring/数据管理基础/lab/assert/db3.png",
     "2023Spring/数据管理基础/lab/assert/db2.png",
     "2023Spring/数据管理基础/lab/assert/db1.png",
     "2023Spring/数据管理基础/lab/assert",
-    "2023Spring/数据管理基础/lab/la01.md",
     "2023Spring/数据管理基础/mysql使用.md",
     "2023Spring/数据管理基础/02_数据模型.md",
     "2023Spring/数据管理基础/lab",
@@ -182,10 +186,8 @@
     "2023Spring/数据管理基础/04_关系.md",
     "2023Spring/软工二/4_后端开发基础.md",
     "2023Spring/软工二/3_前端开发基础.md",
-    "2023Spring/编译原理/02_词法分析.md",
     "2023Spring/数据管理基础/作业/HW_4_P70_6.md",
     "其他/ubuntu.md",
-    "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/编译原理/02_词法分析器.md",
     "2022Fall/计算机组织与结构/09_高速缓冲存储器（Cache）.md",
     "().md",
