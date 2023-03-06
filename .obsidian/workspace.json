@@ -11,11 +11,10 @@
             "id": "96f1c3379f583562",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
                 "file": "2023Spring/编译原理/02_词法分析.md",
-                "mode": "source",
-                "source": false
+                "staged": false
               }
             }
           }
@@ -86,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/编译原理/02_词法分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +101,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/编译原理/02_词法分析.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,9 +122,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2023Spring/编译原理/02_词法分析.md"
-              }
+              "state": {}
             }
           },
           {
@@ -170,8 +165,8 @@
   },
   "active": "96f1c3379f583562",
   "lastOpenFiles": [
-    "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/编译原理/02_词法分析.md",
+    "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/数据管理基础/lab/la01.md",
     "2023Spring/数据管理基础/lab/assert/db5.png",
     "2023Spring/数据管理基础/lab/assert/db4.png",
