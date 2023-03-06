@@ -20,3 +20,11 @@ Host git.nju.edu.cn
 - 如何验证git远程仓库是否添加ssh验证成功？
 `ssh -T <git远程仓库>`
 如果终端信息不是`permission denied`就说明成功
+
+
+# 切换远程仓库 
+`git remote set-url <remote-branch-name> <remote-url>`
+
+查看远程仓库
+`git remote`
+`git remote -v`
