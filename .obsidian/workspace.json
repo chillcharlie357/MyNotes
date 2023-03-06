@@ -11,10 +11,11 @@
             "id": "96f1c3379f583562",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
                 "file": "2023Spring/编译原理/02_词法分析.md",
-                "staged": false
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -85,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -122,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2023Spring/编译原理/02_词法分析.md"
+              }
             }
           },
           {
