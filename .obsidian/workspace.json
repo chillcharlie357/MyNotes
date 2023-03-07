@@ -1,18 +1,27 @@
 {
   "main": {
-    "id": "aea30a3e9ba80400",
+    "id": "de293ad95eec3d3d",
     "type": "split",
     "children": [
       {
+<<<<<<< HEAD
         "id": "f1bdf68a180cdd39",
         "type": "tabs",
         "children": [
           {
             "id": "b42eae7911573577",
+=======
+        "id": "750e605d8d90145a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4f5df3c4cf59a33",
+>>>>>>> fef57631d67b84b3fbd9c0f0bf0124afdf7d4414
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "2023Spring/软工二/4_后端开发基础.md",
                 "mode": "source",
                 "source": false
@@ -38,6 +47,9 @@
               "type": "markdown",
               "state": {
                 "file": "2023Spring/软工二/Spring Boot.md",
+=======
+                "file": "2023Spring/编译原理/02_词法分析.md",
+>>>>>>> fef57631d67b84b3fbd9c0f0bf0124afdf7d4414
                 "mode": "source",
                 "source": false
               }
@@ -50,15 +62,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "4de869c39e8e7214",
+    "id": "84d05063171058fe",
     "type": "split",
     "children": [
       {
-        "id": "994586355e212e08",
+        "id": "e4322925d3fb372f",
         "type": "tabs",
         "children": [
           {
-            "id": "aa661d8a75ef034c",
+            "id": "083ae430f266d1e9",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -68,7 +80,7 @@
             }
           },
           {
-            "id": "c019fc52713ffe98",
+            "id": "c1548cc0a80a208d",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -83,7 +95,7 @@
             }
           },
           {
-            "id": "61cf1e31af1bf0fb",
+            "id": "36b4c3bb997acfac",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -94,23 +106,28 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "8af841629c44cda5",
+    "id": "4dc6bffe291c7e1c",
     "type": "split",
     "children": [
       {
-        "id": "5c2ac6e762422000",
+        "id": "6ff8210d3b2455c5",
         "type": "tabs",
         "children": [
           {
-            "id": "701b7c5465d9832f",
+            "id": "70bf09b0e07825f7",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "2023Spring/软工二/Spring Boot.md",
+=======
+                "file": "2023Spring/编译原理/02_词法分析.md",
+>>>>>>> fef57631d67b84b3fbd9c0f0bf0124afdf7d4414
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,19 +139,25 @@
             }
           },
           {
-            "id": "74677a62f83395a4",
+            "id": "24bdad6b06ed685a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "2023Spring/软工二/Spring Boot.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
+=======
+                "file": "2023Spring/编译原理/02_词法分析.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+>>>>>>> fef57631d67b84b3fbd9c0f0bf0124afdf7d4414
               }
             }
           },
           {
-            "id": "3bbfecc33cfb8924",
+            "id": "f63232c2fa9b192c",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -145,17 +168,37 @@
             }
           },
           {
-            "id": "48985f6e6e13901d",
+            "id": "e5a0a59b1885c06e",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< HEAD
                 "file": "2023Spring/软工二/Spring Boot.md"
+=======
+                "file": "2023Spring/编译原理/02_词法分析.md"
+>>>>>>> fef57631d67b84b3fbd9c0f0bf0124afdf7d4414
               }
+            }
+          },
+          {
+            "id": "9cb0452532d6ebcc",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "f8701efb4139c008",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -164,19 +207,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": false,
+      "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
+      "workspaces:管理工作区布局": false,
       "random-note:开始漫游笔记": false,
-      "workspaces:管理工作区布局": false
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false
     }
   },
+<<<<<<< HEAD
   "active": "3209ec9b3008efe7",
   "lastOpenFiles": [
     "2023Spring/软工二/5_项目启动.md",
@@ -190,9 +234,52 @@
     "2023Spring/西方音乐通论/西方音乐通论.md",
     "其他/git.md",
     "大创/cuda.md",
+=======
+  "active": "c4f5df3c4cf59a33",
+  "lastOpenFiles": [
+    "2023Spring/编译原理/01_编译原理概述.md",
+    "2023Spring/编译原理/00_介绍.md",
+    "2023Spring/编译原理/02_词法分析.md",
+    "其他/git.md",
+>>>>>>> fef57631d67b84b3fbd9c0f0bf0124afdf7d4414
     "2023Spring/数据管理基础/lab/la01.md",
-    "2023Spring/数据管理基础/lab/assert/msedge_683_572.png",
-    "2023Spring/操作系统/03_.md",
-    "2023Spring/数据管理基础/05_SQL.md"
+    "2023Spring/数据管理基础/lab/assert/db5.png",
+    "2023Spring/数据管理基础/lab/assert/db4.png",
+    "2023Spring/数据管理基础/lab/assert/db3.png",
+    "2023Spring/数据管理基础/lab/assert/db2.png",
+    "2023Spring/数据管理基础/lab/assert/db1.png",
+    "2023Spring/数据管理基础/lab/assert",
+    "2023Spring/数据管理基础/mysql使用.md",
+    "2023Spring/数据管理基础/02_数据模型.md",
+    "2023Spring/数据管理基础/lab",
+    "2023Spring/数据管理基础/05_SQL.md",
+    "2023Spring/数据管理基础/04_关系.md",
+    "2023Spring/软工二/4_后端开发基础.md",
+    "2023Spring/软工二/3_前端开发基础.md",
+    "2023Spring/数据管理基础/作业/HW_4_P70_6.md",
+    "其他/ubuntu.md",
+    "2023Spring/编译原理/02_词法分析器.md",
+    "2022Fall/计算机组织与结构/09_高速缓冲存储器（Cache）.md",
+    "().md",
+    "Pasted image 20230301210813.png",
+    "README.md",
+    "undefined.md",
+    "未命名.canvas",
+    "2023Spring/数据管理基础/作业/HW_2_P70_03.md",
+    "2023Spring/编译原理/02_.md",
+    "2023Spring/数据管理基础/04_.md",
+    "2023Spring/数据管理基础/03_数据库结构与组成.md",
+    "2023Spring/软工二/3.md",
+    "未命名.md",
+    "2023Spring/软工二/1_Overview.md",
+    "西方音乐通论/西方音乐通论.md",
+    "你学不完了嘻嘻.png",
+    "2023Spring/西方音乐通论",
+    "西方音乐通论",
+    "其他",
+    "Pasted image 20230213204945.png",
+    "2022Fall/数据结构/~$结构重点提纲.docx",
+    "msedge_1089_331.png",
+    "msedge_1089_331 1.png"
   ]
 }
