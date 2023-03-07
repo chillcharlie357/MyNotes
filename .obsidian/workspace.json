@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "98af5352cdbcbc19",
+        "id": "750e605d8d90145a",
         "type": "tabs",
         "children": [
           {
-            "id": "96f1c3379f583562",
+            "id": "c4f5df3c4cf59a33",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": ".obsidian/plugins/obsidian-git/data.json",
-                "staged": false
+                "file": "2023Spring/编译原理/02_词法分析.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -68,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -84,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -121,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2023Spring/编译原理/02_词法分析.md"
+              }
             }
           },
           {
@@ -162,11 +168,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "96f1c3379f583562",
+  "active": "c4f5df3c4cf59a33",
   "lastOpenFiles": [
-    "其他/git.md",
-    "2023Spring/编译原理/02_词法分析.md",
     "2023Spring/编译原理/01_编译原理概述.md",
+    "2023Spring/编译原理/00_介绍.md",
+    "2023Spring/编译原理/02_词法分析.md",
+    "其他/git.md",
     "2023Spring/数据管理基础/lab/la01.md",
     "2023Spring/数据管理基础/lab/assert/db5.png",
     "2023Spring/数据管理基础/lab/assert/db4.png",
@@ -190,7 +197,6 @@
     "README.md",
     "undefined.md",
     "未命名.canvas",
-    "2023Spring/编译原理/00_介绍.md",
     "2023Spring/数据管理基础/作业/HW_2_P70_03.md",
     "2023Spring/编译原理/02_.md",
     "2023Spring/数据管理基础/04_.md",
