@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "2c3e04df2395f7ad",
+        "id": "f1bdf68a180cdd39",
         "type": "tabs",
         "children": [
           {
-            "id": "65a17c94c7976f7f",
+            "id": "b42eae7911573577",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
+                "file": "2023Spring/软工二/4_后端开发基础.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "62ba29181792f187",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/软工二/5_项目启动.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3209ec9b3008efe7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/软工二/Spring Boot.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
+                "file": "2023Spring/软工二/Spring Boot.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
+                "file": "2023Spring/软工二/Spring Boot.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/西方音乐通论/西方音乐通论.md"
+                "file": "2023Spring/软工二/Spring Boot.md"
               }
             }
           }
@@ -134,7 +159,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -151,12 +177,19 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "65a17c94c7976f7f",
+  "active": "3209ec9b3008efe7",
   "lastOpenFiles": [
-    "其他/git.md",
-    "2023Spring/操作系统/02_处理器管理.md",
-    "大创/cuda.md",
+    "2023Spring/软工二/5_项目启动.md",
+    "2023Spring/软工二/Spring Boot.md",
+    "2023Spring/软工二/4_后端开发基础.md",
+    "2023Spring/软工二/3_前端开发基础.md",
+    "2023Spring/软工二/3.md",
+    "2023Spring/软工二/2_SE历史发展.md",
     "2023Spring/操作系统/01_计算机操作系统.md",
+    "2023Spring/操作系统/02_处理器管理.md",
+    "2023Spring/西方音乐通论/西方音乐通论.md",
+    "其他/git.md",
+    "大创/cuda.md",
     "2023Spring/数据管理基础/lab/la01.md",
     "2023Spring/数据管理基础/lab/assert/msedge_683_572.png",
     "2023Spring/操作系统/03_.md",
