@@ -30,6 +30,16 @@ conda base环境自启动关闭`bash`
 
 - 如果你希望连接到docker image的终端：`docker run -it <image> /bin/bash`
 
+## 向容器中传文件
+使用`docker cp`命令
+### 命令参数
+`docker cp [OPTIONS] CONTAINER:SRC_PATH Host_DEST_PATH`
+`docker cp [OPTIONS] Host_SRC_PATH CONTAINER:DEST_PATH`
+
+### 具体步骤：
+1. 首先`docker ps`查看正在运行容器的`CONTAINER ID`
+2. `docker cp <host_src_path> CONTAINER ID:dest_path`
+
 ## 2.3. 如何在docker中使用nvidia gpu
 安装NVIDIA Container Toolkit
 [Installation Guide — NVIDIA Cloud Native Technologies documentation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
@@ -37,7 +47,7 @@ conda base环境自启动关闭`bash`
 Usage
 [User Guide — NVIDIA Cloud Native Technologies documentation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html)
 
-## 2.4. 如何验证安装？
+### 2.3.1. 如何验证安装？
 `docker run  --runtime=nvidia --gpus all <image:tag>  nvidia-smi`
 
 如果终端返回这样的结果说明成功了:

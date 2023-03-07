@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/cuda.md",
+                "file": "其他/troubleshooting.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/cuda.md",
+                "file": "其他/troubleshooting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/cuda.md",
+                "file": "其他/troubleshooting.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/cuda.md"
+                "file": "其他/troubleshooting.md"
               }
             }
           },
@@ -171,7 +171,7 @@
   "lastOpenFiles": [
     "cuda.md",
     "其他/ubuntu.md",
-    "其他/cuda.md",
+    "其他/troubleshooting.md",
     "其他/PAs.md",
     "其他/linux各种环境配置.md",
     "其他/git.md",
