@@ -22,4 +22,13 @@ grub里可以` exec` 切换`lightdm` 和`gdm3`
 在Ubuntu上：脚本$HOME/.profile在登录时运行，这个脚本将PATH="$HOME/bin:$HOME/.local/bin"添加到路径中。
 此外，存储任何其他位置也是可以，例如U盘，网络位置或光盘，但是这样AppImage应用的路径不在环境变量中，意味着不能简单地在终端输入应用名来运行，而必须使用完整的路径。
 
+# 终端复用
+[Tmux 使用教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2019/10/tmux.html)
+
+
+# docker
+[Docker 教程——理解 Docker 镜像和容器的存储路径](https://www.freecodecamp.org/chinese/news/where-are-docker-images-stored-docker-container-paths-explained/)
+[Install Docker Desktop on Linux](https://docs.docker.com/desktop/install/linux-install/)
+
+
 
