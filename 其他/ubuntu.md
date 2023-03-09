@@ -1,6 +1,7 @@
 
 # 安装软件
 ## tar.gz包
+[software installation - How do I install a .tar.gz (or .tar.bz2) file? - Ask Ubuntu](https://askubuntu.com/questions/25961/how-do-i-install-a-tar-gz-or-tar-bz2-file)
 ```bash
 tar -zxvf <包的文件名> -C <解压目录>
 ```
@@ -32,3 +33,8 @@ grub里可以` exec` 切换`lightdm` 和`gdm3`
 
 
 
+# root权限
+ubuntu默认无法通过su获得root权限，因为没有密码
+可以:
+`sudo bash` 
+`sudo -s`
