@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/操作系统/02_处理器管理.md",
+                "file": "2023Spring/数据管理基础/05_SQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "8af841629c44cda5",
@@ -80,29 +81,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "701b7c5465d9832f",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "2023Spring/操作系统/02_处理器管理.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "74677a62f83395a4",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/操作系统/02_处理器管理.md",
+                "file": "2023Spring/数据管理基础/05_SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,16 +109,34 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/操作系统/02_处理器管理.md"
+                "file": "2023Spring/数据管理基础/05_SQL.md"
+              }
+            }
+          },
+          {
+            "id": "701b7c5465d9832f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2023Spring/数据管理基础/05_SQL.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -153,6 +155,8 @@
   },
   "active": "7117ac68aebe2f38",
   "lastOpenFiles": [
+    "2023Spring/操作系统/02_处理器管理.md",
+    "2023Spring/操作系统/01_计算机操作系统.md",
     "2023Spring/操作系统/未命名.md",
     "2023Spring/编译原理/02_词法分析.md",
     "其他/troubleshooting.md",
@@ -169,8 +173,6 @@
     "2023Spring/软工二/3_前端开发基础.md",
     "2023Spring/软工二/3.md",
     "2023Spring/软工二/2_SE历史发展.md",
-    "2023Spring/操作系统/01_计算机操作系统.md",
-    "2023Spring/操作系统/02_处理器管理.md",
     "2023Spring/西方音乐通论/西方音乐通论.md",
     "其他/git.md",
     "大创/cuda.md",
