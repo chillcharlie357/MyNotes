@@ -54,3 +54,27 @@ Usage
 ![](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-07%2023-06-39.png)
 
 ## 2.5. docker容器端口映射
+
+1. 查看目标容器的`CONTAINER ID`
+![](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-10%2022-16-11.png)
+
+2. 从目标容器创建新的镜像
+![](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-10%2022-18-19.png)
+
+![](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-10%2022-21-09.png)
+
+- 使用`docker commit`命令
+	- 语法：`docker commit [OPTIONS] CONTAINER_ID [REPOSITORY[:TAG]]`
+
+3. 从步骤2的镜像运行(`docker run`)一个容器，并端口映射
+
+- `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
+	- `-p`:指定端口映射，格式为：主机(宿主)端口:容器端口
+	- `-P`:随机端口映射，容器内部端口**随机**映射到主机的端口
+	- `-v`：把主机目录映射到容器目录
+
+`docker run -P -d nginx:latest`：使用镜像nginx:latest以后台模式启动一个容器,并将容器的80端口映射到主机随机端口
+`docker run -p 80:80 -v /data:/data -d nginx:latest`：使用镜像 nginx:latest，以后台模式启动一个容器,将容器的 80 端口映射到主机的 80 端口,主机的目录 /data 映射到容器的 /data
+`docker run -p 127.0.0.1:80:8080/tcp ubuntu bash`：使用镜像nginx:latest以交互模式启动一个容器,在容器内执行/bin/bash命令
+
+[Docker-端口映射 - 简书](https://www.jianshu.com/p/b92d4b845ed6)
