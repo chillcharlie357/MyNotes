@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/数据管理基础/04_关系.md",
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/ubuntu.md"
+                "file": "2023Spring/编译原理/02_词法分析.md"
               }
             }
           },
@@ -171,11 +171,12 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,8 +193,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9cb0452532d6ebcc",
+  "active": "c4f5df3c4cf59a33",
   "lastOpenFiles": [
+    "2023Spring/数据管理基础/04_关系.md",
+    "2023Spring/编译原理/02_词法分析.md",
+    "2023Spring/数据管理基础/mysql使用.md",
     "其他/PAs.md",
     "其他/git.md",
     "其他/linux各种环境配置.md",
@@ -201,10 +205,7 @@
     "2023Spring/操作系统/00_lab.md",
     "2023Spring/操作系统/未命名.md",
     "2023Spring/操作系统/01_计算机操作系统.md",
-    "2023Spring/编译原理/02_词法分析.md",
-    "2023Spring/数据管理基础/04_关系.md",
     "2023Spring/数据管理基础/01_计算、数据和数据管理.md",
-    "2023Spring/数据管理基础/mysql使用.md",
     "2023Spring/数据管理基础/05_SQL.md",
     "其他/troubleshooting.md",
     "cuda.md",
