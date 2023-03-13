@@ -8,53 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ef4a5d9cfa67305f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/操作系统/02_处理器管理.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "47c04263893b4f98",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/操作系统/lab/lab01.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2e10d80120bf1998",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "你学不完了嘻嘻.png"
-              }
-            }
-          },
-          {
             "id": "d60080283816d595",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/操作系统/lab/整数除法-New Bing.md",
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -120,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/操作系统/lab/整数除法-New Bing.md",
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/操作系统/lab/整数除法-New Bing.md",
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -160,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/操作系统/lab/整数除法-New Bing.md"
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md"
               }
             }
           },
@@ -185,8 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,8 +169,8 @@
   },
   "active": "d60080283816d595",
   "lastOpenFiles": [
-    "2023Spring/操作系统/lab/lab01.md",
     "2023Spring/操作系统/lab/整数除法-New Bing.md",
+    "2023Spring/操作系统/lab/lab01.md",
     "你学不完了嘻嘻.png",
     "其他/ubuntu.md",
     "2023Spring/操作系统/03_多线程.md",
