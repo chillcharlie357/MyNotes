@@ -29,3 +29,10 @@ boot: floppy
 - megs：虚拟机内存大小 (MB)
 - floppya：虚拟机外设，软盘为a.img文件
 - boot：虚拟机启动方式，从软盘启动
+
+# t2
+
+
+# t3
+
+[[整数除法-New Bing]]

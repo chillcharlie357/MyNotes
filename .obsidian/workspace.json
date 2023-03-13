@@ -25,14 +25,36 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/操作系统/lab/lab01.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2e10d80120bf1998",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "你学不完了嘻嘻.png"
+              }
+            }
+          },
+          {
+            "id": "d60080283816d595",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/操作系统/lab/整数除法-New Bing.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -98,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/操作系统/lab/整数除法-New Bing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/操作系统/lab/整数除法-New Bing.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -138,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/ubuntu.md"
+                "file": "2023Spring/操作系统/lab/整数除法-New Bing.md"
               }
             }
           },
@@ -181,8 +203,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "47c04263893b4f98",
+  "active": "d60080283816d595",
   "lastOpenFiles": [
+    "2023Spring/操作系统/lab/lab01.md",
+    "2023Spring/操作系统/lab/整数除法-New Bing.md",
+    "你学不完了嘻嘻.png",
+    "其他/ubuntu.md",
     "2023Spring/操作系统/03_多线程.md",
     "2023Spring/操作系统/02_处理器管理.md",
     "其他/troubleshooting.md",
@@ -194,9 +220,7 @@
     "其他/PAs.md",
     "2023Spring/数据管理基础/00_课程概要.md",
     "2023Spring/操作系统/00_lab.md",
-    "2023Spring/操作系统/lab/lab01.md",
     "2023Spring/操作系统/lab",
-    "其他/ubuntu.md",
     "2023Spring/操作系统/01_计算机操作系统.md",
     "2023Spring/数据管理基础/04_关系.md",
     "其他/git.md",
@@ -208,18 +232,15 @@
     "2023Spring/软工二/3_前端开发基础.md",
     "2023Spring/软工二/4_后端开发基础.md",
     "2023Spring/软工二/5_项目启动.md",
-    "2023Spring/软工二/Spring Boot.md",
     "2023Spring/数据管理基础/lab/assert/db5.png",
     "2023Spring/数据管理基础/lab/assert/db4.png",
     "2023Spring/数据管理基础/lab/assert/db3.png",
     "2023Spring/数据管理基础/lab/assert/db2.png",
     "2023Spring/数据管理基础/lab/assert/db1.png",
     "2023Spring/数据管理基础/lab/assert",
-    "2023Spring/数据管理基础/02_数据模型.md",
     "2023Spring/数据管理基础/lab",
     "Pasted image 20230301210813.png",
     "未命名.canvas",
-    "你学不完了嘻嘻.png",
     "2023Spring/西方音乐通论",
     "西方音乐通论",
     "其他",
