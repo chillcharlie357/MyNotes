@@ -78,3 +78,4 @@ Usage
 `docker run -p 127.0.0.1:80:8080/tcp ubuntu bash`：使用镜像nginx:latest以交互模式启动一个容器,在容器内执行/bin/bash命令
 
 [Docker-端口映射 - 简书](https://www.jianshu.com/p/b92d4b845ed6)
+[PyCharm+Docker：打造最舒适的深度学习炼丹炉 - 知乎](https://zhuanlan.zhihu.com/p/52827335)

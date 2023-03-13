@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/数据管理基础/lab/la01.md",
+                "file": "其他/troubleshooting.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/数据管理基础/lab/la01.md",
+                "file": "其他/troubleshooting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/数据管理基础/lab/la01.md",
+                "file": "其他/troubleshooting.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/数据管理基础/lab/la01.md"
+                "file": "其他/troubleshooting.md"
               }
             }
           },
@@ -170,9 +170,12 @@
   },
   "active": "ef4a5d9cfa67305f",
   "lastOpenFiles": [
+    "2023Spring/编译原理/02_词法分析.md",
+    "2023Spring/编译原理/01_编译原理概述.md",
+    "2023Spring/编译原理/00_介绍.md",
+    "2023Spring/数据管理基础/lab/la01.md",
     "2023Spring/数据管理基础/mysql使用.md",
     "其他/PAs.md",
-    "2023Spring/数据管理基础/lab/la01.md",
     "2023Spring/数据管理基础/00_课程概要.md",
     "2023Spring/操作系统/00_lab.md",
     "2023Spring/操作系统/lab/lab01.md",
@@ -180,7 +183,6 @@
     "2023Spring/操作系统/lab",
     "其他/ubuntu.md",
     "2023Spring/操作系统/01_计算机操作系统.md",
-    "2023Spring/编译原理/02_词法分析.md",
     "2023Spring/数据管理基础/04_关系.md",
     "其他/git.md",
     "其他/linux各种环境配置.md",
@@ -190,12 +192,10 @@
     "2023Spring/数据管理基础/05_SQL.md",
     "cuda.md",
     "README.md",
-    "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/软工二/3_前端开发基础.md",
     "2023Spring/软工二/4_后端开发基础.md",
     "2023Spring/软工二/5_项目启动.md",
     "2023Spring/软工二/Spring Boot.md",
-    "2023Spring/编译原理/00_介绍.md",
     "2023Spring/数据管理基础/lab/assert/db5.png",
     "2023Spring/数据管理基础/lab/assert/db4.png",
     "2023Spring/数据管理基础/lab/assert/db3.png",
