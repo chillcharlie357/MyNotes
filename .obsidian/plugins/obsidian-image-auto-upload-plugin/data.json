@@ -2,9 +2,9 @@
   "uploadByClipSwitch": true,
   "uploader": "PicGo-Core",
   "uploadServer": "http://127.0.0.1:36677/upload",
-  "picgoCorePath": "",
+  "picgoCorePath": "/usr/local/lib/node/nodejs/bin/picgo",
   "workOnNetWork": true,
-  "fixPath": true,
+  "fixPath": false,
   "applyImage": true,
   "newWorkBlackDomains": "",
   "deleteSource": false

@@ -1,10 +1,15 @@
 
 # 安装软件
 ## tar.gz包
+
 [software installation - How do I install a .tar.gz (or .tar.bz2) file? - Ask Ubuntu](https://askubuntu.com/questions/25961/how-do-i-install-a-tar-gz-or-tar-bz2-file)
 ```bash
 tar -zxvf <包的文件名> -C <解压目录>
 ```
+一般的放到`/opt/`下
+
+- 快捷方式创建
+[【包学包会】【Zotero篇】Linux安装、重装和备份，换新电脑再也不用麻烦啦！不同系统的配置文件是通用的，香。 - 知乎](https://zhuanlan.zhihu.com/p/436241013)
 
 ## deb包
 `dpkg -i`

@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/troubleshooting.md",
+                "file": "2023Spring/操作系统/02_处理器管理.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "47c04263893b4f98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "其他/ubuntu.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/troubleshooting.md",
+                "file": "其他/ubuntu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/troubleshooting.md",
+                "file": "其他/ubuntu.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/troubleshooting.md"
+                "file": "其他/ubuntu.md"
               }
             }
           },
@@ -168,8 +181,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ef4a5d9cfa67305f",
+  "active": "47c04263893b4f98",
   "lastOpenFiles": [
+    "2023Spring/操作系统/03_多线程.md",
+    "2023Spring/操作系统/02_处理器管理.md",
+    "其他/troubleshooting.md",
     "2023Spring/编译原理/02_词法分析.md",
     "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/编译原理/00_介绍.md",
@@ -179,15 +195,12 @@
     "2023Spring/数据管理基础/00_课程概要.md",
     "2023Spring/操作系统/00_lab.md",
     "2023Spring/操作系统/lab/lab01.md",
-    "其他/troubleshooting.md",
     "2023Spring/操作系统/lab",
     "其他/ubuntu.md",
     "2023Spring/操作系统/01_计算机操作系统.md",
     "2023Spring/数据管理基础/04_关系.md",
     "其他/git.md",
     "其他/linux各种环境配置.md",
-    "2023Spring/操作系统/02_处理器管理.md",
-    "2023Spring/操作系统/未命名.md",
     "2023Spring/数据管理基础/01_计算、数据和数据管理.md",
     "2023Spring/数据管理基础/05_SQL.md",
     "cuda.md",
