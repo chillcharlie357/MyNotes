@@ -13,7 +13,7 @@
 	- -f : configfile
 
 ## boot.asm
-![](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/code.png)
+![image-code](assets/image-code.png)
 
 
 ## bochsrc

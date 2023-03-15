@@ -4,18 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b78d09a64bf24d0a",
+        "id": "0b143574485a74da",
         "type": "tabs",
         "children": [
           {
-            "id": "167c4fda6707dede",
+            "id": "4fad0b43aee2b9bc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "2023Spring/编译原理/02_词法分析.md",
-                "mode": "source",
-                "source": false
+                "file": "2023Spring/数据管理基础/.gitignore",
+                "staged": true
               }
             }
           }
@@ -69,8 +68,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 330.5
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -86,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/编译原理/02_词法分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +100,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/编译原理/02_词法分析.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,9 +121,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2023Spring/编译原理/02_词法分析.md"
-              }
+              "state": {}
             }
           },
           {
@@ -147,12 +141,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,31 +162,32 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "167c4fda6707dede",
+  "active": "4fad0b43aee2b9bc",
   "lastOpenFiles": [
-    "2023Spring/编译原理/asserts/Pasted image 20230315175205.png",
-    "2023Spring/数据管理基础/lab/asserts/Screenshot from 2023-03-14 23-23-10.png",
-    "2023Spring/数据管理基础/lab/asserts/Screenshot from 2023-03-14 22-52-38.png",
-    "2023Spring/数据管理基础/lab/asserts/Screenshot from 2023-03-14 22-42-46.png",
-    "2023Spring/数据管理基础/lab/asserts/Pasted image 20230314232455.png",
-    "2023Spring/数据管理基础/lab/asserts/Pasted image 20230314231246.png",
-    "2023Spring/数据管理基础/lab/asserts/Pasted image 20230314225424.png",
-    "2023Spring/数据管理基础/lab/asserts/Pasted image 20230314231308.png",
-    "2023Spring/数据管理基础/lab/asserts/Pasted image 20230314232127.png",
-    "2023Spring/数据管理基础/lab/asserts/Pasted image 20230314232717.png",
-    "2023Spring/数据管理基础/lab/asserts/Screenshot from 2023-03-14 22-12-29.png",
+    "2023Spring/数据管理基础/lab/lab02.md",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315200503.png",
+    "2023Spring/数据管理基础/lab/assets/Screenshot from 2023-03-14 23-23-10.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230314225424.png",
+    "2023Spring/操作系统/lab/assets/image-code.png",
+    "2023Spring/操作系统/lab/assets/Pasted image 20230315201024.png",
+    "2023Spring/操作系统/lab/lab01.md",
+    "2023Spring/数据管理基础/lab/assets/Screenshot from 2023-03-14 22-52-38.png",
+    "2023Spring/数据管理基础/lab/lab01.md",
+    "2023Spring/操作系统/lab/assets",
+    "2023Spring/操作系统/lab/整数除法-New Bing.md",
     "2023Spring/编译原理/02_词法分析.md",
+    "2023Spring/编译原理/asserts/Pasted image 20230315175205.png",
+    "2023Spring/数据管理基础/lab/assets/Screenshot from 2023-03-14 22-42-46.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230314232455.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230314231246.png",
     "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/编译原理/asserts",
-    "2023Spring/数据管理基础/lab/la01.md",
     "其他/ubuntu.md",
-    "2023Spring/数据管理基础/lab/asserts",
+    "2023Spring/数据管理基础/lab/assets",
     "其他/troubleshooting.md",
     "大创/3.14.md",
     "大创",
     "2023Spring/西方音乐通论/西方音乐通论.md",
-    "2023Spring/操作系统/lab/整数除法-New Bing.md",
-    "2023Spring/操作系统/lab/lab01.md",
     "2023Spring/操作系统/03_多线程.md",
     "2023Spring/操作系统/02_处理器管理.md",
     "2023Spring/编译原理/00_介绍.md",
@@ -210,13 +204,11 @@
     "2023Spring/数据管理基础/05_SQL.md",
     "cuda.md",
     "README.md",
-    "2023Spring/软工二/3_前端开发基础.md",
     "2023Spring/数据管理基础/lab/assert",
     "2023Spring/数据管理基础/lab",
     "未命名.canvas",
     "2023Spring/西方音乐通论",
     "西方音乐通论",
-    "其他",
-    "2022Fall/数据结构/~$结构重点提纲.docx"
+    "其他"
   ]
 }
