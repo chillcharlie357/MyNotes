@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b4ceeebb0f77bb79",
+        "id": "0e59927d25aa2859",
         "type": "tabs",
         "children": [
           {
-            "id": "c3a85d9eb0503b7b",
+            "id": "35c6755886fd9538",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5,
+    "width": 672.5,
     "collapsed": true
   },
   "right": {
@@ -147,11 +147,12 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,25 +169,27 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9cb0452532d6ebcc",
+  "active": "35c6755886fd9538",
   "lastOpenFiles": [
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315232445.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315232438.png",
+    "Pasted image 20230315232322.png.md",
+    "2023Spring/数据管理基础/lab/lab02.md",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315232322.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315230853.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315230757.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315230259.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315225124.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315224731.png",
+    "2023Spring/数据管理基础/05_SQL.md",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315221438.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230315220014.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230315202558.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315202153.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315201458.png",
-    "2023Spring/数据管理基础/lab/lab02.md",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230315200503.png",
-    "2023Spring/数据管理基础/lab/assets/Screenshot from 2023-03-14 23-23-10.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230314225424.png",
-    "2023Spring/操作系统/lab/assets/image-code.png",
-    "2023Spring/操作系统/lab/assets/Pasted image 20230315201024.png",
     "2023Spring/操作系统/lab/lab01.md",
-    "2023Spring/数据管理基础/lab/assets/Screenshot from 2023-03-14 22-52-38.png",
     "2023Spring/数据管理基础/lab/lab01.md",
     "2023Spring/操作系统/lab/assets",
     "2023Spring/操作系统/lab/整数除法-New Bing.md",
     "2023Spring/编译原理/02_词法分析.md",
-    "2023Spring/编译原理/asserts/Pasted image 20230315175205.png",
     "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/编译原理/asserts",
     "其他/ubuntu.md",
@@ -208,9 +211,7 @@
     "其他/git.md",
     "其他/linux各种环境配置.md",
     "2023Spring/数据管理基础/01_计算、数据和数据管理.md",
-    "2023Spring/数据管理基础/05_SQL.md",
     "cuda.md",
-    "README.md",
     "2023Spring/数据管理基础/lab/assert",
     "2023Spring/数据管理基础/lab",
     "未命名.canvas",
