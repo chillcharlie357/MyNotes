@@ -81,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "8af841629c44cda5",
@@ -167,8 +166,9 @@
   },
   "active": "3646ca3d07933662",
   "lastOpenFiles": [
-    "2023Spring/数据管理基础/03_数据库结构与组成.md",
+    "conflict-files-obsidian-git.md",
     "2023Spring/数据管理基础/05_SQL.md",
+    "2023Spring/数据管理基础/03_数据库结构与组成.md",
     "2023Spring/数据管理基础/02_数据模型.md",
     "2023Spring/数据管理基础/mysql使用.md",
     "2023Spring/西方音乐通论/西方音乐通论.md",
@@ -193,7 +193,6 @@
     "2023Spring/软工二/Spring Boot.md",
     "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/软工二/3_前端开发基础.md",
-    "2023Spring/软工二/3.md",
     "2023Spring/数据管理基础/lab/assert/msedge_683_572.png"
   ]
 }

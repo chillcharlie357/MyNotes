@@ -14,5 +14,5 @@
     "downscalePercent": 100
   },
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "2023Spring/数据管理基础/lab/assert"
+  "attachmentFolderPath": "./assets"
 }
