@@ -129,6 +129,10 @@ ALTER TABLE <表名>
 		- 数据可能是分布式的，在多个节点上，可以提高速度
 
 #### 修改/删除索引
+- ALTER INDEX <旧索引名> RENAME TO <新索引名>
+- DROP INDEX <索引名>;
+	- 删除索引时，系统会从数据字典中删去有关该索引的描述
+
 
 ## 数据字典
 - 关系数据库系统内部的一组系统表，记录了数据中的所有**定义信息**：
@@ -140,4 +144,167 @@ ALTER TABLE <表名>
 	- 统计信息等
 		- DBA可以根据这个做优化
 
+
+# 数据查询
+## 单表查询
+格式：
+SELECT [ALL|DISTINCT] <目标列表达式>[,<目标列表达式>] …
+       FROM <表名或视图名>[,<表名或视图名> ]…|(SELECT 语句)      
+                    [AS]<别名>
+					[ WHERE <条件表达式> ]
+					[GROUP BY <列名1> [ HAVING <条件表达式> ] ]
+					[ORDER BY <列名2> [ ASC|DESC ] ];
+
+### 满足条件的查询
+#### 比较大小
+
+#### 确定范围
+
+#### 确定集合
+
+#### 字符匹配
+- 谓词： [NOT] LIKE  ‘<匹配串>’  [ESCAPE ‘ <换码字符>’]
+- <匹配串>可以是一个完整的字符串，也可以含有通配符%（任意长度（长度可以为0）的字符串）和 _（任意单个字符）
+
+1. 匹配串为固定字符串
+
+2. 匹配串为含**通配符**的字符串
+	- 涉及中文需要考虑单字节、双字节问题
+
+3. 使用换码字符将通配符**转义**为普通字符
+	- ESCAPE '＼' 表示“ ＼” 为换码字符
+
+
+#### 涉及空值查询
+- 谓词：`IS NULL` 或`IS NOT NULL` 
+	- `IS`不是= ，NULL不等于任何东西
+	- 例子：两个性别为null的同学性别一样吗
+
+#### 多重条件查询
+- 逻辑运算符：AND和OR来连接多个查询条件
+
+
+#### 排序
+- 对查询结果排序：`ORDER BY <attribute>` 
+	- 可以按一个或多个属性列排序（多个是主次关键字）
+	- 升序：ASC;降序：DESC;缺省值为升序
+	- 对于空值，排序时显示的次序由具体系统实现来决定
+
+**作用**：
+- select每次结果顺序不一定一样，因为内模式的实现可能不同
+- order by一个主键：查询的**结果顺序唯一**，但顺序有意时才会排序
+- 排序不影响语义，但是影响**开发效率**
+
+
+
+### 聚集函数
+
+- 统计**元组**个数
+	 - COUNT(\*)
+- 统计一**列中值**的个数	(<font color="#ff0000">不包含NULL</font>)
+	 - COUNT([DISTINCT|ALL] <列名>)
+- 计算一列值的总和（此列必须为<font color="#ff0000">数值型</font>）
+	- SUM([DISTINCT|ALL] <列名>)	
+- 计算一列值的平均值（此列必须为<font color="#ff0000">数值型</font>）
+	- AVG([DISTINCT|ALL] <列名>)
+- 求一列中的最大值和最小值
+	- MAX([DISTINCT|ALL] <列名>)
+	- MIN([DISTINCT|ALL] <列名>)
+
+ ![POWERPNT_663_414.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/24d97c12edcb86061953edafd4d83d4c_POWERPNT_663_414.png)
+
+### 对查询结果分组
+-  `GROUP BY`
+- 细化聚集函数的作用对象
+	- 如果未对查询结果分组，聚集函数将作用于整个查询结果
+	- 对查询结果分组后，**聚集函数将分别作用于每个组** 
+	- 按指定的一列或多列值分组，值相等的为一组
+![POWERPNT_283_410.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/c72a17e1a1f1cd5fab5a65130e0aa264_POWERPNT_283_410.png)
+
+
+
+- **HAVING**短语与WHERE子句的区别：
+	- 作用对象不同
+	- WHERE子句作用于基表或视图，从中选择满足条件的元组
+		- WHERE子句中是不能用聚集函数作为条件表达式
+	- HAVING短语**作用于组**，从中选择满足条件的组。 
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/0d0cab2ec14eda531d4a96d198446c90_20230314144343.png)
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/3dba9b7d0e54c1623eafd10780f5e7d1_20230314144601.png)
+
+
+## 连接查询
+- 定义：涉及两个及以上的表的查询
+- 格式：
+[<表名1>.]<列名1>  <比较运算符>  [<表名2>.]<列名2>
+[<表名1>.]<列名1> BETWEEN [<表名2>.]<列名2> AND [<表名2>.]<列名3>
+
+### 等值连接/自然连接查询 
+
+- 等值连接：运算符` = `
+- 连接参照关系和被参照关系
+
+一般连接查询：WHERE在笛卡尔积中进行条件筛选
+连接几乎是最耗时的操作，运算量很大
+![1678777584.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/40978025b598475c08aef754d957021b_1678777584.png)
+
+### 连接执行过程
+无法自己选择，数据库决定
+
+1. 嵌套循环法（NESTED-LOOP）
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/5d1e3488c03a84677d7b23b211428cf9_20230314151338.png)
+
+
+2. 排序合并法（SORT-MERGE）
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/30a7592a2c0983c59629b2928dfe3dd6_20230314151438.png)
+
+3. 索引连接（INDEX-JOIN）
+
+同时进行选择和连接：一条SQL语句可以同时完成选择和连接查询，这时WHERE子句是由连接谓词和选择谓词组成的复合条件。
+
+
+### 自身连接
+**自身连接**：一个表与自己连接，需要给表取**别名**。由于所有属性都是同名属性，因此必须使用别名前缀
+
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/7c01aaa3b25b941802740ad679a52f57_20230314152204.png)
+
+### 外连接
+- 外连接与普通连接的区别
+	- 普通连接操作只输出满足连接条件的元组
+	- 外连接操作以指定表为连接主体，将主体表中不满足连接条件的元组一并输出
+ - 左外连接
+	- 列出左边关系中所有的元组 
+	- 右边可以含NULL
+ - 右外连接
+	- 列出右边关系中所有的元组 
+	- 左边可以含NULL
+![POWERPNT_684_426.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/e5f1e3e97c60395d4c5dd949abc1aad3_POWERPNT_684_426.png)
+### 多表连接
+两个表以上连接，语法和双表连接差不多
+WHERE后面几个表的顺序无所谓
+具体实现是数据库管理系统实现的，不需要关心
+
+## 嵌套查询
+- 一个SELECT-FROM-WHERE语句称为一个查询块
+- 将一个查询块嵌套在另一个查询块的WHERE子句或HAVING短语的条件中的查询称为嵌套查询
+
+**副作用**：
+- SQL效率低下
+- 整体语义难以理解
+
+
+**限制**：
+- 子查询不能用ORDER BY
+
+### 求解方式
+
+### 带IN谓词的子查询
+![POWERPNT_660_393.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/d2b785211c207fa462112536dbd0e5fd_POWERPNT_660_393.png)
+![POWERPNT_645_406.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/79b4f763dd7618a8b4f2ede6c198f9bc_POWERPNT_645_406.png)
+- 推荐右边，使用语义描述而非过程
+
+### 带比较运算符的子查询
+
+当能确切知道内层查询返回单值时，可用比较运算符（>，<，=，>=，<=，!=或< >）。
 
