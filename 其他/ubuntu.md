@@ -43,3 +43,8 @@ ubuntu默认无法通过su获得root权限，因为没有密码
 可以:
 `sudo bash` 
 `sudo -s`
+
+# vim
+- 删除行首的空格？
+	- `%s/^\s\+//`
+[linux - vim技巧：删除行首、行末的空白字符，删除空白行 - 南木阁 - SegmentFault 思否](https://segmentfault.com/a/1190000021058245)

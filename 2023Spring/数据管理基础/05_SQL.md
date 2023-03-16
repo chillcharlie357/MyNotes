@@ -213,12 +213,14 @@ SELECT [ALL|DISTINCT] <目标列表达式>[,<目标列表达式>] …
 
  ![POWERPNT_663_414.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/24d97c12edcb86061953edafd4d83d4c_POWERPNT_663_414.png)
 
-### 对查询结果分组
+### 分组查询
+
 -  `GROUP BY`
 - 细化聚集函数的作用对象
 	- 如果未对查询结果分组，聚集函数将作用于整个查询结果
 	- 对查询结果分组后，**聚集函数将分别作用于每个组** 
-	- 按指定的一列或多列值分组，值相等的为一组
+	- 按指定的**一列或多列**值分组，值相等的为一组
+
 ![POWERPNT_283_410.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/c72a17e1a1f1cd5fab5a65130e0aa264_POWERPNT_283_410.png)
 
 
@@ -228,6 +230,7 @@ SELECT [ALL|DISTINCT] <目标列表达式>[,<目标列表达式>] …
 	- WHERE子句作用于基表或视图，从中选择满足条件的元组
 		- WHERE子句中是不能用聚集函数作为条件表达式
 	- HAVING短语**作用于组**，从中选择满足条件的组。 
+
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/0d0cab2ec14eda531d4a96d198446c90_20230314144343.png)
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/3dba9b7d0e54c1623eafd10780f5e7d1_20230314144601.png)
