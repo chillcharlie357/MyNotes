@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/操作系统/lab/lab01.md",
+                "file": "2023Spring/数据管理基础/05_SQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395.5
+    "width": 300.5,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/操作系统/lab/lab01.md",
+                "file": "2023Spring/数据管理基础/05_SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/操作系统/lab/lab01.md",
+                "file": "2023Spring/数据管理基础/05_SQL.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/操作系统/lab/lab01.md"
+                "file": "2023Spring/数据管理基础/05_SQL.md"
               }
             }
           },
@@ -185,6 +186,7 @@
   "lastOpenFiles": [
     "其他/nasm.md",
     "其他/ubuntu.md",
+    "2023Spring/操作系统/lab/lab01.md",
     "其他/git.md",
     "其他/linux各种环境配置.md",
     "其他/troubleshooting.md",
@@ -201,7 +203,6 @@
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110028.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230316105230.png",
     "Pasted image 20230315232322.png.md",
-    "2023Spring/操作系统/lab/lab01.md",
     "2023Spring/数据管理基础/lab/lab01.md",
     "2023Spring/操作系统/lab/assets",
     "2023Spring/操作系统/lab/整数除法-New Bing.md",
