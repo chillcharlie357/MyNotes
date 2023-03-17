@@ -25,7 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/软工二/6_需求基础.md",
+                "file": "2022Fall/计算机组织与结构/05_整数运算.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8212c60ce50e08de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/操作系统/lab/lab01.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/软工二/6_需求基础.md",
+                "file": "2022Fall/计算机组织与结构/05_整数运算.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/软工二/6_需求基础.md",
+                "file": "2022Fall/计算机组织与结构/05_整数运算.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/软工二/6_需求基础.md"
+                "file": "2022Fall/计算机组织与结构/05_整数运算.md"
               }
             }
           },
@@ -160,12 +172,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,17 +193,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "dfd0aed8b8d446c1",
+  "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
-    "2023Spring/数据管理基础/05_SQL.md",
+    "2023Spring/操作系统/lab/整数除法.md",
+    "2023Spring/操作系统/lab/lab01.md",
     "2023Spring/软工二/6_需求基础.md",
+    "2023Spring/数据管理基础/05_SQL.md",
     "2023Spring/软工二/4_后端开发基础.md",
     "2023Spring/软工二/5_项目启动.md",
     "2023Spring/软工二/1_Overview.md",
     "其他/OS_SE_lab.md",
     "大创/3.14.md",
     "其他/ubuntu.md",
-    "2023Spring/操作系统/lab/lab01.md",
     "2023Spring/数据管理基础/lab/lab02.md",
     "其他/git.md",
     "其他/linux各种环境配置.md",
@@ -210,7 +222,6 @@
     "Pasted image 20230315232322.png.md",
     "2023Spring/数据管理基础/lab/lab01.md",
     "2023Spring/操作系统/lab/assets",
-    "2023Spring/操作系统/lab/整数除法-New Bing.md",
     "2023Spring/编译原理/02_词法分析.md",
     "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/编译原理/asserts",
