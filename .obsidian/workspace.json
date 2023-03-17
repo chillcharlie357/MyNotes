@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "大创/3.14.md",
+                "file": "其他/OS_SE_lab.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "大创/3.14.md",
+                "file": "其他/OS_SE_lab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "大创/3.14.md",
+                "file": "其他/OS_SE_lab.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "大创/3.14.md"
+                "file": "其他/OS_SE_lab.md"
               }
             }
           },
@@ -167,8 +167,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9cb0452532d6ebcc",
+  "active": "17daaa1db632ec04",
   "lastOpenFiles": [
+    "大创/3.14.md",
     "其他/OS_SE_lab.md",
     "其他/ubuntu.md",
     "2023Spring/操作系统/lab/lab01.md",
@@ -195,7 +196,6 @@
     "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/编译原理/asserts",
     "2023Spring/数据管理基础/lab/assets",
-    "大创/3.14.md",
     "大创",
     "2023Spring/西方音乐通论/西方音乐通论.md",
     "2023Spring/操作系统/03_多线程.md",
