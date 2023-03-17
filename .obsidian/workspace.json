@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "f081648118e00372",
+        "id": "a2d9c992bb4fa76f",
         "type": "tabs",
         "children": [
           {
-            "id": "a5b943bebcfa2573",
+            "id": "17daaa1db632ec04",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/ubuntu.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "683d0851039084fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
+                "file": "大创/3.14.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5,
-    "collapsed": true
+    "width": 300.5
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
+                "file": "大创/3.14.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
+                "file": "大创/3.14.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md"
+                "file": "大创/3.14.md"
               }
             }
           },
@@ -160,12 +146,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,16 +167,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "683d0851039084fd",
+  "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
-    "其他/nasm.md",
+    "其他/OS_SE_lab.md",
     "其他/ubuntu.md",
     "2023Spring/操作系统/lab/lab01.md",
+    "2023Spring/数据管理基础/lab/lab02.md",
+    "2023Spring/数据管理基础/05_SQL.md",
     "其他/git.md",
     "其他/linux各种环境配置.md",
     "其他/troubleshooting.md",
-    "2023Spring/数据管理基础/lab/lab02.md",
-    "2023Spring/数据管理基础/05_SQL.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110521.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110508.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110455.png",
