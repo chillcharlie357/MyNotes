@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "1f5918ffefe5ebc3",
+        "id": "cd5d470a331471f1",
         "type": "tabs",
         "children": [
           {
-            "id": "22a2875e5faa14fd",
+            "id": "d65e6f420830c071",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dfd0aed8b8d446c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2022Fall/计算机组织与结构/05_整数运算.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8212c60ce50e08de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/操作系统/lab/lab01.md",
+                "file": "2023Spring/操作系统/02_处理器管理.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5,
-    "collapsed": true
+    "width": 300.5
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -111,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022Fall/计算机组织与结构/05_整数运算.md",
+                "file": "2023Spring/操作系统/02_处理器管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022Fall/计算机组织与结构/05_整数运算.md",
+                "file": "2023Spring/操作系统/02_处理器管理.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -151,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2022Fall/计算机组织与结构/05_整数运算.md"
+                "file": "2023Spring/操作系统/02_处理器管理.md"
               }
             }
           },
@@ -172,7 +146,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -193,12 +167,25 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9cb0452532d6ebcc",
+  "active": "d65e6f420830c071",
   "lastOpenFiles": [
-    "2023Spring/操作系统/lab/整数除法.md",
-    "2023Spring/操作系统/lab/lab01.md",
-    "2023Spring/软工二/6_需求基础.md",
+    "2023Spring/操作系统/assets/Pasted image 20230320143048.png",
+    "2023Spring/操作系统/assets",
+    "2023Spring/操作系统/03_多线程.md",
+    "2023Spring/操作系统/02_处理器管理.md",
     "2023Spring/数据管理基础/05_SQL.md",
+    "其他/SE2.md",
+    "2023Spring/数据管理基础/lab/lab3.md",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230320114849.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230320114027.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230320114017.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230320112800.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230320112141.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230320111928.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230320110606.png",
+    "2023Spring/操作系统/lab/lab01.md",
+    "2023Spring/操作系统/lab/整数除法.md",
+    "2023Spring/软工二/6_需求基础.md",
     "2023Spring/软工二/4_后端开发基础.md",
     "2023Spring/软工二/5_项目启动.md",
     "2023Spring/软工二/1_Overview.md",
@@ -212,13 +199,6 @@
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110521.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110508.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110455.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110349.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110335.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110316.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110250.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110151.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230316110028.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230316105230.png",
     "Pasted image 20230315232322.png.md",
     "2023Spring/数据管理基础/lab/lab01.md",
     "2023Spring/操作系统/lab/assets",
@@ -228,19 +208,13 @@
     "2023Spring/数据管理基础/lab/assets",
     "大创",
     "2023Spring/西方音乐通论/西方音乐通论.md",
-    "2023Spring/操作系统/03_多线程.md",
-    "2023Spring/操作系统/02_处理器管理.md",
     "2023Spring/编译原理/00_介绍.md",
     "2023Spring/数据管理基础/mysql使用.md",
-    "其他/PAs.md",
-    "2023Spring/数据管理基础/00_课程概要.md",
-    "2023Spring/操作系统/00_lab.md",
     "2023Spring/操作系统/lab",
     "2023Spring/数据管理基础/lab/assert",
     "2023Spring/数据管理基础/lab",
     "未命名.canvas",
     "2023Spring/西方音乐通论",
-    "西方音乐通论",
-    "其他"
+    "西方音乐通论"
   ]
 }

@@ -355,7 +355,7 @@ SELECT Sname
 
 #### 用EXISTS/NOT EXISTS实现全称量词
 
-可以把带有全称量词的谓词转换为等价的带有存在量词的谓词：
+
 ![](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/17/df48423102be88d76ac8f83502203235_202303171518892.png)
 
 SQL语言中没有全称量词（for all），但用存在量词可以实现等价的效果
