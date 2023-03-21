@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 300.5,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
+                "file": "2023Spring/编译原理/02_词法分析.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md"
+                "file": "2023Spring/编译原理/02_词法分析.md"
               }
             }
           },
@@ -146,11 +147,12 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,10 +171,13 @@
   },
   "active": "6a9d8123aa98ca2a",
   "lastOpenFiles": [
+    "2023Spring/操作系统/lab/整数除法.md",
+    "2023Spring/编译原理/02_词法分析.md",
+    "2023Spring/操作系统/lab/lab01.md",
+    "2023Spring/数据管理基础/05_SQL.md",
     "2023Spring/数据管理基础/lab/lab03.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230321163606.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230321163532.png",
-    "2023Spring/数据管理基础/05_SQL.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230321163131.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230321163111.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230321162820.png",
@@ -185,12 +190,10 @@
     "未命名.md",
     "2023Spring/软工二/6_需求基础.md",
     "其他/PAs.md",
-    "2023Spring/操作系统/lab/lab01.md",
     "2023Spring/操作系统/02_处理器管理.md",
     "2023Spring/操作系统/assets",
     "2023Spring/操作系统/03_多线程.md",
     "其他/SE2.md",
-    "2023Spring/操作系统/lab/整数除法.md",
     "2023Spring/软工二/4_后端开发基础.md",
     "2023Spring/软工二/5_项目启动.md",
     "2023Spring/软工二/1_Overview.md",
@@ -204,7 +207,6 @@
     "Pasted image 20230315232322.png.md",
     "2023Spring/数据管理基础/lab/lab01.md",
     "2023Spring/操作系统/lab/assets",
-    "2023Spring/编译原理/02_词法分析.md",
     "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/编译原理/asserts",
     "2023Spring/数据管理基础/lab/assets",
