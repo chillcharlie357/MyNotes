@@ -16,6 +16,10 @@
 ![image-code](assets/image-code.png)
 
 
+`$`:当前地址
+`$$`:当前扇区的起始地址
+[x86 - What is the difference between Times and Dup in Assembly Language? ](https://softwareengineering.stackexchange.com/questions/165025/what-is-the-difference-between-times-and-dup-in-assembly-language?newreg=f1626a136f5d4aa098cb03bbb585c112)
+
 ## bochsrc
 bochs的配置文件
 ```
@@ -38,5 +42,11 @@ boot: floppy
 [[整数除法]]
 
 使⽤NASM汇编语⾔实现整数除法。 
-输⼊：被除数x和除数y ，其中$0\le x,y \le 10^100$ 
+输⼊：被除数x和除数y ，其中$0\le x,y \le 10^{100}$ 
 输出：计算$x \div y$的结果，包括商和余数。若出错则输出错误信息。
+
+
+## 寄存器
+
+
+
