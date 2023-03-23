@@ -2,7 +2,7 @@
 如何查看torch是否正确调用GPU
 ```shell
 import torch
-torch.cuda.is_avaliable()//cuda是否可用
+torch.cuda.is_available//cuda是否可用
 torch.cuda.current_device()//查看cuda调用设备
 torch.cuda.device(<设备号>)
 torch.cuda.get_device_name(<设备号>)//设备名称

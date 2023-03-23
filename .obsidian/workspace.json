@@ -8,55 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6a9d8123aa98ca2a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/操作系统/lab/lab01.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "cfd6028416c1e68f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/OS_SE_lab.md",
+                "file": "2023Spring/数据管理基础/05_SQL.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "e8107f104d2783bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "大创/3.14.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f80a16f8f1d3cc5c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "大创/3.22.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5d2c627d403be686",
+            "id": "119ccec45a99990c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -68,19 +32,30 @@
             }
           },
           {
-            "id": "b07cf925c9693d04",
+            "id": "34525bb0072282da",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022Fall/计算机组织与结构/05_整数运算.md",
+                "file": "2023Spring/操作系统/03_存储器.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "95adc27d8d467317",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/操作系统/lab/lab01.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,7 +105,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 300.5,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -146,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/OS_SE_lab.md",
+                "file": "2023Spring/数据管理基础/05_SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/OS_SE_lab.md",
+                "file": "2023Spring/数据管理基础/05_SQL.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -186,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/OS_SE_lab.md"
+                "file": "2023Spring/数据管理基础/05_SQL.md"
               }
             }
           },
@@ -207,11 +183,12 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,14 +205,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9cb0452532d6ebcc",
+  "active": "cfd6028416c1e68f",
   "lastOpenFiles": [
-    "2023Spring/操作系统/lab/lab01.md",
-    "大创/3.22.md",
-    "大创/3.14.md",
-    "2022Fall/计算机组织与结构/05_整数运算.md",
-    "2023Spring/操作系统/lab/整数除法.md",
     "其他/OS_SE_lab.md",
+    "2023Spring/操作系统/lab/整数除法.md",
+    "2023Spring/操作系统/02_处理器管理.md",
+    "2023Spring/操作系统/03_存储器.md",
+    "2023Spring/操作系统/lab/lab01.md",
+    "2022Fall/计算机组织与结构/05_整数运算.md",
+    "大创/3.14.md",
+    "其他/troubleshooting.md",
+    "大创/3.22.md",
     "2023Spring/编译原理/02_词法分析.md",
     "2023Spring/数据管理基础/05_SQL.md",
     "2023Spring/数据管理基础/lab/lab03.md",
@@ -253,7 +233,6 @@
     "未命名.md",
     "2023Spring/软工二/6_需求基础.md",
     "其他/PAs.md",
-    "2023Spring/操作系统/02_处理器管理.md",
     "2023Spring/操作系统/assets",
     "2023Spring/操作系统/03_多线程.md",
     "其他/SE2.md",
@@ -264,9 +243,7 @@
     "2023Spring/数据管理基础/lab/lab02.md",
     "其他/git.md",
     "其他/linux各种环境配置.md",
-    "其他/troubleshooting.md",
     "Pasted image 20230315232322.png.md",
-    "2023Spring/数据管理基础/lab/lab01.md",
     "2023Spring/操作系统/lab/assets",
     "2023Spring/编译原理/asserts",
     "2023Spring/数据管理基础/lab/assets",

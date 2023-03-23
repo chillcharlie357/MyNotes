@@ -45,6 +45,7 @@ boot: floppy
 输⼊：被除数x和除数y ，其中$0\le x,y \le 10^{100}$ 
 输出：计算$x \div y$的结果，包括商和余数。若出错则输出错误信息。
 
+nasm -felf32 div.asm && ld  -melf_i386 div.o && ./a.out
 
 ## 寄存器
 

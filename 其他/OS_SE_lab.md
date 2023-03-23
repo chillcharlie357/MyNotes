@@ -32,6 +32,8 @@ To fix this error, you will need to either recompile the `div.o` object file for
 
 If you are unsure about the architecture of your system or the object files, you can use the `file` command to check. For example, running `file div.o` will show you the architecture of the `div.o` object file.
 
+## GDB调试
+[NASM与GDB的使用指南：如何编好你的汇编 - 知乎](https://zhuanlan.zhihu.com/p/263102219)
 # BOCHS
 ## 安装
 依赖库
