@@ -4,59 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "eddba0ae7fe8780a",
+        "id": "e13536a5658a80bd",
         "type": "tabs",
         "children": [
           {
-            "id": "cfd6028416c1e68f",
+            "id": "f3679aa7ee23f26e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/数据管理基础/05_SQL.md",
+                "file": "大创/3.22.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "1dabcbd8fdd7d223",
+            "id": "5c039edef1919c05",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/数据管理基础/06_安全性.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "382852eb2baad32d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "其他/git.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "55a7590d33c9fcfc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/数据管理基础/03_数据库结构与组成.md",
+                "file": "其他/OS_SE_lab.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/git.md",
+                "file": "其他/OS_SE_lab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/git.md",
+                "file": "其他/OS_SE_lab.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -162,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/git.md"
+                "file": "其他/OS_SE_lab.md"
               }
             }
           },
@@ -183,12 +159,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,9 +180,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "382852eb2baad32d",
+  "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
+    "大创/3.22.md",
+    "大创/环境配置 2.0.md",
+    "其他/OS_SE_lab.md",
+    "2022Fall/计算机组织与结构/05_整数运算.md",
+    "其他/ubuntu.md",
+    "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/编译原理/02_词法分析.md",
+    "2023Spring/操作系统/lab/lab01.md",
+    "其他/git.md",
     "2023Spring/编译原理/assets/Pasted image 20230323200010.png",
     "2023Spring/编译原理/assets",
     "2023Spring/数据管理基础/06_安全性.md",
@@ -215,15 +198,11 @@
     "2023Spring/数据管理基础/05_SQL.md",
     "2023Spring/数据管理基础/03_数据库结构与组成.md",
     "2023Spring/数据管理基础/02_数据模型.md",
-    "其他/OS_SE_lab.md",
     "2023Spring/操作系统/lab/整数除法.md",
     "2023Spring/操作系统/02_处理器管理.md",
     "2023Spring/操作系统/03_存储器.md",
-    "2023Spring/操作系统/lab/lab01.md",
-    "2022Fall/计算机组织与结构/05_整数运算.md",
     "大创/3.14.md",
     "其他/troubleshooting.md",
-    "大创/3.22.md",
     "2023Spring/数据管理基础/lab/lab03.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230321163606.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230321163532.png",
@@ -241,9 +220,6 @@
     "2023Spring/操作系统/assets",
     "2023Spring/操作系统/03_多线程.md",
     "其他/SE2.md",
-    "2023Spring/软工二/4_后端开发基础.md",
-    "2023Spring/软工二/5_项目启动.md",
-    "2023Spring/软工二/1_Overview.md",
     "2023Spring/操作系统/lab/assets",
     "2023Spring/编译原理/asserts",
     "2023Spring/数据管理基础/lab/assets",

@@ -1,4 +1,8 @@
+
+[高精度数（大整数）除法 - 简书](https://www.jianshu.com/p/769f8ae05b89)
+
 # NASM
+
 ## Tutorials
 [NASM Tutorial](https://nasm-tutorial.akash.website/basic/assembly.html)
 
@@ -33,7 +37,29 @@ To fix this error, you will need to either recompile the `div.o` object file for
 If you are unsure about the architecture of your system or the object files, you can use the `file` command to check. For example, running `file div.o` will show you the architecture of the `div.o` object file.
 
 ## GDB调试
-[NASM与GDB的使用指南：如何编好你的汇编 - 知乎](https://zhuanlan.zhihu.com/p/263102219)
+[Get Started with our GNU Debugger Tutorial | Red Hat Developer](https://developers.redhat.com/blog/2021/04/30/the-gdb-developers-gnu-debugger-tutorial-part-1-getting-started-with-the-debugger)
+[介绍 | 100个gdb小技巧](https://wizardforcel.gitbooks.io/100-gdb-tips/content/)
+
+
+![](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/24/65f6080c772b12a39ad18e7446a97ed5_202303241016852.png)
+
+- 调试时显示汇编源码
+```gdb
+layout asm
+```
+- 调试时显示寄存器
+```gdb
+layout regs
+```
+
+- 单步执行`ni`和`si`
+	- 与s与n的区别在于：s与n是C语言级别的单步调试，si与ni是汇编级别的单步调试
+
+
+- x 打印 `.data`段数据时要加`&` (取地址)
+```gdb
+x /4b &did_len
+```
 # BOCHS
 ## 安装
 依赖库

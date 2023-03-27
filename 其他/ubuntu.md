@@ -20,7 +20,11 @@ grub里可以` exec` 切换`lightdm` 和`gdm3`
 
 ## APPImage
 文档
-[[总结 - AppImage中文文档](https://doc.appimage.cn/docs/wiki/)]
+[总结 - AppImage中文文档](https://doc.appimage.cn/docs/wiki/)
+
+- 先`chmod +x`
+- 再放到合适的目录下
+- 
 ### AppImage应用安放在哪里比较合适？
 如果你不想把它们放在`$HOME/Downloads`中，那么 `$HOME/.local/bin 和 $HOME/bin `是很好的选择：
 
