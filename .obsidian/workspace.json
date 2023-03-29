@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5a0aa92e7b5cec53",
+        "id": "0e5fdc468a547040",
         "type": "tabs",
         "children": [
           {
-            "id": "468ea7760fafeaff",
+            "id": "1fc405bea0ca3e7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/数据管理基础/06_安全性.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6ac2ee9c544747cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/数据管理基础/07_完整性.md",
+                "file": "2023Spring/编译原理/03_语法分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5,
-    "collapsed": true
+    "width": 300.5
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/数据管理基础/06_安全性.md",
+                "file": "2023Spring/编译原理/03_语法分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/数据管理基础/06_安全性.md",
+                "file": "2023Spring/编译原理/03_语法分析.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/数据管理基础/06_安全性.md"
+                "file": "2023Spring/编译原理/03_语法分析.md"
               }
             }
           },
@@ -182,8 +169,20 @@
   },
   "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
-    "2023Spring/数据管理基础/07_完整性.md",
+    "2023Spring/数据管理基础/lab/lab03.md",
+    "2023Spring/数据管理基础/lab/lab4.md",
     "2023Spring/数据管理基础/06_安全性.md",
+    "2023Spring/数据管理基础/07_完整性.md",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222951.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222730.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222712.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222346.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222145.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222003.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328221952.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328221742.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328221243.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328221125.png",
     "2023Spring/软工二/6_需求基础.md",
     "2023Spring/数据管理基础/mysql使用.md",
     "2023Spring/软工二/7_需求分析⽅法.md",
@@ -198,7 +197,6 @@
     "其他/ubuntu.md",
     "2023Spring/操作系统/lab/lab01.md",
     "其他/git.md",
-    "2023Spring/编译原理/assets/Pasted image 20230323200010.png",
     "2023Spring/编译原理/assets",
     "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/数据管理基础/05_SQL.md",
@@ -208,17 +206,6 @@
     "2023Spring/操作系统/02_处理器管理.md",
     "大创/3.14.md",
     "其他/troubleshooting.md",
-    "2023Spring/数据管理基础/lab/lab03.md",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230321163606.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230321163532.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230321163131.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230321163111.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230321162820.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230321162730.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230321162526.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230321162222.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230321160648.png",
-    "未命名 1.md",
     "2023Spring/操作系统/assets",
     "2023Spring/操作系统/lab/assets",
     "2023Spring/编译原理/asserts",
