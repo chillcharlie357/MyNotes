@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md",
+                "file": "其他/ubuntu.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md",
+                "file": "其他/ubuntu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md",
+                "file": "其他/ubuntu.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md"
+                "file": "其他/ubuntu.md"
               }
             }
           },
@@ -167,8 +167,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9cb0452532d6ebcc",
+  "active": "1fc405bea0ca3e7e",
   "lastOpenFiles": [
+    "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/数据管理基础/lab/lab03.md",
     "2023Spring/数据管理基础/lab/lab4.md",
     "2023Spring/数据管理基础/06_安全性.md",
@@ -190,7 +191,6 @@
     "大创/3.22.md",
     "2023Spring/操作系统/03_存储器.md",
     "2023Spring/编译原理/02_词法分析.md",
-    "2023Spring/编译原理/03_语法分析.md",
     "其他/OS_SE_lab.md",
     "大创/环境配置 2.0.md",
     "2022Fall/计算机组织与结构/05_整数运算.md",

@@ -52,3 +52,12 @@ ubuntu默认无法通过su获得root权限，因为没有密码
 - 删除行首的空格？
 	- `%s/^\s\+//`
 [linux - vim技巧：删除行首、行末的空白字符，删除空白行 - 南木阁 - SegmentFault 思否](https://segmentfault.com/a/1190000021058245)
+
+
+# 切换显示管理器(Dispaly Manager)
+
+```shell
+sudo sudo dpkg-reconfigure <option>
+```
+
+一般系统自带`gdm3`和`lightgdm`
