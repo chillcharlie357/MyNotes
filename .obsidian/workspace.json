@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/数据管理基础/07_完整性.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 300.5,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/数据管理基础/07_完整性.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/数据管理基础/07_完整性.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/ubuntu.md"
+                "file": "2023Spring/数据管理基础/07_完整性.md"
               }
             }
           },
@@ -167,13 +168,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1fc405bea0ca3e7e",
+  "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
-    "2023Spring/编译原理/03_语法分析.md",
-    "2023Spring/数据管理基础/lab/lab03.md",
-    "2023Spring/数据管理基础/lab/lab4.md",
+    "2023Spring/数据管理基础/02_数据模型.md",
+    "2023Spring/数据管理基础/05_SQL.md",
     "2023Spring/数据管理基础/06_安全性.md",
     "2023Spring/数据管理基础/07_完整性.md",
+    "2023Spring/编译原理/03_语法分析.md",
+    "2023Spring/编译原理/assets/Pasted image 20230330150240.png",
+    "2023Spring/编译原理/assets",
+    "其他/ubuntu.md",
+    "2023Spring/数据管理基础/mysql使用.md",
+    "2023Spring/数据管理基础/lab/lab04.md",
+    "2023Spring/操作系统/03_存储器.md",
+    "2023Spring/数据管理基础/lab/lab03.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222951.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222730.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222712.png",
@@ -183,29 +191,21 @@
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230328221952.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230328221742.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230328221243.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230328221125.png",
     "2023Spring/软工二/6_需求基础.md",
-    "2023Spring/数据管理基础/mysql使用.md",
     "2023Spring/软工二/7_需求分析⽅法.md",
     "2023Spring/西方音乐通论/西方音乐通论.md",
     "大创/3.22.md",
-    "2023Spring/操作系统/03_存储器.md",
     "2023Spring/编译原理/02_词法分析.md",
     "其他/OS_SE_lab.md",
     "大创/环境配置 2.0.md",
     "2022Fall/计算机组织与结构/05_整数运算.md",
-    "其他/ubuntu.md",
     "2023Spring/操作系统/lab/lab01.md",
     "其他/git.md",
-    "2023Spring/编译原理/assets",
     "2023Spring/编译原理/01_编译原理概述.md",
-    "2023Spring/数据管理基础/05_SQL.md",
     "2023Spring/数据管理基础/03_数据库结构与组成.md",
-    "2023Spring/数据管理基础/02_数据模型.md",
     "2023Spring/操作系统/lab/整数除法.md",
     "2023Spring/操作系统/02_处理器管理.md",
     "大创/3.14.md",
-    "其他/troubleshooting.md",
     "2023Spring/操作系统/assets",
     "2023Spring/操作系统/lab/assets",
     "2023Spring/编译原理/asserts",

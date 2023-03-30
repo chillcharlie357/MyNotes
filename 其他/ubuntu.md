@@ -9,7 +9,7 @@ tar -zxvf <包的文件名> -C <解压目录>
 一般的放到`/opt/`下
 
 - 快捷方式创建
-[【包学包会】【Zotero篇】Linux安装、重装和备份，换新电脑再也不用麻烦啦！不同系统的配置文件是通用的，香。 - 知乎](https://zhuanlan.zhihu.com/p/436241013)
+[【Zotero篇】Linux安装、重装和备份，换新电脑再也不用麻烦啦！不同系统的配置文件是通用的，香。 - 知乎](https://zhuanlan.zhihu.com/p/436241013)
 
 ## deb包
 `dpkg -i`
@@ -28,8 +28,8 @@ grub里可以` exec` 切换`lightdm` 和`gdm3`
 ### AppImage应用安放在哪里比较合适？
 如果你不想把它们放在`$HOME/Downloads`中，那么 `$HOME/.local/bin 和 $HOME/bin `是很好的选择：
 
-在 CentOS/RHEL 和 Fedora 上：脚本$HOME/.bash_profile在登录时运行，这个脚本将$HOME/.local/bin:$HOME/bin添加到路径中。
-在Ubuntu上：脚本$HOME/.profile在登录时运行，这个脚本将PATH="$HOME/bin:$HOME/.local/bin"添加到路径中。
+在 CentOS/RHEL 和 Fedora 上：脚本`\$HOME/.bash_profile`在登录时运行，这个脚本将`\$HOME/.local/bin:$HOME/bin`添加到路径中。
+在Ubuntu上：脚本`$HOME/.profile`在登录时运行，这个脚本将`PATH="\$HOME/bin:HOME/.local/bin"`添加到路径中。
 此外，存储任何其他位置也是可以，例如U盘，网络位置或光盘，但是这样AppImage应用的路径不在环境变量中，意味着不能简单地在终端输入应用名来运行，而必须使用完整的路径。
 
 # 终端复用
