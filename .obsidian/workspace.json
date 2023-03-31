@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0e5fdc468a547040",
+        "id": "e104450835ca7f4f",
         "type": "tabs",
         "children": [
           {
-            "id": "1fc405bea0ca3e7e",
+            "id": "ede173b727f9044e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -81,6 +81,24 @@
         "type": "tabs",
         "children": [
           {
+            "id": "a21e16f0f748ac69",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2023Spring/编译原理/03_语法分析.md"
+              }
+            }
+          },
+          {
+            "id": "9cb0452532d6ebcc",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
+          {
             "id": "70bf09b0e07825f7",
             "type": "leaf",
             "state": {
@@ -121,66 +139,60 @@
             }
           },
           {
-            "id": "e5a0a59b1885c06e",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md"
-              }
-            }
-          },
-          {
-            "id": "9cb0452532d6ebcc",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
-            }
-          },
-          {
             "id": "f8701efb4139c008",
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "e80c01623bdb91e5",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 305.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
-      "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
       "workspaces:管理工作区布局": false,
       "random-note:开始漫游笔记": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "zk-prefixer:创建时间戳笔记": false
     }
   },
   "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
+    "202303311508.md",
+    "2023Spring/编译原理/03_语法分析.md",
+    "2023Spring/操作系统/02_处理器管理.md",
+    "2023Spring/操作系统/03_存储器.md",
+    "2022Fall/计算机组织与结构/16_总线.md",
+    "2023Spring/软工二/7_需求分析⽅法.md",
+    "2023Spring/软工二/未命名.md",
     "2023Spring/数据管理基础/07_完整性.md",
     "2023Spring/数据管理基础/02_数据模型.md",
     "2023Spring/数据管理基础/05_SQL.md",
     "2023Spring/数据管理基础/06_安全性.md",
-    "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/编译原理/assets/Pasted image 20230330150240.png",
     "2023Spring/编译原理/assets",
     "其他/ubuntu.md",
     "2023Spring/数据管理基础/mysql使用.md",
     "2023Spring/数据管理基础/lab/lab04.md",
-    "2023Spring/操作系统/03_存储器.md",
     "2023Spring/数据管理基础/lab/lab03.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222951.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230328222730.png",
@@ -192,7 +204,6 @@
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230328221742.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230328221243.png",
     "2023Spring/软工二/6_需求基础.md",
-    "2023Spring/软工二/7_需求分析⽅法.md",
     "2023Spring/西方音乐通论/西方音乐通论.md",
     "大创/3.22.md",
     "2023Spring/编译原理/02_词法分析.md",
@@ -203,9 +214,6 @@
     "其他/git.md",
     "2023Spring/编译原理/01_编译原理概述.md",
     "2023Spring/数据管理基础/03_数据库结构与组成.md",
-    "2023Spring/操作系统/lab/整数除法.md",
-    "2023Spring/操作系统/02_处理器管理.md",
-    "大创/3.14.md",
     "2023Spring/操作系统/assets",
     "2023Spring/操作系统/lab/assets",
     "2023Spring/编译原理/asserts",

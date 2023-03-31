@@ -11,5 +11,6 @@
   "oz-image-plugin",
   "obsidian-title-index",
   "templater-obsidian",
-  "dataview"
+  "dataview",
+  "mermaid-tools"
 ]
