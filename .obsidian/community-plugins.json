@@ -8,10 +8,10 @@
   "obsidian-footnotes",
   "editing-toolbar",
   "cm-editor-syntax-highlight-obsidian",
-  "oz-image-plugin",
   "obsidian-title-index",
   "templater-obsidian",
   "dataview",
   "mermaid-tools",
-  "obsidian-pandoc"
+  "obsidian-pandoc",
+  "obsidian-annotator"
 ]

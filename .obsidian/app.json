@@ -14,5 +14,6 @@
     "downscalePercent": 100
   },
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "./assets"
+  "attachmentFolderPath": "./assets",
+  "showLineNumber": false
 }
