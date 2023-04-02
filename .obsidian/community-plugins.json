@@ -12,5 +12,6 @@
   "obsidian-title-index",
   "templater-obsidian",
   "dataview",
-  "mermaid-tools"
+  "mermaid-tools",
+  "obsidian-pandoc"
 ]

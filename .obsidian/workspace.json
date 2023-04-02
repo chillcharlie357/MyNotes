@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0d4d359fc47c6e74",
+        "id": "2a675673b45a222a",
         "type": "tabs",
         "children": [
           {
-            "id": "a3e63f8f5291218a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "92e8297160183ec0",
+            "id": "803ef906f7be4e40",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -189,9 +176,10 @@
   },
   "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
-    "2023Spring/编译原理/assets/test1.sysy",
-    "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/编译原理/Lab02_Visitor模式.md",
+    "2023Spring/编译原理/03_语法分析.md",
+    "2023Spring/编译原理/assets/Pasted image 20230330150240.png",
+    "2023Spring/编译原理/assets/test1.sysy",
     "2023Spring/数据管理基础/06_安全性.md",
     "2023Spring/数据管理基础/lab/lab05.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402154851.png",
@@ -204,7 +192,6 @@
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402142015.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402141515.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402140840.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230402140506.png",
     "2023Spring/软工二/7_需求分析⽅法.md",
     "2023Spring/软工二/Spring Boot.md",
     "2023Spring/编译原理/02_词法分析.md",
@@ -234,7 +221,6 @@
     "2023Spring/操作系统/lab",
     "2023Spring/数据管理基础/lab/assert",
     "2023Spring/数据管理基础/lab",
-    "未命名.canvas",
-    "2023Spring/西方音乐通论"
+    "未命名.canvas"
   ]
 }

@@ -9,7 +9,9 @@ ParseTree tree = sysYParser.program();
 
 `ParseTree`是抽象语法树的节点，`sysYParser`是词法分析器，两个并不具备包含关系。
 
----
+
+<div style="page-break-after: always;"></div>
+
 
 调用图如下：
 - ProgramContext
@@ -44,6 +46,9 @@ RuleNode  -->  ParseTree
 SyntaxTree  -->  Tree 
 
 ```
+
+<div style="page-break-after: always;"></div>
+
 - CompUnitContext
 
 ```mermaid
@@ -78,6 +83,7 @@ SyntaxTree  -->  Tree
 
 ```
 
+<div style="page-break-after: always;"></div>
 
 # Visitor的运行机制
 
@@ -109,6 +115,8 @@ visitor.visit(tree);
 ```
 
 这个`tree`的声明类型是`ParseTree`，但显然它的实际类型是`ProgramContext`，所以这个语句会调用`SysyParser.ProgramContext`类中的`accept`。
+
+注意：`ProgramContext`、`CompUnitContext`等类都是`SysyParser`内部的`static`类，因此`accept`方法并不能说是`SysyParser`，而是每个抽象语法树的节点里的。
 
 ```java
 @Override  
