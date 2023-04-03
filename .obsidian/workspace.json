@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/数据管理基础/mysql使用.md",
+                "file": "2023Spring/软工二/Spring Boot.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/数据管理基础/mysql使用.md"
+                "file": "2023Spring/软工二/Spring Boot.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/数据管理基础/mysql使用.md",
+                "file": "2023Spring/软工二/Spring Boot.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/数据管理基础/mysql使用.md",
+                "file": "2023Spring/软工二/Spring Boot.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -176,6 +176,15 @@
   },
   "active": "9dd4fd747845426a",
   "lastOpenFiles": [
+    "2023Spring/软工二/7_需求分析⽅法.md",
+    "2023Spring/软工二/6_需求基础.md",
+    "2023Spring/软工二/5_项目启动.md",
+    "2023Spring/软工二/4_后端开发基础.md",
+    "2023Spring/软工二/3_前端开发基础.md",
+    "2023Spring/软工二/3.md",
+    "2023Spring/软工二/2_SE历史发展.md",
+    "2023Spring/软工二/1_Overview.md",
+    "2023Spring/数据管理基础/mysql使用.md",
     "2023Spring/数据管理基础/07_完整性.md",
     "2023Spring/数据管理基础/06_安全性.md",
     "2023Spring/数据管理基础/05_SQL.md",
@@ -193,16 +202,7 @@
     "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/编译原理/02_词法分析.md",
     "2023Spring/编译原理/01_编译原理概述.md",
-    "2023Spring/编译原理/00_介绍.md",
-    "其他/OS_SE_lab.md",
-    "template/note_template.md",
-    "2023Spring/软工二/Spring Boot.md",
     "大创/DL/assets/(图灵程序设计丛书) 作者：[日] 斋藤康毅 译者：陆宇杰 - 深度学习进阶：自然语言处理-人民邮电出版社 (2020).pdf",
-    "大创/DL/深度学习进阶：自然语言处理.md",
-    "大创/DL/深度学习入门.md",
-    "大创/deepxpore_paper.md",
-    "大创/deepxplore.md",
-    "大创/MUNIT环境配置 2.0.md",
     "大创/DL/assets/(图灵程序设计丛书) 斋藤康毅 - 深度学习入门：基于Python的理论与实现-人民邮电出版社 (2018).pdf",
     "大创/DL/assets",
     "大创/DL",
