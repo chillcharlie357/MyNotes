@@ -1,3 +1,19 @@
+---
+title: 05_SQL
+tags: 2023_Spring数据管理基础 课程
+categories: 2023_Spring数据管理基础
+date:  2023-03-16 10:26
+modified:  星期一 3日 四月 2023 15:31:12
+sticky:
+thumbnail:
+cover: 
+excerpt: false
+mathjax: true
+comment: true
+---
+
+
+
 - **SQL（Structured Query Language）** 结构化查询语言，是关系数据库的标准语言
  是一个ISO标准，变种和版本极多，概念和实际实现也有差异
 - 本课程使用MySQL，环境无所谓

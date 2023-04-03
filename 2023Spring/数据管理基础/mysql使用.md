@@ -1,3 +1,19 @@
+---
+title: mysql使用
+tags: 2023_Spring数据管理基础 课程 
+categories: 2023_Spring数据管理基础
+date:  2023-03-03 20:47
+modified:  星期一 3日 四月 2023 15:31:52
+sticky:
+thumbnail:
+cover: 
+excerpt: false
+mathjax: true
+comment: true
+---
+
+
+
 # terminal
 ## 登陆
 - 终端输入`mysql -u root -p`  ，然后输入密码即可
