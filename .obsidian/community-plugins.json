@@ -13,5 +13,6 @@
   "dataview",
   "mermaid-tools",
   "obsidian-pandoc",
-  "obsidian-annotator"
+  "obsidian-annotator",
+  "language-translator"
 ]
