@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/OS_SE_lab.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ae63a20a8eb056d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "template/note_template.md",
+                "file": "2023Spring/编译原理/Lab02_Visitor模式.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "template/note_template.md"
+                "file": "2023Spring/编译原理/Lab02_Visitor模式.md"
               }
             }
           },
@@ -116,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "template/note_template.md",
+                "file": "2023Spring/编译原理/Lab02_Visitor模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "template/note_template.md",
+                "file": "2023Spring/编译原理/Lab02_Visitor模式.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -187,11 +174,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ae63a20a8eb056d2",
+  "active": "9a31ba855b45d58b",
   "lastOpenFiles": [
-    "2023Spring/软工二/Spring Boot.md",
-    "template/note_template.md",
+    "2023Spring/编译原理/03_语法分析.md",
+    "2023Spring/编译原理/02_词法分析.md",
+    "2023Spring/编译原理/01_编译原理概述.md",
+    "2023Spring/编译原理/00_介绍.md",
     "其他/OS_SE_lab.md",
+    "template/note_template.md",
+    "2023Spring/软工二/Spring Boot.md",
     "2023Spring/操作系统/lab/lab01.md",
     "大创/DL/assets/(图灵程序设计丛书) 作者：[日] 斋藤康毅 译者：陆宇杰 - 深度学习进阶：自然语言处理-人民邮电出版社 (2020).pdf",
     "大创/DL/深度学习进阶：自然语言处理.md",
@@ -221,11 +212,7 @@
     "README.md",
     "202303311508.md",
     "2023Spring/操作系统/lab/docs/lab02/gcc+nasm.md",
-    "未命名.md",
-    "2023Spring/软工二/未命名.md",
-    "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/编译原理/assets/Pasted image 20230330150240.png",
-    "2023Spring/数据管理基础/06_安全性.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402154851.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402154839.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402143927.png",
