@@ -8,17 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "82d3eb8a2e4606ce",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "2023Spring/操作系统/lab/lab01.md",
-                "staged": false
-              }
-            }
-          },
-          {
             "id": "9a31ba855b45d58b",
             "type": "leaf",
             "state": {
@@ -29,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ae63a20a8eb056d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "template/note_template.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -80,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 249.5,
-    "collapsed": true
+    "width": 249.5
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -96,7 +97,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "template/note_template.md"
+              }
             }
           },
           {
@@ -113,6 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "template/note_template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,6 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "template/note_template.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -182,10 +187,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "82d3eb8a2e4606ce",
+  "active": "ae63a20a8eb056d2",
   "lastOpenFiles": [
-    "2023Spring/操作系统/lab/lab01.md",
+    "2023Spring/软工二/Spring Boot.md",
+    "template/note_template.md",
     "其他/OS_SE_lab.md",
+    "2023Spring/操作系统/lab/lab01.md",
     "大创/DL/assets/(图灵程序设计丛书) 作者：[日] 斋藤康毅 译者：陆宇杰 - 深度学习进阶：自然语言处理-人民邮电出版社 (2020).pdf",
     "大创/DL/深度学习进阶：自然语言处理.md",
     "大创/DL/深度学习入门.md",
@@ -219,13 +226,11 @@
     "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/编译原理/assets/Pasted image 20230330150240.png",
     "2023Spring/数据管理基础/06_安全性.md",
-    "2023Spring/数据管理基础/lab/lab05.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402154851.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402154839.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402143927.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402143910.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402143411.png",
-    "2023Spring/数据管理基础/07_完整性.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402142047.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402142015.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230402141515.png",
