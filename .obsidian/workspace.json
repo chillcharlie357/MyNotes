@@ -1,21 +1,18 @@
 {
   "main": {
-    "id": "de293ad95eec3d3d",
+    "id": "aea30a3e9ba80400",
     "type": "split",
     "children": [
       {
-        "id": "a26dc5a180c99c87",
+        "id": "3160e274427c4559",
         "type": "tabs",
         "children": [
           {
-            "id": "05ecb88fb138eebc",
+            "id": "df27ba067416cda5",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "2023Spring/软工二/7_需求分析⽅法.md",
-                "staged": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -24,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "84d05063171058fe",
+    "id": "4de869c39e8e7214",
     "type": "split",
     "children": [
       {
-        "id": "e4322925d3fb372f",
+        "id": "994586355e212e08",
         "type": "tabs",
         "children": [
           {
-            "id": "083ae430f266d1e9",
+            "id": "aa661d8a75ef034c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -42,7 +39,7 @@
             }
           },
           {
-            "id": "c1548cc0a80a208d",
+            "id": "c019fc52713ffe98",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -57,7 +54,7 @@
             }
           },
           {
-            "id": "36b4c3bb997acfac",
+            "id": "61cf1e31af1bf0fb",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -68,61 +65,30 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263.5
+    "width": 300
   },
   "right": {
-    "id": "4dc6bffe291c7e1c",
+    "id": "8af841629c44cda5",
     "type": "split",
     "children": [
       {
-        "id": "6ff8210d3b2455c5",
+        "id": "5c2ac6e762422000",
         "type": "tabs",
         "children": [
           {
-            "id": "a21e16f0f748ac69",
+            "id": "74677a62f83395a4",
             "type": "leaf",
             "state": {
-              "type": "outline",
-              "state": {}
-            }
-          },
-          {
-            "id": "9cb0452532d6ebcc",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "70bf09b0e07825f7",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
+              "type": "outgoing-link",
               "state": {
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
+                "file": "大创/cuda.md",
+                "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "24bdad6b06ed685a",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": true,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "f63232c2fa9b192c",
+            "id": "3bbfecc33cfb8924",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,81 +99,82 @@
             }
           },
           {
-            "id": "f8701efb4139c008",
+            "id": "48985f6e6e13901d",
             "type": "leaf",
             "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
+              "type": "outline",
+              "state": {
+                "file": "大创/cuda.md"
+              }
+            }
+          },
+          {
+            "id": "701b7c5465d9832f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "大创/cuda.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
-      "canvas:新建白板": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "templates:插入模板": false,
-      "workspaces:管理工作区布局": false,
-      "random-note:开始漫游笔记": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
-      "command-palette:打开命令面板": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "random-note:开始漫游笔记": false,
+      "workspaces:管理工作区布局": false
     }
   },
-  "active": "05ecb88fb138eebc",
+  "active": "74677a62f83395a4",
   "lastOpenFiles": [
-    "README.md",
-    "2023Spring/软工二/7_需求分析⽅法.md",
-    "大创/DL/深度学习入门.md",
-    "2023Spring/数据管理基础/lab/lab03.md",
-    "大创/会议记录/3.14.md",
-    "大创/DL/深度学习进阶：自然语言处理.md",
-    "2023Spring/数据管理基础/07_完整性.md",
-    "大创/会议记录/3.22.md",
-    "大创/deepxplore.md",
-    "2023Spring/编译原理/Lab02_Visitor模式.md",
-    "2023Spring/数据管理基础/lab/lab06.md",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203725.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203635.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203524.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203444.png",
-    "2023Spring/西方音乐通论/西方音乐通论.md",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403181743.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403171919.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403171717.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403170112.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403170049.png",
-    "2023Spring/数据管理基础/lab/lab02.md",
-    "2023Spring/操作系统/lab/lab01.md",
-    "2023Spring/数据管理基础/lab/Untitled.md",
+    "template/note_template.md",
     "未命名.md",
-    "2023Spring/软工二/Spring Boot.md",
+    "template/pdf_equb.md",
+    "template",
+    "2023Spring/软工二/7_需求分析⽅法.md",
+    "2023Spring/编译原理/Lab02_Visitor模式.md",
+    "2023Spring/编译原理/03_语法分析.md",
+    "2023Spring/数据管理基础/07_完整性.md",
+    "其他/SE2.md",
+    "其他/OS_SE_lab.md",
     "2023Spring/软工二/6_需求基础.md",
-    "2023Spring/软工二/5_项目启动.md",
-    "2023Spring/软工二/4_后端开发基础.md",
-    "2023Spring/软工二/3_前端开发基础.md",
-    "2023Spring/软工二/3.md",
-    "2023Spring/软工二/2_SE历史发展.md",
-    "2023Spring/软工二/1_Overview.md",
-    "2023Spring/数据管理基础/mysql使用.md",
     "2023Spring/数据管理基础/06_安全性.md",
-    "大创/DL/assets/深度学习进阶：自然语言处理.pdf",
-    "大创/DL/assets/深度学习入门：基于Python的理论与实现.pdf",
-    "大创/DL/assets",
-    "大创/DL",
-    "大创/会议记录",
-    "2023Spring/操作系统/lab/docs/lab02",
-    "2023Spring/操作系统/lab/docs/lab02/assets/静态链接动态链接.pdf",
-    "2023Spring/操作系统/lab/docs/lab02/assets/实模式与保护模式.pdf",
-    "2023Spring/操作系统/lab/docs/lab02/assets/2023 操作系统实验（二）.pdf",
-    "assets/2023 操作系统实验（二）.pdf",
-    "2023Spring/编译原理/assets/Pasted image 20230330150240.png",
-    "未命名.canvas"
+    "2023Spring/操作系统/03_存储器.md",
+    "2023Spring/数据管理基础/05_SQL.md",
+    "2023Spring/数据管理基础/03_数据库结构与组成.md",
+    "conflict-files-obsidian-git.md",
+    "2023Spring/数据管理基础/02_数据模型.md",
+    "2023Spring/数据管理基础/mysql使用.md",
+    "2023Spring/西方音乐通论/西方音乐通论.md",
+    "2023Spring/软工二/5_项目启动.md",
+    "其他/troubleshooting.md",
+    "其他/ubuntu.md",
+    "cuda.md",
+    "大创/cuda.md",
+    "其他/PAs.md",
+    "其他/git.md",
+    "其他/linux各种环境配置.md",
+    "2023Spring/操作系统/lab",
+    "2023Spring/数据管理基础/lab/assert/msedge_683_572.png"
   ]
 }
