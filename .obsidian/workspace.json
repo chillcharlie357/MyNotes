@@ -4,17 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a26dc5a180c99c87",
+        "id": "05292362a6ce960f",
         "type": "tabs",
         "children": [
           {
-            "id": "05ecb88fb138eebc",
+            "id": "b50d3e35c6f1135e",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "pdf-annotator",
               "state": {
-                "file": "2023Spring/软工二/7_需求分析⽅法.md",
-                "staged": false
+                "file": "大创/DL/深度学习入门.md"
               }
             }
           }
@@ -68,7 +67,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263.5
+    "width": 263.5,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -83,7 +83,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "大创/DL/深度学习入门.md"
+              }
             }
           },
           {
@@ -100,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "大创/DL/深度学习入门.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "大创/DL/深度学习入门.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -160,8 +164,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "05ecb88fb138eebc",
+  "active": "9cb0452532d6ebcc",
   "lastOpenFiles": [
+    "2023Spring/操作系统/lab/docs/lab02/gcc+nasm.md",
+    "2023Spring/操作系统/OS_SE_lab.md",
+    "2023Spring/操作系统/lab/docs/lab02/静态链接动态链接.md",
+    "2023Spring/操作系统/lab/docs/lab02/lab02要求.md",
+    "2023Spring/操作系统/lab/docs/lab02/实模式与保护模式.md",
+    "2023Spring/操作系统/lab/docs/lab02/FAT12简介.md",
+    "2023Spring/操作系统/lab/lab02.md",
     "README.md",
     "2023Spring/软工二/7_需求分析⽅法.md",
     "大创/DL/深度学习入门.md",
@@ -190,13 +201,6 @@
     "2023Spring/软工二/Spring Boot.md",
     "2023Spring/软工二/6_需求基础.md",
     "2023Spring/软工二/5_项目启动.md",
-    "2023Spring/软工二/4_后端开发基础.md",
-    "2023Spring/软工二/3_前端开发基础.md",
-    "2023Spring/软工二/3.md",
-    "2023Spring/软工二/2_SE历史发展.md",
-    "2023Spring/软工二/1_Overview.md",
-    "2023Spring/数据管理基础/mysql使用.md",
-    "2023Spring/数据管理基础/06_安全性.md",
     "大创/DL/assets/深度学习进阶：自然语言处理.pdf",
     "大创/DL/assets/深度学习入门：基于Python的理论与实现.pdf",
     "大创/DL/assets",
