@@ -4,33 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "05292362a6ce960f",
+        "id": "27ad039f55e35ec5",
         "type": "tabs",
         "children": [
           {
-            "id": "b50d3e35c6f1135e",
-            "type": "leaf",
-            "state": {
-              "type": "pdf-annotator",
-              "state": {
-                "file": "大创/DL/深度学习入门.md"
-              }
-            }
-          },
-          {
-            "id": "acaf889c5e7e693c",
+            "id": "bb440ea3ac97830d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -80,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263.5
+    "width": 263.5,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -96,16 +86,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md"
               }
-            }
-          },
-          {
-            "id": "9cb0452532d6ebcc",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
             }
           },
           {
@@ -114,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -157,7 +139,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -176,53 +158,52 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "acaf889c5e7e693c",
+  "active": "f8701efb4139c008",
   "lastOpenFiles": [
-    "大创/DL/深度学习入门.md",
-    "conflict-files-obsidian-git.md",
-    "大创/cuda.md",
-    "2023Spring/操作系统/lab/docs/lab02/gcc+nasm.md",
-    "2023Spring/操作系统/OS_SE_lab.md",
-    "2023Spring/操作系统/lab/docs/lab02/静态链接动态链接.md",
+    "2023Spring/软工二/7_需求分析⽅法.md",
+    "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/操作系统/lab/docs/lab02/lab02要求.md",
-    "2023Spring/操作系统/lab/docs/lab02/实模式与保护模式.md",
     "2023Spring/操作系统/lab/docs/lab02/FAT12简介.md",
+    "2023Spring/操作系统/lab/docs/lab02/assets/静态链接动态链接.pdf",
+    "2023Spring/操作系统/00_lab.md",
+    "大创/会议记录/4.7 4.8.md",
+    "大创/paper/TACTIC.md",
+    "大创/cuda.md",
+    "大创/未命名.md",
+    "大创/paper/assets/TACTIC.pdf",
+    "大创/paper/assets",
+    "大创/paper",
+    "2023Spring/数据管理基础/07_完整性.md",
+    "2023Spring/操作系统/lab/lab01.md",
+    "2023Spring/操作系统/OS_SE_lab.md",
+    "2023Spring/数据管理基础/08_数据库设计.md",
+    "2023Spring/数据管理基础/lab/lab06.md",
+    "2023Spring/操作系统/03_存储器.md",
+    "大创/DL/深度学习入门.md",
+    "大创/deepxpore_paper.md",
+    "其他/git.md",
+    "conflict-files-obsidian-git.md",
+    "2023Spring/操作系统/lab/docs/lab02/gcc+nasm.md",
+    "2023Spring/操作系统/lab/docs/lab02/静态链接动态链接.md",
+    "2023Spring/操作系统/lab/docs/lab02/实模式与保护模式.md",
     "2023Spring/操作系统/lab/lab02.md",
     "README.md",
-    "2023Spring/软工二/7_需求分析⽅法.md",
     "2023Spring/数据管理基础/lab/lab03.md",
-    "大创/会议记录/3.14.md",
-    "大创/DL/深度学习进阶：自然语言处理.md",
-    "2023Spring/数据管理基础/07_完整性.md",
-    "大创/会议记录/3.22.md",
-    "大创/deepxplore.md",
-    "2023Spring/编译原理/Lab02_Visitor模式.md",
-    "2023Spring/数据管理基础/lab/lab06.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203725.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203635.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203524.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203444.png",
-    "2023Spring/西方音乐通论/西方音乐通论.md",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403181743.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403171919.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403171717.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403170112.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403170049.png",
-    "2023Spring/数据管理基础/lab/lab02.md",
-    "2023Spring/操作系统/lab/lab01.md",
-    "2023Spring/数据管理基础/lab/Untitled.md",
-    "未命名.md",
-    "2023Spring/软工二/Spring Boot.md",
     "大创/DL/assets/深度学习进阶：自然语言处理.pdf",
     "大创/DL/assets/深度学习入门：基于Python的理论与实现.pdf",
     "大创/DL/assets",
     "大创/DL",
     "大创/会议记录",
     "2023Spring/操作系统/lab/docs/lab02",
-    "2023Spring/操作系统/lab/docs/lab02/assets/静态链接动态链接.pdf",
-    "2023Spring/操作系统/lab/docs/lab02/assets/实模式与保护模式.pdf",
-    "2023Spring/操作系统/lab/docs/lab02/assets/2023 操作系统实验（二）.pdf",
-    "assets/2023 操作系统实验（二）.pdf",
     "2023Spring/编译原理/assets/Pasted image 20230330150240.png",
     "未命名.canvas"
   ]
