@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/操作系统/OS_SE_lab.md",
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/操作系统/OS_SE_lab.md"
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md"
               }
             }
           },
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/操作系统/OS_SE_lab.md",
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/操作系统/OS_SE_lab.md",
+                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -159,6 +159,8 @@
   },
   "active": "01f28f89ecb1cfa0",
   "lastOpenFiles": [
+    "2023Spring/文献阅读写作/论文写作.md",
+    "2023Spring/操作系统/OS_SE_lab.md",
     "大创/paper/TACTIC.md",
     "大创/会议记录/4.14.md",
     "大创/会议记录/4.12.md",
@@ -168,7 +170,6 @@
     "大创/MUNIT环境配置 2.0.md",
     "2023Spring/操作系统/lab/docs/lab02/FAT12简介.md",
     "2023Spring/操作系统/lab/docs/lab02/lab02要求.md",
-    "2023Spring/操作系统/OS_SE_lab.md",
     "2023Spring/软工二/10_体系结构.md",
     "2023Spring/软工二/9_软件设计基础.md",
     "2023Spring/数据管理基础/关系数据理论.md",
@@ -176,7 +177,6 @@
     "2023Spring/操作系统/未命名",
     "大创/会议记录/3.14.md",
     "大创/会议记录/3.22.md",
-    "2023Spring/文献阅读写作/未命名.md",
     "2023Spring/文献阅读写作",
     "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/操作系统/lab/docs/lab02/gcc+nasm.md",
