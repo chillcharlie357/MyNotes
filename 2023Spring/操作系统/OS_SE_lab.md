@@ -131,13 +131,15 @@ Note that you need to make sure the assembly code is compiled into an object fil
 
 [https://www.eit.lth.se/fileadmin/eit/courses/eitn50/Literature/fat12\_description.pdf](https://www.eit.lth.se/fileadmin/eit/courses/eitn50/Literature/fat12_description.pdf)
 
-
-[https://www.eit.lth.se/fileadmin/eit/courses/eitn50/Literature/fat12\_description.pdf](https://www.eit.lth.se/fileadmin/eit/courses/eitn50/Literature/fat12_description.pdf)
-
 ## Esacpe Code
 
 [ANSI转义序列详解 - 掘金](https://juejin.cn/post/7086720921158811662)
 
+[Linux技巧：在代码中设置终端字符显示颜色和移动光标位置 - 南木阁 - SegmentFault 思否](https://segmentfault.com/a/1190000023553724)
+
+```
+\033[<color>m
+```
 
 ## cstdint
 
@@ -236,3 +238,8 @@ b: 7
 -   Ctrl + Shift + I in Linux
 
 [Site Unreachable](https://www.w3schools.io/editor/vscode-format-code/)
+
+
+## core dumped处理
+
+[Linux之core dumped出错原因及位置分析\_宗而研之的博客-CSDN博客](https://blog.csdn.net/zong596568821xp/article/details/104436395)

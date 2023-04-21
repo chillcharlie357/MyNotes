@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "00f979ee12fb3518",
+        "id": "b2e5879d5b672824",
         "type": "tabs",
         "children": [
           {
-            "id": "01f28f89ecb1cfa0",
+            "id": "c3042a403a24aca6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
+                "file": "2023Spring/编译原理/03_语法分析.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bbdf25fc95d3666c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/编译原理/04_语义分析.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "规范化",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/西方音乐通论/西方音乐通论.md"
+                "file": "2023Spring/编译原理/04_语义分析.md"
               }
             }
           },
@@ -96,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
+                "file": "2023Spring/编译原理/04_语义分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
+                "file": "2023Spring/编译原理/04_语义分析.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -142,7 +155,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 305.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,39 +171,39 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "01f28f89ecb1cfa0",
+  "active": "bbdf25fc95d3666c",
   "lastOpenFiles": [
-    "2023Spring/文献阅读写作/论文写作.md",
-    "2023Spring/操作系统/OS_SE_lab.md",
-    "大创/paper/TACTIC.md",
+    "2023Spring/编译原理/03_语法分析.md",
+    "2023Spring/编译原理/04_语义分析.md",
+    "大创/deepxplore.md",
+    "大创/MUNIT环境配置 2.0.md",
     "大创/会议记录/4.14.md",
     "大创/会议记录/4.12.md",
     "大创/会议记录/4.7 4.8.md",
-    "大创/deepxplore.md",
-    "大创/deepxpore_paper.md",
-    "大创/MUNIT环境配置 2.0.md",
-    "2023Spring/操作系统/lab/docs/lab02/FAT12简介.md",
-    "2023Spring/操作系统/lab/docs/lab02/lab02要求.md",
-    "2023Spring/软工二/10_体系结构.md",
-    "2023Spring/软工二/9_软件设计基础.md",
-    "2023Spring/数据管理基础/关系数据理论.md",
-    "2023Spring/数据管理基础/08_数据库设计.md",
-    "2023Spring/操作系统/未命名",
-    "大创/会议记录/3.14.md",
     "大创/会议记录/3.22.md",
-    "2023Spring/文献阅读写作",
-    "2023Spring/编译原理/03_语法分析.md",
-    "2023Spring/操作系统/lab/docs/lab02/gcc+nasm.md",
-    "2023Spring/操作系统/lab/lab01.md",
-    "2023Spring/操作系统/lab/docs/lab02/assets/2023 操作系统实验（二）.pdf",
-    "2023Spring/操作系统/lab/lab02.md",
-    "2023Spring/软工二/8_需求⽂档化与验证.md",
-    "2023Spring/软工二/7_需求分析⽅法.md",
-    "2023Spring/西方音乐通论/西方音乐通论.md",
-    "2023Spring/操作系统/lab/docs/lab02/assets/静态链接动态链接.pdf",
-    "2023Spring/操作系统/00_lab.md",
-    "大创/cuda.md",
+    "大创/会议记录/3.14.md",
+    "大创/会议记录/4.18.md",
+    "大创/paper/TACTIC.md",
     "大创/paper/assets/TACTIC.pdf",
+    "其他/ubuntu.md",
+    "其他/linux各种环境配置.md",
+    "大创/DL/深度学习入门.md",
+    "大创/pandas.md",
+    "大创/deepxpore_paper.md",
+    "大创/cuda.md",
+    "2023Spring/操作系统/OS_SE_lab.md",
+    "2023Spring/操作系统/lab/docs/lab02/lab02要求.md",
+    "2023Spring/操作系统/03_存储器.md",
+    "2023Spring/数据管理基础/08_数据库设计.md",
+    "2023Spring/软工二/10_体系结构.md",
+    "2023Spring/数据管理基础/09_关系数据理论.md",
+    "2023Spring/软工二/9_软件设计基础.md",
+    "2023Spring/操作系统/lab/docs/lab02/FAT12简介.md",
+    "2023Spring/软工二/7_需求分析⽅法.md",
+    "2023Spring/操作系统/未命名",
+    "2023Spring/文献阅读写作",
+    "2023Spring/操作系统/lab/docs/lab02/assets/2023 操作系统实验（二）.pdf",
+    "2023Spring/操作系统/lab/docs/lab02/assets/静态链接动态链接.pdf",
     "大创/paper/assets",
     "大创/paper",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203725.png",
