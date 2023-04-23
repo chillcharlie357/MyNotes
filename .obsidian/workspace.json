@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "b2e5879d5b672824",
+        "id": "69916edcaa86c123",
         "type": "tabs",
         "children": [
           {
-            "id": "c3042a403a24aca6",
+            "id": "8a59fa05706a0378",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md",
+                "file": "2023Spring/软工二/10_体系结构.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "bbdf25fc95d3666c",
+            "id": "6ff527208a346776",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/编译原理/04_语义分析.md",
+                "file": "2023Spring/软工二/11_体系结构设计与构建.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/编译原理/04_语义分析.md"
+                "file": "2023Spring/软工二/11_体系结构设计与构建.md"
               }
             }
           },
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/编译原理/04_语义分析.md",
+                "file": "2023Spring/软工二/11_体系结构设计与构建.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/编译原理/04_语义分析.md",
+                "file": "2023Spring/软工二/11_体系结构设计与构建.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -171,8 +171,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "bbdf25fc95d3666c",
+  "active": "a21e16f0f748ac69",
   "lastOpenFiles": [
+    "2023Spring/软工二/assets/Pasted image 20230423112524.png",
+    "2023Spring/软工二/assets",
+    "2023Spring/软工二/10_体系结构.md",
+    "2023Spring/软工二/11_体系结构设计与构建.md",
     "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/编译原理/04_语义分析.md",
     "大创/deepxplore.md",
@@ -195,11 +199,8 @@
     "2023Spring/操作系统/lab/docs/lab02/lab02要求.md",
     "2023Spring/操作系统/03_存储器.md",
     "2023Spring/数据管理基础/08_数据库设计.md",
-    "2023Spring/软工二/10_体系结构.md",
     "2023Spring/数据管理基础/09_关系数据理论.md",
     "2023Spring/软工二/9_软件设计基础.md",
-    "2023Spring/操作系统/lab/docs/lab02/FAT12简介.md",
-    "2023Spring/软工二/7_需求分析⽅法.md",
     "2023Spring/操作系统/未命名",
     "2023Spring/文献阅读写作",
     "2023Spring/操作系统/lab/docs/lab02/assets/2023 操作系统实验（二）.pdf",
@@ -217,7 +218,6 @@
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403170049.png",
     "大创/DL/assets/深度学习进阶：自然语言处理.pdf",
     "大创/DL/assets/深度学习入门：基于Python的理论与实现.pdf",
-    "大创/DL/assets",
     "2023Spring/编译原理/assets/Pasted image 20230330150240.png",
     "未命名.canvas"
   ]
