@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/软工二/12_人机交互设计.md",
+                "file": "2023Spring/数据管理基础/09_关系数据理论.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c7b19cc375975c2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/编译原理/04_语义分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/软工二/12_人机交互设计.md"
+                "file": "2023Spring/编译原理/04_语义分析.md"
               }
             }
           },
@@ -108,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/软工二/12_人机交互设计.md",
+                "file": "2023Spring/编译原理/04_语义分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/软工二/12_人机交互设计.md",
+                "file": "2023Spring/编译原理/04_语义分析.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -170,10 +183,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "19c1843845ea8797",
+  "active": "c7b19cc375975c2e",
   "lastOpenFiles": [
-    "2023Spring/操作系统/OS_SE_lab.md",
+    "2023Spring/数据管理基础/08_数据库设计.md",
+    "2023Spring/数据管理基础/09_关系数据理论.md",
     "2023Spring/软工二/12_人机交互设计.md",
+    "2023Spring/操作系统/OS_SE_lab.md",
     "未命名.md",
     "2023Spring/软工二/11_体系结构设计与构建.md",
     "2023Spring/西方音乐通论/西方音乐通论.md",
@@ -199,8 +214,6 @@
     "大创/pandas.md",
     "大创/deepxpore_paper.md",
     "大创/cuda.md",
-    "2023Spring/操作系统/lab/docs/lab02/lab02要求.md",
-    "2023Spring/操作系统/03_存储器.md",
     "2023Spring/操作系统/未命名",
     "2023Spring/文献阅读写作",
     "2023Spring/操作系统/lab/docs/lab02/assets/2023 操作系统实验（二）.pdf",
