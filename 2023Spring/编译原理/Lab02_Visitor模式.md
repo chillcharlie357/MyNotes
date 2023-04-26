@@ -131,7 +131,7 @@ visitor.visit(tree);
 
 这个`tree`的声明类型是`ParseTree`，但显然它的实际类型是`ProgramContext`，所以这个语句会调用`SysyParser.ProgramContext`类中的`accept`。
 
-注意：`ProgramContext`、`CompUnitContext`等类都是`SysyParser`内部的`static`类，因此`accept`方法并不能说是`SysyParser`，而是每个抽象语法树的节点里的。
+注意：`ProgramContext`、`CompUnitContext`等类都是`SysyParser`内部的`static`类，因此`accept`方法并不能是`SysyParser`中的，而是每个抽象语法树的节点里的。
 
 ```java
 @Override  
