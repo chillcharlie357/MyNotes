@@ -53,6 +53,10 @@ ubuntu默认无法通过su获得root权限，因为没有密码
 	- `%s/^\s\+//`
 [linux - vim技巧：删除行首、行末的空白字符，删除空白行 - 南木阁 - SegmentFault 思否](https://segmentfault.com/a/1190000021058245)
 
+`s` 是替换命令，可以替换字符串，其基本格式是 `:s/from/to/`，把 "from" 字符串替换成 "to" 字符串，可以用正则表达式来匹配特定模式。该命令默认对光标所在行生效，而 `:%s` 表示对整个文件都进行替换。
+```shell
+s/from/to/
+```
 
 # 切换显示管理器(Dispaly Manager)
 
