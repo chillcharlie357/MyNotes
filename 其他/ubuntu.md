@@ -65,5 +65,6 @@ sudo sudo dpkg-reconfigure <option>
 
 # EasyConnect
 
-[Ubuntu 20.04安装Easyconnect及兼容性问题解决（亲测可用）\_easyconnect ubuntu\_嵌入式技术的博客-CSDN博客](https://blog.csdn.net/weixin_37926734/article/details/123068318)
+
+[ubuntu 20.04 下安装easyconnect记录\_qq\_24857291的博客-CSDN博客](https://blog.csdn.net/qq_24857291/article/details/108071231)
 

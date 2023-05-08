@@ -243,3 +243,19 @@ b: 7
 ## core dumped处理
 
 [Linux之core dumped出错原因及位置分析\_宗而研之的博客-CSDN博客](https://blog.csdn.net/zong596568821xp/article/details/104436395)
+
+
+
+# Lab03
+
+
+## OrangeS里的代码BOCHS报错
+
+
+```
+interrupt(): vector must be within IDT table limits
+```
+
+[Bochs x86 PC emulator / Bugs / #1355 BIOS failure with 386 build](https://sourceforge.net/p/bochs/bugs/1355/)
+
+romimage改成BIOS-bochs-legacy

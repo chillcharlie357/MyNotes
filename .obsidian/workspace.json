@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/软工二/12_人机交互设计.md",
+                "file": "2023Spring/操作系统/OS_SE_lab.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "59f602b0d6ac75d0",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf"
+                "file": "2023Spring/操作系统/OS_SE_lab.md"
               }
             }
           },
@@ -114,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
+                "file": "2023Spring/操作系统/OS_SE_lab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
+                "file": "2023Spring/操作系统/OS_SE_lab.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -160,8 +149,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5,
-    "collapsed": true
+    "width": 305.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,17 +164,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "59f602b0d6ac75d0",
+  "active": "71266da6b058754f",
   "lastOpenFiles": [
+    "其他/ubuntu.md",
+    "conflict-files-obsidian-git.md",
+    "未命名 1.md",
+    "未命名.md",
+    "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
     "2022Fall/计算机组织与结构/13_指令系统.md",
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 实验三 实模式和保护模式下的中断.pptx",
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 实验三 中断与异常.pptx",
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 IO.pptx",
-    "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
     "2023Spring/操作系统/lab/docs/lab03",
     "2022Fall/数据结构/数据考试重点.md",
     "2022Fall/数据结构/4.0_树.md",
-    "其他/ubuntu.md",
     "2023Spring/软工二/13_详细设计.md",
     "2023Spring/软工二/assets/Pasted image 20230428103811.png",
     "2023Spring/软工二/assets",
@@ -199,7 +190,6 @@
     "2023Spring/操作系统/lab/docs/lab02/FAT12简介.md",
     "2023Spring/编译原理/04_语义分析.md",
     "2023Spring/数据管理基础/08_数据库设计.md",
-    "未命名.md",
     "2023Spring/软工二/11_体系结构设计与构建.md",
     "2023Spring/西方音乐通论/西方音乐通论.md",
     "2023Spring/编译原理/Lab02_Visitor模式.md",
@@ -209,9 +199,6 @@
     "大创/deepxplore.md",
     "大创/MUNIT环境配置 2.0.md",
     "大创/会议记录/4.14.md",
-    "大创/会议记录/4.12.md",
-    "大创/会议记录/4.7 4.8.md",
-    "大创/会议记录/3.22.md",
     "大创/paper/assets/TACTIC.pdf",
     "2023Spring/操作系统/未命名",
     "2023Spring/文献阅读写作",
