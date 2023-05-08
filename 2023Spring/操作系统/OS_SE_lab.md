@@ -259,3 +259,9 @@ interrupt(): vector must be within IDT table limits
 [Bochs x86 PC emulator / Bugs / #1355 BIOS failure with 386 build](https://sourceforge.net/p/bochs/bugs/1355/)
 
 romimage改成BIOS-bochs-legacy
+
+
+## VSCode Reformat
+
+默认会对#include排序
+最好在setting里关一下

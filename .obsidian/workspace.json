@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/操作系统/OS_SE_lab.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5
+    "width": 337.5,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -93,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/ubuntu.md"
+                "file": "2023Spring/操作系统/OS_SE_lab.md"
               }
             }
           },
@@ -103,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/操作系统/OS_SE_lab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/ubuntu.md",
+                "file": "2023Spring/操作系统/OS_SE_lab.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -167,6 +168,7 @@
   "active": "71266da6b058754f",
   "lastOpenFiles": [
     "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
+    "2023Spring/操作系统/lab/lab02.md",
     "2023Spring/操作系统/OS_SE_lab.md",
     "其他/ubuntu.md",
     "conflict-files-obsidian-git.md",
@@ -184,7 +186,6 @@
     "2023Spring/软工二/assets",
     "2023Spring/软工二/12_人机交互设计.md",
     "2023Spring/操作系统/lab/docs/lab02/实模式与保护模式.md",
-    "2023Spring/操作系统/lab/lab02.md",
     "2023Spring/操作系统/lab/docs/lab02/lab02要求.md",
     "2023Spring/数据管理基础/09_关系数据理论.md",
     "2023Spring/操作系统/lab/docs/lab02/FAT12简介.md",
