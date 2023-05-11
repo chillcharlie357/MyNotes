@@ -72,3 +72,8 @@ sudo sudo dpkg-reconfigure <option>
 
 [ubuntu 20.04 下安装easyconnect记录\_qq\_24857291的博客-CSDN博客](https://blog.csdn.net/qq_24857291/article/details/108071231)
 
+
+
+# NTFS-3g
+
+[NTFS-3G - ArchWiki](https://wiki.archlinux.org/title/NTFS-3G)

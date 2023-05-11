@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "4f1b74e708f97f46",
+        "id": "c5cb88fa772d02f5",
         "type": "tabs",
         "children": [
           {
-            "id": "71266da6b058754f",
+            "id": "eb50614cdf2af1ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/操作系统/OS_SE_lab.md",
+                "file": "2023Spring/编译原理/04_语义分析.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0cd1daec61128da6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/数据管理基础/11_并发.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5,
+    "width": 218.5,
     "collapsed": true
   },
   "right": {
@@ -94,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/操作系统/OS_SE_lab.md"
+                "file": "2023Spring/数据管理基础/11_并发.md"
               }
             }
           },
@@ -104,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/操作系统/OS_SE_lab.md",
+                "file": "2023Spring/数据管理基础/11_并发.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/操作系统/OS_SE_lab.md",
+                "file": "2023Spring/数据管理基础/11_并发.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -150,7 +163,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 305.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,12 +179,27 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "71266da6b058754f",
+  "active": "0cd1daec61128da6",
   "lastOpenFiles": [
-    "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
-    "2023Spring/操作系统/lab/lab02.md",
+    "2023Spring/数据管理基础/10_数据转储.md",
+    "2023Spring/数据管理基础/11_并发.md",
     "2023Spring/操作系统/OS_SE_lab.md",
     "其他/ubuntu.md",
+    "2023Spring/编译原理/04_语义分析.md",
+    "2023Spring/编译原理/00_介绍.md",
+    "其他/troubleshooting.md",
+    "其他/SE2.md",
+    "其他/PAs.md",
+    "其他/linux各种环境配置.md",
+    "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
+    "2023Spring/数据管理基础/assets/Pasted image 20230509170235.png",
+    "2023Spring/数据管理基础/assets",
+    "2023Spring/数据管理基础/lab/lab7.md",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230509140826.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230509140809.png",
+    "2023Spring/数据管理基础/lab/assets/Pasted image 20230509140536.png",
+    "2023Spring/软工二/13_详细设计.md",
+    "2023Spring/操作系统/lab/lab02.md",
     "conflict-files-obsidian-git.md",
     "未命名 1.md",
     "未命名.md",
@@ -181,7 +210,6 @@
     "2023Spring/操作系统/lab/docs/lab03",
     "2022Fall/数据结构/数据考试重点.md",
     "2022Fall/数据结构/4.0_树.md",
-    "2023Spring/软工二/13_详细设计.md",
     "2023Spring/软工二/assets/Pasted image 20230428103811.png",
     "2023Spring/软工二/assets",
     "2023Spring/软工二/12_人机交互设计.md",
@@ -189,29 +217,16 @@
     "2023Spring/操作系统/lab/docs/lab02/lab02要求.md",
     "2023Spring/数据管理基础/09_关系数据理论.md",
     "2023Spring/操作系统/lab/docs/lab02/FAT12简介.md",
-    "2023Spring/编译原理/04_语义分析.md",
     "2023Spring/数据管理基础/08_数据库设计.md",
     "2023Spring/软工二/11_体系结构设计与构建.md",
-    "2023Spring/西方音乐通论/西方音乐通论.md",
-    "2023Spring/编译原理/Lab02_Visitor模式.md",
     "2023Spring/软工二/assets/Pasted image 20230423112524.png",
-    "2023Spring/软工二/10_体系结构.md",
-    "2023Spring/编译原理/03_语法分析.md",
-    "大创/deepxplore.md",
-    "大创/MUNIT环境配置 2.0.md",
-    "大创/会议记录/4.14.md",
     "大创/paper/assets/TACTIC.pdf",
     "2023Spring/操作系统/未命名",
     "2023Spring/文献阅读写作",
-    "2023Spring/操作系统/lab/docs/lab02/assets/2023 操作系统实验（二）.pdf",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203725.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203635.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203524.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203444.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403181743.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403171919.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403171717.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403170112.png",
     "未命名.canvas"
   ]
 }
