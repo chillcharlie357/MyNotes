@@ -4,33 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c5cb88fa772d02f5",
+        "id": "dfea39cec3275f40",
         "type": "tabs",
         "children": [
           {
-            "id": "eb50614cdf2af1ed",
+            "id": "ac2281046bad1e50",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/编译原理/04_语义分析.md",
+                "file": "2023Spring/操作系统/lab/lab04.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "0cd1daec61128da6",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf"
+                "file": "2023Spring/操作系统/lab/lab04.md"
               }
             }
           },
@@ -114,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
+                "file": "2023Spring/操作系统/lab/lab04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
+                "file": "2023Spring/操作系统/lab/lab04.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -165,23 +154,36 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "canvas:新建白板": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "templates:插入模板": false,
-      "workspaces:管理工作区布局": false,
-      "random-note:开始漫游笔记": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": false,
-      "command-palette:打开命令面板": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "0cd1daec61128da6",
+  "active": "ac2281046bad1e50",
   "lastOpenFiles": [
-    "2023Spring/数据管理基础/11_并发.md",
-    "2023Spring/数据管理基础/10_数据转储.md",
+    "2023Spring/操作系统/lab/assets/Pasted image 20230522201057.png",
+    "2023Spring/操作系统/lab/assets",
+    "2023Spring/操作系统/信号量.md",
+    "2023Spring/操作系统/lab/lab04.md",
     "2023Spring/操作系统/OS_SE_lab.md",
+    "2023Spring/操作系统/00_lab.md",
+    "2023Spring/操作系统/01_计算机操作系统.md",
+    "2023Spring/操作系统/02_处理器管理.md",
+    "2023Spring/操作系统/03_存储器.md",
+    "2023Spring/操作系统/lab/lab01.md",
+    "2023Spring/数据管理基础/11_并发控制.md",
+    "2023Spring/数据管理基础/作业/07.md",
+    "2023Spring/数据管理基础/作业/08.md",
+    "Untitled.md",
+    "2023Spring/数据管理基础/10_数据转储.md",
     "其他/ubuntu.md",
+    "2023Spring/编译原理/05_中间代码生成.md",
     "2023Spring/编译原理/04_语义分析.md",
     "2023Spring/编译原理/00_介绍.md",
     "其他/troubleshooting.md",
@@ -198,28 +200,15 @@
     "2023Spring/软工二/13_详细设计.md",
     "2023Spring/操作系统/lab/lab02.md",
     "conflict-files-obsidian-git.md",
-    "未命名 1.md",
-    "未命名.md",
-    "2022Fall/计算机组织与结构/13_指令系统.md",
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 实验三 实模式和保护模式下的中断.pptx",
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 实验三 中断与异常.pptx",
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 IO.pptx",
     "2023Spring/操作系统/lab/docs/lab03",
-    "2022Fall/数据结构/数据考试重点.md",
-    "2022Fall/数据结构/4.0_树.md",
     "2023Spring/软工二/assets/Pasted image 20230428103811.png",
     "2023Spring/软工二/assets",
-    "2023Spring/软工二/12_人机交互设计.md",
-    "2023Spring/操作系统/lab/docs/lab02/实模式与保护模式.md",
-    "2023Spring/操作系统/lab/docs/lab02/lab02要求.md",
-    "2023Spring/数据管理基础/09_关系数据理论.md",
-    "2023Spring/操作系统/lab/docs/lab02/FAT12简介.md",
-    "2023Spring/数据管理基础/08_数据库设计.md",
-    "2023Spring/软工二/11_体系结构设计与构建.md",
     "2023Spring/软工二/assets/Pasted image 20230423112524.png",
     "大创/paper/assets/TACTIC.pdf",
     "2023Spring/操作系统/未命名",
-    "2023Spring/文献阅读写作",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203725.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203635.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203524.png",

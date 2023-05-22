@@ -30,7 +30,7 @@ grub里可以` exec` 切换`lightdm` 和`gdm3`
 
 在 CentOS/RHEL 和 Fedora 上：脚本`\$HOME/.bash_profile`在登录时运行，这个脚本将`\$HOME/.local/bin:$HOME/bin`添加到路径中。
 在Ubuntu上：脚本`$HOME/.profile`在登录时运行，这个脚本将`PATH="\$HOME/bin:HOME/.local/bin"`添加到路径中。
-此外，存储任何其他位置也是可以，例如U盘，网络位置或光盘，但是这样AppImage应用的路径不在环境变量中，意味着不能简单地在终端输入应用名来运行，而必须使用完整的路径。
+此外，存储任何其他位置也是可以，例如U盘，网络位置或光盘，但是这样AppImage应用的路径不在环境变量中，意味着不能简单地在终端输入应用名来运行，而必须使用完整的路径。i:
 
 # 终端复用
 [Tmux 使用教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2019/10/tmux.html)
