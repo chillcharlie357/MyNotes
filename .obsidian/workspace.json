@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/操作系统/lab/lab04.md",
+                "file": "2023Spring/软工二/设计模式.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/操作系统/lab/lab04.md"
+                "file": "2023Spring/软工二/设计模式.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/操作系统/lab/lab04.md",
+                "file": "2023Spring/软工二/设计模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/操作系统/lab/lab04.md",
+                "file": "2023Spring/软工二/设计模式.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -167,10 +167,15 @@
   },
   "active": "ac2281046bad1e50",
   "lastOpenFiles": [
+    "2023Spring/软工二/Untitled.md",
+    "2023Spring/软工二/设计模式.md",
+    "2023Spring/软工二/设计模式.md.kdtmp",
+    "2023Spring/软工二/13_详细设计.md",
+    "2023Spring/软工二/Spring Boot.md",
+    "2023Spring/操作系统/lab/lab04.md",
     "2023Spring/操作系统/lab/assets/Pasted image 20230522201057.png",
     "2023Spring/操作系统/lab/assets",
     "2023Spring/操作系统/信号量.md",
-    "2023Spring/操作系统/lab/lab04.md",
     "2023Spring/操作系统/OS_SE_lab.md",
     "2023Spring/操作系统/00_lab.md",
     "2023Spring/操作系统/01_计算机操作系统.md",
@@ -197,9 +202,6 @@
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230509140826.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230509140809.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230509140536.png",
-    "2023Spring/软工二/13_详细设计.md",
-    "2023Spring/操作系统/lab/lab02.md",
-    "conflict-files-obsidian-git.md",
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 实验三 实模式和保护模式下的中断.pptx",
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 实验三 中断与异常.pptx",
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 IO.pptx",
@@ -208,11 +210,9 @@
     "2023Spring/软工二/assets",
     "2023Spring/软工二/assets/Pasted image 20230423112524.png",
     "大创/paper/assets/TACTIC.pdf",
-    "2023Spring/操作系统/未命名",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203725.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203635.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203524.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203444.png",
     "未命名.canvas"
   ]
 }
