@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md",
+                "file": "2023Spring/操作系统/02_处理器管理.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,8 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.5,
-    "collapsed": true
+    "width": 218.5
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -107,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md"
+                "file": "2023Spring/操作系统/02_处理器管理.md"
               }
             }
           },
@@ -117,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md",
+                "file": "2023Spring/操作系统/02_处理器管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/编译原理/03_语法分析.md",
+                "file": "2023Spring/操作系统/02_处理器管理.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -163,8 +162,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5,
-    "collapsed": true
+    "width": 305.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -179,14 +177,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a21e16f0f748ac69",
+  "active": "8ddc49cc1e19ffe9",
   "lastOpenFiles": [
+    "2023Spring/操作系统/03_存储器.md",
+    "2023Spring/操作系统/信号量.md",
+    "2023Spring/操作系统/OS_SE_lab.md",
+    "2023Spring/操作系统/02_处理器管理.md",
+    "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/编译原理/assets/Pasted image 20230524142734.png",
     "2023Spring/编译原理/assets",
     "2023Spring/编译原理/LR0语法分析器.md",
     "2023Spring/编译原理/05_中间代码生成.md",
     "2023Spring/编译原理/Risc-V.md",
-    "2023Spring/操作系统/OS_SE_lab.md",
     "其他/ubuntu.md",
     "2023Spring/数据管理基础/12_查询.md",
     "2023Spring/数据管理基础/11_并发控制.md",
@@ -199,11 +201,8 @@
     "2023Spring/操作系统/lab/lab04.md",
     "2023Spring/操作系统/lab/assets/Pasted image 20230522201057.png",
     "2023Spring/操作系统/lab/assets",
-    "2023Spring/操作系统/信号量.md",
     "2023Spring/操作系统/00_lab.md",
     "2023Spring/操作系统/01_计算机操作系统.md",
-    "2023Spring/操作系统/02_处理器管理.md",
-    "2023Spring/操作系统/03_存储器.md",
     "2023Spring/操作系统/lab/lab01.md",
     "2023Spring/数据管理基础/作业/07.md",
     "2023Spring/数据管理基础/作业/08.md",
@@ -226,7 +225,6 @@
     "2023Spring/软工二/assets/Pasted image 20230423112524.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203725.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203635.png",
-    "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203524.png",
     "未命名.canvas"
   ]
 }
