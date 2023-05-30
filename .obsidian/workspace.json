@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "542c29d2e3c41c6e",
+        "id": "0f36cb73563fc4a4",
         "type": "tabs",
         "children": [
           {
-            "id": "8ddc49cc1e19ffe9",
+            "id": "ed3b86e38e234302",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/西方音乐通论/期末.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5a25a527db3c2ec1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023Spring/西方音乐通论/西方音乐通论.md",
+                "file": "2023Spring/软工二/软件开发过程模型.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.5
+    "width": 218.5,
+    "collapsed": true
   },
   "right": {
     "id": "4dc6bffe291c7e1c",
@@ -105,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/西方音乐通论/期末.md"
+                "file": "2023Spring/软工二/软件开发过程模型.md"
               }
             }
           },
@@ -115,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/西方音乐通论/期末.md",
+                "file": "2023Spring/软工二/软件开发过程模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/西方音乐通论/期末.md",
+                "file": "2023Spring/软工二/软件开发过程模型.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -161,7 +150,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 305.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,8 +166,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8ddc49cc1e19ffe9",
+  "active": "ed3b86e38e234302",
   "lastOpenFiles": [
+    "2023Spring/软工二/面向对象的信息隐藏.md",
+    "2023Spring/软工二/软件开发过程模型.md",
+    "2023Spring/软工二/assets/Pasted image 20230428103811.png",
+    "2023Spring/软工二/18_软件构造.md",
+    "2023Spring/软工二/13_详细设计.md",
+    "2023Spring/软工二/17_设计模式.md",
     "2023Spring/西方音乐通论/西方音乐通论.md",
     "2023Spring/西方音乐通论/期末.md",
     "2023Spring/数据管理基础/12_查询.md",
@@ -194,11 +190,8 @@
     "2023Spring/编译原理/Risc-V.md",
     "其他/ubuntu.md",
     "2023Spring/数据管理基础/11_并发控制.md",
-    "2023Spring/软工二/18_软件构造.md",
-    "2023Spring/软工二/17_设计模式.md",
     "2023Spring/软工二/Untitled.md",
     "2023Spring/软工二/设计模式.md.kdtmp",
-    "2023Spring/软工二/13_详细设计.md",
     "2023Spring/软工二/Spring Boot.md",
     "2023Spring/操作系统/lab/lab04.md",
     "2023Spring/操作系统/lab/assets/Pasted image 20230522201057.png",
@@ -207,8 +200,6 @@
     "2023Spring/操作系统/01_计算机操作系统.md",
     "2023Spring/操作系统/lab/lab01.md",
     "2023Spring/数据管理基础/作业/07.md",
-    "2023Spring/数据管理基础/作业/08.md",
-    "2023Spring/数据管理基础/10_数据转储.md",
     "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
     "2023Spring/数据管理基础/assets/Pasted image 20230509170235.png",
     "2023Spring/数据管理基础/assets",
@@ -219,7 +210,6 @@
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 实验三 中断与异常.pptx",
     "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 IO.pptx",
     "2023Spring/操作系统/lab/docs/lab03",
-    "2023Spring/软工二/assets/Pasted image 20230428103811.png",
     "2023Spring/软工二/assets",
     "2023Spring/软工二/assets/Pasted image 20230423112524.png",
     "2023Spring/数据管理基础/lab/assets/Pasted image 20230403203725.png",
