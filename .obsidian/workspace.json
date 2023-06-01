@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/软工二/软件开发过程模型.md",
+                "file": "2023Spring/操作系统/并发.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "通奏低音",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/软工二/软件开发过程模型.md"
+                "file": "2023Spring/操作系统/并发.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/软工二/软件开发过程模型.md",
+                "file": "2023Spring/操作系统/并发.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/软工二/软件开发过程模型.md",
+                "file": "2023Spring/操作系统/并发.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -168,21 +168,26 @@
   },
   "active": "ed3b86e38e234302",
   "lastOpenFiles": [
-    "2023Spring/软工二/面向对象的信息隐藏.md",
+    "2022Fall/计算机组织与结构/10_外部存储器.md",
+    "2023Spring/操作系统/并发.md",
+    "2023Spring/操作系统/02_处理器管理.md",
+    "2023Spring/操作系统/03_存储器.md",
+    "2023Spring/编译原理/03_语法分析.md",
+    "2023Spring/编译原理/04_语义分析.md",
+    "2023Spring/编译原理/Lab02_Visitor模式.md",
+    "2023Spring/数据管理基础/12_查询.md",
     "2023Spring/软工二/软件开发过程模型.md",
+    "2023Spring/软工二/Untitled.md",
+    "2023Spring/软工二/面向对象的信息隐藏.md",
     "2023Spring/软工二/assets/Pasted image 20230428103811.png",
     "2023Spring/软工二/18_软件构造.md",
     "2023Spring/软工二/13_详细设计.md",
     "2023Spring/软工二/17_设计模式.md",
     "2023Spring/西方音乐通论/西方音乐通论.md",
     "2023Spring/西方音乐通论/期末.md",
-    "2023Spring/数据管理基础/12_查询.md",
     "Untitled.md",
     "2023Spring/操作系统/OS_SE_lab.md",
-    "2023Spring/操作系统/02_处理器管理.md",
-    "2023Spring/操作系统/03_存储器.md",
     "2023Spring/操作系统/信号量.md",
-    "2023Spring/编译原理/03_语法分析.md",
     "2023Spring/编译原理/assets/Pasted image 20230524142734.png",
     "2023Spring/编译原理/assets",
     "2023Spring/编译原理/LR0语法分析器.md",
@@ -190,16 +195,11 @@
     "2023Spring/编译原理/Risc-V.md",
     "其他/ubuntu.md",
     "2023Spring/数据管理基础/11_并发控制.md",
-    "2023Spring/软工二/Untitled.md",
     "2023Spring/软工二/设计模式.md.kdtmp",
     "2023Spring/软工二/Spring Boot.md",
     "2023Spring/操作系统/lab/lab04.md",
     "2023Spring/操作系统/lab/assets/Pasted image 20230522201057.png",
     "2023Spring/操作系统/lab/assets",
-    "2023Spring/操作系统/00_lab.md",
-    "2023Spring/操作系统/01_计算机操作系统.md",
-    "2023Spring/操作系统/lab/lab01.md",
-    "2023Spring/数据管理基础/作业/07.md",
     "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
     "2023Spring/数据管理基础/assets/Pasted image 20230509170235.png",
     "2023Spring/数据管理基础/assets",
