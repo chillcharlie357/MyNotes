@@ -3,6 +3,11 @@
 
 [高精度数（大整数）除法 - 简书](https://www.jianshu.com/p/769f8ae05b89)
 
+## 32位库
+
+gcc-multilib
+g++-multilib
+
 ## NASM
 
 ### Tutorials
