@@ -1,39 +1,76 @@
 {
   "main": {
-    "id": "de293ad95eec3d3d",
+    "id": "f1c3021719e9e8a3",
     "type": "split",
     "children": [
       {
-        "id": "168f7743344d95ca",
+        "id": "56b47a639cc6c3a0",
         "type": "tabs",
         "children": [
           {
-            "id": "9b50fe0a546cc595",
+            "id": "b519127d9f9afac7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/西方音乐通论/期末.md",
+                "file": "2023Spring/数据管理基础/02_数据模型.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "94bcbc3ba5867050",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/数据管理基础/考试题型.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e776d231ab76a421",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/数据管理基础/09_关系数据理论.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7054580fe9368414",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023Spring/数据管理基础/08_数据库设计.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "84d05063171058fe",
+    "id": "0f5833ddc81b79ea",
     "type": "split",
     "children": [
       {
-        "id": "e4322925d3fb372f",
+        "id": "ad21b01e0d167137",
         "type": "tabs",
         "children": [
           {
-            "id": "083ae430f266d1e9",
+            "id": "956fffddea63c394",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +80,7 @@
             }
           },
           {
-            "id": "c1548cc0a80a208d",
+            "id": "af36e48ca9e9b13e",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,15 +95,7 @@
             }
           },
           {
-            "id": "36b4c3bb997acfac",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "001350b0898c1577",
+            "id": "922cad90d879715d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -77,33 +106,34 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.5
+    "width": 226.5069465637207,
+    "collapsed": true
   },
   "right": {
-    "id": "4dc6bffe291c7e1c",
+    "id": "f0859dc6d794c809",
     "type": "split",
     "children": [
       {
-        "id": "6ff8210d3b2455c5",
+        "id": "4ae7da2f8a8d0415",
         "type": "tabs",
         "children": [
           {
-            "id": "a21e16f0f748ac69",
+            "id": "1c2a4df862441fca",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/西方音乐通论/期末.md"
+                "file": "2023Spring/数据管理基础/08_数据库设计.md"
               }
             }
           },
           {
-            "id": "70bf09b0e07825f7",
+            "id": "09e884b843a2d320",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/西方音乐通论/期末.md",
+                "file": "2023Spring/数据管理基础/08_数据库设计.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,27 +145,19 @@
             }
           },
           {
-            "id": "24bdad6b06ed685a",
+            "id": "48a6f6b2f3c36284",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/西方音乐通论/期末.md",
-                "linksCollapsed": true,
-                "unlinkedCollapsed": false
+                "file": "2023Spring/数据管理基础/08_数据库设计.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "f8701efb4139c008",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          },
-          {
-            "id": "f63232c2fa9b192c",
+            "id": "625a70155bab8d93",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -149,68 +171,38 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "random-note:开始漫游笔记": false,
-      "workspaces:管理工作区布局": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": false
+      "workspaces:管理工作区布局": false
     }
   },
-  "active": "9b50fe0a546cc595",
+  "active": "7054580fe9368414",
   "lastOpenFiles": [
-    "2023Spring/软工二/Lab/软工二体系结构描述文档.md",
-    "2023Spring/软工二/Lab/assets/UML 图.jpg",
-    "2023Spring/软工二/Lab/assets",
-    "2023Spring/软工二/Lab",
+    "2023Spring/数据管理基础/09_关系数据理论.md",
+    "2023Spring/软工二/复习提纲.md",
+    "2023Spring/数据管理基础/08_数据库设计.md",
+    "2023Spring/数据管理基础/考试题型.md",
+    "2023Spring/数据管理基础/10_数据转储.md",
+    "2023Spring/数据管理基础/04_关系代数.md",
+    "2023Spring/数据管理基础/03_数据库结构与组成.md",
+    "2023Spring/数据管理基础/02_数据模型.md",
+    "2023Spring/数据管理基础/07_完整性.md",
+    "2023Spring/数据管理基础/11_并发控制.md",
+    "2023Spring/数据管理基础/06_安全性.md",
+    "2023Spring/数据管理基础/05_SQL.md",
+    "2023Spring/数据管理基础/01_计算、数据和数据管理.md",
     "2023Spring/编译原理/05_中间代码生成.md",
-    "2023Spring/编译原理/04_语义分析.md",
-    "2023Spring/编译原理/Lab02_Visitor模式.md",
-    "其他/ubuntu.md",
-    "2023Spring/操作系统/OS_SE_lab.md",
-    "其他/git.md",
-    "2023Spring/编译原理/Risc-V.md",
-    "2023Spring/编译原理/assets/Pasted image 20230602153247.png",
-    "2023Spring/编译原理/assets",
-    "2023Spring/编译原理/03_语法分析.md",
-    "2023Spring/操作系统/并发.md",
-    "2023Spring/操作系统/assets/Pasted image 20230602112248.png",
-    "2023Spring/操作系统/assets/Pasted image 20230602112214.png",
-    "2023Spring/操作系统/assets/Pasted image 20230602112120.png",
-    "2023Spring/操作系统/assets/Pasted image 20230602111302.png",
-    "2023Spring/操作系统/assets",
-    "2023Spring/操作系统/进程通信.md",
-    "2022Fall/计算机组织与结构/10_外部存储器.md",
-    "2023Spring/操作系统/02_处理器管理.md",
-    "2023Spring/操作系统/03_存储器.md",
-    "2023Spring/数据管理基础/12_查询.md",
-    "2023Spring/软工二/软件开发过程模型.md",
-    "2023Spring/软工二/Untitled.md",
-    "2023Spring/软工二/面向对象的信息隐藏.md",
-    "2023Spring/软工二/assets/Pasted image 20230428103811.png",
-    "2023Spring/软工二/18_软件构造.md",
-    "2023Spring/软工二/13_详细设计.md",
-    "2023Spring/软工二/17_设计模式.md",
-    "2023Spring/西方音乐通论/西方音乐通论.md",
-    "2023Spring/西方音乐通论/期末.md",
-    "Untitled.md",
-    "2023Spring/操作系统/信号量.md",
-    "2023Spring/编译原理/assets/Pasted image 20230524142734.png",
-    "2023Spring/软工二/设计模式.md.kdtmp",
-    "2023Spring/操作系统/lab/assets/Pasted image 20230522201057.png",
-    "2023Spring/操作系统/lab/assets",
-    "2023Spring/操作系统/lab/docs/lab03/2022 操作系统实验.pdf",
-    "2023Spring/数据管理基础/assets/Pasted image 20230509170235.png",
-    "2023Spring/数据管理基础/assets",
-    "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 实验三 实模式和保护模式下的中断.pptx",
-    "2023Spring/操作系统/lab/docs/lab03/操作系统20230425 实验三 中断与异常.pptx",
-    "未命名.canvas"
+    "2023Spring/编译原理/04_语义分析.md"
   ]
 }
