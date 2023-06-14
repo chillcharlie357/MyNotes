@@ -256,10 +256,11 @@ DISTINCT：消除重复行。
 ![POWERPNT_283_410.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/14/c72a17e1a1f1cd5fab5a65130e0aa264_POWERPNT_283_410.png)
 
 
+where和groupby子句可以同时出现。
 
 - **HAVING**短语与WHERE子句的区别：
 	- 作用对象不同
-	- WHERE子句作用于基表或视图，从中选择满足条件的元组
+	- WHERE子句作用于**基表或视图**，从中选择满足条件的元组
 		- WHERE子句中是不能用聚集函数作为条件表达式
 	- HAVING短语**作用于组**，从中选择满足条件的组。 
 
@@ -351,6 +352,7 @@ WHERE后面几个表的顺序无所谓
 - 看不看得懂
 - 项目编码规范允许吗？
 
+- 于聚集函数、IN谓词等价转换关系：
 ![](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/16/f965f24bdebfc9ba19fd6d88e514e23f_202303161618675.png)
 
 
