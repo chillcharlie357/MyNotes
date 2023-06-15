@@ -9,10 +9,12 @@
   "editing-toolbar",
   "cm-editor-syntax-highlight-obsidian",
   "obsidian-title-index",
-  "templater-obsidian",
   "dataview",
   "obsidian-pandoc",
   "obsidian-annotator",
   "language-translator",
-  "obsidian-emoji-toolbar"
+  "obsidian-emoji-toolbar",
+  "url-into-selection",
+  "obsidian-outliner",
+  "obsidian-linter"
 ]
