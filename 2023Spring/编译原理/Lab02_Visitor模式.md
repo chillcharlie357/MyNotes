@@ -1,9 +1,10 @@
 ---
+aliases: 
 title: Lab02_Visitor模式
 tags: 2023_Spring编译原理  课程
 categories: 2023_Spring编译原理
-date:  2023-04-02 20:28
-modified:  星期日 2日 四月 2023 21:31:42
+date:  Thursday,June 1st 2023
+modified:  Thursday,June 22nd 2023
 sticky:
 thumbnail:
 cover: 
@@ -12,24 +13,24 @@ mathjax: true
 comment: true
 ---
 
-
-
 # SysYParser和ParseTree
 
 ParseTree、ProgramContext、RuleNode都是从同一个类继承下来的，所以下面这行代码可以正确运行。
+
 ```java
 ParseTree tree = sysYParser.program();
 ```
+
 其中`sysYParser.program()`返回了一个`ProgramContext`对象，也就是语法分析器得到的抽象语法树的`Program`节点，与我们所写的词法规则对应。
 
 `ParseTree`是抽象语法树的节点，`sysYParser`是词法分析器，两个并不具备包含关系。
 
-
 <div style="page-break-after: always;"></div>
 
-
 调用图如下：
+
 - ProgramContext
+
 ```mermaid
 classDiagram
 direction BT
@@ -103,6 +104,7 @@ SyntaxTree  -->  Tree
 # Visitor的运行机制
 
 - SysYParserVisitor
+
 ```mermaid
 classDiagram
 direction BT
@@ -123,8 +125,8 @@ SysYParserVisitor~T~  -->  ParseTreeVisitor~T~
 	- Node层次：接受操作的元素（即第一部分的`Parsertree`）
 	- Visitor层次：定义对元素的操作
 
-
 在`Main`中我们通过这行命令调用`Visitor`遍历抽象语法树，`visitor`确实只是一个入口。
+
 ```java
 visitor.visit(tree);
 ```
@@ -147,8 +149,8 @@ public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 
 ![](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/30/b2f707ed3df21a402d5dd1b2dbe9630d_202303302123676.png)
 
-
 `visitProgram`的原始定义在接口`SysYParserVisitor`中，`Antlr4`自动生成的类`SysYParserBaseVisitor`对其给出了默认实现。
+
 ```java
 public class SysYParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements SysYParserVisitor<T>
 ```
@@ -163,7 +165,7 @@ public T visitProgram(SysYParser.ProgramContext ctx) { return visitChildren(ctx)
 
 `visitChildren`方法的存在只是为了具体实现时更方便，与Visitor设计模式关系不大。Visitor模式的核心应该是accept和visit的多分派，根据实际类型而不是声明类型来选择调用的方法（和C++中的虚函数类似）。
 
-至于怎么打印语法树，也就是如何深度优先遍历，只要在我们自己的`visitChildren`中实现递归即可。其实可以参考`AbstractParseTreeVisitor`中的`visitChildren`，其中的`for`循环就实现了深度优先遍历，这里的`accept`也会根据`c`的实际类型动态选择实现，由于没有修改默认实现，最后一定会调用到`visitChildren`方法。
+至于怎么打印语法树，也就是如何深度优先遍历，只要在我们自己的`visitChildren`中实现递归即可。其实可以参考`AbstractParseTreeVisitor`中的`visitChildren`，其中的`for`循环就实现了深度优先遍历，这里的`accept`也会根据`c`的实际类型动态选择实现，由于没有修改默认实现，最后一定会调用到`visitChildren`方法。  
 我们只需要做一些修改，在适当的位置打印节点的相关信息就可以了。
 
 ```java
