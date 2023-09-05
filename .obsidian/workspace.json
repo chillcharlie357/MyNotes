@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "bc424dfca85a6b1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Fall/需求与商业模式创新/0-introduction.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -95,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Fall/需求与商业模式创新/0-introduction.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Fall/需求与商业模式创新/0-introduction.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,11 +170,17 @@
       "audio-recorder:开始/结束录音": false
     }
   },
-  "active": "60642d61a181a99a",
+  "active": "bc424dfca85a6b1b",
   "lastOpenFiles": [
+    "2023Fall/需求与商业模式创新/0-introduction.md",
+    "conflict-files-obsidian-git.md",
+    "2023Spring/编译原理/LLVM IR.md",
+    "2023Spring/百度前端/Untitled.md",
+    "2023Spring/百度前端",
+    "2023Spring/云原生/troubleshooting.md",
+    "2023Spring/云原生",
     "2023Fall/需求与商业模式创新",
     "2023Fall/嵌入式系统概论/0-introduction.md",
-    "2023Fall/需求与商业模式创新/0-introduction.md",
     "2023Spring/文献阅读写作/Optuna A Next-generation Hyperparameter Optimization Framework.md",
     "2023Fall/嵌入式系统概论",
     "2023Fall",
@@ -187,13 +206,7 @@
     "大创/deepxpore_paper.md",
     "大创/deepxplore.md",
     "大创/cuda.md",
-    "大创/会议记录/3.14.md",
-    "大创/会议记录/3.22.md",
-    "大创/会议记录/4.7 4.8.md",
     "大创/paper/assets/TACTIC.pdf",
-    "2023Spring/文献阅读写作/papers/1907.10902.pdf",
-    "2023Spring/文献阅读写作/papers/1807.05118.pdf",
-    "2023Spring/文献阅读写作/papers/s10489-022-04105-y.pdf",
-    "2023Spring/文献阅读写作/papers/1807.05118.tmp"
+    "2023Spring/文献阅读写作/papers/1907.10902.pdf"
   ]
 }
