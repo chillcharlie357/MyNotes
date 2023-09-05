@@ -1,0 +1,18 @@
+{
+  "livePreview": true,
+  "alwaysUpdateLinks": true,
+  "spellcheckLanguages": null,
+  "showFrontmatter": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./assets",
+  "showLineNumber": false,
+  "autoPairBrackets": true,
+  "autoPairMarkdown": true
+}
