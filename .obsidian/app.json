@@ -1,10 +1,7 @@
 {
   "livePreview": true,
   "alwaysUpdateLinks": true,
-  "spellcheckLanguages": [
-    "zh-CN",
-    "en"
-  ],
+  "spellcheckLanguages": null,
   "showFrontmatter": true,
   "pdfExportSettings": {
     "includeName": true,

@@ -4,76 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "f272b41d9ef76d68",
-        "type": "tabs",
-        "dimension": 55.620014503263235,
-        "children": [
-          {
-            "id": "da0e2ab88eeaae3f",
-            "type": "leaf",
-            "state": {
-              "type": "pdf-annotator",
-              "state": {
-                "file": "2023Spring/文献阅读写作/RLlib.md"
-              }
-            }
-          },
-          {
-            "id": "90171f9175f98463",
-            "type": "leaf",
-            "state": {
-              "type": "pdf-annotator",
-              "state": {
-                "file": "2023Spring/文献阅读写作/RLlib-zh.md"
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "6cdc1ae7abfff4d0",
         "type": "tabs",
-        "dimension": 44.379985496736765,
         "children": [
           {
-            "id": "bf8babe5ba780262",
+            "id": "60642d61a181a99a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023Spring/文献阅读写作/RLlib稿子.md",
+                "file": "2023Fall/需求与商业模式创新/0-introduction.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "539ee06ea52b5058",
-            "type": "leaf",
-            "state": {
-              "type": "pdf-annotator",
-              "state": {
-                "file": "2023Spring/文献阅读写作/Optuna A Next-generation Hyperparameter Optimization Framework.md"
-              }
-            }
-          },
-          {
-            "id": "428cd37c8d9da660",
-            "type": "leaf",
-            "state": {
-              "type": "pdf-annotator",
-              "state": {
-                "file": "2023Spring/文献阅读写作/Tune A Research Platform for Distributed Model Selectionand Training.md"
-              }
-            }
-          },
-          {
-            "id": "380777ea86911016",
-            "type": "leaf",
-            "state": {
-              "type": "pdf-annotator",
-              "state": {
-                "file": "2023Spring/文献阅读写作/RAY.md"
               }
             }
           }
@@ -106,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "增广",
+                "query": "封装",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -127,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 280.5069465637207,
-    "collapsed": true
+    "width": 280.5069465637207
   },
   "right": {
     "id": "bfe971e422fd30ee",
@@ -144,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023Spring/文献阅读写作/RLlib稿子.md"
+                "file": "2023Fall/需求与商业模式创新/0-introduction.md"
               }
             }
           },
@@ -154,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023Spring/文献阅读写作/RLlib稿子.md",
+                "file": "2023Fall/需求与商业模式创新/0-introduction.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023Spring/文献阅读写作/RLlib稿子.md",
+                "file": "2023Fall/需求与商业模式创新/0-introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -216,12 +157,29 @@
       "audio-recorder:开始/结束录音": false
     }
   },
-  "active": "bf8babe5ba780262",
+  "active": "60642d61a181a99a",
   "lastOpenFiles": [
-    "2023Spring/文献阅读写作/RLlib.md",
+    "2023Fall/需求与商业模式创新",
+    "2023Fall/嵌入式系统概论/0-introduction.md",
+    "2023Fall/需求与商业模式创新/0-introduction.md",
+    "2023Spring/文献阅读写作/Optuna A Next-generation Hyperparameter Optimization Framework.md",
+    "2023Fall/嵌入式系统概论",
+    "2023Fall",
+    "2023Spring/文献阅读写作/Asynchronous Methods for Deep Reinforcement Learning.md",
+    "2023Spring/文献阅读写作/Tune A Research Platform for Distributed Model Selectionand Training.md",
+    "2023Spring/文献阅读写作/IMPALA.md",
+    "2023Spring/文献阅读写作/RAY.md",
+    "2023Spring/文献阅读写作/未命名.md",
+    "2023Spring/文献阅读写作/展望.md",
+    "2023Spring/文献阅读写作/papers/yang20a.pdf",
+    "2023Spring/文献阅读写作/论文写作.md",
+    "2023Spring/文献阅读写作/papers/978-3-030-60990-0_12.pdf",
+    "其他/软件测试/Jmeter.md",
+    "其他/软件测试/Selenium.md",
+    "其他/软件测试",
     "2023Spring/文献阅读写作/RLlib稿子.md",
     "2023Spring/文献阅读写作/RLlib-zh.md",
-    "2023Spring/文献阅读写作/未命名.md",
+    "2023Spring/文献阅读写作/RLlib.md",
     "其他/troubleshooting.md",
     "其他/ubuntu.md",
     "大创/pandas.md",
@@ -232,27 +190,10 @@
     "大创/会议记录/3.14.md",
     "大创/会议记录/3.22.md",
     "大创/会议记录/4.7 4.8.md",
-    "大创/会议记录/4.12.md",
-    "大创/会议记录/4.14.md",
-    "大创/会议记录/4.18.md",
-    "2023Spring/文献阅读写作/Rlib-zh.md",
-    "2023Spring/文献阅读写作/Optuna A Next-generation Hyperparameter Optimization Framework.md",
-    "2023Spring/文献阅读写作/Tune A Research Platform for Distributed Model Selectionand Training.md",
     "大创/paper/assets/TACTIC.pdf",
-    "2023Spring/文献阅读写作/Rlib.md",
-    "2023Spring/文献阅读写作/RAY.md",
     "2023Spring/文献阅读写作/papers/1907.10902.pdf",
     "2023Spring/文献阅读写作/papers/1807.05118.pdf",
     "2023Spring/文献阅读写作/papers/s10489-022-04105-y.pdf",
-    "2023Spring/文献阅读写作/papers/1807.05118.tmp",
-    "2023Spring/文献阅读写作/papers/1907.10902.tmp",
-    "2023Spring/文献阅读写作/papers/liang18b.pdf",
-    "2023Spring/文献阅读写作/Asynchronous Methods for Deep Reinforcement Learning.md",
-    "2023Spring/文献阅读写作/papers/espeholt18a.pdf",
-    "2023Spring/文献阅读写作/papers/978-3-030-60990-0_12.pdf",
-    "2023Spring/文献阅读写作/papers/s10489-022-04105-y.tmp",
-    "2023Spring/文献阅读写作/IMPALA.md",
-    "大创/paper/TACTIC.md",
-    "2023Spring/编译原理/06_目标代码.md"
+    "2023Spring/文献阅读写作/papers/1807.05118.tmp"
   ]
 }
