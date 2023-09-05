@@ -9,7 +9,7 @@
 
 ## `.kts`
 
-找到类似文件：`build.gradle.kts`
+找到类似文件：`build.gradle.kts` `settings.gradle.kts`
 
 ```kotlin
 buildscript {  
@@ -21,6 +21,18 @@ buildscript {
 }
 ```
 
+```kotlin
+pluginManagement {  
+  repositories {  
+    maven("https://maven.aliyun.com/repository/public/")  
+    maven("https://maven.aliyun.com/repository/spring/")  
+    mavenLocal()  
+    gradlePluginPortal()  
+    google()  
+    mavenCentral()  
+  }  
+}
+```
 ## `.gradle`
 
 找到类似文件：`build.gradle`、`setting.gradle`
@@ -53,3 +65,20 @@ dependencyResolutionManagement {
         mavenCentral()  
     }}
 ```
+
+# 天气api(gen by AI)
+
+[天气api](https://poe.com/s/qohVLzcGUb5Chy31PCkU)
+
+
+[按钮上显示天气信息](https://poe.com/s/PugcvBygRNWN9f8EFGTL)
+
+
+[Conversation with Assistant on Poe](https://poe.com/s/2JVdqXFFHe6magFS0GRv)
+
+
+# 自定义返回导航
+
+[提供自定义返回导航  |  Android 开发者  |  Android Developers](https://developer.android.com/guide/navigation/custom-back?hl=zh-cn)
+
+

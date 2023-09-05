@@ -72,8 +72,23 @@ sudo sudo dpkg-reconfigure <option>
 
 [ubuntu 20.04 下安装easyconnect记录\_qq\_24857291的博客-CSDN博客](https://blog.csdn.net/qq_24857291/article/details/108071231)
 
+![[libpangoft2-1.0-0_1.42.4-7_amd64.deb]]
 
+![[libpangocairo-1.0-0_1.42.4-7_amd64.deb]]
 
+![[libpango-1.0-0_1.42.4-7_amd64.deb]]
 # NTFS-3g
 
 [NTFS-3G - ArchWiki](https://wiki.archlinux.org/title/NTFS-3G)
+
+
+# 双系统时间不一致
+
+```shell
+# 更新ubuntu的系统时间
+sudo apt-get update
+sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+# 将时间更新到硬件上
+sudo hwclock --localtime --systohc
+```
