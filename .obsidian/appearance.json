@@ -2,9 +2,9 @@
   "accentColor": "",
   "theme": "system",
   "cssTheme": "PLN",
-  "interfaceFontFamily": "思源黑体 CN,微软雅黑",
-  "textFontFamily": "思源黑体 CN",
-  "monospaceFontFamily": "",
+  "interfaceFontFamily": "思源黑体 CN,Century Gothic",
+  "textFontFamily": "思源黑体 CN,Century Gothic",
+  "monospaceFontFamily": "Century Gothic",
   "baseFontSize": 17,
   "nativeMenus": false,
   "translucency": false
