@@ -13,7 +13,7 @@ date:  Thursday,September 7th 2023
 modified:  Thursday,September 7th 2023
 ---
 
-使用步骤
+# 如何在React中使用redux
 
 - **Create a Redux store with `configureStore`**
     - `configureStore` accepts a `reducer` function as a named argument
