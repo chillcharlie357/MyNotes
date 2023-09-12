@@ -105,6 +105,10 @@ k近邻的简化，选取最近的一个
 测试阶段：$O(nd+nlogk)$
 
 [What would be the time complexity to find top K elements in an unsorted array of size N using MaxHeap (of size N) and MinHeap (of size K) and which one would be more efficient? - Quora](https://www.quora.com/What-would-be-the-time-complexity-to-find-top-K-elements-in-an-unsorted-array-of-size-N-using-MaxHeap-of-size-N-and-MinHeap-of-size-K-and-which-one-would-be-more-efficient)
+
+Top k问题时间复杂度：
+
+[algorithm - Find the top K elements in O(N log K) time using heaps - Stack Overflow](https://stackoverflow.com/questions/49217910/find-the-top-k-elements-in-on-log-k-time-using-heaps)
 # 降低近邻计算
 
 
@@ -136,7 +140,6 @@ KD树是二叉树，表示对k维空间的一个划分。
 
 [Introduction to K-D Trees | Baeldung on Computer Science](https://www.baeldung.com/cs/k-d-trees)
 
-[algorithm - Find the top K elements in O(N log K) time using heaps - Stack Overflow](https://stackoverflow.com/questions/49217910/find-the-top-k-elements-in-on-log-k-time-using-heaps)
 ### 构造
 
 
