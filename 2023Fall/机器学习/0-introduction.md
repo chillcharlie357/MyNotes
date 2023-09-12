@@ -9,15 +9,14 @@ excerpt: false
 mathjax: true
 comment: true
 title: 0-introduction
-date:  Tuesday,September 5th 2023
-modified:  Tuesday,September 5th 2023
+date:  Friday,September 8th 2023
+modified:  Tuesday,September 12th 2023
 ---
 
 学习：利用经验改善系统的性能
 
 - 机器学习：现代特指统计机器学习
 	- 任何通过数据训练的学习算法都属于机器学习
-
 - 学习系统
 	- 模型空间
 	- 数据
