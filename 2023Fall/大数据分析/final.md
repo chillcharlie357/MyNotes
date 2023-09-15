@@ -1,0 +1,3 @@
+
+paper: [EasyDGL: Encode, Train and Interpret for Continuous-time Dynamic Graph Learning | Papers With Code](https://paperswithcode.com/paper/easydgl-encode-train-and-interpret-for)
+github:[GitHub - cchao0116/EasyDGL: Code for paper "EasyDGL: Encode, Train and Interpret for Continuous-time Dynamic Graph Learning"](https://github.com/cchao0116/EasyDGL)
