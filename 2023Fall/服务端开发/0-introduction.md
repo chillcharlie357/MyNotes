@@ -1,5 +1,5 @@
 
-# Spring
+# 1. Spring
 
 - Spring
 	- Spring的核心是提供一个容器（container）
@@ -17,14 +17,14 @@
 	- 简化，只需要关注业务
 	- JDBC、事务管理、ORM工具整合
 
-# Spring衍生
+# 2. Spring衍生
 
 - Spring：基本框架
 - Spring Boot：自动配置，简化Spring开发
 	- 开发单个微服务（可执行程序）
 - Spring Cloud：解决分布式系统中特有的问题
 
-## spring boot
+## 2.1. spring boot
 
 1. 可以创建独立的Spring应用程序，并且基于其Maven或Gradle插件，可以创建可执行的JARs和WARs
 2. 内嵌Tomcat或Jetty等**Servlet容器**（Web容器，有很多可运行的web组件）
@@ -37,19 +37,19 @@
 war包小，不能独立运行
 Jar包大，内嵌tomcat容器，本身可以独立运行
 
-## 常用依赖
+## 2.2. 常用依赖
 
 devtools：开发时候用于调试
 web：MVC开发框架
 thymeleaf：动态组装html页面
 
-# Spring Web开发框架的分层👍
+# 3. Spring Web开发框架的分层👍
 
 - 在服务端一侧的划分：
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2Faa30cd55d3482bfd4228c3f361bba520_20230907204339.png)
 
-# 使用JUnit写测试用例
+# 4. 使用JUnit写测试用例
 
 - `@Test`注解
 - `void`返回值，`public`可选
@@ -57,12 +57,12 @@ thymeleaf：动态组装html页面
 
 -方法命名随意
 
-## 断言
+## 4.1. 断言
 
 测试代码中对预期结果的断定
 
 
-# Spring模块组成
+# 5. Spring模块组成
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F14%2F4df50c54d812c48ff73dfeac3b4008cc_20230914185434.png)
 
