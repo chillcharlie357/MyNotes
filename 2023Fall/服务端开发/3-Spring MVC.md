@@ -6,20 +6,15 @@
 - 控制器controller：处理用户输入
 - 视图view：显示内容
 
-# 领域类
+# Model 领域类
 
  `lombok`插件`@Data`注解
 
-# MVC请求映射
+- `@ModelAttribute`
+- `@SessionAttributes`
+	- Model属性会复制到Servlet Request属性中，这样视图中就可以使用它们用于渲染页面
 
-`Requestmapping`
-`GetMapping`
-`PostMapping`
-`DeleteMapping`
-`PatchMapping`
-`PutMapping`
-
-# Servlet规范
+## Servlet规范
 
 - **Web容器的实现规范**，与Spring无关
 	- Web容器/服务器，里面放Serlet对象
@@ -27,6 +22,7 @@
 	- tomcat
 	- jetty
 
+thymeleaf与Servlet request属性协作（与spring model解耦）
 ## Servlet对象
 
 - 类型
@@ -40,3 +36,12 @@ Servlet对象带有属性(property即key-value)
 - `@ModelAttribute(name = <key>)`
 	- 注解返回值为`value`
 - 方法被Spring自动调用
+# MVC请求映射
+
+`Requestmapping`
+`GetMapping`
+`PostMapping`
+`DeleteMapping`
+`PatchMapping`
+`PutMapping`
+
