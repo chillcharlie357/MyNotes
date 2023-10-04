@@ -18,7 +18,7 @@ modified:  Tuesday,October 3rd 2023
 Natural User Interface.使用触摸、自然语言、手势、手写和视觉等方式进行人机交互。  
 而传统用户交互系统适用鼠标、键盘等设备
 
-# NUI发展：手势操作为例
+# NUI发展：手势交互为例
 
 ## 历史
 
