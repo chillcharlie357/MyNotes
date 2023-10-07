@@ -75,3 +75,4 @@ ORM：对象关系映射
 JPA：Java Persistence API
 JPA宗旨是为POJO提供持久化标准范围
 JPQL是一种面向对象的查询语言
+
