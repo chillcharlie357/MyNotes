@@ -87,7 +87,13 @@ public String methodName(@ModelAttribute SomeObject object) {
 如果没有指定`@ModelAttribute`注解的属性名称，Spring MVC会根据参数类型自动推断属性名称，并将其添加到模型中。  
 在上面的示例中，`SomeObject`类型的参数将使用类名的首字母小写作为属性名称。
 
-# 3. MVC请求映射
+# 3. MVC请求
+
+## 3.1. 处理过程
+
+![[Screenshot from 2023-10-07 18-38-55.png]]
+
+## 3.2. MVC请求映射
 
 - `Requestmapping`
 - `GetMapping`
@@ -96,9 +102,12 @@ public String methodName(@ModelAttribute SomeObject object) {
 - `PatchMapping`
 - `PutMapping`
 
-Spr
+## 3.3. 重定向
 
-# Spring MVC获取参数的集中方式
+- http状态码：302
+- 控制器`return redirect:<url>`
+
+## 3.4. Spring MVC获取参数的集中方式
 
 1. 表单(form)参数，转成model
 	- 可能要自己实现Converter
@@ -113,4 +122,4 @@ Spr
 	- `@RequestBody`，会用到HttpMessageConverter消息转换器
 	- Rest API
 
-![[Screenshot from 2023-10-07 18-38-55.png]]
+
