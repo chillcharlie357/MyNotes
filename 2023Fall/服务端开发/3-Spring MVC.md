@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 3-Spring MVC
 date:  Sunday,October 1st 2023
-modified:  Monday,October 2nd 2023
+modified:  Saturday,October 7th 2023
 ---
 
 # 1. 基本概念
@@ -21,6 +21,8 @@ modified:  Monday,October 2nd 2023
 - 控制器controller：处理用户输入
 - 视图view：显示内容
 
+`@Slf4j`是lombok提供的
+`slf4j`是一个日志标准，具体实现有很多
 # 2. Model 领域类
 
  `lombok`插件`@Data`注解
@@ -37,8 +39,7 @@ modified:  Monday,October 2nd 2023
 	- tomcat
 	- jetty
 
-**thymeleaf与Servlet request属性协作**（与spring model解耦）
-
+thymeleaf与Servlet request属性协作，<font color="#ff0000">与spring model解耦</font>
 ### 2.1.1. Servlet对象
 
 - 类型
@@ -95,3 +96,21 @@ public String methodName(@ModelAttribute SomeObject object) {
 - `PatchMapping`
 - `PutMapping`
 
+Spr
+
+# Spring MVC获取参数的集中方式
+
+1. 表单(form)参数，转成model
+	- 可能要自己实现Converter
+	- 可以用`@Valid`校验
+2. 路径参数
+	- `@PathVariable`
+	- `/book/{id}`
+3. 请求参数/查询参数
+	- `@RequestParam`
+	- `challenge?model=2`
+4. json请求体
+	- `@RequestBody`，会用到HttpMessageConverter消息转换器
+	- Rest API
+
+![[Screenshot from 2023-10-07 18-38-55.png]]
