@@ -57,7 +57,21 @@ modified:  Saturday,October 7th 2023
 
 # Spring Data JDBC
 
+属于Spring Data项目，和上面的JDBC不一样
+
+commandLineRunner
+## 异同
+
+- 异
+	- 只定义了一个接口
+	- `CrudRepository`
+- 同
+	- 需要自己创建表
 # Spring Data JPA
 
 JPA是另一个规范  
 ORM：对象关系映射
+
+JPA：Java Persistence API
+JPA宗旨是为POJO提供持久化标准范围
+JPQL是一种面向对象的查询语言
