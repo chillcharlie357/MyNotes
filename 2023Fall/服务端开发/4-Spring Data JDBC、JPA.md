@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 4-Spring Data JDBC、JPA
-date:  Saturday,October 7th 2023
-modified:  Saturday,October 7th 2023
+date:  Sunday,October 8th 2023
+modified:  Monday,October 9th 2023
 ---
 
 持久化存储
@@ -54,12 +54,11 @@ modified:  Saturday,October 7th 2023
 	- Jdbc驱动程序
 		- 例子：h2,内存数据库
 
-
 # Spring Data JDBC
 
-属于Spring Data项目，和上面的JDBC不一样
-
+属于Spring Data项目，和上面的JDBC不一样  
 commandLineRunner
+
 ## 异同
 
 - 异
@@ -67,12 +66,109 @@ commandLineRunner
 	- `CrudRepository`
 - 同
 	- 需要自己创建表
+
+## 步骤
+
+1. 添加依赖
+2. 定义存储库接口
+3. 为领域类添加持久化注解
+
+## 存储库接口
+
+1. Spring Data会在运行时**自动生成存储库接口的实现**。但是，只有当**接口扩展自Spring Data提供的存储库接口**时，它才会帮我们实现这一点。
+2. Repository接口是<font color="#ff0000">参数化</font>的，其中第一个参数是该存储库要**持久化的对象类型**；第二个参数是要持久化对象的**ID字段的类型**。
+
+```java
+public interface IngredientRepository extends Repository<Ingredient, String> {
+  Iterable<Ingredient> findAll();
+
+  Optional<Ingredient> findById(String id);
+
+  Ingredient save(Ingredient ingredient);
+
+}
+```
+
+```java
+public interface IngredientRepository extends CrudRepository<Ingredient, String> {
+}
+```
+
+**CrudRepository**接口包含了增删改查等基础操作  
+当应用启动的时候，Spring Data会在运行时自动生成一个实现。这意味着存储库已经准备就绪，我们将其注入控制器就可以了。
+
+## 为领域类添加持久化注解
+
+1. 涉及为标识属性添加@Id，以让Spring Data知道哪个字段代表了对象的唯一标识
+2. 可选：在类上添加@Table注解
+	- 默认情况下，对象会基于领域类的名称映射到数据库的表上。在本例中，TacoOrder会映射至名为“Taco_Order”的表。
+
+```java
+@Data
+@Table
+public class TacoOrder implements Serializable {
+
+  private static final long serialVersionUID = 1L;
+
+  @Id
+  private Long id;
+
+ // ...
+
+}
+```
+
+- 指定表名：
+
+```java
+@Table("Taco_Cloud_Order")
+public class TacoOrder {
+  ...
+}
+```
+
+- 列名
+	- 默认驼峰映射到下划线
+- `@Column(<name>)`指定列名
+
+## CommandLineRunner预加载数据
+
+Spring Boot提供了两个非常有用的接口，用于在应用启动的时候执行一定的逻辑，即CommandLineRunner和ApplicationRunner。
+
 # Spring Data JPA
 
 JPA是另一个规范  
 ORM：对象关系映射
 
-JPA：Java Persistence API
-JPA宗旨是为POJO提供持久化标准范围
+JPA：Java Persistence API  
+JPA宗旨是为POJO提供持久化标准范围  
 JPQL是一种面向对象的查询语言
+
+## 步骤
+
+1. 添加依赖
+2. 为领域类添加`@Entity`注解
+3. 声明JPA存储库
+
+## 领域类标注为实体
+
+1. 为了将Ingredient声明为JPA实体，它必须添加@Entity注解
+2. id属性需要使用@Id注解，以便于将其指定为数据库中唯一标识该实体的属性
+
+```java
+@Data
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
+public class Ingredient {
+
+  @Id
+  private String id;
+  private String name;
+  private Type type;
+  public enum Type {
+    WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
+  }
+}
+```
 
