@@ -163,6 +163,7 @@ JPQL是一种面向对象的查询语言
 public class Ingredient {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private String id;
   private String name;
   private Type type;
@@ -172,3 +173,73 @@ public class Ingredient {
 }
 ```
 
+- `@GeneratedValue(strategy = GenerationType.AUTO)`
+	- 依赖数据库自动生成ID值
+
+```java
+@Data
+@Entity
+public class TacoOrder implements Serializable {
+
+  private static final long serialVersionUID = 1L;
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
+
+  private Date placedAt = new Date();
+
+  ...
+
+  @OneToMany(cascade = CascadeType.ALL)
+  private List<Taco> tacos = new ArrayList<>();
+
+  public void addTaco(Taco taco) {
+    this.tacos.add(taco);
+  }
+
+}
+```
+
+- `@OneToMany`
+	- 一对多映射
+	- 表明这些taco都属于这一个订单。除此之外，cascade属性设置成了CascadeType.ALL，因此在删除订单的时候，所有关联的taco也都会被删除
+
+## 声明JPA存储库
+
+借助Spring Data JDBC，我们可以省略掉显式的实现类，**只需扩展CrudRepository接口**。实际上，CrudRepository同样适用于Spring Data JPA。
+
+```java
+public interface IngredientRepository extends CrudRepository<Ingredient, String> {
+
+}
+```
+
+## 自定义JPA存储库
+
+### DSL
+
+- Spring Data定义了一组小型的**领域特定语言(Domain-Specific Language,DSL)**，在这里，持久化的细节都是通过存储库方法的签名来描述的。
+- **存储库的方法**由一个**动词**、一个**可选的主题(subject)**、**关键词By**，以及一个**断言**组成。
+
+- 例子:
+
+```java
+List<TacoOrder> findByDeliveryZip(String deliveryZip);
+```
+
+在findByDeliveryZip()这个样例中，动词是find，断言是DeliveryZip，主题并没有指定，暗含的主题是TacoOrder。
+
+### JPQL
+
+- `@Query`
+	- 在查询语句中写SQL语句
+
+```java
+@Query("Order o where o.deliveryCity = 'Seattle'")
+List<TacoOrder> readOrdersDeliveredInSeattle();
+```
+
+- 同样适用于Spring DataJDBC,但存在以下差异
+	1. 在@Query中声明的必须全部是**SQL查询**，不允许使用JPA查询
+	2. 所有的自定义方法都需要使用@Query。这是因为，与JPA不同，我们没有映射元数据帮助Spring Data JDBC根据方法名自动推断查询。
