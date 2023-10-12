@@ -125,7 +125,11 @@ public RedisTemplate<String, Product> redisTemplate(RedisConnectionFactory cf){
 }
 ```
 
-### 2.5.1. 序列化
+- BoudListOperations绑定key，不需要每个操作都写一边
+```java
+ BoudListOperations cart = redisTemplate.boundListOp(''cart")
+```
+### 2.5.1. JDK序列化
 
 - 存储java对象需要序列化
 	- 即持久化
@@ -133,4 +137,23 @@ public RedisTemplate<String, Product> redisTemplate(RedisConnectionFactory cf){
 - 把java对象通过key-value读出来，反序列化
 
 mongodb没有这个要求，因为它会把所有值都转成json串
+
+
+做得很失败，性能也不好
+
+
+### 2.5.2. JSON序列化
+
+```java
+redis.setKeySerializer(new StringRedisSerializer())
+redis.setVAlueSerializer(new Jackson2JsonRedisSerializer<Product.class>)
+```
+
+1. Key比较简单，可以直接用String序列化
+2. 指定Value使用`Jackson2JsonRedisSerializer`进行序列化
+
+对数据存取操作的代码没有影响
+
+直接使用**RedisTemplate**获取的Value会经过反序列化，仍然为Java对象
+如果想要获取String，可以使用**StringRedisTemplate**读取Value
 
