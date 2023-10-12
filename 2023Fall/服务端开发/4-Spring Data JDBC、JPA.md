@@ -11,26 +11,28 @@ excerpt: false
 mathjax: true
 comment: true
 title: 4-Spring Data JDBC、JPA
-date:  Sunday,October 8th 2023
-modified:  Monday,October 9th 2023
+date:  Tuesday,October 10th 2023
+modified:  Thursday,October 12th 2023
 ---
 
 持久化存储
 
 **JDBC是JDK中的内容**，并非spring实现
 
-# JDBCTemplate简化JDBC访问
+# 1. JDBCTemplate简化JDBC访问
 
-依赖：`spring-boot-starter-jdbc`
+1. 依赖：`spring-boot-starter-jdbc`
+2. 提供SQL语句
+3. 把查询结果转成java对象
 
-## 使用原始的JDBC访问数据库
+## 1.1. 使用原始的JDBC访问数据库
 
 - `RawJdbcIngredientRepository`
 - 提供样板代码，减少原始JDBC访问数据库时的重复工作
 - **SQLException**,checked异常（即必须处理，否则编译器会报错）
 	- runtimeExcetion可,unchecked,以不catch
 
-## 异常体系
+## 1.2. 异常体系
 
 - SQLException
 	- 发现异常很难恢复
@@ -47,33 +49,33 @@ modified:  Monday,October 9th 2023
 	- 不需要强制写try catch
 	- 和底层细节解耦
 
-## 使用JdbcTemplate
+## 1.3. 使用JdbcTemplate
 
 - 依赖
 	- `spring-boot-starter-jdbc`
 	- Jdbc驱动程序
 		- 例子：h2,内存数据库
+- <font color="#ff0000">需要scheme.sql脚本定义表结构</font>
 
-# Spring Data JDBC
+# 2. Spring Data JDBC
 
-属于Spring Data项目，和上面的JDBC不一样  
-commandLineRunner
+属于Spring Data项目，和上面的JDBC不一样。进一步简化，只需要提供接口。
 
-## 异同
+## 2.1. 异同
 
 - 异
 	- 只定义了一个接口
 	- `CrudRepository`
 - 同
-	- 需要自己创建表
+	- 需要自己创建表（<font color="#ff0000">scheme.sql</font>脚本定义表结构）
 
-## 步骤
+## 2.2. 步骤
 
 1. 添加依赖
 2. 定义存储库接口
 3. 为领域类添加持久化注解
 
-## 存储库接口
+## 2.3. 存储库接口
 
 1. Spring Data会在运行时**自动生成存储库接口的实现**。但是，只有当**接口扩展自Spring Data提供的存储库接口**时，它才会帮我们实现这一点。
 2. Repository接口是<font color="#ff0000">参数化</font>的，其中第一个参数是该存储库要**持久化的对象类型**；第二个参数是要持久化对象的**ID字段的类型**。
@@ -97,7 +99,7 @@ public interface IngredientRepository extends CrudRepository<Ingredient, String>
 **CrudRepository**接口包含了增删改查等基础操作  
 当应用启动的时候，Spring Data会在运行时自动生成一个实现。这意味着存储库已经准备就绪，我们将其注入控制器就可以了。
 
-## 为领域类添加持久化注解
+## 2.4. 为领域类添加持久化注解
 
 1. 涉及为标识属性添加@Id，以让Spring Data知道哪个字段代表了对象的唯一标识
 2. 可选：在类上添加@Table注解
@@ -131,26 +133,27 @@ public class TacoOrder {
 	- 默认驼峰映射到下划线
 - `@Column(<name>)`指定列名
 
-## CommandLineRunner预加载数据
+## 2.5. CommandLineRunner预加载数据
 
 Spring Boot提供了两个非常有用的接口，用于在应用启动的时候执行一定的逻辑，即CommandLineRunner和ApplicationRunner。
 
-# Spring Data JPA
+# 3. Spring Data JPA
 
-JPA是另一个规范  
 ORM：对象关系映射
 
-JPA：Java Persistence API  
+JPA：Java Persistence API ，另一个规范不同厂家有不同实现  
 JPA宗旨是为POJO提供持久化标准范围  
 JPQL是一种面向对象的查询语言
 
-## 步骤
+## 3.1. 步骤
 
 1. 添加依赖
 2. 为领域类添加`@Entity`注解
 3. 声明JPA存储库
 
-## 领域类标注为实体
+不需要scheme脚本，可以根据java对象自动创建数据库表
+
+## 3.2. 领域类标注为实体
 
 1. 为了将Ingredient声明为JPA实体，它必须添加@Entity注解
 2. id属性需要使用@Id注解，以便于将其指定为数据库中唯一标识该实体的属性
@@ -205,7 +208,7 @@ public class TacoOrder implements Serializable {
 	- 一对多映射
 	- 表明这些taco都属于这一个订单。除此之外，cascade属性设置成了CascadeType.ALL，因此在删除订单的时候，所有关联的taco也都会被删除
 
-## 声明JPA存储库
+## 3.3. 声明JPA存储库
 
 借助Spring Data JDBC，我们可以省略掉显式的实现类，**只需扩展CrudRepository接口**。实际上，CrudRepository同样适用于Spring Data JPA。
 
@@ -215,12 +218,13 @@ public interface IngredientRepository extends CrudRepository<Ingredient, String>
 }
 ```
 
-## 自定义JPA存储库
+## 3.4. 自定义JPA存储库
 
-### DSL
+### 3.4.1. DSL
 
 - Spring Data定义了一组小型的**领域特定语言(Domain-Specific Language,DSL)**，在这里，持久化的细节都是通过存储库方法的签名来描述的。
 - **存储库的方法**由一个**动词**、一个**可选的主题(subject)**、**关键词By**，以及一个**断言**组成。
+	- 常用动词：get、read、find、count
 
 - 例子:
 
@@ -230,7 +234,7 @@ List<TacoOrder> findByDeliveryZip(String deliveryZip);
 
 在findByDeliveryZip()这个样例中，动词是find，断言是DeliveryZip，主题并没有指定，暗含的主题是TacoOrder。
 
-### JPQL
+### 3.4.2. JPQL
 
 - `@Query`
 	- 在查询语句中写SQL语句
@@ -243,3 +247,46 @@ List<TacoOrder> readOrdersDeliveredInSeattle();
 - 同样适用于Spring DataJDBC,但存在以下差异
 	1. 在@Query中声明的必须全部是**SQL查询**，不允许使用JPA查询
 	2. 所有的自定义方法都需要使用@Query。这是因为，与JPA不同，我们没有映射元数据帮助Spring Data JDBC根据方法名自动推断查询。
+
+## 3.5. 数据访问对象模拟
+
+常用工具**Mockito**
+
+- <font color="#ff0000">业务层依赖接口</font>（依赖倒置）
+	- 接口实现可以替换不需要修改业务层
+	- 方便测试
+
+# 4. 三种方法区别👍
+
+- 1、2需要scheme脚本，3不需要
+- 1不需要为领域类加注解
+- 2、3都可以使用@Querry，3还可以基于方法名的DSL自定义查询
+
+## 4.1. 数据表创建和初始化
+
+### 4.1.1. 脚本
+
+schema.sql表创建  
+data.sql数据初始化
+
+### 4.1.2. 程序初始化
+
+CommandLineRunner或ApplicationRunner接口
+
+## 4.2. ID区别
+
+1手动  
+2、3自动
+
+## 定义持久化接口
+
+2、3都继承自CrudRepository接口
+
+## 为领域类添加持久化的注解
+
+JPA中的规范注解都来自javax.persisitence.* ，不是Spring自己实现 
+
+- @Table，对象会基于领域类的名称映射到数据库的表上
+- @Id
+	- 有两个来自不同包的@Id，主义区别
+- @Colimn
