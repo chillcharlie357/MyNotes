@@ -64,6 +64,29 @@ Id为String，mongoDB会自动生成
 - 批量插入数据
 	- 直接从client插入
 	- Spring Data Mongodb插入
+
+Spring插入时会自动创建一个`_class`字段
 # Redis
 
-分布式存储，存在内存里，常用于作缓存
+## 介绍
+
+- 分布式存储
+- 存在内存里，常用于作缓存
+- 可以持久化，但不太重要，不是主要用途
+- 主从复制
+- key-value的Hash表结构，区分大小写
+
+可以设置key的存活时长
+
+
+## Redis数据类型👍
+
+指的是value类型
+1. String
+2. List
+3. Hash
+4. Set
+
+在cilent内用`type`查看value类型
+`lrang mylist 0 -1`：查看list内容
+`lpush`,`rpush`插入数据
