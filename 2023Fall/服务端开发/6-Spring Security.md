@@ -60,7 +60,12 @@ modified:  Monday,October 16th 2023
 	- 例：A提供静态页面，B提供Rest接口
 
 
-# Security配置
+# Security权限控制
 
-1. Java配置类配置
-2. 方法级别的配置
+1. Java配置类权限配置
+	- 针对从客户端来的http请求
+2. 方法级别的权限
+	- 针对业务层代码
+	- 调用前控制，调用后控制
+	- 例：对数据库delete操作做权限控制
+
