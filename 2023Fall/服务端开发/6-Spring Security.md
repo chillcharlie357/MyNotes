@@ -11,5 +11,9 @@
 
 1. 实现接口
 	- 被Spring Security调用
-	- 
+	- `UserDetailInterface`
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F16%2F0dd61f796a4a66bb935bc6ffaebd9676_20231016193806.png)
+
+- PasswordEncoder：<font color="#ff0000">密码不能明文存储</font>，需要加密后再存到数据库里
+	- 需要定义`Bean`
+
