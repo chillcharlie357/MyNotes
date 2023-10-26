@@ -19,8 +19,11 @@ modified:  Monday,October 16th 2023
 # Spring Security
 
 - 作用
-	- 针对客户请求权限控制
-	- 针对方法级的权限控制
+	1. 针对客户web请求权限控制
+	2. 针对方法级的权限控制
+		-  针对业务层代码
+		- 调用前控制，调用后控制
+		- 例：对数据库delete操作做权限控制
 
 添加依赖后会自动加载安全相关的bean
 # Cookie
@@ -74,7 +77,32 @@ modified:  Monday,October 16th 2023
 # 权限分类
 
 - Authority，权限
-- Role，角色，===>>>权限，加前缀：ROLE_
+- Role，角色$\rightarrow$权限，加**前缀**：ROLE_
+	- 从角色到权限
+
+# 自定义登录页面
+
+使用`HttpSecurity`对象配置。
+
+- 当需要认证时转向的登录页：`.loginPage("/login")`
+- 视图控制器，定义login请求对应的视图：`registry.addViewController("/login")`;
+- 登录的post请求由Spring Security自动处理，名称默认：`username`、`password`，可配置
+
+```java
+.loginPage("/login")
+```
+
+# 启用HTTP Basic认证👍
+
+HTTP协议内容，与Spring框架无关。由于用户 ID 与密码是是以明文的形式在网络中进行传输的（尽管采用了 base64 编码，但是 base64 算法是可逆的），所以基本验证方案并**不安全**。
+
+- 启用HTTP basic认证: `httpBasic()`
+	- 默认关闭
+- 在请求时带上用户名密码
+	- `Authorization`属性
+	- `https://username:password@www.example.com/`
+
+[HTTP authentication - HTTP | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)
 # CSRF
 
 - 跨站请求伪造
@@ -91,7 +119,8 @@ modified:  Monday,October 16th 2023
 	4. B返回表单，但提交地址是A
 	5. 由于有C的SessionID，所以A认为是合法的
 
-- 解决：C每次提交表单A，\_csrf 字段有唯一ID，无法伪造
+- 解决：C每次提交表单A，**\_csrf 字段**有唯一ID，无法伪造
+	- get得到`_csrf`， post请求携带`_csrf` ，防止第三方伪造
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F16%2F6a1a8a2f1ac8edf6f33638931d9d15b6_20231016210157.png)
 
@@ -104,12 +133,21 @@ modified:  Monday,October 16th 2023
 	- 例：A提供静态页面，B提供Rest接口
 
 
-# Spring Security权限控制
+# 在后端代码获得用户信息
 
-1. Java配置类权限配置
-	- 针对从客户端来的http请求
-2. 方法级别的权限
-	- 针对业务层代码
-	- 调用前控制，调用后控制
-	- 例：对数据库delete操作做权限控制
+1. 注入`Principal`对象
+	- 来自`java.security`，是JDK中JASS的低层框架
+	- `String username = principal.getName()`获取用户名
+2. `@AuthenticationPrincipal`注解
+	- 来自`Spring Security`
+	- `@AuthenticationPrincipal User user`作为函数参数获得user对象
+3. 安全上下文获取
+```java
+
+Authentication authentication = SecurityContextHolder.getContext().getAuthentication(); User user = (User) authentication.getPrincipal();
+```
+
+
+
+
 
