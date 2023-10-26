@@ -16,21 +16,65 @@ modified:  Monday,October 16th 2023
 
 `spring-boot-starter-security`
 
+# Spring Security
+
+- 作用
+	- 针对客户请求权限控制
+	- 针对方法级的权限控制
+
+添加依赖后会自动加载安全相关的bean
 # Cookie
 
 - http是无状态的协议，cookie可以保存状态
 	- 例：保持用户登录状态
 
-# 开发要做什么
+用户登录后，服务端会返回session-id，作为cookie存在本地每次请求都带上cookie
+
+
+# Web请求拦截
+
+使用filter
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F092f577948a6053f598961fe1a329feb_20231026184400.png)
+
+# 开发人员要做什么👍
+
+除了框架提供的，开发人员还需要做什么
 
 1. 实现接口
 	- 被Spring Security调用
-	- `UserDetailInterface`  
-![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F16%2F0dd61f796a4a66bb935bc6ffaebd9676_20231016193806.png)
+	- `UserDetailInterface`接口：给Spring框架提供用户详细信息
+2. 密码加密/解密对象
+3. (optional)实现登录页面
+	- 有默认页面
+	- `/login`, Spring已经自动实现了对应的`Controller`
+4. 权限设定  
+	- `SecurityFilterChain`
+	- 从父类`WebSecurityConfigurerAdapter`实现`configure`方法
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F4875ccdece8ae8892f54cde6042a6fef_20231026184427.png)
+
 
 - PasswordEncoder：<font color="#ff0000">密码不能明文存储</font>，需要加密后再存到数据库里
 	- 需要定义`Bean`
 
+# 框架实现了什么
+
+1. 实现用户登录控制器get post
+2. 请求重定向到用户登录页面
+	- eg.用户未登录时，访问URL，服务端重定向到登录页面
+4. 通过Filter对用户设定的权限进行权限控制
+# 用户信息存储👍
+
+- 内存用户数据库
+- JDBC用户存储
+- LDAP用户数据库
+	- 轻量级目录数据库
+
+# 权限分类
+
+- Authority，权限
+- Role，角色，===>>>权限，加前缀：ROLE_
 # CSRF
 
 - 跨站请求伪造
@@ -60,7 +104,7 @@ modified:  Monday,October 16th 2023
 	- 例：A提供静态页面，B提供Rest接口
 
 
-# Security权限控制
+# Spring Security权限控制
 
 1. Java配置类权限配置
 	- 针对从客户端来的http请求
