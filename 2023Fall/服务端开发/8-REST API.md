@@ -147,3 +147,51 @@ CORS ，Cross Origin Resource Sharing
 
 依赖：spring-boot-starter-data-rest
 
+## Spring HEATEOAS项目
+
+- 超媒体作为应用状态引擎（Hypermedia AsThe Engine Of Application State,HEATEOAS）
+- 消费这个API的客户端可以使用这些超链接作为指南，以便于导航API并执行后续的请求
+- 也会生成POST和PUT请求
+
+## 设置API基础路径
+
+```yaml
+spring:
+  data
+    rest:
+      base-path: /data-api
+```
+
+## 调整关系名和路径
+
+```java
+@Data
+@Entity
+@RestResource(rel="tacos", path="tacos") 
+public class Taco {}
+```
+
+甚至可以在URL种实现分页和排序：
+http://tacocloud:8080/data-api/tacos?size=15&page=0&sort=createdAt,desc
+
+
+# 测试和保护端点
+
+## RestTemplate
+
+spring会自动注入，不需要自己创建。在java种调用RESTful API。
+
+getForObject：只获取body
+getForEntity：获取完整responseEntity，可以获取headers
+
+## 使用Feign调用REST API
+
+用得更多，实现调用远程API就像调用本地对象。
+
+```xml
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-feign</artifactId>
+</dependency>
+```
+
