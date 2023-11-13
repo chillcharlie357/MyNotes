@@ -9,22 +9,23 @@ excerpt: false
 mathjax: true
 comment: true
 title: 8-REST API
-date: Thursday,November 2nd 2023
-modified: Thursday,November 2nd 2023
+date:  Saturday,November 11th 2023
+modified:  Monday,November 13th 2023
 ---
 
-# 不同开发模式
+# 1. 不同开发模式
 
-## 前后端不分离
+## 1.1. 前后端不分离
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F02%2F5ec4e681073f4e19bdfa388580e8f2ac_20231102185803.png)
 
-## 前后端分离
+## 1.2. 前后端分离
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F02%2F458ecc31fe35e9d03f9062f9439a2ff3_20231102185749.png)
 
-# 使用Spring MVC的控制器创建RESTful端点
-## Rest
+# 2. 使用Spring MVC的控制器创建RESTful端点
+
+## 2.1. Rest
 
 - Representational State Transfer，表现层状态转移
 	- 表现层（Representation）：json、xml、html、pdf、excel
@@ -40,22 +41,38 @@ modified: Thursday,November 2nd 2023
 
 如果一个架构符合REST原则，就称它为RESTful架构. 请求都是针对资源的操作.
 
-## RESTful 控制器实现
+## 2.2. RESTful 控制器实现👍
 
 - RESR API以面向数据的格式返回, JSON或XML
-- @RestController, @ResponseBody: 返回JSON格式串, 而不是逻辑视图名
+- **@RestController, @ResponseBody**: 返回JSON格式串, 而不是逻辑视图名
 	- 或返回ResponseEntity对象，TacoController
 	- 第三方包完成了java对象到JSON格式串的转换过程
-- @RequestMapping的produces属性
+	- <font color="#ff0000">区别</font>：在**方法**上方ResponseBody会返回JSON串；RestController加在**类**上，相当于每个方法上都加ResponseBody
+- @RequestMapping的**produces**属性
 	- 数组
-	- 指定处理的数据格式, `produces={"application/json", "application/xml"}`
+	- 用于请求映射，指定需要处理的数据格式,
+	- e.g.`produces={"application/json", "application/xml"}`
 
 各种Mapping不变
-## 请求头与请求体
 
-## 响应头与响应体
+**@RequestBody**：用于方法参数，从客户端来的JSON串转换成java对象
 
-### Accept取值
+## 2.3. 请求头与请求体
+
+- 请求头：请求头由 key/value 对组成，每行为一对，key 和 value 之间通过冒号(:)分割。请求头的作用主要用于通 知服务端有关于客户端的请求信息。
+	- User-Agent：生成请求的浏览器类型
+	- <font color="#ff0000">Accept：客户端可识别的响应内容类型列表；星号* 用于按范围将类型分组。*/*表示可接受全部类型，type/*表示可接受 type 类型的所有子类型。</font>
+	- Accept-Language: 客户端可接受的自然语言
+	- Accept-Encoding: 客户端可接受的编码压缩格式
+	- Accept-Charset： 可接受的字符集
+	- Host: 请求的主机名，允许多个域名绑定同一 IP 地址
+	- connection：连接方式（close 或 keepalive）
+	- Cookie: 存储在客户端的扩展字段
+	- Content-Type:标识请求内容的类型
+	- Content-Length:标识请求内容的长度
+- 请求体：请求体主要用于 POST 请求，与 POST 请求方法配套的请求头一般有 Content-Type和 Content-Length
+
+### 2.3.1. Accept取值
 
 - text/html ： HTML格式
 - text/plain ：纯文本格式 
@@ -74,7 +91,24 @@ modified: Thursday,November 2nd 2023
 - application/octet-stream： 二进制流数据（如常见的文件下载）
 - application/x-www-form-urlencoded： < form encType=””>中默认的encType，form表单数据被编码为key/value格式发送到服务器（表单默认的提交数据的格式）
 
-## @CrossOrigin注解
+## 2.4. 响应头与响应体👍
+
+- 状态行：由 HTTP 协议版本、状态码、状态码描述三部分构成，它们之间由空格隔开。
+- <font color="#ff0000">状态码</font>：由 3 位数字组成，**第一位标识响应的类型**，常用的5大类状态码如下：
+	- 1xx：表示服务器已接收了客户端的请求，客户端可以继续发送请求
+	- 2xx：表示服务器已成功接收到请求并进行处理
+		- 201：Created
+	- 3xx：表示服务器要求客户端重定向
+	- 4xx：表示客户端的请求有非法内容
+	- 5xx：标识服务器未能正常处理客户端的请求而出现意外错误
+- 响应头
+	- Location：服务器返回给客户端，用于重定向到新的位置
+	- Server： 包含服务器用来处理请求的软件信息及版本信息Vary：标识不可缓存的请求头列表
+	- Connection: 连接方式， close 是告诉服务端，断开连接，不用等待后续的请求了。 keep-alive 则是告诉服务端，在完成本次请求的响应后，保持连接
+	- Keep-Alive: 300，期望服务端保持连接多长时间（秒）
+- 响应内容：服务端返回给请求端的文本信息。
+
+## 2.5. @CrossOrigin注解
 
 CORS ，Cross Origin Resource Sharing
 
@@ -84,32 +118,30 @@ CORS ，Cross Origin Resource Sharing
 
 请求头内HOST字段会有主机域名和端口号
 
-## 消息转换器
+## 2.6. 消息转换器
 
-- 使用注解@ResponseBody或类级@RestController，作用：指定使用消息转换器 
+- 使用注解**方法级@ResponseBody**或**类级@RestController**
+	- 作用：指定使用消息转换器 
 - 没有model和视图，控制器产生数据，然后消息转换器转换数据之后的资源表述。
 - Spring会自动注入一些HttpMethodConverter, 如jackson Json processor、JAXB库
 - 请求传入，@RequestBody以及HttpMethodConverter
 
 应用：jackson Json processor帮助spring转换java object和json
 
-```java
 
-```
-
-## @GetMapping
+## 2.7. @GetMapping
 
 - @PathVariable路径参数据
 - 返回ResponseEntity  
 如果未查询到元素，返回状态码200，body返回null，如果不使用Optional类型，则返回状态码500
 
-## @PostMapping
+## 2.8. @PostMapping
 
 - consumes属性
 - @RequestBody
 - @ResponseStatus，指定**返回状态码**
 
-## @PutMapping和@PatchMapping
+## 2.9. @PutMapping和@PatchMapping
 
 - @PutMapping，putOrder方法实现，”将数据放到这个URL上“
 	- 完全覆盖
@@ -118,11 +150,11 @@ CORS ，Cross Origin Resource Sharing
 
 协议规定了两者更新的范围不一样， 实际开发很少用Patch
 
-## @DeleteMapping
+## 2.10. @DeleteMapping
 
 @DeleteMapping，deleteOrder方法实现，HttpStatus.NO_CONTENT，body不需要返回数据
 
-## 参数类型
+## 2.11. 参数类型
 
 1. 表单参数 form
 	- 用户名、密码
@@ -134,26 +166,26 @@ CORS ，Cross Origin Resource Sharing
 4. 路径参数
 	- `@PathVariable`
 
-## Rest API接口设计👍
+## 2.12. Rest API接口设计👍
 
-1. 使用标注HTTP动词：GET、PUT、POST、DELETE，映射到CRUD
+1. 使用标准**HTTP动词**：GET、PUT、POST、DELETE，映射到CRUD
 2. 使用URL来传达意图
 3. 请求和响应使用JSON
 4. 使用HTTP状态码来传达效果
 	- `Create`: 201
 	- `No content`: 204
 
-# 将Spring Data存储库暴露为REST端点
+# 3. 将Spring Data存储库暴露为REST端点
 
-依赖：spring-boot-starter-data-rest
+添加spring data的rest子依赖：spring-boot-starter-data-rest
 
-## Spring HEATEOAS项目
+## 3.1. Spring HEATEOAS项目
 
 - 超媒体作为应用状态引擎（Hypermedia AsThe Engine Of Application State,HEATEOAS）
 - 消费这个API的客户端可以使用这些超链接作为指南，以便于导航API并执行后续的请求
 - 也会生成POST和PUT请求
 
-## 设置API基础路径
+## 3.2. 设置API基础路径
 
 ```yaml
 spring:
@@ -162,7 +194,7 @@ spring:
       base-path: /data-api
 ```
 
-## 调整关系名和路径
+## 3.3. 调整关系名和路径
 
 ```java
 @Data
@@ -171,20 +203,19 @@ spring:
 public class Taco {}
 ```
 
-甚至可以在URL种实现分页和排序：
+甚至可以在URL种实现分页和排序：  
 http://tacocloud:8080/data-api/tacos?size=15&page=0&sort=createdAt,desc
 
+# 4. 测试和保护端点
 
-# 测试和保护端点
-
-## RestTemplate
+## 4.1. RestTemplate
 
 spring会自动注入，不需要自己创建。在java种调用RESTful API。
 
-getForObject：只获取body
+getForObject：只获取body  
 getForEntity：获取完整responseEntity，可以获取headers
 
-## 使用Feign调用REST API
+## 4.2. 使用Feign调用REST API
 
 用得更多，实现调用远程API就像调用本地对象。
 
@@ -194,4 +225,3 @@ getForEntity：获取完整responseEntity，可以获取headers
 	<artifactId>spring-cloud-starter-feign</artifactId>
 </dependency>
 ```
-
