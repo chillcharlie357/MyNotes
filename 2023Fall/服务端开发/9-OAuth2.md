@@ -57,6 +57,8 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 8. 资源服务器验证token，返回结果
 9. 客户端程序把结果返回给用户
 
+密码没有在浏览器来回传送，但是如果没有密码即使拿到code也没用
+用code向授权服务器换取token才需要密码
 ## 其他授权模式
 
 1. 隐式授权（implicit grant），直接返回访问令牌，而不是授仅码
@@ -83,11 +85,48 @@ JSON web key，RSA密钥对（公䄴、私䄴），用于对令牌签名，令�
 2. 获得token（postman访问） POST ： http://authserver:9000/oauth2/token
 3. 刷新token（postman访问）： http://authserver:9000/oauth2/token
 
-
 # 创建资源服务器
 
+## 步骤
+
 1. 添加依赖
+
 2. 在过滤器中针对被保护的API添加权限控制
 	- 使用`SCOPE_`前缀
+	- 开启API调用前的过滤器
+
 3. 指定授权服务器的地址
 	- 为了获取公钥
+
+使用`SCOPE_`前缀:
+```
+.antMatchers(HttpMethod.POST, "/api/ingredients").hasAuthority("SCOPE_writeIngredients")
+.antMatchers(HttpMethod.DELETE, "/api/ingredients/*").hasAuthority("SCOPE_deleteIngredients")
+```
+
+开启API调用前的过滤器:
+```
+and()
+	.oauth2ResourceServer(oauth2 -> oauth2.jwt())
+```
+
+## 配置资源服务器从何处获取公钥
+
+
+jwt属性配置：
+```
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://tacocloud:9000/oauth2/jwks
+```
+
+## 从POSTMAN访问被保护资源
+
+- 带着token（Authorization属性）访问POST：http://tacocloud:8080/api/ingredients
+- 带着token（Authorization属性）访问DELETE：http://tacocloud:8080/api/ingredients/*
+
+# 开发客户端
+
