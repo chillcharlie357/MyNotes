@@ -69,6 +69,9 @@ MessageConverter是一个Spring的接口
 
 typeId
 
+- SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换
+- MappingJackson2MessageConverter：使用Jackson 2 JSON库实现消息与JSON格式的相互转换
+
 ## 接收模式
 
 ### 拉取模式 pull model
@@ -82,3 +85,34 @@ JmsTemplate支持
 @JmsListener
 
 # RabbitMQ
+
+实现AMQP协议
+
+RabbitMQ基础概念详细介绍https://www.cnblogs.com/williamjie/p/9481774.html
+
+## 概念
+
+- ConnectionFactory、Connection、Channel
+- Exchange：
+	- Default、Direct、Topic、Fanout、Headers、Dead letter
+- Queue
+- Routing key：exchange根据routing key确定消息发往哪个队列
+- Binding key
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F20-31-55-d57a847ec3e2d2ed48f59f6b49ec2e0c-20231116203155-0bdbb4.png)
+
+## 使用
+
+1. 添加依赖
+2. 配置文件
+
+```yaml
+spring:
+rabbitmq:
+host: localhost
+port: 5672
+username: guest
+password: guest
+template:
+exchange: tacocloud.order
+```
