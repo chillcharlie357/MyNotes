@@ -67,3 +67,18 @@ Destination destination = session.createQueue("queue.example");
 MessageConverter是一个Spring的接口  
 实现各种序列化机制
 
+typeId
+
+## 接收模式
+
+### 拉取模式 pull model
+
+JmsTemplate支持  
+访问URL
+
+### 推送模式 push model
+
+需要定义消息监听器  
+@JmsListener
+
+# RabbitMQ
