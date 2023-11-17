@@ -116,3 +116,6 @@ password: guest
 template:
 exchange: tacocloud.order
 ```
+
+生产放指定exchange、routing key
+消费方只需关注队列名字
