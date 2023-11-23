@@ -103,7 +103,7 @@ JSON web key，RSA密钥对（公䄴、私䄴），用于对令牌签名，令�
 3. 指定授权服务器的地址
 	- 为了获取公钥
 
-使用`SCOPE_`前缀:
+<font color="#ff0000">使用`SCOPE_`前缀</font>:
 
 ```
 .antMatchers(HttpMethod.POST, "/api/ingredients").hasAuthority("SCOPE_writeIngredients")
