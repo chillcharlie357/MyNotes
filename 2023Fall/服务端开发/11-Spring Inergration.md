@@ -133,7 +133,7 @@ RendezvousChannel
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F20-14-53-3423606ae480b57609abc38987c77384-20231123201453-e17b91.png)
 
 
-## Endpoint modules
+## 3.9. Endpoint modules
 
 
 Spring已经提供了很多中Endpoint
@@ -141,6 +141,10 @@ AMQP、Filesystems、FTP、Email...
 
 
 
-# 电子邮件集成流
+# 4. 电子邮件集成流
 
 
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F21-08-14-37a3cf11926c438aa0ff8c40edb1591f-20231123210813-33a283.png)
+
+
+IMAP协议需要授权码
