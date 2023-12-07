@@ -54,8 +54,14 @@ modified:  Thursday,December 7th 2023
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F07%2F19-18-18-1741f90e8a645b889a8b9171efa080c4-20231207191818-e018d8.png)
 
-# 使用函数式范式定义控制器
+## 使用函数式范式定义控制器
 
 - 基本组件
 	- HandlerFunction：
 	- RouterFunction：路由和处理关系
+
+WebClient：相当于RestTemplate
+# R2DBC
+
+反应式关系型数据库链接
+JDBC的替代方案
