@@ -43,8 +43,19 @@ modified:  Thursday,December 7th 2023
 
 - 继承`ReactiveCRUDrepository`接口
 - 成员方法返回流
+
 # controller
 
+- 返回流
+- 如果方法**没有返回值**，需要在方法内**订阅**
+	- 否则不会执行，不订阅就不会驱动
+	- 多层嵌套流，对外围订阅不会触发内层的流
 
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F07%2F19-18-18-1741f90e8a645b889a8b9171efa080c4-20231207191818-e018d8.png)
+
+# 使用函数式范式定义控制器
+
+- 基本组件
+	- HandlerFunction：
+	- RouterFunction：路由和处理关系
