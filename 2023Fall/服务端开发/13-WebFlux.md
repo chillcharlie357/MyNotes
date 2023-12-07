@@ -41,5 +41,10 @@ modified:  Thursday,December 7th 2023
 
 ## repository
 
-继承`ReactiveCRUDrepository`
+- 继承`ReactiveCRUDrepository`接口
+- 成员方法返回流
+# controller
 
+
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F07%2F19-18-18-1741f90e8a645b889a8b9171efa080c4-20231207191818-e018d8.png)
