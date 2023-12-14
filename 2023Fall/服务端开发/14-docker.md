@@ -27,6 +27,8 @@ docker ru n hello-world
 - `--link my-mysql:server`：添加链接到另一个容器
 - `-v c:/templ :/data`: 绑定一个卷
 - `--rm`: 退出时自动删除容器
+- `--link mongo:mongo2`：多个容器连接到同一个网络
+	- 
 
 
 ## inspect
@@ -35,4 +37,15 @@ docker ru n hello-world
 
 `docker image`和`docker container`都有`inspect`子命令
 
+
+# Vscode中基于docker容器开发
+
+C/C++：底层开发，嵌入式，性能要求高
+Java：
+Python
+JS：前端开发，服务端，基于JS的测试工具
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F19-50-53-30b0928d69d9e80c0c19e469f102cdb6-20231214195051-9c2274.png)
+
+Gadle：并发构建，性能优于maven
 
