@@ -13,7 +13,7 @@ date:  Thursday,December 7th 2023
 modified:  Thursday,December 7th 2023
 ---
 
-# 异步Web框架的事件轮询机制
+# 1. 异步Web框架的事件轮询机制
 
 - 用较少的线程处理更多请求，减少线程管理的开销
 	- 很多请求的线程并不是在运行，而是在等待
@@ -23,7 +23,7 @@ modified:  Thursday,December 7th 2023
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F07%2F18-52-05-3d823dafa4673e8da18904eae9cbd7f0-20231207185204-00c0c0.png)
 
-# Spring MVC与Spring WebFlux
+# 2. Spring MVC与Spring WebFlux
 
 - 不同
 	- MVC：依赖多线程处理
@@ -37,14 +37,14 @@ modified:  Thursday,December 7th 2023
 
 依赖：spring-boot-starter-webflux
 
-# 实现
+# 3. 实现
 
-## repository
+## 3.1. repository
 
 - 继承`ReactiveCRUDrepository`接口
 - 成员方法返回流
 
-# controller
+# 4. controller
 
 - 返回流
 - 如果方法**没有返回值**，需要在方法内**订阅**
@@ -54,14 +54,14 @@ modified:  Thursday,December 7th 2023
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F07%2F19-18-18-1741f90e8a645b889a8b9171efa080c4-20231207191818-e018d8.png)
 
-## 使用函数式范式定义控制器
+## 4.1. 使用函数式范式定义控制器
 
 - 基本组件
 	- HandlerFunction：
 	- RouterFunction：路由和处理关系
 
 WebClient：相当于RestTemplate
-# R2DBC
+# 5. R2DBC
 
 反应式关系型数据库链接
 JDBC的替代方案
