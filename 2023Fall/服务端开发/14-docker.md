@@ -50,11 +50,49 @@ docker ru n hello-world
 
 # 数据的存储方式
 
-- 数据卷 Volume
-- bind mounts
-- 临时文件系统 tmpfs(temporary file system)
+1. 数据卷 Volume
+2. bind mounts
+3. 临时文件系统 tmpfs(temporary file system)
+
+docker volume子命令可以管理数据卷
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-49-16-0157f9b342cd970ea85a05734fc2b95d-20231214204914-b94d29.png)
 
 
+# 导入导出镜像
+
+- 备份镜像
+	- 保存：docker save -o 文件名.tar 镜像
+	- 导入
+
+# dangling镜像
+
+dangling镜像：没有tag的镜像
+查看：`docker image ls -f dangling=true`
+删除dangling镜像：`docker image prune -f`
+
+# Docker System
+
+- docker system df 命令，类似于 Linux上的 df 命令，用于查看 Docker 的磁盘使用情况
+- RECLAIMABLE 指可回收的，对 image, 指的是没有被容器使用的镜像
+- 查看系统日志：docker system events
+
+# 容器网络👍
+
+网络：
+- none网络， `--net=none`
+- host网络，`--net=host`
+- bridge网络, `--net=bridge`
+	- 例：docker0的linux bridge
+- container网络, `--net=container:NAME_or_ID`
+
+`docker run --network=my-net`：在同一个network里的多个容器可以相互通信
+`docker network connect <network> <container>`
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-47-39-95ea83a90dd44b9bcaeacda307e0cb5c-20231214204737-dcac1b.png)
+
+上图中host为宿主机，docker0为网关，docker1和docker2为容器
+host eth0：宿主机网卡
 # Vscode中基于docker容器开发
 
 C/C++：底层开发，嵌入式，性能要求高
