@@ -79,12 +79,16 @@ dangling镜像：没有tag的镜像
 
 # 容器网络👍
 
-网络：
+不同Network Driver的区别：[Network drivers overview | Docker Docs](https://docs.docker.com/network/drivers/)
+
 - none网络， `--net=none`
 - host网络，`--net=host`
-- bridge网络, `--net=bridge`
+	- 共享宿主机的网络
+- **bridge网络**, `--net=bridge`
 	- 例：docker0的linux bridge
 - container网络, `--net=container:NAME_or_ID`
+	- 新创建的容器共享其他容器的网络
+	- 共享相同的ip地址和端口号，类似k8s的pod
 
 `docker run --network=my-net`：在同一个network里的多个容器可以相互通信
 `docker network connect <network> <container>`
