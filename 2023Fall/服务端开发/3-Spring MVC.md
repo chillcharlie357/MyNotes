@@ -91,7 +91,7 @@ public String methodName(@ModelAttribute SomeObject object) {
 
 ## 3.1. 处理过程
 
-![[Screenshot from 2023-10-07 18-38-55.png]]
+![Screenshot from 2023-10-07 18-38-55](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F10-13-42-ca4167c94583a1706c06fdd1405e61c3-Screenshotundefinedfromundefined2023-10-07undefined18-38-55-eb0c99.png)
 
 ## 3.2. MVC请求映射
 
