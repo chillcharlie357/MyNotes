@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories:
+tags:
+  - 2023_Fall_需求与商业模式创新
+  - 课程
+categories: 2023_Fall_需求与商业模式创新
 sticky:
 thumbnail:
 cover: 
