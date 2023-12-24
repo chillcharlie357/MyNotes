@@ -3,7 +3,7 @@
   "renderImages": true,
   "renderPDF": true,
   "renderIframe": false,
-  "renderExcalidraw": true,
+  "renderExcalidraw": false,
   "renderMsgFile": false,
   "renderRichLink": false,
   "renderTransclusion": false,
