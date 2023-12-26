@@ -1,16 +1,18 @@
 ---
 aliases: 
-tags: 
-categories:
-sticky:
-thumbnail:
+tags:
+  - 2023_Fall_机器学习
+  - 课程
+categories: 2023_Fall_机器学习
+sticky: 
+thumbnail: 
 cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 0-introduction
-date:  Friday,September 8th 2023
-modified:  Tuesday,September 12th 2023
+date: Friday,September 8th 2023
+modified: Tuesday,September 12th 2023
 ---
 
 学习：利用经验改善系统的性能

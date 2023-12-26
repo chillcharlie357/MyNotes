@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories:
+tags:
+  - 2023_Fall_机器学习
+  - 课程
+categories: 2023_Fall_机器学习
 sticky:
 thumbnail:
 cover: 
