@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories:
+tags:
+  - 2023_Fall_服务端开发
+  - 课程
+categories: 2023_Fall_服务端开发
 sticky:
 thumbnail:
 cover: 
@@ -10,7 +12,7 @@ mathjax: true
 comment: true
 title: 5-Spring Data MongoDB、Redis
 date:  Thursday,October 12th 2023
-modified:  Thursday,October 12th 2023
+modified:  Thursday,December 28th 2023
 ---
 
 # 1. MongoDB
@@ -59,6 +61,7 @@ Id为String，mongoDB会自动生成
 在Appication配置文件中指定
 
 `spring.data.mongodb.url=<url>`
+
 ## 1.5. 性能对比
 
 - 批量插入数据
@@ -66,6 +69,7 @@ Id为String，mongoDB会自动生成
 	- Spring Data Mongodb插入
 
 Spring插入时会自动创建一个`_class`字段
+
 # 2. Redis
 
 ## 2.1. 介绍
@@ -78,35 +82,33 @@ Spring插入时会自动创建一个`_class`字段
 
 ## 2.2. Redis命令
 
-可以设置key的存活时长
+可以设置key的存活时长  
 默认创建16个数据库
 
-flushdb：deletes the keys in a database
+flushdb：deletes the keys in a database  
 flushall：deletes all keys in all databases
 
 ## 2.3. Redis数据类型👍
 
 指的是**value类型**
+
 1. String
 2. List
 3. Hash
 4. Set
 5. ......
 
-
-在cilent内：
-`type`查看value类型
-`lrang mylist 0 -1`：查看list内容
-`lpush`,`rpush`插入数据
-`sadd mysqet 1 2 3 4`：add set
+在cilent内：  
+`type`查看value类型  
+`lrang mylist 0 -1`：查看list内容  
+`lpush`,`rpush`插入数据  
+`sadd mysqet 1 2 3 4`：add set  
 `smember myset`：查看set内容
-
 
 ## 2.4. Redis客户端
 
 - Jedis：早期Spring集成
 - Lettuce：目前Spring采用的客户端
-
 
 ## 2.5. Spring Data Redis
 
@@ -126,9 +128,11 @@ public RedisTemplate<String, Product> redisTemplate(RedisConnectionFactory cf){
 ```
 
 - BoudListOperations绑定key，不需要每个操作都写一边
+
 ```java
  BoudListOperations cart = redisTemplate.boundListOp(''cart")
 ```
+
 ### 2.5.1. JDK序列化
 
 - 存储java对象需要序列化
@@ -138,9 +142,7 @@ public RedisTemplate<String, Product> redisTemplate(RedisConnectionFactory cf){
 
 mongodb没有这个要求，因为它会把所有值都转成json串
 
-
 做得很失败，性能也不好
-
 
 ### 2.5.2. JSON序列化
 
@@ -154,6 +156,5 @@ redis.setVAlueSerializer(new Jackson2JsonRedisSerializer<Product.class>)
 
 对数据存取操作的代码没有影响
 
-直接使用**RedisTemplate**获取的Value会经过反序列化，仍然为Java对象
+直接使用**RedisTemplate**获取的Value会经过反序列化，仍然为Java对象  
 如果想要获取String，可以使用**StringRedisTemplate**读取Value
-

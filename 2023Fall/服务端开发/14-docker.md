@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories:
+tags:
+  - 2023_Fall_服务端开发
+  - 课程
+categories: 2023_Fall_服务端开发
 sticky:
 thumbnail:
 cover: 
@@ -10,7 +12,7 @@ mathjax: true
 comment: true
 title: 14-docker
 date:  Thursday,December 14th 2023
-modified:  Thursday,December 21st 2023
+modified:  Thursday,December 28th 2023
 ---
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png)

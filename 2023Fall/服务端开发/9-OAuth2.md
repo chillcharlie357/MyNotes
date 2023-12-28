@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories:
+tags:
+  - 2023_Fall_服务端开发
+  - 课程
+categories: 2023_Fall_服务端开发
 sticky:
 thumbnail:
 cover: 
@@ -10,7 +12,7 @@ mathjax: true
 comment: true
 title: 9-OAuth2
 date:  Monday,November 13th 2023
-modified:  Thursday,November 16th 2023
+modified:  Thursday,December 28th 2023
 ---
 
 之前讲了Spring Security的单体应用权限控制
@@ -51,15 +53,15 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 1. 用户使用第三方的应用程序，也就是客户端应用程序
 2. 客户端发现用户未登录，把用户请求**重定向**到授权服务器
 	- 授权服务器会维护合法的重定向地址，用于校验
-4. 授权服务器向用户索取用户名密码
-5. 用户名密码匹配，则授权服务器请求用户授权
-6. **授权服务器给客户端程序返回code**
-7. **客户端应用程序用code向授权服务器索取token**
+3. 授权服务器向用户索取用户名密码
+4. 用户名密码匹配，则授权服务器请求用户授权
+5. **授权服务器给客户端程序返回code**
+6. **客户端应用程序用code向授权服务器索取token**
 	- 用code交换token
 	- 不过浏览器，直接与授权服务器沟通
-8. 客户端在请求头带上token调用资源服务器的API
-9. 资源服务器验证token，返回结果
-10. 客户端程序把结果返回给用户
+7. 客户端在请求头带上token调用资源服务器的API
+8. 资源服务器验证token，返回结果
+9. 客户端程序把结果返回给用户
 
 密码没有在浏览器来回传送，但是如果没有密码即使拿到code也没用  
 用code向授权服务器换取token才需要密码

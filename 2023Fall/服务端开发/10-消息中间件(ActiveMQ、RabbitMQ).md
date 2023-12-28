@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories:
+tags:
+  - 2023_Fall_服务端开发
+  - 课程
+categories: 2023_Fall_服务端开发
 sticky:
 thumbnail:
 cover: 
@@ -10,7 +12,7 @@ mathjax: true
 comment: true
 title: 10-消息中间件(ActiveMQ、RabbitMQ)
 date:  Thursday,November 16th 2023
-modified:  Thursday,November 16th 2023
+modified:  Thursday,December 28th 2023
 ---
 
 # 1. 消息中间件
@@ -29,6 +31,7 @@ modified:  Thursday,November 16th 2023
 - JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持
 
 Jms规定了ConnectionFactory、Connection、Session等接口/类
+
 # 3. ActiveMQ Artemis
 
 - 支持协议
@@ -118,7 +121,7 @@ template:
 exchange: tacocloud.order
 ```
 
-生产放指定exchange、routing key
+生产放指定exchange、routing key  
 消费方只需关注队列名字
 
 也有拉取模式和推送模式、消息的转换

@@ -3,7 +3,9 @@ aliases:
 tags:
   - 关系型数据库
   - Spring_Data
-categories: 
+  - 2023_Fall_服务端开发
+  - 课程
+categories: 2023_Fall_服务端开发
 sticky: 
 thumbnail: 
 cover: 
@@ -12,7 +14,7 @@ mathjax: true
 comment: true
 title: 4-Spring Data JDBC、JPA
 date:  Tuesday,October 10th 2023
-modified:  Thursday,October 12th 2023
+modified:  Thursday,December 28th 2023
 ---
 
 持久化存储
@@ -278,11 +280,11 @@ CommandLineRunner或ApplicationRunner接口
 1手动  
 2、3自动
 
-## 定义持久化接口
+## 4.3. 定义持久化接口
 
 2、3都继承自CrudRepository接口
 
-## 为领域类添加持久化的注解
+## 4.4. 为领域类添加持久化的注解
 
 JPA中的规范注解都来自javax.persisitence.* ，不是Spring自己实现 
 

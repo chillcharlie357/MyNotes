@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories: 
+tags:
+  - 2023_Fall_服务端开发
+  - 课程
+categories: 2023_Fall_服务端开发
 sticky: 
 thumbnail: 
 cover: 
@@ -10,7 +12,7 @@ mathjax: true
 comment: true
 title: 8-REST API
 date:  Saturday,November 11th 2023
-modified:  Monday,November 13th 2023
+modified:  Thursday,December 28th 2023
 ---
 
 # 1. 不同开发模式
@@ -127,7 +129,6 @@ CORS ，Cross Origin Resource Sharing
 - 请求传入，@RequestBody以及HttpMethodConverter
 
 应用：jackson Json processor帮助spring转换java object和json
-
 
 ## 2.7. @GetMapping
 

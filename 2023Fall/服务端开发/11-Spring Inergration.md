@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories:
+tags:
+  - 2023_Fall_服务端开发
+  - 课程
+categories: 2023_Fall_服务端开发
 sticky:
 thumbnail:
 cover: 
@@ -10,7 +12,7 @@ mathjax: true
 comment: true
 title: 11-Spring Inergration
 date:  Thursday,November 23rd 2023
-modified:  Thursday,December 7th 2023
+modified:  Thursday,December 28th 2023
 ---
 
 做不同系统集成

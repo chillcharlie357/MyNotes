@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories:
+tags:
+  - 2023_Fall_服务端开发
+  - 课程
+categories: 2023_Fall_服务端开发
 sticky:
 thumbnail:
 cover: 
@@ -9,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 3-Spring MVC
-date:  Sunday,October 1st 2023
-modified:  Saturday,October 7th 2023
+date:  Tuesday,October 10th 2023
+modified:  Thursday,December 28th 2023
 ---
 
 # 1. 基本概念
@@ -21,8 +23,9 @@ modified:  Saturday,October 7th 2023
 - 控制器controller：处理用户输入
 - 视图view：显示内容
 
-`@Slf4j`是lombok提供的
+`@Slf4j`是lombok提供的  
 `slf4j`是一个日志标准，具体实现有很多
+
 # 2. Model 领域类
 
  `lombok`插件`@Data`注解
@@ -40,6 +43,7 @@ modified:  Saturday,October 7th 2023
 	- jetty
 
 thymeleaf与Servlet request属性协作，<font color="#ff0000">与spring model解耦</font>
+
 ### 2.1.1. Servlet对象
 
 - 类型
@@ -121,5 +125,4 @@ public String methodName(@ModelAttribute SomeObject object) {
 4. json请求体
 	- `@RequestBody`，会用到HttpMessageConverter消息转换器
 	- Rest API
-
 

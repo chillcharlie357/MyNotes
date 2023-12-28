@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories:
+tags:
+  - 2023_Fall_服务端开发
+  - 课程
+categories: 2023_Fall_服务端开发
 sticky:
 thumbnail:
 cover: 
@@ -10,7 +12,7 @@ mathjax: true
 comment: true
 title: 13-WebFlux
 date:  Thursday,December 7th 2023
-modified:  Thursday,December 7th 2023
+modified:  Thursday,December 28th 2023
 ---
 
 # 1. 异步Web框架的事件轮询机制
@@ -51,7 +53,6 @@ modified:  Thursday,December 7th 2023
 	- 否则不会执行，不订阅就不会驱动
 	- 多层嵌套流，对外围订阅不会触发内层的流
 
-
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F07%2F19-18-18-1741f90e8a645b889a8b9171efa080c4-20231207191818-e018d8.png)
 
 ## 4.1. 使用函数式范式定义控制器
@@ -61,8 +62,8 @@ modified:  Thursday,December 7th 2023
 	- RouterFunction：路由和处理关系
 
 WebClient：相当于RestTemplate
+
 # 5. R2DBC
 
-反应式关系型数据库链接
+反应式关系型数据库链接  
 JDBC的替代方案
-
