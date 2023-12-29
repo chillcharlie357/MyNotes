@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 8-REST API
-date:  Saturday,November 11th 2023
-modified:  Thursday,December 28th 2023
+date: 2023-11-11 18:52
+modified: 2023-12-29 10:15
 ---
 
 # 1. 不同开发模式

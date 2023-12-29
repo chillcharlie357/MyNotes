@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 1-概率与学习-KNN
-date:  Friday,September 15th 2023
-modified:  Sunday,October 1st 2023
+date: 2023-10-10 18:22
+modified: 2023-12-29 10:15
 ---
 
 # 1. 回顾

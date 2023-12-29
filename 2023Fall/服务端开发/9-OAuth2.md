@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 9-OAuth2
-date:  Monday,November 13th 2023
-modified:  Thursday,December 28th 2023
+date: 2023-11-13 18:46
+modified: 2023-12-29 10:15
 ---
 
 之前讲了Spring Security的单体应用权限控制

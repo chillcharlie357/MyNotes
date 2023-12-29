@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 3-Spring MVC
-date:  Tuesday,October 10th 2023
-modified:  Thursday,December 28th 2023
+date: 2023-10-10 18:22
+modified: 2023-12-29 10:15
 ---
 
 # 1. 基本概念

@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 0-introduction
-date: Friday,September 8th 2023
-modified: Tuesday,September 12th 2023
+date: 2023-10-10 18:22
+modified: 2023-12-29 10:15
 ---
 
 学习：利用经验改善系统的性能

@@ -9,8 +9,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: HW1
-date:  Sunday,October 1st 2023
-modified:  Tuesday,October 3rd 2023
+date: 2023-10-10 18:22
+modified: 2023-12-29 10:10
 ---
 
 # 什么是NUI

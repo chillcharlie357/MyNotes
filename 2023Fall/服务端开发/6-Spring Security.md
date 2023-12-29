@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 6-Spring Security
-date:  Monday,October 16th 2023
-modified:  Thursday,December 28th 2023
+date: 2023-10-16 18:47
+modified: 2023-12-29 10:15
 ---
 - JAAS: Java Authentication Authorization Service. JDK提供的认证授权服务
 

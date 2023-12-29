@@ -46,7 +46,7 @@
       "force-retention-of-create-value": false,
       "date-modified": true,
       "date-modified-key": "modified",
-      "format": " dddd,MMMM Do YYYY"
+      "format": "YYYY-MM-DD HH:mm"
     },
     "yaml-title": {
       "enabled": true,
@@ -233,15 +233,24 @@
     },
     "remove-multiple-blank-lines-on-paste": {
       "enabled": true
+    },
+    "add-blank-line-after-yaml": {
+      "enabled": false
+    },
+    "default-language-for-code-fences": {
+      "enabled": false,
+      "default-language": ""
     }
   },
   "lintOnSave": true,
   "recordLintOnSaveLogs": false,
   "displayChanged": true,
+  "lintOnFileChange": false,
+  "displayLintOnFileChangeNotice": false,
   "settingsConvertedToConfigKeyValues": true,
   "foldersToIgnore": [],
   "linterLocale": "en",
-  "logLevel": 4,
+  "logLevel": "ERROR",
   "lintCommands": [],
   "customRegexes": [],
   "commonStyles": {
