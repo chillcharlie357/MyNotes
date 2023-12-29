@@ -43,10 +43,10 @@
       "enabled": true,
       "date-created": true,
       "date-created-key": "date",
-      "force-retention-of-create-value": false,
+      "force-retention-of-create-value": true,
       "date-modified": true,
       "date-modified-key": "modified",
-      "format": "YYYY-MM-DD HH:mm"
+      "format": " YYYY-MM-DD HH:MM"
     },
     "yaml-title": {
       "enabled": true,
@@ -233,13 +233,6 @@
     },
     "remove-multiple-blank-lines-on-paste": {
       "enabled": true
-    },
-    "add-blank-line-after-yaml": {
-      "enabled": false
-    },
-    "default-language-for-code-fences": {
-      "enabled": false,
-      "default-language": ""
     }
   },
   "lintOnSave": true,
