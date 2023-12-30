@@ -23,6 +23,7 @@ modified: 2023-12-29 10:15
 	- Application Context上下文运行环境
 - Bean
 	- 一个object  
+
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2F27a33f228b702e3362eab03541d8c21e_20230907191141.png)
 
 - 核心技术
