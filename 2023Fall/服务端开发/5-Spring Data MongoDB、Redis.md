@@ -33,9 +33,8 @@ modified:  2023-12-31 15:12
 
 ## 1.2. 使用
 
-Id为String，mongoDB会自动生成
-
-可以使用mongdb-shell交互
+- Id为String，mongoDB会自动生成
+- 可以使用mongdb-shell交互
 
 ## 1.3. Spring Data MongoDB👍
 
@@ -53,8 +52,8 @@ Id为String，mongoDB会自动生成
 	- 因为String类型MongoDB可以自动创建并唯一赋值
 
 - <font color="#ff0000">和关系型数据库主要区别</font>
-	- List，可以把原来关系型数据库的子表放到同一个Collection里。
-	- 可能会导致重复存储，但可以通过加索引等方法解决
+	1. List，可以把原来关系型数据库的子表放到同一个Collection里。document可以直接包含子document。
+	2. 可能会导致重复存储，但可以通过加索引等方法解决
 
 ## 1.4. 在Spring中配置
 

@@ -11,25 +11,25 @@ excerpt: false
 mathjax: true
 comment: true
 title: 6-Spring Security
-date: 2023-10-16 18:47
-modified: 2023-12-29 10:15
+date:  2023-10-16 18:10
+modified:  2023-12-31 16:12
 ---
 - JAAS: Java Authentication Authorization Service. JDK提供的认证授权服务
 
-`spring-boot-starter-security`
+# 1. Spring Security👍
 
-# 1. Spring Security
-
-- 作用
+- 划分为两类：
 	1. 针对客户web请求权限控制
 	2. 针对方法级的权限控制
 		- 针对业务层代码
 		- 调用前控制，调用后控制
 		- 例：对数据库delete操作做权限控制
 
-添加依赖后会自动加载安全相关的bean
+- 在spring中使用：添加依赖`spring-boot-starter-security`后会自动加载安全相关的bean
 
 # 2. Cookie
+
+维持客户端与服务端长时间的会话。
 
 - http是无状态的协议，cookie可以保存状态
 	- 例：保持用户登录状态
@@ -38,24 +38,28 @@ modified: 2023-12-29 10:15
 
 # 3. Web请求拦截
 
-使用filter
+- spring data权限认证的原理：使用servlet容器的filter
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F092f577948a6053f598961fe1a329feb_20231026184400.png)
 
-# 4. 开发人员要做什么👍
+# 4. 开发人员还要做什么👍
 
-<font color="#ff0000">除了框架提供的，开发人员还需要做什么?</font>
+<font color="#ff0000">除了框架提供的，开发人员还需要做什么，很重要</font>
 
 1. 实现接口
+	- `UserDetailsService`接口：给Spring框架提供用户详细信息。用户信息注册存储，需要用到用户信息的时候从数据访问层获取
+		- 这里用到之前讲到数据访问层实现技术。
+		- 和spring security解耦，只需要提供用户信息但不关心怎么实现。
 	- 被Spring Security调用
-	- `UserDetailInterface`接口：给Spring框架提供用户详细信息
-2. 密码加密/解密对象
+2. 实现密码加密/解密对象
+	- PasswordEncoder
+	- Bean对象
 3. (optional)实现登录页面
 	- 有默认页面
 	- `/login`, Spring已经自动实现了对应的`Controller`
-4. 权限设定  
-	- `SecurityFilterChain`
-	- 从父类`WebSecurityConfigurerAdapter`实现`configure`方法
+4. 权限设定
+	1. `SecurityFilterChain`，基于注入的`httpSecurity`对象
+	2. 继承父类`WebSecurityConfigurerAdapter`，实现`configure`方法
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F4875ccdece8ae8892f54cde6042a6fef_20231026184427.png)
 
@@ -71,9 +75,12 @@ modified: 2023-12-29 10:15
 
 # 6. 用户信息存储👍
 
-- 内存用户数据库
-- JDBC用户存储
-- LDAP用户数据库
+来自多个渠道，spring security不关心。
+
+1. 内存用户数据库
+2. JDBC用户存储
+	- 不止是JDBC、关系型数据库，只要是持久化的都算
+3. LDAP用户数据库
 	- 轻量级目录数据库
 
 # 7. 权限分类
@@ -91,16 +98,18 @@ modified: 2023-12-29 10:15
 - 登录的post请求由Spring Security自动处理，名称默认：`username`、`password`，可配置
 
 ```java
-.loginPage("/login")
+formLogin()
+.loginPage("/login").usernameParamrter('username').passwordParameter('password')
 ```
 
 # 9. 启用HTTP Basic认证👍
 
-HTTP协议内容，与Spring框架无关。由于用户 ID 与密码是是以明文的形式在网络中进行传输的（尽管采用了 base64 编码，但是 base64 算法是可逆的），所以基本验证方案并**不安全**。
+HTTP协议内容，与Spring框架无关。  
+由于用户 ID 与密码是是以明文的形式在网络中进行传输的（尽管采用了 base64 编码，但是 base64 算法是可逆的），所以基本验证方案并**不安全**。
 
 - 启用HTTP basic认证: `httpBasic()`
 	- 默认关闭
-- 在请求时带上用户名密码
+- 在请求时带上用户名密码，一般在测试的时候使用
 	- `Authorization`属性
 	- `https://username:password@www.example.com/`
 
@@ -109,6 +118,7 @@ HTTP协议内容，与Spring框架无关。由于用户 ID 与密码是是以明
 # 10. CSRF
 
 - 跨站请求伪造
+	- 攻击者诱导受害者进入第三方网站，在第三方网站中，向被攻击网站发送跨站请求。利用受害者在被攻击网站已经获取的注册凭证，绕过后台的用户验证，达到冒充用户对被攻击的网站执行某项操作的目的。
 - 默认开启
 - 如何关闭：`.csrd().disable()`
 - 如何忽略：`.ignoringAntMatchers("/admin/**")`
@@ -116,16 +126,20 @@ HTTP协议内容，与Spring框架无关。由于用户 ID 与密码是是以明
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F16%2F485966b40e6bb369ce1b793d15d48bf1_20231016205535.png)
 
 - 例子：
-	1. C访问A，登录，建立长期会话
-	2. C每次对A请求，都会带有SessionID
-	3. 在此期间C又访问了B，假设又一个表达
-	4. B返回表单，但提交地址是A
-	5. 由于有C的SessionID，所以A认为是合法的
+	1. 受害者登录a.com，并保留了登录凭证（Cookie）。
+	2. 攻击者引诱受害者访问了b.com。
+	3. b.com 向 a.com 发送了一个请求：a.com/act=xx。浏览器会默认携带a.com的Cookie。
+	4. a.com接收到请求后，对请求进行验证，并确认是受害者的凭证，误以为是受害者自己发送的请求。
+	5. a.com以受害者的名义执行了act=xx。
+	6. 攻击完成，攻击者在受害者不知情的情况下，冒充受害者，让a.com执行了自己定义的操作。
 
 - 解决：C每次提交表单A，**\_csrf 字段**有唯一ID，无法伪造
 	- get得到`_csrf`， post请求携带`_csrf` ，防止第三方伪造
+	- 不在cookie中
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F16%2F6a1a8a2f1ac8edf6f33638931d9d15b6_20231016210157.png)
+
+[前端安全系列（二）：如何防止CSRF攻击？ - 美团技术团队](https://tech.meituan.com/2018/10/11/fe-security-csrf.html)
 
 # 11. CORS：跨域资源共享
 
@@ -134,7 +148,7 @@ HTTP协议内容，与Spring框架无关。由于用户 ID 与密码是是以明
 - 常用于客户端与服务端分离的场景
 	- 例：A提供静态页面，B提供Rest接口
 
-# 12. 在后端代码获得用户信息
+# 12. 在后端代码获得当前登录的用户信息
 
 1. 注入`Principal`对象
 	- 来自`java.security`，是JDK中JASS的低层框架
