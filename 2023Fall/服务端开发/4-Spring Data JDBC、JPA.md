@@ -14,7 +14,7 @@ mathjax: true
 comment: true
 title: 4-Spring Data JDBC、JPA
 date:  2023-10-10 18:10
-modified:  2023-12-31 14:12
+modified:  2023-12-31 15:12
 ---
 
 # 1. 数据库访问层的开发👍
@@ -38,7 +38,7 @@ modified:  2023-12-31 14:12
 ## 2.1. 使用原始的JDBC访问数据库
 
 - `RawJdbcIngredientRepository`
-- 提供样板代码，减少原始JDBC访问数据库时的重复工作
+- 提供样板代码（ResultSet、PreparedStatement、Connection）
 - **SQLException**,checked异常（即必须处理，否则编译器会报错）
 	- runtimeExcetion可,unchecked,以不catch
 
@@ -55,17 +55,28 @@ modified:  2023-12-31 14:12
 	- 具体异常，方便定位
 	- 隔离具体数据库
 
-- Spring优点：
-	- 不需要强制写try catch
-	- 和底层细节解耦
-
 ## 2.3. 使用JdbcTemplate
 
 - 依赖
 	- `spring-boot-starter-jdbc`
 	- Jdbc驱动程序
 		- 例子：h2,内存数据库
-- <font color="#ff0000">需要scheme.sql脚本定义表结构</font>
+- <font color="#ff0000">需要scheme.sql脚本定义表结构，data.sql-数据初始化</font>
+- Spring优点：
+	- 不需要强制写try catch
+	- 和底层细节解耦
+	- 减少原始JDBC访问数据库时的重复工作
+
+`spring-jdbc`提供了一个 [`GeneratedKeyHolder`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/support/GeneratedKeyHolder.html) 类，通过它可以获取到自增ID的值。
+
+```java
+public long getUsers() {
+    return jdbcTemplate.queryForObject("SELECT COUNT(*) FROM users", (ResultSet rs, int rowNum) -> {
+        // SELECT COUNT(*)查询只有一列，取第一列数据:
+        return rs.getLong(1);
+    });
+}
+```
 
 # 3. Spring Data JDBC
 
@@ -77,7 +88,7 @@ modified:  2023-12-31 14:12
 	- 只定义了一个接口
 	- `CrudRepository`
 - 同
-	- 需要自己创建表（<font color="#ff0000">scheme.sql</font>脚本定义表结构）
+	- 需要自己创建表（<font color="#ff0000">scheme.sql</font>脚本定义表结构）,data.sql初始化数据
 
 ## 3.2. 步骤
 
@@ -111,8 +122,8 @@ public interface IngredientRepository extends CrudRepository<Ingredient, String>
 
 ## 3.4. 为领域类添加持久化注解
 
-1. 涉及为标识属性添加@Id，以让Spring Data知道哪个字段代表了对象的唯一标识
-2. 可选：在类上添加@Table注解
+1. 涉及为标识属性**添加@Id**，以让Spring Data知道哪个字段代表了对象的唯一标识
+2. **可选**：在类上添加@Table注解
 	- 默认情况下，对象会基于领域类的名称映射到数据库的表上。在本例中，TacoOrder会映射至名为“Taco_Order”的表。
 
 ```java
@@ -161,7 +172,7 @@ JPQL是一种面向对象的查询语言
 2. 为领域类添加`@Entity`注解
 3. 声明JPA存储库
 
-不需要scheme脚本，可以根据java对象自动创建数据库表
+<font color="#c00000">不需要scheme脚本，可以根据java对象自动创建数据库表</font>
 
 ## 4.2. 领域类标注为实体
 
@@ -268,22 +279,24 @@ List<TacoOrder> readOrdersDeliveredInSeattle();
 
 # 5. 三种方法区别、相同点👍
 
-1. 1、2需要scheme脚本，3不需要（根据领域类自动生成）
-2. 数据库访问层，1需要自己实现接口，2、3不需要
-3. 1不需要为领域类加注解，2、3要为领域类加注解（提供领域类和表结构的映射关系）
-4. 2、3都可以使用@Querry定义查询逻辑，但3还可以使用基于方法名的DSL自定义查询
+1. 数据表生成：1、2需要scheme脚本，3不需要（根据领域类自动生成）
+2. 数据库访问层：1需要自己实现接口，2、3不需要
+3. 领域类注解：1不需要为领域类加注解，2、3要为领域类加注解（提供领域类和表结构的映射关系）
+	- 2： @Id
+	- 3: @Entity, @Id
+4. 自定义查询：2、3都可以使用@Querry定义查询逻辑，但3还可以使用基于方法名的DSL自定义查询
 5. ID字段的处理：1需要手动获取数据库生成的Id，2、3不需要
-6. 2、3都继承自CrudRepository接口
-7. 2、3为领域类添加持久化的注解包路径不一样
+6. 存储库接口：2、3都继承自CrudRepository接口
+7. 包路径：2、3为领域类添加持久化的注解包路径不一样
 	- JPA中的规范注解都来自javax.persisitence.* ，因为不是Spring自己实现
 	- @Table，对象会基于领域类的名称映射到数据库的表上
 	- @Id
 		- 有两个来自不同包的@Id，主义区别
-	- @Colimn
+	- @Column
 
 # 6. 数据表创建和初始化
 
-三种方式
+三种方式，java代码初始化有两种。
 
 ### 6.1. 脚本
 
