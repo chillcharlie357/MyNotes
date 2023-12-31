@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 3-Spring MVC
 date:  2023-10-10 18:10
-modified:  2023-12-31 11:12
+modified:  2023-12-31 14:12
 ---
 
 # 1. 基本概念👍
@@ -24,8 +24,9 @@ modified:  2023-12-31 11:12
 - 视图view：显示内容
 
 lombok在编译器自动生成一些样板代码，运行期没用。  
-`@Slf4j`是lombok提供的 。  
-`slf4j`是一个日志标准，具体实现有很多。
+`@Slf4j`是lombok提供的注解。  
+`slf4j`是一个日志标准，具体实现有很多，如logback,log4j等。  
+`lombok`插件`@Data`注解
 
 目前主流的是前后端分离开发。
 
@@ -33,21 +34,22 @@ lombok在编译器自动生成一些样板代码，运行期没用。
 
 # 2. Model 领域类
 
- `lombok`插件`@Data`注解
+为视图提供数据。
 
 - `@ModelAttribute`
 - `@SessionAttributes`
-	- Model属性会复制到Servlet Request属性中，这样视图中就可以使用它们用于渲染页面
+	- Model属性会复制到**Servlet Request**属性中，这样视图中就可以使用它们用于渲染页面
 
 ## 2.1. Servlet规范
 
+- 最小开发单元
 - **Web容器的实现规范**，与Spring无关
 	- Web容器/服务器，里面放Servlet对象
 - 实现
 	- tomcat
 	- jetty
 
-thymeleaf与Servlet request属性协作，<font color="#ff0000">与spring model解耦</font>
+**thymeleaf**与**Servlet request**属性协作，<font color="#ff0000">与spring model解耦</font>
 
 ### 2.1.1. Servlet对象
 
@@ -112,9 +114,13 @@ public String methodName(@ModelAttribute SomeObject object) {
 7. servlet拿到了数据和逻辑视图名，找到视图解析器的第三方库
 8. 视图解析器渲染视图
 
+
 ![Screenshot from 2023-10-07 18-38-55](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F10-13-42-ca4167c94583a1706c06fdd1405e61c3-Screenshotundefinedfromundefined2023-10-07undefined18-38-55-eb0c99.png)
 
 ## 3.2. MVC请求映射
+
+来自http协议的标准。  
+注解可以放在类定义上方，也可以放在方法上方。
 
 - `Requestmapping`
 - `GetMapping`
@@ -123,7 +129,9 @@ public String methodName(@ModelAttribute SomeObject object) {
 - `PatchMapping`
 - `PutMapping`
 
-## 3.3. 重定向
+## 3.3. 重定向👍
+
+控制器处理完成后可以返回逻辑视图名，也可以重定向到其他url
 
 - http状态码：302
 - 控制器`return redirect:<url>`
