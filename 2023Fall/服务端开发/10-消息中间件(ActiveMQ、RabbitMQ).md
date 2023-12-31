@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 10-消息中间件(ActiveMQ、RabbitMQ)
-date: 2023-11-16 18:45
-modified: 2023-12-29 10:15
+date:  2023-11-16 18:11
+modified:  2023-12-31 16:12
 ---
 
 # 1. 消息中间件

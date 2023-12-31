@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 8-REST API
-date: 2023-11-11 18:52
-modified: 2023-12-29 10:15
+date:  2023-11-11 18:11
+modified:  2023-12-31 16:12
 ---
 
 # 1. 不同开发模式
@@ -27,13 +27,14 @@ modified: 2023-12-29 10:15
 
 # 2. 使用Spring MVC的控制器创建RESTful端点
 
-## 2.1. Rest
+## 2.1. Rest原则👍
 
 - Representational State Transfer，表现层状态转移
 	- 表现层（Representation）：json、xml、html、pdf、excel
 		- 服务端的资源在客户端的表现形式
 	- 状态转移（State Transfer）：服务端--客户端, 从一端到另一端
-- 资源（Resources），就是网络上的一个实体，标识：URI
+- **资源（Resources**）：就是网络上的一个实体
+	- 标识：URI
 - HTTP协议的四个操作方式的动词：GET、POST、PUT、DELETE
 	- **CRUD**：Create、Read、Update、Delete
 	- GET: Read
@@ -46,18 +47,18 @@ modified: 2023-12-29 10:15
 ## 2.2. RESTful 控制器实现👍
 
 - RESR API以面向数据的格式返回, JSON或XML
-- **@RestController, @ResponseBody**: 返回JSON格式串, 而不是逻辑视图名
-	- 或返回ResponseEntity对象，TacoController
+	- JSON更直观，结构清晰
+- **@RestController, @ResponseBody**: 
+	- 返回JSON格式串, 而不是逻辑视图名，或返回ResponseEntity对象
 	- 第三方包完成了java对象到JSON格式串的转换过程
-	- <font color="#ff0000">区别</font>：在**方法**上方ResponseBody会返回JSON串；RestController加在**类**上，相当于每个方法上都加ResponseBody
+	- <font color="#ff0000">区别</font>：在控制器**方法**上方加ResponseBody会返回JSON串；RestController加在**类**上，相当于每个方法上都加ResponseBody
 - @RequestMapping的**produces**属性
 	- 数组
 	- 用于请求映射，指定需要处理的数据格式,
-	- e.g.`produces={"application/json", "application/xml"}`
+	- e.g. `produces={"application/json", "application/xml"}`
+- **@RequestBody**：用于方法参数，把从客户端来的JSON串转换成java对象。
 
-各种Mapping不变
-
-**@RequestBody**：用于方法参数，从客户端来的JSON串转换成java对象
+各种Mapping的注解不变，可以继续用。
 
 ## 2.3. 请求头与请求体
 
@@ -87,7 +88,7 @@ modified: 2023-12-29 10:15
 - application/xhtml+xml ：XHTML格式
 - application/xml： XML数据格式
 - application/atom+xml ：Atom XML聚合格式 
-- application/json： JSON数据格式
+- **application/json： JSON数据格式**
 - application/pdf：pdf格式 
 - application/msword： Word文档格式
 - application/octet-stream： 二进制流数据（如常见的文件下载）
@@ -96,7 +97,7 @@ modified: 2023-12-29 10:15
 ## 2.4. 响应头与响应体👍
 
 - 状态行：由 HTTP 协议版本、状态码、状态码描述三部分构成，它们之间由空格隔开。
-- <font color="#ff0000">状态码</font>：由 3 位数字组成，**第一位标识响应的类型**，常用的5大类状态码如下：
+- <font color="#ff0000">状态码</font>：由 3 位数字组成，**第一位标识响应的类型**，常用的**5大类状态码**如下：
 	- 1xx：表示服务器已接收了客户端的请求，客户端可以继续发送请求
 	- 2xx：表示服务器已成功接收到请求并进行处理
 		- 201：Created
@@ -126,7 +127,7 @@ CORS ，Cross Origin Resource Sharing
 	- 作用：指定使用消息转换器 
 - 没有model和视图，控制器产生数据，然后消息转换器转换数据之后的资源表述。
 - Spring会自动注入一些HttpMethodConverter, 如jackson Json processor、JAXB库
-- 请求传入，@RequestBody以及HttpMethodConverter
+- 请求传入，**@RequestBody**以及HttpMethodConverter
 
 应用：jackson Json processor帮助spring转换java object和json
 
@@ -169,8 +170,12 @@ CORS ，Cross Origin Resource Sharing
 
 ## 2.12. Rest API接口设计👍
 
-1. 使用标准**HTTP动词**：GET、PUT、POST、DELETE，映射到CRUD
+**要求：**
+
+1. 使用**标准HTTP动词**：GET、PUT、POST、DELETE，映射到CRUD
 2. 使用URL来传达意图
+	- 例：请求一批资源复数，单个资源单数
+	- 推荐用名词
 3. 请求和响应使用JSON
 4. 使用HTTP状态码来传达效果
 	- `Create`: 201
@@ -178,7 +183,7 @@ CORS ，Cross Origin Resource Sharing
 
 # 3. 将Spring Data存储库暴露为REST端点
 
-添加spring data的rest子依赖：spring-boot-starter-data-rest
+- 添加spring data的rest子依赖：`spring-boot-starter-data-rest`
 
 ## 3.1. Spring HEATEOAS项目
 

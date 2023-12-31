@@ -11,14 +11,9 @@ excerpt: false
 mathjax: true
 comment: true
 title: 9-OAuth2
-date: 2023-11-13 18:46
-modified: 2023-12-29 10:15
+date:  2023-11-13 18:11
+modified:  2023-12-31 16:12
 ---
-
-之前讲了Spring Security的单体应用权限控制
-
-- OAth2：分布式环境中微服务权限控制，需要把认证和授权集中在一个地方
-	- restful api权限控制
 
 # 1. 创建授权服务器
 
@@ -33,11 +28,15 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 
 ## 1.2. OAth2👍
 
-是一个与变成语言无关的规范
+之前讲了Spring Security的单体应用权限控制
+
+- OAth2：**分布式环境**中微服务权限控制，需要把认证和授权集中在一个地方，不需要每个微服务单独做认证授权。
+	- 是一个与变成语言无关的规范
+	- restful api权限控制
 
 ## 1.3. 授仅码授权（authorization code grant）模式👍
 
-### 1.3.1. 流程图
+### 1.3.1. 流程图👍
 
 - Client application：客户端（第三方应用程序），消费API提供的资源
 - Authorization server：授权服务器
@@ -48,19 +47,24 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 - 授权服务器会用**私钥**给token签名，资源服务器用**公钥**验证token是否合法
 - token不变时公钥也不变，只有第一次才需要向授权服务器索取公钥
 
-### 1.3.2. 过程
+### 1.3.2. 过程👍
+
+其中使用**授权码授权模式**
 
 1. 用户使用第三方的应用程序，也就是客户端应用程序
 2. 客户端发现用户未登录，把用户请求**重定向**到授权服务器
 	- 授权服务器会维护合法的重定向地址，用于校验
 3. 授权服务器向用户索取用户名密码
 4. 用户名密码匹配，则授权服务器请求用户授权
-5. **授权服务器给客户端程序返回code**
+5. **授权服务器给客户端程序返回code**，重定向回到应用程序
+	- code需要经过浏览器
 6. **客户端应用程序用code向授权服务器索取token**
 	- 用code交换token
-	- 不过浏览器，直接与授权服务器沟通
+	- token不过浏览器，在应用程序服务端和授权服务器之间处理
 7. 客户端在请求头带上token调用资源服务器的API
 8. 资源服务器验证token，返回结果
+	- 第一次，资源服务器向授权服务器索取公钥，验证Token合法性
+	- Token过期时才会重新索取公钥
 9. 客户端程序把结果返回给用户
 
 密码没有在浏览器来回传送，但是如果没有密码即使拿到code也没用  
@@ -68,7 +72,7 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 
 ## 1.4. 其他授权模式
 
-1. 隐式授权（implicit grant），直接返回访问令牌，而不是授仅码
+1. 隐式授权（implicit grant）：直接返回访问令牌Token，而不是授仅码
 2. 用户凭证（或密码）授权（user credentials (password) grant）：用户凭证直接换取访问令牌，不经过浏览器登录
 3. 客户端凭证授权（client credentials grant）：客户端交换自己的凭证以获取访问令牌
 
