@@ -14,5 +14,6 @@
   "attachmentFolderPath": "./assets",
   "showLineNumber": false,
   "autoPairBrackets": true,
-  "autoPairMarkdown": true
+  "autoPairMarkdown": true,
+  "newLinkFormat": "relative"
 }
