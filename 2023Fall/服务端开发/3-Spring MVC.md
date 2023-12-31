@@ -11,20 +11,25 @@ excerpt: false
 mathjax: true
 comment: true
 title: 3-Spring MVC
-date: 2023-10-10 18:22
-modified: 2023-12-29 10:15
+date:  2023-10-10 18:10
+modified:  2023-12-31 11:12
 ---
 
-# 1. 基本概念
+# 1. 基本概念👍
 
 **M**odel-**V**iew-**C**ontroller
 
 - 模型model：存储内容，指数据、领域类
-- 控制器controller：处理用户输入
+- 控制器controller：处理用户输入，客户端的请求
 - 视图view：显示内容
 
-`@Slf4j`是lombok提供的  
-`slf4j`是一个日志标准，具体实现有很多
+lombok在编译器自动生成一些样板代码，运行期没用。  
+`@Slf4j`是lombok提供的 。  
+`slf4j`是一个日志标准，具体实现有很多。
+
+目前主流的是前后端分离开发。
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F11-21-23-58e755321af999ee54aaca9812997e0a-20231231112122-1cafd2.png)
 
 # 2. Model 领域类
 
@@ -37,7 +42,7 @@ modified: 2023-12-29 10:15
 ## 2.1. Servlet规范
 
 - **Web容器的实现规范**，与Spring无关
-	- Web容器/服务器，里面放Serlet对象
+	- Web容器/服务器，里面放Servlet对象
 - 实现
 	- tomcat
 	- jetty
@@ -93,7 +98,19 @@ public String methodName(@ModelAttribute SomeObject object) {
 
 # 3. MVC请求
 
-## 3.1. 处理过程
+## 3.1. 处理过程👍
+
+客户端请求在**后端的处理过程**，非常重要。  
+**核心DispatcherServlet**，是Spring自己实现的Servlet容器。
+
+1. Web容器开发的基本单元是Servlet，请求先到servlet。
+2. mapping根据url把请求转到controller，其中spring框架会做参数解析。
+3. controller拿到请求和请求参数，把请求和请求参数传给业务层
+4. 业务层处理业务逻辑，可能会做数据持久化访问DAO层
+5. 业务层把处理结构返回控制器
+6. 控制器把结果放回给servlet
+7. servlet拿到了数据和逻辑视图名，找到视图解析器的第三方库
+8. 视图解析器渲染视图
 
 ![Screenshot from 2023-10-07 18-38-55](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F10-13-42-ca4167c94583a1706c06fdd1405e61c3-Screenshotundefinedfromundefined2023-10-07undefined18-38-55-eb0c99.png)
 
@@ -111,17 +128,18 @@ public String methodName(@ModelAttribute SomeObject object) {
 - http状态码：302
 - 控制器`return redirect:<url>`
 
-## 3.4. Spring MVC获取参数的集中方式
+## 3.4. Spring MVC获取参数的集中方式👍
 
 1. 表单(form)参数，转成model
-	- 可能要自己实现Converter
+	- 成员类型可能要自己实现Converter进行转换
 	- 可以用`@Valid`校验
+	- form是html里定义的
 2. 路径参数
 	- `@PathVariable`
-	- `/book/{id}`
+	- 例：`/book/{id}`
 3. 请求参数/查询参数
 	- `@RequestParam`
-	- `challenge?model=2`
+	- 例：`/challenge?model=2`
 4. json请求体
 	- `@RequestBody`，会用到HttpMessageConverter消息转换器
 	- Rest API
