@@ -266,7 +266,7 @@ List<TacoOrder> readOrdersDeliveredInSeattle();
 	- 接口实现可以替换不需要修改业务层
 	- 方便测试
 
-# 5. 三种方法区别👍
+# 5. 三种方法区别、相同点👍
 
 1. 1、2需要scheme脚本，3不需要（根据领域类自动生成）
 2. 数据库访问层，1需要自己实现接口，2、3不需要
@@ -274,7 +274,12 @@ List<TacoOrder> readOrdersDeliveredInSeattle();
 4. 2、3都可以使用@Querry定义查询逻辑，但3还可以使用基于方法名的DSL自定义查询
 5. ID字段的处理：1需要手动获取数据库生成的Id，2、3不需要
 6. 2、3都继承自CrudRepository接口
-7. 
+7. 2、3为领域类添加持久化的注解包路径不一样
+	- JPA中的规范注解都来自javax.persisitence.* ，因为不是Spring自己实现
+	- @Table，对象会基于领域类的名称映射到数据库的表上
+	- @Id
+		- 有两个来自不同包的@Id，主义区别
+	- @Colimn
 
 # 6. 数据表创建和初始化
 
@@ -289,12 +294,3 @@ data.sql数据初始化
 
 CommandLineRunner接口  
 ApplicationRunner接口
-
-# 7. 为领域类添加持久化的注解
-
-JPA中的规范注解都来自javax.persisitence.* ，不是Spring自己实现 
-
-- @Table，对象会基于领域类的名称映射到数据库的表上
-- @Id
-	- 有两个来自不同包的@Id，主义区别
-- @Colimn
