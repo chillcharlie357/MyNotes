@@ -113,6 +113,8 @@ dangling镜像：没有tag的镜像
 
 不同Network Driver的区别：[Network drivers overview | Docker Docs](https://docs.docker.com/network/drivers/)
 
+[Docker 网络模式详解及容器间网络通信 - 知乎](https://zhuanlan.zhihu.com/p/212772001)
+
 - none网络， `--net=none`
 - host网络，`--net=host`
 	- 共享宿主机的网络
