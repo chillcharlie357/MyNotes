@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 14-docker
 date:  2023-12-14 18:12
-modified:  2023-12-31 16:12
+modified:  2024-01-02 16:01
 ---
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png)
@@ -31,13 +31,9 @@ modified:  2023-12-31 16:12
 
 # 2. docker子命令
 
-## 2.1. run
+## 2.1. run👍
 
 文件：写时复制，不修改就用底层linux的文件，修改复制一份就放到上一层
-
-docker run hello-world
-
-如何查看ip地址：在容器里`ip a`
 
 - `--rm`: 退出时删除容器
 - `--it`: 进入命令行终端
@@ -61,6 +57,14 @@ docker run hello-world
 - `-v c:/templ :/data`: 绑定一个卷
 	- 左边时本机路径，右边是容器路径
 - `--rm`: 退出时自动删除容器
+
+<font color="#c00000">如何在镜像中查看网卡信息和ip地址？</font>
+
+```shell
+docker run --rm -it busybox
+cat /etc/hosts
+ip a
+```
 
 ## 2.2. inspect
 
