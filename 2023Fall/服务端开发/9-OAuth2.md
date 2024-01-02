@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 9-OAuth2
 date:  2023-11-13 18:11
-modified:  2023-12-31 16:12
+modified:  2024-01-02 18:01
 ---
 
 # 1. 创建授权服务器
@@ -52,15 +52,16 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 其中使用**授权码授权模式**
 
 1. 用户使用第三方的应用程序，也就是客户端应用程序
-2. 客户端发现用户未登录，把用户请求**重定向**到授权服务器
+2. 客户端发现用户未登录，将用户**重定向**到授权服务器
 	- 授权服务器会维护合法的重定向地址，用于校验
 3. 授权服务器向用户索取用户名密码
 4. 用户名密码匹配，则授权服务器请求用户授权
 5. **授权服务器给客户端程序返回code**，重定向回到应用程序
-	- code需要经过浏览器
+	- **这里的code是和重定向URI一起返回给浏览器的，所以不安全**
+	- 授权服务器返回的是重定向url+code
 6. **客户端应用程序用code向授权服务器索取token**
-	- 用code交换token
-	- token不过浏览器，在应用程序服务端和授权服务器之间处理
+	- 用code交换token，可能包含访问令牌（access token）和更新令牌（refresh token）
+	- **token不过浏览器**，在应用程序服务端和授权服务器之间处理
 7. 客户端在请求头带上token调用资源服务器的API
 8. 资源服务器验证token，返回结果
 	- 第一次，资源服务器向授权服务器索取公钥，验证Token合法性
@@ -70,6 +71,9 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 密码没有在浏览器来回传送，但是如果没有密码即使拿到code也没用  
 用code向授权服务器换取token才需要密码
 
+[理解OAuth 2.0 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
+
+[URL与URI，有联系有区别？ - 知乎](https://zhuanlan.zhihu.com/p/38120321)
 ## 1.4. 其他授权模式
 
 1. 隐式授权（implicit grant）：直接返回访问令牌Token，而不是授仅码
