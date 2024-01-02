@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 14-docker
 date:  2023-12-14 18:12
-modified:  2024-01-02 16:01
+modified:  2024-01-02 17:01
 ---
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png)
@@ -77,7 +77,7 @@ ip a
 - **写时复制 COW**(Copy-On-Write)
 	- 需要修改底层文件时才会复制一份到上层，然后进行修改
 	- 否则一直共享底层文件
-- docker hostory \<image name> 查看镜像的层
+- docker history \<image name> 查看镜像的层
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-16-50-cef8d6cc91e64be46d5afa44e9e97583-20231214201648-b1c6b2.png)
 
