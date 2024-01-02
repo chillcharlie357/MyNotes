@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 13-WebFlux
 date:  2023-12-07 18:12
-modified:  2023-12-31 16:12
+modified:  2024-01-02 20:01
 ---
 
 # 1. 异步Web框架的事件轮询机制
@@ -54,7 +54,49 @@ modified:  2023-12-31 16:12
 	- 否则不会执行，不订阅就不会驱动
 	- 多层嵌套流，对外围订阅不会触发内层的流
 
-![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F07%2F19-18-18-1741f90e8a645b889a8b9171efa080c4-20231207191818-e018d8.png)
+例子：
+
+```java
+    @GetMapping(value="/mono")
+    public Mono<String> stringMono() {
+        Mono<String> from = Mono.fromSupplier(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println(" in Supplier thread: " + Thread.currentThread().getName());
+            return "Hello, Spring Reactive data time:" + LocalDateTime.now();
+        });
+        System.out.println("thread: " + Thread.currentThread().getName() + ", time:" + LocalDateTime.now());
+        return from;
+    }
+```
+
+```shell
+Hello, Spring Reactive data time:2024-01-02T20:40:46.651302900
+```
+
+```java
+    @GetMapping(value="/flux", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<String> produceFlux(){
+        Flux<String> stringFlux = Flux.fromStream(IntStream.range(1,6).mapToObj(i->{
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println(" in Supplier thread: " + Thread.currentThread().getName());
+            return "java north flux："+i+", date time: "+LocalDateTime.now();
+        }));
+        System.out.println("thread: " + Thread.currentThread().getName() + ", time:" + LocalDateTime.now());
+        return stringFlux;
+    }
+
+```
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F02%2F20-47-01-c9692a4a5af3f51e8de2b1c113c85c6c-20240102204701-f3eb3e.png)  
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F02%2F20-47-19-a2f875c2613b77f4a8fe127cfb4a0331-20240102204719-e660d9.png)
 
 ## 4.1. 使用函数式范式定义控制器
 
