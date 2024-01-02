@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 0-introduction
-date: 2023-10-10 18:22
-modified: 2023-12-29 10:15
+date:  2023-10-10 18:10
+modified:  2024-01-02 21:01
 ---
 
 学习：利用经验改善系统的性能
@@ -91,19 +91,31 @@ modified: 2023-12-29 10:15
 - 精度 Accuracy
 
 $$
-Accuracy = \frac{\#TP + \#TN}{\#TP + \#FP + \#TN + \#FN}
+Accuracy = \frac{TP + TN}{TP + FP + TN + FN}
+$$
+
+- 错误率
+
+$$
+Err=1-Acc
 $$
 
 - 查准 Precision
 
 $$
+Precision=\frac{TP}{TP+FP}
 $$
 
 - 查全 Recall
+
+$$
+Recall=\frac{TP}{TP+FN}
+$$
+
 - $F_1$度量 
 
 $$
-F_1 = 2 \frac{precision \times recall}{ precision + recall}
+F_1 = 2 \frac{precision \times recall}{ precision + recall}=\frac{2TP}{2TP+FN+FP}
 $$
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F05%2F7275e60fff263326a531c5d8539a68db_20230905201955.png)
