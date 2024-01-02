@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 14-docker
 date:  2023-12-14 18:12
-modified:  2024-01-02 17:01
+modified:  2024-01-02 21:01
 ---
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png)
@@ -50,9 +50,7 @@ modified:  2024-01-02 17:01
 - `--env-file=c:/templ /tl .txt`: 从指定文件读入环境变量
 - `--expose = 2000-2002`: 开放（暴露）一个端口或一组端口，用于指出容器内可能对外暴露的端(不一定映射)
 	- 如果加上-P则会建立外部端口映射
-- `--link my-mysql:server`：添加链接到另一个容器
-	- The linking feature is a **legacy feature**. You should always prefer using **Docker network** drivers over linking.
-	- 远程容器链接到本地容器
+- `--link <name or id>:alias`：链接两个容器，使得他们可以相互通信
 	- $:$右边可以写在本地属性文件，可以在不修改命令的情况下把远程容器映射到本地容器
 - `-v c:/templ :/data`: 绑定一个卷
 	- 左边时本机路径，右边是容器路径
@@ -66,6 +64,8 @@ cat /etc/hosts
 ip a
 ```
 
+[关于对docker run --link的理解 - 简书](https://www.jianshu.com/p/21d66ca6115e)
+- `--link`的例子：`docker run -d --name node --link selenium_hub:hub selenium/node-chrome-debug`。创建并启动名为node的容器，并把该容器和名为selenium_hub的容器链接起来。hub是该容器在link下的别名（alias），通俗易懂的讲，站在node容器的角度，selenium_hub和hub都是1cbbf6f07804容器的名字，并且作为容器的hostname，node用这2个名字中的哪一个都可以访问到1cbbf6f07804容器并与之通信（docker通过DNS自动解析）。
 ## 2.2. inspect
 
 查看详细信息
