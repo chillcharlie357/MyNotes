@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 6-Spring Security
 date:  2023-10-16 18:10
-modified:  2023-12-31 16:12
+modified:  2024-01-02 16:01
 ---
 - JAAS: Java Authentication Authorization Service. JDK提供的认证授权服务
 
@@ -38,7 +38,7 @@ modified:  2023-12-31 16:12
 
 # 3. Web请求拦截
 
-- spring data权限认证的原理：使用servlet容器的filter
+- spring security权限认证的原理：使用servlet容器的filter
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F092f577948a6053f598961fe1a329feb_20231026184400.png)
 
