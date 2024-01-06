@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 8-REST API
 date:  2023-11-11 18:11
-modified:  2023-12-31 16:12
+modified:  2024-01-06 09:01
 ---
 
 # 1. 不同开发模式
@@ -29,10 +29,12 @@ modified:  2023-12-31 16:12
 
 ## 2.1. Rest原则👍
 
-- Representational State Transfer，表现层状态转移
-	- 表现层（Representation）：json、xml、html、pdf、excel
+- Representational State Transfer，表述性状态转移
+	- 表述性（Representational）：REST 资源实际上可以用各种形式来进行表述，包括json、xml、html、pdf、excel
 		- 服务端的资源在客户端的表现形式
-	- 状态转移（State Transfer）：服务端--客户端, 从一端到另一端
+	- 状态 (State): 当使用 REST 的时候，我们更关注资源的状态而不是对资源采取的行为；
+	- 转移（Transfer）：REST 涉及到转移资源数据，它以某种表述性形式从一个应用转移到另一个应用;
+		- 服务端--客户端, 从一端到另一端
 - **资源（Resources**）：就是网络上的一个实体
 	- 标识：URI
 - HTTP协议的四个操作方式的动词：GET、POST、PUT、DELETE
@@ -42,6 +44,7 @@ modified:  2023-12-31 16:12
 	- PUT: Update
 	- DELETE: Delete
 
+更简洁地讲，REST 就是**将资源的状态以最适合客户端或服务端的形式从服务器端转移到客户端（或者反过来）**。  
 如果一个架构符合REST原则，就称它为RESTful架构. 请求都是针对资源的操作.
 
 ## 2.2. RESTful 控制器实现👍
