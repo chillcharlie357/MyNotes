@@ -32,7 +32,7 @@ modified:  2024-01-06 09:01
 - Representational State Transfer，表述性状态转移
 	- 表述性（Representational）：REST 资源实际上可以用各种形式来进行表述，包括json、xml、html、pdf、excel
 		- 服务端的资源在客户端的表现形式
-	- 状态 (State): 当使用 REST 的时候，我们更关注资源的状态而不是对资源采取的行为；
+	- 状态 (State): 资源在特定时间的条件或属性。当使用 REST 的时候，我们更关注资源的状态而不是对资源采取的行为；
 	- 转移（Transfer）：REST 涉及到转移资源数据，它以某种表述性形式从一个应用转移到另一个应用;
 		- 服务端--客户端, 从一端到另一端
 - **资源（Resources**）：就是网络上的一个实体
