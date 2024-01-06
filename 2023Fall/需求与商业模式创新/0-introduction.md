@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 0-introduction
-date:  Friday,September 8th 2023
-modified:  Tuesday,September 26th 2023
+date:  2023-09-08 00:09
+modified:  2024-01-06 10:01
 ---
 
 # 1. 问题域/解系统

@@ -76,6 +76,7 @@ MessageConverter是一个Spring的接口，实现各种**序列化**机制。
 - SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换
 - MappingJackson2MessageConverter：使用**Jackson 2 JSON**库实现消息与JSON格式的相互转换
 - typeId：目的是告诉对方是什么类型，以便于反序列化
+	- 字符串
 - Message.setStringProperty，随属性集传输
 - 消息转换器使用@Configuration定义成Bean
 
