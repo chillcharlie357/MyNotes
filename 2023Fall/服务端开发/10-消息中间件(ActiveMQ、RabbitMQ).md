@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 10-消息中间件(ActiveMQ、RabbitMQ)
 date:  2023-11-16 18:11
-modified:  2023-12-31 17:12
+modified:  2024-01-06 10:01
 ---
 
 # 1. 消息中间件
@@ -20,16 +20,16 @@ modified:  2023-12-31 17:12
 - 提供消息服务的应用程序
 - 主要用于组件之间的解耦，消息的发送者服务知道消息使用者的存在，反之依然
 
-消息代理 broker：
-
-![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png)
-
 # 2. JMS👍
 
 - Java Message Service
 	- Jms规定了ConnectionFactory、Connection、Session等接口/类
 - JMS是一个Java标准，使用消息代理（message broker）的同意API
 - JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持
+
+消息代理 broker：
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png)
 
 # 3. ActiveMQ Artemis
 

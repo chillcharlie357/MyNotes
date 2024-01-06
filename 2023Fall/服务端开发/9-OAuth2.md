@@ -76,7 +76,7 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 [URL与URI，有联系有区别？ - 知乎](https://zhuanlan.zhihu.com/p/38120321)
 ## 1.4. 其他授权模式
 
-1. 隐式授权（implicit grant）：直接返回访问令牌Token，而不是授仅码
+1. 隐式授权（implicit grant）：直接返回访问令牌Token，而不是授权码
 2. 用户凭证（或密码）授权（user credentials (password) grant）：用户凭证直接换取访问令牌，不经过浏览器登录
 3. 客户端凭证授权（client credentials grant）：客户端交换自己的凭证以获取访问令牌
 
