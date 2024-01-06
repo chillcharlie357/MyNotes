@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 14-docker
 date:  2023-12-14 18:12
-modified:  2024-01-06 14:01
+modified:  2024-01-06 15:01
 ---
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png)
@@ -93,6 +93,12 @@ docker volume子命令可以管理数据卷
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-49-16-0157f9b342cd970ea85a05734fc2b95d-20231214204914-b94d29.png)
 
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F06%2F15-00-42-510c7d3cd929abe64d8077e5e16f543e-20240106150042-d4a5d1.png)
+
+[Volumes | Docker Docs](https://docs.docker.com/storage/volumes/)
+
+[Docker筆記 - 讓資料遠離Container，使用 Volume、Bind Mount 與 Tmpfs Mount | by Albert Hg | alberthg-docker-notes | Medium](https://medium.com/alberthg-docker-notes/docker%E7%AD%86%E8%A8%98-%E8%AE%93%E8%B3%87%E6%96%99%E9%81%A0%E9%9B%A2container-%E4%BD%BF%E7%94%A8-volume-bind-mount-%E8%88%87-tmpfs-mount-6908da341d11)
+
 # 5. 导入导出镜像
 
 - 备份镜像
@@ -118,9 +124,11 @@ dangling镜像：没有tag的镜像
 [Docker 网络模式详解及容器间网络通信 - 知乎](https://zhuanlan.zhihu.com/p/212772001)
 
 - none网络， `--net=none`
+	- 不为 Docker Container 创建任何的网络环境，容器内部就只能使用 loopback 网络设备，不会再有其他的网络资源。
 - host网络，`--net=host`
 	- 共享宿主机的网络
 - **bridge网络**, `--net=bridge`
+	- Docker 守护进程创建了一个虚拟以太网桥 `docker0`，新建的容器会自动桥接到这个接口，附加在其上的任何网卡之间都能自动转发数据包。
 	- 例：docker0的linux bridge
 - container网络, `--net=container:NAME_or_ID`
 	- 新创建的容器共享其他容器的网络
