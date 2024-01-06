@@ -157,7 +157,7 @@ CORS ，Cross Origin Resource Sharing
 
 ## 2.10. @DeleteMapping
 
-@DeleteMapping，deleteOrder方法实现，HttpStatus.NO_CONTENT，body不需要返回数据
+@DeleteMapping，deleteOrder方法实现，HttpStatus.NO_CONTENT(204)，body不需要返回数据
 
 ## 2.11. 参数类型
 
@@ -219,7 +219,7 @@ http://tacocloud:8080/data-api/tacos?size=15&page=0&sort=createdAt,desc
 
 ## 4.1. RestTemplate
 
-spring会自动注入，不需要自己创建。在java种调用RESTful API。
+spring会自动注入，不需要自己创建。在java中调用RESTful API。
 
 getForObject：只获取body  
 getForEntity：获取完整responseEntity，可以获取headers
