@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: HarmonyOS整理
 date:  2024-01-09 18:01
-modified:  2024-01-09 19:01
+modified:  2024-01-09 20:01
 ---
 
 # 数据管理
@@ -103,6 +103,11 @@ modified:  2024-01-09 19:01
 - 不属于传感器六大类：声音类传感器
 - 六大类：运动类传感器、环境类传感器、方向类传感器、光线类传感器、健康类传感器、其他类传感器（如霍尔传感器），每一大类传感器包含不同类型的传感器，某种类型的传感器可能是单一的物理传感器，也可能是由多个物理传感器复合而成。
 
-  
+传感器权限列表
 
- 
+|传感器|权限名|敏感级别|权限描述|
+|---|---|---|---|
+|加速度传感器、加速度未校准传感器、线性加速度传感器|ohos.permission.ACCELEROMETER|system_grant|允许订阅Motion组对应的加速度传感器的数据|
+|陀螺仪传感器、陀螺仪未校准传感器|ohos.permission.GYROSCOPE|system_grant|允许订阅Motion组对应的陀螺仪传感器的数据|
+|计步器|ohos.permission.ACTIVITY_MOTION|user_grant|允许订阅运动状态|
+|心率|ohos.permission.READ_HEALTH_DATA|user_grant|
