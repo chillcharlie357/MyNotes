@@ -115,7 +115,19 @@ LInux下的文件类型：
 7. cp：copy files
 8. mv：move and rename files
 9. ln：link files
+	1. 硬：一个文件有两个名字，需要文件系统支持，不能跨分区
+	2. 软：快捷方式
 10. rm: remove files
 11. cat: print file contents
 12. more/less: display files page-by page
 
+# 文件权限
+
+- Access Levels
+	1. User: The user that created the file
+	2. Group: All users in the group that owns the file
+	3. Others: All others
+- Permissions
+	1. **R**ead
+	2. **W**rite
+	3. E**x**ecute
