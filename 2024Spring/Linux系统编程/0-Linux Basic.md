@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 0-Linux Basic
 date:  2024-02-26 09:02
-modified:  2024-03-07 10:03
+modified:  2024-03-07 11:03
 ---
 
 # 1. Linux
@@ -121,7 +121,9 @@ LInux下的文件类型：
 11. cat: print file contents
 12. more/less: display files page-by page
 
-# 文件权限
+# 7. 文件权限
+
+## 7.1. 类型
 
 - Access Levels
 	1. User: The user that created the file
@@ -130,4 +132,48 @@ LInux下的文件类型：
 - Permissions
 	1. **R**ead
 	2. **W**rite
-	3. E**x**ecute
+	3. E**x**ecute: Excute file ad program or use directory as active directory
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F07%2F11-27-44-4efaed2fe509f07bcecd30503d688e88-20240307112743-70a833.png)
+
+## 7.2. 修改
+
+- chmod
+	1. 三位八进制数
+	2. +/-/= [rwx]
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F07%2F11-29-37-cc244da0d71b754913c581425a601483-20240307112936-b42f9e.png)
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F07%2F11-30-52-3fe0363c3865594780d5176f64dd7b0c-20240307113051-0ea01f.png)
+
+- 默认权限
+	- file -rw-r--r-- 644
+	- directory drwxr-xr-x 755
+
+# 8. 进程
+
+## 概述
+
+进程是一个正在执行的程序实例。由执行程序、它的当前值、状态信息以及通过操作系 统管理此进程执行情况的资源组成。
+
+- Linux中每个进程都有父进程(除了init/init.rb)，形成<span style="background:rgba(3, 135, 102, 0.2)">树状结构</span>
+	- init是kernel启动的第一个用户进程，PID 1
+	- shell下起一个任务，父进程是shell
+	- 图形界面下启一个程序，父进程是图形界面
+- 结束进程
+	1. 自己退出
+	2. 系统信号强制退出
+
+## 常用命令
+
+1. ps: report process status
+2. pstree: display a tree of processes
+3. jobs, fg, bg, <\ctrl-z>: job controlling
+4. <span style="background:rgba(3, 135, 102, 0.2)">kill: Send </span><span style="background:rgba(3, 135, 102, 0.2)">the processes</span> identified by PID or JOBSPEC the <span style="background:rgba(3, 135, 102, 0.2)">signal</span> named by  
+    SIGSPEC or SIGNUM.
+5. nohup: run a command, ignoring hangup signals
+6. nice, renice: 调整进程优先级
+	- nice: 修改默认优先级
+	- renice: 修改已经运行的进程优先级
+7. top: display top CUP processes
+
