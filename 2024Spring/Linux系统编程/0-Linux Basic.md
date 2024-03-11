@@ -205,3 +205,11 @@ LInux下的文件类型：
 	- C语言变量：stdin, stdout, stderr
 
 
+# 管道
+
+一个进程的输出作为后一个进程都输入
+
+
+- 例子
+	1. `ls | wc -l`
+	2. `ls -lF | grep ^d` 正则表达式搜索
