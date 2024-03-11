@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 0-Linux Basic
 date:  2024-02-26 09:02
-modified:  2024-03-11 10:03
+modified:  2024-03-11 11:03
 ---
 
 # 1. Linux
@@ -184,14 +184,24 @@ LInux下的文件类型：
 11. 修改文件熟悉: chmod, chown, chgrp, touch
 12. 查找文件: locate, find
 13. 字符串匹配: grep, egrep
-14. 其他
+14. 其他: who, whoami, passwd, uname
 
 # 9. 系统层次
 
  上层调用下层
+
  
 - 系统调用是Linux中内核和用户态程序的分界线
 	- Windows下叫做Windows API
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F11%2F10-34-10-6b773cd048cbdbb8d0578b569a00abbf-20240311103409-abfba0.png)
+
+
+# 重定向
+
+- 标准输入，标准输出，标准错误
+	- shell提供发功能，不是命令提供
+	- 对应文件描述符：0,1,2
+	- C语言变量：stdin, stdout, stderr
+
 
