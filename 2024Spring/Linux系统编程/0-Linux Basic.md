@@ -190,12 +190,10 @@ LInux下的文件类型：
 
  上层调用下层
 
- 
 - 系统调用是Linux中内核和用户态程序的分界线
 	- Windows下叫做Windows API
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F11%2F10-34-10-6b773cd048cbdbb8d0578b569a00abbf-20240311103409-abfba0.png)
-
 
 # 重定向
 
@@ -204,12 +202,28 @@ LInux下的文件类型：
 	- 对应文件描述符：0,1,2
 	- C语言变量：stdin, stdout, stderr
 
-
 # 管道
 
 一个进程的输出作为后一个进程都输入
 
-
 - 例子
 	1. `ls | wc -l`
 	2. `ls -lF | grep ^d` 正则表达式搜索
+
+# 环境变量
+
+- 操作环境的参数
+- 查看和设置环境变量
+	- echo \$PATH
+	- **env**
+	- set
+
+PATH里的目录下的可执行文件都能直接在shell中调用
+
+# 高级命令和正则表达式
+
+1. find
+2. grep
+	- 在文件里查找字符串
+3. sed
+	- 可以用来替换
