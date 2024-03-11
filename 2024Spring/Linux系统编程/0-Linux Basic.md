@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 0-Linux Basic
 date:  2024-02-26 09:02
-modified:  2024-03-07 11:03
+modified:  2024-03-11 10:03
 ---
 
 # 1. Linux
@@ -18,7 +18,9 @@ modified:  2024-03-07 11:03
 GPL许可证：可以随便用，但不能拿去卖钱
 
 # 2. 安装系统
+
  .
+
 ## 2.1. 硬盘分区
 
 ## 2.2. 硬盘组织方式
@@ -152,7 +154,7 @@ LInux下的文件类型：
 
 # 8. 进程
 
-## 概述
+## 8.1. 概述
 
 进程是一个正在执行的程序实例。由执行程序、它的当前值、状态信息以及通过操作系 统管理此进程执行情况的资源组成。
 
@@ -164,7 +166,7 @@ LInux下的文件类型：
 	1. 自己退出
 	2. 系统信号强制退出
 
-## 常用命令
+## 8.2. 常用命令
 
 1. ps: report process status
 2. pstree: display a tree of processes
@@ -176,4 +178,13 @@ LInux下的文件类型：
 	- nice: 修改默认优先级
 	- renice: 修改已经运行的进程优先级
 7. top: display top CUP processes
+
+# 9. 系统层次
+
+ 上层调用下层
+ 
+- 系统调用是Linux中内核和用户态程序的分界线
+	- Windows下叫做Windows API
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F11%2F10-34-10-6b773cd048cbdbb8d0578b569a00abbf-20240311103409-abfba0.png)
 
