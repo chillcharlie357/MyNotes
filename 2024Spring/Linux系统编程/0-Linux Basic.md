@@ -178,6 +178,13 @@ LInux下的文件类型：
 	- nice: 修改默认优先级
 	- renice: 修改已经运行的进程优先级
 7. top: display top CUP processes
+8. 列出文件: ls
+9. 创建特殊文件: mkdir
+10. 文件操作:cp, mv, rm
+11. 修改文件熟悉: chmod, chown, chgrp, touch
+12. 查找文件: locate, find
+13. 字符串匹配: grep, egrep
+14. 其他
 
 # 9. 系统层次
 
