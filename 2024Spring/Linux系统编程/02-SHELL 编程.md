@@ -203,5 +203,35 @@ done
 ```
 
 - 作用
-	- 生成菜单列表
+	- 直接生成菜单列表
+
+```shell
+#!/bin/sh
+clear
+select item in Continue Finish
+do
+	case “$item” in
+		Continue) ;;
+		Finish) break ;;
+		*) echo “Wrong choice! Please select again!” ;;
+	esac
+done
+```
+break跳出的是select循环
+
+
+# 命令表和语句块
+
+## 命令表/命令组合
+
+- 分号串联
+	- 把多个命令放在同一行
+	- command1;command2;...
+- 条件组合
+	- AND命令表
+		- statement1 && statement2 && statement3 && …
+	- OR命令表
+		- statement1 || statement2 || statement3 || …
+
+
 
