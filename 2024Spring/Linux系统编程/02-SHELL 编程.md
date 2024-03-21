@@ -178,3 +178,30 @@ while [ “$quit” != “y” ]; do
 done
 ```
 
+### until语句
+
+不推荐使用
+
+- 形式
+	- 条件为假时执行循环
+```shell
+until condition
+do
+	statements
+done
+```
+
+
+### select语句
+
+- 形式
+```shell
+select item in itemlist
+do
+	statements
+done
+```
+
+- 作用
+	- 生成菜单列表
+
