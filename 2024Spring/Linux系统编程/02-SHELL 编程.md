@@ -288,3 +288,17 @@ yesno()
 	done
 }
 ```
+
+# 杂项命令
+
+1. break: 从for/while/until/select循环退出
+2. continue: 跳到下一个循环继续执行
+3. exit n: 以退出码”n”退出脚本运行
+4. return: 函数返回
+5. export: 将变量导出到shell，使之成为shell的环境变量
+	- 该进程及其子进程都有效，否则只在脚本有效
+6. set: 为shell设置参数变量
+7. unset: 从环境中删除变量或函数
+8. trap: 指定在收到操作系统信号后执行的动作
+9. “:”(冒号命令): 空命令
+10. “.”(句点命令)或source: 在当前shell中执行命令
