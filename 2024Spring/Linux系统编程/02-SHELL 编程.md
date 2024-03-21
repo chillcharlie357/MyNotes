@@ -20,6 +20,10 @@ modified:  2024-03-21 10:03
 
 SHELL里的变量的值都是字符串
 
+
+# Read
+
+
 # 条件判断
 
 SHELL脚本本身不支持条件判断
@@ -77,7 +81,7 @@ expr1 -o expr2 OR
 - if elif后面也要有空格，then else默认单独占一行
 - 形式：
 
-```
+```shell
 if [ expression ]
 then
 	statements
@@ -93,4 +97,84 @@ fi
 - 紧凑形式
 	- `;`
 	- 同一行上多个命令分隔符
+
+### case语句
+
+- 形式
+	- 分支语句结尾是`;;`
+```shell
+case str in
+	str1 | str2) statements;;
+	str3 | str4) statements;;
+	*) statements;;
+esac
+```
+
+- 例子：
+```shell
+#!/bin/sh
+echo “Is this morning? Please answer yes or no.”
+read answer
+case “$answer” in
+	yes | y | Yes | YES) echo “Good morning!” ;;
+	no | n | No | NO) echo “Good afternoon!” ;;
+	*) echo “Sorry, answer not recognized.” ;;
+esac
+exit 0
+
+```
+
+
+## 循环语句
+
+语句开始和结束都是do和done
+
+### for语句
+
+- 形式
+```shell
+for var in list
+do
+	statements
+done
+```
+
+适用于对一系列字符串循环处理。
+
+- 例子
+```shell
+for file in $(ls f*.sh);do
+	lpr $file
+done
+exit 0
+```
+
+`$()`相当于反引号，执行里面的命令把结果字符串替换在这里
+
+
+`
+### while语句
+
+- 形式
+```shell
+while condition
+do 
+	statements
+done
+```
+
+- 例子
+```shell
+quit=n
+while [ “$quit” != “y” ]; do
+	read menu_choice
+	case “$menu_choice” in
+		a) do_something;;
+		b) do_anotherthing;;
+		…
+		q|Q) quit=y;;
+		*) echo “Sorry, choice not recognized.”;;
+	esac
+done
+```
 
