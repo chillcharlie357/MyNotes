@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 02-SHELL 编程
 date:  2024-03-21 10:03
-modified:  2024-03-21 10:03
+modified:  2024-03-21 11:03
 ---
 
 # Shell
@@ -20,9 +20,7 @@ modified:  2024-03-21 10:03
 
 SHELL里的变量的值都是字符串
 
-
 # Read
-
 
 # 条件判断
 
@@ -102,6 +100,7 @@ fi
 
 - 形式
 	- 分支语句结尾是`;;`
+
 ```shell
 case str in
 	str1 | str2) statements;;
@@ -111,6 +110,7 @@ esac
 ```
 
 - 例子：
+
 ```shell
 #!/bin/sh
 echo “Is this morning? Please answer yes or no.”
@@ -124,7 +124,6 @@ exit 0
 
 ```
 
-
 ## 循环语句
 
 语句开始和结束都是do和done
@@ -132,6 +131,7 @@ exit 0
 ### for语句
 
 - 形式
+
 ```shell
 for var in list
 do
@@ -142,6 +142,7 @@ done
 适用于对一系列字符串循环处理。
 
 - 例子
+
 ```shell
 for file in $(ls f*.sh);do
 	lpr $file
@@ -151,11 +152,12 @@ exit 0
 
 `$()`相当于反引号，执行里面的命令把结果字符串替换在这里
 
-
 `
+
 ### while语句
 
 - 形式
+
 ```shell
 while condition
 do 
@@ -164,6 +166,7 @@ done
 ```
 
 - 例子
+
 ```shell
 quit=n
 while [ “$quit” != “y” ]; do
@@ -184,6 +187,7 @@ done
 
 - 形式
 	- 条件为假时执行循环
+
 ```shell
 until condition
 do
@@ -191,10 +195,10 @@ do
 done
 ```
 
-
 ### select语句
 
 - 形式
+
 ```shell
 select item in itemlist
 do
@@ -217,8 +221,8 @@ do
 	esac
 done
 ```
-break跳出的是select循环
 
+break跳出的是select循环
 
 # 命令表和语句块
 
@@ -235,11 +239,10 @@ break跳出的是select循环
 		- 前面的失败了，采取执行后面的；前面成功了后面就不执行。只有一个命令会成功执行。
 		- statement1 || statement2 || statement3 || …
 
-
-
 ## 语句块
 
 - 形式
+
 ```shell
 {
 	statement1
@@ -251,6 +254,7 @@ break跳出的是select循环
 ## 函数
 
 - 形式
+
 ```shell
 func()
 {
@@ -269,8 +273,8 @@ statements
 	- 没有形参
 	- 在函数内用$1, $2,...调用
 
-
 - 例子
+
 ```shell
 yesno()
 {
@@ -302,3 +306,50 @@ yesno()
 8. trap: 指定在收到操作系统信号后执行的动作
 9. “:”(冒号命令): 空命令
 10. “.”(句点命令)或source: 在当前shell中执行命令
+
+# 捕获命令输出
+
+${}和反引号
+
+```shell
+echo “The current directory is $PWD”
+echo “The current directory is $(pwd)”
+```
+
+# 算术扩展
+
+- $((...))
+
+在Shell脚本里比较慢
+
+```shell
+#!/bin/sh
+x=0
+while [ “$x” –ne 10 ]; do
+	echo $x
+	x=$(($x+1))
+done
+exit 0
+
+```
+
+# 参数扩展
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F21%2F11-53-56-80673f6b51040b22e1c0a9aa2dd72cc5-20240321115355-3b2b2d.png)
+
+- 例子
+	- 批处理1_tmp,2_tmp,...
+
+```shell
+#!/bin/sh
+i=1
+while [ “$i” –ne 10 ]; do
+	touch “${i}_tmp”
+	i=$(($i+1))
+done
+exit 0
+```
+
+
+# 即时文档
+
