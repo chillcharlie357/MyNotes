@@ -229,9 +229,62 @@ break跳出的是select循环
 	- command1;command2;...
 - 条件组合
 	- AND命令表
+		- 前面成功了，后面才会继续执行。
 		- statement1 && statement2 && statement3 && …
 	- OR命令表
+		- 前面的失败了，采取执行后面的；前面成功了后面就不执行。只有一个命令会成功执行。
 		- statement1 || statement2 || statement3 || …
 
 
 
+## 语句块
+
+- 形式
+```shell
+{
+	statement1
+	statement2
+	...
+}
+```
+
+## 函数
+
+- 形式
+```shell
+func()
+{
+statements
+}
+```
+
+- 局部变量
+	- local关键字
+- 默认全局变量
+- 函数调用
+	- func para1 para2 ...
+- 返回值
+	- return
+- 参数
+	- 没有形参
+	- 在函数内用$1, $2,...调用
+
+
+- 例子
+```shell
+yesno()
+{
+	msg=“$1”
+	def=“$2”
+	while true; do
+		echo ” ”
+		echo “$msg”
+		read answer
+		if [ -n “$answer” ]; then
+			...
+		else
+			return $def
+		fi
+	done
+}
+```
