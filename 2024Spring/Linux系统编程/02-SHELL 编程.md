@@ -10,19 +10,19 @@ mathjax: true
 comment: true
 title: 02-SHELL 编程
 date:  2024-03-21 10:03
-modified:  2024-03-21 11:03
+modified:  2024-03-25 10:03
 ---
 
-# Shell
+# 1. Shell
 
 用户和操作系统之间的接口  
 是核外程序
 
 SHELL里的变量的值都是字符串
 
-# Read
+# 2. Read
 
-# 条件判断
+# 3. 条件判断
 
 SHELL脚本本身不支持条件判断
 
@@ -37,16 +37,16 @@ SHELL脚本本身不支持条件判断
 	- 与文件有关的条件测试
 	- 逻辑操作
 
-## 条件运算符
+## 3.1. 条件运算符
 
-### 字符串比较
+### 3.1.1. 字符串比较
 
 str1 = str2 两个字符串相同则结果为真  
 str1 != srt2  
 -z str 字符串为空则结果为真  
 -n str 字符串不为空则为真
 
-### 算术比较
+### 3.1.2. 算术比较
 
 expr1 -eq expr2  
 expr1 -ne expr2  
@@ -55,7 +55,7 @@ expr1 -ge expr2
 expr1 -lt expr2  
 expr1 -le expr2
 
-### 与文件相关的条件测试
+### 3.1.3. 与文件相关的条件测试
 
 -e file 文件存在  
 -d file 文件是目录  
@@ -66,15 +66,15 @@ expr1 -le expr2
 -w file 文件可写  
 -x file 文件可执行
 
-### 逻辑操作
+### 3.1.4. 逻辑操作
 
 ! expr NOT  
 expr1 -a expr2 AND  
 expr1 -o expr2 OR
 
-## 条件语句
+## 3.2. 条件语句
 
-### if 语句
+### 3.2.1. if 语句
 
 - if elif后面也要有空格，then else默认单独占一行
 - 形式：
@@ -96,7 +96,7 @@ fi
 	- `;`
 	- 同一行上多个命令分隔符
 
-### case语句
+### 3.2.2. case语句
 
 - 形式
 	- 分支语句结尾是`;;`
@@ -124,11 +124,11 @@ exit 0
 
 ```
 
-## 循环语句
+## 3.3. 循环语句
 
 语句开始和结束都是do和done
 
-### for语句
+### 3.3.1. for语句
 
 - 形式
 
@@ -154,7 +154,7 @@ exit 0
 
 `
 
-### while语句
+### 3.3.2. while语句
 
 - 形式
 
@@ -181,7 +181,7 @@ while [ “$quit” != “y” ]; do
 done
 ```
 
-### until语句
+### 3.3.3. until语句
 
 不推荐使用
 
@@ -195,7 +195,7 @@ do
 done
 ```
 
-### select语句
+### 3.3.4. select语句
 
 - 形式
 
@@ -224,9 +224,9 @@ done
 
 break跳出的是select循环
 
-# 命令表和语句块
+# 4. 命令表和语句块
 
-## 命令表/命令组合
+## 4.1. 命令表/命令组合
 
 - 分号串联
 	- 把多个命令放在同一行
@@ -239,7 +239,7 @@ break跳出的是select循环
 		- 前面的失败了，采取执行后面的；前面成功了后面就不执行。只有一个命令会成功执行。
 		- statement1 || statement2 || statement3 || …
 
-## 语句块
+## 4.2. 语句块
 
 - 形式
 
@@ -251,7 +251,7 @@ break跳出的是select循环
 }
 ```
 
-## 函数
+## 4.3. 函数
 
 - 形式
 
@@ -293,7 +293,7 @@ yesno()
 }
 ```
 
-# 杂项命令
+# 5. 杂项命令
 
 1. break: 从for/while/until/select循环退出
 2. continue: 跳到下一个循环继续执行
@@ -307,7 +307,7 @@ yesno()
 9. “:”(冒号命令): 空命令
 10. “.”(句点命令)或source: 在当前shell中执行命令
 
-# 捕获命令输出
+# 6. 捕获命令输出
 
 ${}和反引号
 
@@ -316,7 +316,7 @@ echo “The current directory is $PWD”
 echo “The current directory is $(pwd)”
 ```
 
-# 算术扩展
+# 7. 算术扩展
 
 - $((...))
 
@@ -333,7 +333,8 @@ exit 0
 
 ```
 
-# 参数扩展
+# 8. 参数扩展
+替换字符串
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F21%2F11-53-56-80673f6b51040b22e1c0a9aa2dd72cc5-20240321115355-3b2b2d.png)
 
@@ -350,6 +351,20 @@ done
 exit 0
 ```
 
+- 去掉扩展名
+	- `${param%.*}`，这里`*`是通配符，不是正则表达式
+	- `${param%.cpp}`，只去掉`.cpp`扩展名
+	- `${param%.cpp}.o`，只去掉`.cpp`扩展名，扩展名变成`.o`
+# 9. 即时文档
 
-# 即时文档
+在shell脚本中向一条命令传送输入数据
+
+```shell
+#!/bin/bash
+
+cat >> file.txt << !CATINPUT!
+Hello, this is a here document.
+!CATINPUT!
+```
+
 
