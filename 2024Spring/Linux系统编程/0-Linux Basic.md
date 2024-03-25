@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 0-Linux Basic
 date:  2024-02-26 09:02
-modified:  2024-03-11 11:03
+modified:  2024-03-25 10:03
 ---
 
 # 1. Linux
@@ -195,14 +195,14 @@ LInux下的文件类型：
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F11%2F10-34-10-6b773cd048cbdbb8d0578b569a00abbf-20240311103409-abfba0.png)
 
-# 重定向
+# 10. 重定向
 
 - 标准输入，标准输出，标准错误
 	- shell提供发功能，不是命令提供
 	- 对应文件描述符：0,1,2
 	- C语言变量：stdin, stdout, stderr
 
-# 管道
+# 11. 管道
 
 一个进程的输出作为后一个进程都输入
 
@@ -210,7 +210,7 @@ LInux下的文件类型：
 	1. `ls | wc -l`
 	2. `ls -lF | grep ^d` 正则表达式搜索
 
-# 环境变量
+# 12. 环境变量
 
 - 操作环境的参数
 - 查看和设置环境变量
@@ -220,7 +220,7 @@ LInux下的文件类型：
 
 PATH里的目录下的可执行文件都能直接在shell中调用
 
-# 高级命令和正则表达式
+# 13. 高级命令和正则表达式
 
 1. find
 2. grep
