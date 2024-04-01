@@ -57,3 +57,6 @@ modified:  2024-03-25 11:03
 
 gcc的参数和llvm差不多
 
+- 只编译: `gcc -c test.c -o test.obj`， 输出`.obj`
+- 只链接`gcc test.obj -o test`，输出可执行文件
+- 编译链接一起做：`gcc test.c -o test`，
