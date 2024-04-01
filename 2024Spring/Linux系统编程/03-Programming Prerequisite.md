@@ -53,3 +53,7 @@ modified:  2024-03-25 11:03
 - VC++及Delphi等（一般称为Win编程）
 	- 编译成本地二进制码
 
+# GCC options
+
+gcc的参数和llvm差不多
+
