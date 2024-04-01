@@ -60,3 +60,16 @@ gcc的参数和llvm差不多
 - 只编译: `gcc -c test.c -o test.obj`， 输出`.obj`
 - 只链接`gcc test.obj -o test`，输出可执行文件
 - 编译链接一起做：`gcc test.c -o test`，
+
+
+- Usage:
+	- gcc [options] [filename]
+- Basic options:
+	1. -E: 只对源程序进行预处理(调用cpp预处理器)
+	2. -S: 只对源程序进行预处理、编译
+	3. -c: 执行预处理、编译、汇编而不链接
+	4. -o output_file: 指定输出文件名
+	5. -g: 产生调试工具必需的符号信息
+	6. -O/On: 在程序编译、链接过程中进行优化处理
+	7. -Wall: 显示所有的警告信息
+
