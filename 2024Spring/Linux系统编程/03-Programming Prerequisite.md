@@ -133,3 +133,71 @@ gcc的参数和llvm差不多
 	- 判断被维护文件的时序关系
 	- make的时候用普通用户(会产生很多中间文件，如果用root会导致没有删除权限)，make install可能需要root权限(把生成的文件复制到系统目录)
 
+## makefile格式
+
+```makefile
+target ... : prerequisites ...
+command
+```
+1. target是一个目标文件，可以是Object File，也可以是执行文件
+2. prerequisites是要生成target所需要的文件或是目标
+3. command是make需要执行的命令。（可以是任意的Shell命令）
+	- **命令前面必须是Tab，不能是空格;命令和目标之间不能有空行**
+
+```makefile
+hello : main.o kbd.o 
+	gcc -o hello main.o kbd.o 
+main.o : main.c defs.h
+	cc -c main.c
+kbd.o : kbd.c defs.h command.h
+	cc -c kbd.c 
+clean :
+	rm edit main.o kbd.o 
+```
+
+赋值号两边可以有空格
+
+```makefile
+TOPDIR = ../
+include $(TOPDIR)RuIes.mak
+EXTRA LIBS
+EXEC =
+OBJS = hello.o
+
+all: $(EXEC)
+$(EXEC): $(OBJS)
+$(CC) $(LDFLAGS) -o $(OBJS)
+
+install:
+$(EXEC)
+
+clean:
+-rm -f $(EXEC) *.elf *.gdb
+```
+
+./configure
+make
+make install
+
+make uninstall
+make clean
+make distclean 回到刚刚解压的状态
+
+## 作用
+
+1. 定义整个工程的编译规则
+	- 一个工程中的源文件不计数，其按类型、功能、模块 分别放在若干个目录中，makefile定义了一系列的规 则来指定，哪些文件需要先编译，哪些文件需要后编 译，哪些文件需要重新编译，甚至于进行更复杂的功 能操作 。 
+2. 自动化编译
+	- 只需要一个make命令，整个工程完全自动编译 ； make是一个命令工具，是一个解释makefile中指令的 命令工具；
+
+## 命令
+
+- make命令格式：make \[-f Makefile] \[option] \[target]
+
+## 伪目标
+
+1. 不是一个文件，只是标签，所以 make无法生成它的依赖关系和决定它是否要执行，只 能通过显示地指明这个“目标”才能让其生效
+2. “伪目标”的取名不能和文件名重名
+3. 为了避免和文件重名的这种情况，可以使用一个特殊 的标记“.PHONY”来显示地指明一个目标是“伪目标 ”，向make说明，不管是否有这个文件，这个目标就 是“伪目标”
+4. 伪目标一般没有依赖的文件，但也可以为伪目标指定 所依赖的文件。
+5. 伪目标同样可以作为“默认目标”，只要将其放在第一个
