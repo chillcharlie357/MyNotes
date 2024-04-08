@@ -1,16 +1,17 @@
 ---
 aliases: 
-tags: 
-categories:
-sticky:
-thumbnail:
+tags:
+  - 2024_Spring_Linux系统编程
+categories: 
+sticky: 
+thumbnail: 
 cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 03-Programming Prerequisite
-date:  2024-03-25 10:03
-modified:  2024-04-08 11:04
+date: 2024-03-25 10:03
+modified: 2024-04-08 11:04
 ---
 
 # 1. Programming Language
