@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 03-Programming Prerequisite
 date:  2024-03-25 10:03
-modified:  2024-03-25 11:03
+modified:  2024-04-08 10:04
 ---
 
 # 1. Programming Language
@@ -53,14 +53,15 @@ modified:  2024-03-25 11:03
 - VC++及Delphi等（一般称为Win编程）
 	- 编译成本地二进制码
 
-# 4. GCC options
+# 4. GCC
+
+## 4.1. 选项
 
 gcc的参数和llvm差不多
 
 - 只编译: `gcc -c test.c -o test.obj`， 输出`.obj`
 - 只链接`gcc test.obj -o test`，输出可执行文件
 - 编译链接一起做：`gcc test.c -o test`，
-
 
 - Usage:
 	- gcc [options] [filename]
@@ -77,6 +78,57 @@ gcc的参数和llvm差不多
 	8. -Idir: 指定额外的头文件搜索路径
 	9. -Ldir: 指定额外的库文件搜索路径
 	10. -Iname: 链接时搜索指定的库文件
-	11. -DMACRO=\[=DEFN]:  定义MACRO宏
-	12.  
+	11. -DMACRO=\[=DEFN]: 定义MACRO宏
+
+## 4.2. 文件扩展名
+
+| 扩展名                            | 解释                                                          |
+| ------------------------------ | ----------------------------------------------------------- |
+| .c                             | C source code which must be preprocessed<br>使用C语言编译器        |
+| .C .cc .cp .cpp .CPP .c++ .cxx | C++ source code which must be preprocessed<br>使用C++编译器      |
+| .i                             | C source code which should not be preprocessed              |
+| .ii                            | C++ source code which should not be preprocessed            |
+| .h                             | C or C++ header file to be turned into a precompiled header |
+| .H .hh                         | C++ header file to be turned into a precompiled header      |
+| .s                             | Assembler code                                              |
+| .S                             | Assembler code which must be preprocessed                   |
+| .o                             | Object file                                                 |
+| .a                             | Static library file (archive file)                          |
+| .so                            | Dynamic library file (shared object)                        |
+
+# 5. GDB
+
+- GDB: GNU Debug
+	1. 设置断点
+	2. 监视变量值
+	3. 但不执行
+	4. 修改变量值
+
+
+
+| 命令           | 解释                                          |
+| ------------ | ------------------------------------------- |
+| file         | 打开要调试的文件                                    |
+| break/tbreak | 设置断点，可以是行号、函数名及地址(以\*开头)<br> tbreak: 设置临时断点 |
+| run          | 执行当前调试的程序                                   |
+| list         | 执行当前调试的程序                                   |
+| next         | 执行一条语句但不进入函数内部                              |
+| step         | 执行一条语句，是函数则进入函数内部                           |
+| display      | 显示表达式的值                                     |
+| print        | 临时显示表达式的值                                   |
+| kill         | 中止正在调试的程序                                   |
+| quit         | 退出gdb                                       |
+| shell        | 不退出gdb就执行shell命令                            |
+| make         | 不退出gdb就执行make                               |
+# make和makefile
+
+
+1. makefile
+	- 描述模块间的依赖关系;
+	- 记录实际编译的命令的脚本；
+	- 编译开源软件时一般从./configure或cmake生成
+2. make
+	- 根据makefile对程序进行管理和维护；
+	- 判断被维护文件的时序关系
+	- make的时候用普通用户(会产生很多中间文件，如果用root会导致没有删除权限)，make install可能需要root权限(把生成的文件复制到系统目录)
 
