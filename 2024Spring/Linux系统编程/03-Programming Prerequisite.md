@@ -126,6 +126,7 @@ gcc的参数和llvm差不多
 1. makefile
 	- 描述模块间的依赖关系;
 	- 记录实际编译的命令的脚本；
+	- 自动支持增量编译
 	- 编译开源软件时一般从./configure或cmake生成
 2. make
 	- 根据makefile对程序进行管理和维护；
