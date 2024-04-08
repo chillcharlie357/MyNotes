@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 03-Programming Prerequisite
 date:  2024-03-25 10:03
-modified:  2024-04-08 10:04
+modified:  2024-04-08 11:04
 ---
 
 # 1. Programming Language
@@ -104,8 +104,6 @@ gcc的参数和llvm差不多
 	3. 但不执行
 	4. 修改变量值
 
-
-
 | 命令           | 解释                                          |
 | ------------ | ------------------------------------------- |
 | file         | 打开要调试的文件                                    |
@@ -120,8 +118,8 @@ gcc的参数和llvm差不多
 | quit         | 退出gdb                                       |
 | shell        | 不退出gdb就执行shell命令                            |
 | make         | 不退出gdb就执行make                               |
-# make和makefile
 
+# 6. make和makefile
 
 1. makefile
 	- 描述模块间的依赖关系;
@@ -133,12 +131,13 @@ gcc的参数和llvm差不多
 	- 判断被维护文件的时序关系
 	- make的时候用普通用户(会产生很多中间文件，如果用root会导致没有删除权限)，make install可能需要root权限(把生成的文件复制到系统目录)
 
-## makefile格式
+## 6.1. makefile格式
 
 ```makefile
 target ... : prerequisites ...
 command
 ```
+
 1. target是一个目标文件，可以是Object File，也可以是执行文件
 2. prerequisites是要生成target所需要的文件或是目标
 3. command是make需要执行的命令。（可以是任意的Shell命令）
@@ -175,29 +174,102 @@ clean:
 -rm -f $(EXEC) *.elf *.gdb
 ```
 
-./configure
-make
+./configure  
+make  
 make install
 
-make uninstall
-make clean
+make uninstall  
+make clean  
 make distclean 回到刚刚解压的状态
 
-## 作用
+## 6.2. makefile执行次序
+
+1. make会在当前目录下找名字叫“Makefile” 或 “makefile” 的文件。
+2. 查找文件中的第一个目标文件（target），举例中的hello
+3. 如果hello文件不存在，或是hello所依赖的文件修改时间要 比hello新，就会执行后面所定义的命令来生成hello文件。
+4. 如果hello所依赖的.o文件不存在，那么make会在当前文 件中找目标为.o文件的依赖性，如果找到则再根据那一个 规则生成.o文件。（类似一个堆栈的过程）
+5. make根据.o文件的规则生成 .o 文件，然后再用 .o 文件生 成hello文件。
+
+## 6.3. 作用
 
 1. 定义整个工程的编译规则
 	- 一个工程中的源文件不计数，其按类型、功能、模块 分别放在若干个目录中，makefile定义了一系列的规 则来指定，哪些文件需要先编译，哪些文件需要后编 译，哪些文件需要重新编译，甚至于进行更复杂的功 能操作 。 
 2. 自动化编译
 	- 只需要一个make命令，整个工程完全自动编译 ； make是一个命令工具，是一个解释makefile中指令的 命令工具；
 
-## 命令
+## 6.4. 命令
 
 - make命令格式：make \[-f Makefile] \[option] \[target]
 
-## 伪目标
+## 6.5. 伪目标
+
+clean,install...
 
 1. 不是一个文件，只是标签，所以 make无法生成它的依赖关系和决定它是否要执行，只 能通过显示地指明这个“目标”才能让其生效
 2. “伪目标”的取名不能和文件名重名
 3. 为了避免和文件重名的这种情况，可以使用一个特殊 的标记“.PHONY”来显示地指明一个目标是“伪目标 ”，向make说明，不管是否有这个文件，这个目标就 是“伪目标”
 4. 伪目标一般没有依赖的文件，但也可以为伪目标指定 所依赖的文件。
 5. 伪目标同样可以作为“默认目标”，只要将其放在第一个
+
+## 6.6. 多目标
+
+当多个目标同时依赖于一个文件，并且其生成的命令大体类 似，可以使用一个自动化变量“$@”表示着目前规则中所有 的目标的集合。
+
+```makefile
+bigoutput littleoutput : text.g
+	generate text.g -$(subst output,,$@) > $@ 
+```
+
+等价于：
+
+```
+bigoutput : text.g
+	generate text.g -big > bigoutput
+littleoutput : text.g
+	generate text.g -little > littleoutput
+```
+
+## 6.7. 预定义变量
+
+1. $< 第一个依赖文件的名称
+2. $? 所有的依赖文件，以空格分开，这些依赖文件的修改日期比目标的创建日期晚
+3. $+ 所有的依赖文件，以空格分开，并以出现的先后为序，可能包含重复的依赖文件
+4. $^ 所有的依赖文件，以空格分开，不包含重复的依赖文件
+5. $* 不包括扩展名的目标文件名称
+6. $@目标的完整名称
+7. $%如果目标是归档成员，则该变量表示目标的归档成员名称
+
+## 6.8. 多目标扩展
+
+```
+<targets ...>: <target-pattern>: <prereq-patterns ...>
+	<commands>
+```
+
+```makefile
+objects = foo.o bar.o
+
+all: $(objects)
+$(objects): %.o: %.c
+	$(CC) -c $(CFLAGS) $< -o $@
+```
+
+等价于：
+
+```makefile
+foo.o : foo.c
+	$(CC) -c $(CFLAGS) foo.c -o foo.o
+bar.o : bar.c
+	$(CC) -c $(CFLAGS) bar.c -o bar.o
+```
+
+1. 目标从$object中获取
+2. “%.o”表明要所有以“.o”结尾的目标，即“foo.o bar.o”，就是变量 $object集合的模式
+3. 依赖模式“%.c”则取模式“%.o”的“%”，也就是“foo bar”，并为其 加下“.c”的后缀，于是依赖的目标就是“foo.c bar.c
+
+## 6.9. 函数
+
+- 调用语法
+	- `$(<function> <arguments>)`
+	- `${<function> <arguments>}`
+
