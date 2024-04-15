@@ -127,3 +127,7 @@ int creat(const char *pathname, mode_t mode);
 ```
 
 - flags: `O_RDONLY`, `O_WRONLY`, `O_EDWR`
+- `creat`：`open` with flags`O_CREAT|O_WRONLY|O_TRUNC`
+
+
+
