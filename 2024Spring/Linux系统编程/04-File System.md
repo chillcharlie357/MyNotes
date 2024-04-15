@@ -40,3 +40,19 @@ modified:  2024-04-15 10:04
 
 
 
+- 组件
+	1. super block
+		- 描述文件系统的属性
+		- e.g.只读，ext4
+	2. i-node object
+		- 描述文件，磁盘上**所有的文件都有一个唯一的inode**
+	3. file object
+		- **打开文件**，如果文件没有被打开，不会有file object
+		- 文件对象需要释放
+		- ~~标定唯一文件~~
+	4. dentry object
+		- 记录目录路径
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F10-36-57-db71799c0c080f4b2b107653f0779545-20240415103657-f29555.png)
+
+
