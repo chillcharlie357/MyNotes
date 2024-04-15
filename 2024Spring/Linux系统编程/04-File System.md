@@ -113,3 +113,17 @@ main(){
 ```
 
 
+### opne/creat function
+
+
+```c
+#include <sys/types.h> 
+#include <sys/stat.h> 
+#include <fcntl.h> 
+int open(const char *pathname, int flags);
+int open(const char *pathname, int flags, mode_t mode); //可变参数，不是函数重载
+int creat(const char *pathname, mode_t mode);
+//Return: a new file descriptor if success; -1 if failure
+```
+
+- flags: `O_RDONLY`, `O_WRONLY`, `O_EDWR`
