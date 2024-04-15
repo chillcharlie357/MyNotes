@@ -56,3 +56,15 @@ modified:  2024-04-15 10:04
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F10-36-57-db71799c0c080f4b2b107653f0779545-20240415103657-f29555.png)
 
 
+# 符号链接
+
+- Hard Link
+	1. 不同文件共用一个inode
+		- 两个文件没有主次关系删掉一个没有影响
+	2. 不能跨文件系统/分区
+	3. 对应**系统调用link**
+- Symbolic link
+	1. 存储被链接文件的文件名（而不是inode）实现链接
+	2. 可以跨文件系统
+	3. 对应**系统调用symlink**
+
