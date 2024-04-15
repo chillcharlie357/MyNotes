@@ -68,3 +68,48 @@ modified:  2024-04-15 10:04
 	2. 可以跨文件系统
 	3. 对应**系统调用symlink**
 
+
+- ls -l查看链接数目
+	- ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F11-17-25-fc0746aebea93640a4b72174da722b7c-20240415111724-a9fb6d.png)
+
+
+
+# 系统调用
+
+- 都以C函数的形式出现
+- 系统调用
+	- Linux内核的对外接口; 用户程序和内核之间唯一的接口; 提供最小接口
+- 库函数
+	- 依赖于系统调用; 提供较复杂功能
+	- 例：标准I/O库
+
+
+## Basic I/O System Calls
+
+
+### File Descriptor
+
+用户态程序访问文件最底层的句柄，再往下就是内核。
+
+1. 是一个int值
+	- `unistd.h`：STDIN_FILENO (0), STDOUT_FILENO (1), STDERR_FILENO (2)
+2. 系统调用的返回值
+	- open,read,write...
+
+
+e.g.使用系统调用读写文件
+```c
+#include <fcntl.h>
+main(){
+	int fd, nread;
+	char buf[1024];
+	/*open file “data” for reading */
+	fd = open(“data”, O_RDONLY);
+	/* read in the data */
+	nread = read(fd, buf, 1024);
+	/* close the file */
+	close(fd);
+}
+```
+
+
