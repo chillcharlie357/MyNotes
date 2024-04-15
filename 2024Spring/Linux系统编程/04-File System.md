@@ -131,3 +131,28 @@ int creat(const char *pathname, mode_t mode);
 
 
 
+### close 
+
+```c
+#include <unistd.h>
+int close(int fd);
+//Return: 0 if success; -1 if failure
+```
+
+
+### read/write
+
+read from a file descriptor
+```c
+#include <unistd.h>
+ssize_t read(int fd, void *buf, size_t count);
+//返回值: 读到的字节数，若已到文件尾为0，若出错为-1
+```
+
+write to a file descriptor
+```c
+#include <unistd.h>
+ssize_t write(int fd, const void *buf, size_t count);
+//返回值: 若成功为已写的字节数，若出错为-1
+```
+
