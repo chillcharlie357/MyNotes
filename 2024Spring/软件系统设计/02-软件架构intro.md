@@ -19,4 +19,5 @@ modified:  2024-04-16 14:04
 	3. 可变性 
 	4. 不可见性：没有几何结构
 
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F16%2F14-49-29-00d7cb1dc073a5a241fb8794c7cb365d-20240416144928-c3fd7b.png)
 
