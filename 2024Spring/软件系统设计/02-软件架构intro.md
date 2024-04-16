@@ -39,3 +39,32 @@ modified:  2024-04-16 14:04
 有多个视图
 解决不可见
 
+## 4+1 view model
+
+Logical view
+Process view
+Physical view
+Development view
+
+Architecture use cases: 四个视图是关于某个场景的
+
+## generic design strategies
+
+1. Decomposition
+2. Abstraction
+3. Stepwise: Divid and Conquer
+4. Generate and Test，先生成一个设计，再对它测试
+5. Iteration: Incremental Refinement
+6. Reuseable elements，重用现有的设计
+
+
+# what does a software architect do?
+
+
+1. Liaison
+	1. 调和用户、市场、开发等
+2. software engineering
+3. technology knowledge
+4. risk management
+
+
