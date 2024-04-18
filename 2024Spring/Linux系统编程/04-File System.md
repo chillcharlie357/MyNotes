@@ -13,14 +13,14 @@ date:  2024-04-15 10:04
 modified:  2024-04-15 10:04
 ---
 
-# 文件系统
+# 1. 文件系统
 
 1. 指特定的文件格式
 2. 指按特定格式进行了“格式化”的一块存储介质
 3. 指操作系统用来管理文件系统以及对文件进行操作的机制以及实现
 
 
-# 👍文件类型和结构
+# 2. 👍文件类型和结构
 
 - 文件类型
 	1. regular file
@@ -34,7 +34,7 @@ modified:  2024-04-15 10:04
 	- Byte stream; no particular internal structure
 
 
-# Virtual File system Switch(VFS)
+# 3. Virtual File system Switch(VFS)
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F10-27-12-c665556f9e0546a59447cd52982131cb-20240415102711-2fedd7.png)
 
@@ -56,7 +56,7 @@ modified:  2024-04-15 10:04
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F10-36-57-db71799c0c080f4b2b107653f0779545-20240415103657-f29555.png)
 
 
-# 符号链接
+# 4. 符号链接
 
 - Hard Link
 	1. 不同文件共用一个inode
@@ -74,7 +74,7 @@ modified:  2024-04-15 10:04
 
 
 
-# 系统调用
+# 5. 系统调用
 
 - 都以C函数的形式出现
 - 系统调用
@@ -84,10 +84,10 @@ modified:  2024-04-15 10:04
 	- 例：标准I/O库
 
 
-## Basic I/O System Calls
+## 5.1. Basic I/O System Calls
 
 
-## File Descriptor
+## 5.2. File Descriptor
 
 **用户态程序访问文件最底层的句柄**，再往下就是内核。
 可以理解成下标，数组再内核态（如果存在）
@@ -114,7 +114,7 @@ main(){
 ```
 
 
-## opne/creat function
+## 5.3. opne/creat function
 
 
 ```c
@@ -132,7 +132,7 @@ int creat(const char *pathname, mode_t mode);
 
 
 
-## close 
+## 5.4. close
 
 ```c
 #include <unistd.h>
@@ -141,7 +141,7 @@ int close(int fd);
 ```
 
 
-## read/write
+## 5.5. read/write
 
 read from a file descriptor
 ```c
@@ -157,7 +157,7 @@ ssize_t write(int fd, const void *buf, size_t count);
 //返回值: 若成功为已写的字节数，若出错为-1
 ```
 
-## seek
+## 5.6. seek
 
 - 设置read/write的偏移量
 ```c
@@ -166,7 +166,7 @@ ssize_t write(int fd, const void *buf, size_t count);
 off_t lseek(int fildes, off_t offset, int whence);
 //Return: the resulting offset location if success; -1 if failure)
 ```
-## dup/dup2 Function
+## 5.7. dup/dup2 Function
 
 
 - 复制文件描述符
@@ -185,7 +185,7 @@ dup(fd,1)
 ```
 
 
-## fcntl Function
+## 5.8. fcntl Function
 
 - 控制文件描述符
 
@@ -206,7 +206,7 @@ int fcntl(int fd, int cmd, struct flock *lock);
 		- 可以向文件发几个信号。
 	5. F_GETLK/F_SETLK/F_SETLKW: Get/set the **file lock**
 
-## ioctl function
+## 5.9. ioctl function
 
 
 ```c
@@ -217,9 +217,9 @@ int ioctl(int d, int request, ...);
 - `d`：文件描述符
 - `request`：也是命令，但是是自定义的
 
-# Standard I/O Library
+# 6. Standard I/O Library
 
-## File Stream
+## 6.1. File Stream
 
 使用用户态的结构体`FILE`，而不是文件描述符。`FILE`结构体内部保存文件描述符。
 
@@ -231,7 +231,7 @@ int ioctl(int d, int request, ...);
 	3. No buffer
 
 
-## Stream open/close
+## 6.2. Stream open/close
 
 
 ```c
@@ -248,7 +248,7 @@ int fclose(FILE *stream);
 	5. w+
 	6. a+
 
-## Input of a character
+## 6.3. Input of a character
 
 1. `getc`是宏定义，速度比`fgetc`快
 2. `fgetc`
@@ -264,7 +264,7 @@ int getchar(void);
 
 
 
-## Output of a Character
+## 6.4. Output of a Character
 
 ```c
 #include <stdio.h>
@@ -275,7 +275,7 @@ int putchar(int c);
 ```
 
 
-## Input of a Line of String
+## 6.5. Input of a Line of String
 
 ```c
 #include <stdio.h>
@@ -284,13 +284,35 @@ char *gets(char *s); //not recommended.
 ```
 
 
-## Output of a Line of String
+## 6.6. Output of a Line of String
 
 
 ```c
 #include <stdio.h>
 int fputs(const char *s, FILE *stream);
 int puts(const char *s
+```
+
+
+## 6.7. Binary Stream Input/Output
+
+```c
+#include <stdio.h>
+size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
+size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
+//Return: the number of a items successfully read or written.
+```
+
+fwrite: 向磁盘写入数组，数组首地址ptr，数组每个格子大小size, 数组元素个数nmemb
+
+## 6.8. Formatted I/O
+
+
+```c
+#include <stdio.h>
+int scanf(const char *format, ...);
+int fscanf(FILE *stream, const char *format, ...);
+int sscanf(const char *str, const char *format, ...);
 ```
 
 
