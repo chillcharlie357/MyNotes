@@ -199,8 +199,10 @@ int fcntl(int fd, int cmd, struct flock *lock);
 
 - cmd取值
 	1. F_DUPFD: **Duplicate** a file descriptor
-	2. F_GETFD/F_SETFD: Get/set the **file descriptor’s close-on-exec flag**.
+	2. F_GETFD/F_SETFD: Get/set the **file descriptor’s close-on-exec flag**.调用exec时文件描述符会不会关闭。
 	3. F_GETFL/F_SETFL: Get/set the **file descriptor’s flags**
 	4. F_GETOWN/F_SETOWN: **Manage I/O availability signals**
+		- 可以向文件发几个信号。
 	5. F_GETLK/F_SETLK/F_SETLKW: Get/set the **file lock**
 
+## ioctl function
