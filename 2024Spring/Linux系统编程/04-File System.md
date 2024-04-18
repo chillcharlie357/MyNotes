@@ -198,9 +198,9 @@ int fcntl(int fd, int cmd, struct flock *lock);
 ```
 
 - cmd取值
-	1. F_DUPFD: Duplicate a file descriptor
+	1. F_DUPFD: **Duplicate** a file descriptor
 	2. F_GETFD/F_SETFD: Get/set the **file descriptor’s close-on-exec flag**.
 	3. F_GETFL/F_SETFL: Get/set the **file descriptor’s flags**
-	4. F_GETOWN/F_SETOWN: Manage I/O availability signals
-	5. F_GETLK/F_SETLK/F_SETLKW: Get/set the file lock
+	4. F_GETOWN/F_SETOWN: **Manage I/O availability signals**
+	5. F_GETLK/F_SETLK/F_SETLKW: Get/set the **file lock**
 
