@@ -156,3 +156,51 @@ ssize_t write(int fd, const void *buf, size_t count);
 //返回值: 若成功为已写的字节数，若出错为-1
 ```
 
+## seek
+
+- 设置read/write的偏移量
+```c
+#include <sys/types.h>
+#include <unistd.h>
+off_t lseek(int fildes, off_t offset, int whence);
+//Return: the resulting offset location if success; -1 if failure)
+```
+## dup/dup2 Function
+
+
+- 复制文件描述符
+
+```c
+#include <unistd.h>
+int dup(int oldfd);
+int dup2(int oldfd, int newfd);
+//Return: the new file descriptor if success; -1 if failure)
+```
+
+- e.g.重定向的实现
+```c
+int fd = open(...)
+dup(fd,1)
+```
+
+
+## fcntl Function
+
+- 控制文件描述符
+
+```c
+#include <unistd.h>
+#include <fcntl.h>
+int fcntl(int fd, int cmd);
+int fcntl(int fd, int cmd, long arg);
+int fcntl(int fd, int cmd, struct flock *lock);
+//返回值: 若成功则依赖于cmd，若出错为-1
+```
+
+- cmd取值
+	1. F_DUPFD: Duplicate a file descriptor
+	2. F_GETFD/F_SETFD: Get/set the **file descriptor’s close-on-exec flag**.
+	3. F_GETFL/F_SETFL: Get/set the **file descriptor’s flags**
+	4. F_GETOWN/F_SETOWN: Manage I/O availability signals
+	5. F_GETLK/F_SETLK/F_SETLKW: Get/set the file lock
+
