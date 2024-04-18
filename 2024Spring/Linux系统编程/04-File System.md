@@ -38,7 +38,7 @@ modified:  2024-04-15 10:04
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F10-27-12-c665556f9e0546a59447cd52982131cb-20240415102711-2fedd7.png)
 
-
+**位于内核态**，比系统调用更加底层。
 
 - 组件
 	1. super block
@@ -87,9 +87,10 @@ modified:  2024-04-15 10:04
 ## Basic I/O System Calls
 
 
-### File Descriptor
+## File Descriptor
 
-用户态程序访问文件最底层的句柄，再往下就是内核。
+**用户态程序访问文件最底层的句柄**，再往下就是内核。
+可以理解成下标，数组再内核态（如果存在）
 
 1. 是一个int值
 	- `unistd.h`：STDIN_FILENO (0), STDOUT_FILENO (1), STDERR_FILENO (2)
@@ -113,7 +114,7 @@ main(){
 ```
 
 
-### opne/creat function
+## opne/creat function
 
 
 ```c
@@ -131,7 +132,7 @@ int creat(const char *pathname, mode_t mode);
 
 
 
-### close 
+## close 
 
 ```c
 #include <unistd.h>
@@ -140,7 +141,7 @@ int close(int fd);
 ```
 
 
-### read/write
+## read/write
 
 read from a file descriptor
 ```c
@@ -206,3 +207,90 @@ int fcntl(int fd, int cmd, struct flock *lock);
 	5. F_GETLK/F_SETLK/F_SETLKW: Get/set the **file lock**
 
 ## ioctl function
+
+
+```c
+#include <sys/ioctl.h>
+int ioctl(int d, int request, ...);
+```
+
+- `d`：文件描述符
+- `request`：也是命令，但是是自定义的
+
+# Standard I/O Library
+
+## File Stream
+
+使用用户态的结构体`FILE`，而不是文件描述符。`FILE`结构体内部保存文件描述符。
+
+有预先定义好的stdin, stdout, stderr
+
+- buffer
+	1. Full buffer
+	2. Line buffer
+	3. No buffer
+
+
+## Stream open/close
+
+
+```c
+#include <stdio.h>
+FILE *fopen(const char *filename, const char *mode);
+int fclose(FILE *stream);
+```
+
+- mode
+	1. r
+	2. w
+	3. a
+	4. r+
+	5. w+
+	6. a+
+
+## Input of a character
+
+1. `getc`是宏定义，速度比`fgetc`快
+2. `fgetc`
+3. getchar`
+
+```c
+#include <stdio.h>
+int getc(FILE *fp);
+int fgetc(FILE *fp);
+int getchar(void);
+//Result: Reads the next character from a stream and returns it as an unsigned char cast to an int, or EOF on end of file or error.
+```
+
+
+
+## Output of a Character
+
+```c
+#include <stdio.h>
+int putc(int c, FILE *fp);
+int fputc(int c, FILE *fp);
+int putchar(int c);
+//Return: the character if success; -1 if failure
+```
+
+
+## Input of a Line of String
+
+```c
+#include <stdio.h>
+char *fgets(char *s, int size, FILE *stream);
+char *gets(char *s); //not recommended.
+```
+
+
+## Output of a Line of String
+
+
+```c
+#include <stdio.h>
+int fputs(const char *s, FILE *stream);
+int puts(const char *s
+```
+
+
