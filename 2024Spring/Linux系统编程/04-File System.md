@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 04-File System
 date:  2024-04-15 10:04
-modified:  2024-04-15 10:04
+modified:  2024-04-18 12:04
 ---
 
 # 1. 文件系统
@@ -18,7 +18,6 @@ modified:  2024-04-15 10:04
 1. 指特定的文件格式
 2. 指按特定格式进行了“格式化”的一块存储介质
 3. 指操作系统用来管理文件系统以及对文件进行操作的机制以及实现
-
 
 # 2. 👍文件类型和结构
 
@@ -32,7 +31,6 @@ modified:  2024-04-15 10:04
 	7. directory
 - 结构
 	- Byte stream; no particular internal structure
-
 
 # 3. Virtual File system Switch(VFS)
 
@@ -55,7 +53,6 @@ modified:  2024-04-15 10:04
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F10-36-57-db71799c0c080f4b2b107653f0779545-20240415103657-f29555.png)
 
-
 # 4. 符号链接
 
 - Hard Link
@@ -68,11 +65,8 @@ modified:  2024-04-15 10:04
 	2. 可以跨文件系统
 	3. 对应**系统调用symlink**
 
-
 - ls -l查看链接数目
 	- ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F11-17-25-fc0746aebea93640a4b72174da722b7c-20240415111724-a9fb6d.png)
-
-
 
 # 5. 系统调用
 
@@ -83,13 +77,11 @@ modified:  2024-04-15 10:04
 	- 依赖于系统调用; 提供较复杂功能
 	- 例：标准I/O库
 
-
 ## 5.1. Basic I/O System Calls
-
 
 ## 5.2. File Descriptor
 
-**用户态程序访问文件最底层的句柄**，再往下就是内核。
+**用户态程序访问文件最底层的句柄**，再往下就是内核。  
 可以理解成下标，数组再内核态（如果存在）
 
 1. 是一个int值
@@ -97,8 +89,8 @@ modified:  2024-04-15 10:04
 2. 系统调用的返回值
 	- open,read,write...
 
-
 e.g.使用系统调用读写文件
+
 ```c
 #include <fcntl.h>
 main(){
@@ -113,9 +105,7 @@ main(){
 }
 ```
 
-
 ## 5.3. opne/creat function
-
 
 ```c
 #include <sys/types.h> 
@@ -130,8 +120,6 @@ int creat(const char *pathname, mode_t mode);
 - flags: `O_RDONLY`, `O_WRONLY`, `O_EDWR`
 - `creat`：`open` with flags`O_CREAT|O_WRONLY|O_TRUNC`
 
-
-
 ## 5.4. close
 
 ```c
@@ -140,10 +128,10 @@ int close(int fd);
 //Return: 0 if success; -1 if failure
 ```
 
-
 ## 5.5. read/write
 
 read from a file descriptor
+
 ```c
 #include <unistd.h>
 ssize_t read(int fd, void *buf, size_t count);
@@ -151,6 +139,7 @@ ssize_t read(int fd, void *buf, size_t count);
 ```
 
 write to a file descriptor
+
 ```c
 #include <unistd.h>
 ssize_t write(int fd, const void *buf, size_t count);
@@ -160,14 +149,15 @@ ssize_t write(int fd, const void *buf, size_t count);
 ## 5.6. seek
 
 - 设置read/write的偏移量
+
 ```c
 #include <sys/types.h>
 #include <unistd.h>
 off_t lseek(int fildes, off_t offset, int whence);
 //Return: the resulting offset location if success; -1 if failure)
 ```
-## 5.7. dup/dup2 Function
 
+## 5.7. dup/dup2 Function
 
 - 复制文件描述符
 
@@ -179,11 +169,11 @@ int dup2(int oldfd, int newfd);
 ```
 
 - e.g.重定向的实现
+
 ```c
 int fd = open(...)
 dup(fd,1)
 ```
-
 
 ## 5.8. fcntl Function
 
@@ -208,7 +198,6 @@ int fcntl(int fd, int cmd, struct flock *lock);
 
 ## 5.9. ioctl function
 
-
 ```c
 #include <sys/ioctl.h>
 int ioctl(int d, int request, ...);
@@ -230,9 +219,7 @@ int ioctl(int d, int request, ...);
 	2. Line buffer
 	3. No buffer
 
-
 ## 6.2. Stream open/close
-
 
 ```c
 #include <stdio.h>
@@ -262,8 +249,6 @@ int getchar(void);
 //Result: Reads the next character from a stream and returns it as an unsigned char cast to an int, or EOF on end of file or error.
 ```
 
-
-
 ## 6.4. Output of a Character
 
 ```c
@@ -274,7 +259,6 @@ int putchar(int c);
 //Return: the character if success; -1 if failure
 ```
 
-
 ## 6.5. Input of a Line of String
 
 ```c
@@ -283,16 +267,13 @@ char *fgets(char *s, int size, FILE *stream);
 char *gets(char *s); //not recommended.
 ```
 
-
 ## 6.6. Output of a Line of String
-
 
 ```c
 #include <stdio.h>
 int fputs(const char *s, FILE *stream);
 int puts(const char *s
 ```
-
 
 ## 6.7. Binary Stream Input/Output
 
@@ -307,7 +288,6 @@ fwrite: 向磁盘写入数组，数组首地址ptr，数组每个格子大小siz
 
 ## 6.8. Formatted I/O
 
-
 ```c
 #include <stdio.h>
 int scanf(const char *format, ...);
@@ -315,4 +295,11 @@ int fscanf(FILE *stream, const char *format, ...);
 int sscanf(const char *str, const char *format, ...);
 ```
 
+使用`fgets`然后解析字符串
 
+```c
+#include <stdio.h>
+int printf(const char *format, ...);
+int fprintf(FILE *stream, const char *format, ...);
+int sprintf(char *str, const char *format, ...);
+```
