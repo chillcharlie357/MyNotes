@@ -1,16 +1,16 @@
 ---
 aliases: 
 tags: 
-categories:
-sticky:
-thumbnail:
+categories: 
+sticky: 
+thumbnail: 
 cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 04-File System
-date:  2024-04-15 10:04
-modified:  2024-04-18 12:04
+date: 2024-04-15 10:04
+modified: 2024-04-18 12:04
 ---
 
 # 1. 文件系统
@@ -303,4 +303,24 @@ int printf(const char *format, ...);
 int fprintf(FILE *stream, const char *format, ...);
 int sprintf(char *str, const char *format, ...);
 ```
+
+# File lock
+
+
+作用：几个进程同时操作一个文件
+
+## 分类
+
+- 记录锁：往文件加锁时，是否要锁整个文件，还是只锁一部分（记录锁）
+
+- 劝告锁：
+	- 检查，加锁由应用程序控制
+	- 系统会给进程发信号，告诉他这个文件被上锁，但是可以强行操作文件
+- 强制锁：
+	- 检查，加锁由内核控制
+	- 影响open,write,read等操作
+
+- 共享锁
+- 排他锁
+
 
