@@ -72,3 +72,6 @@ pid_t waitpid(pid_t  pid, int *status, int options)
 ## signal
 
 进程之间通信
+
+
+SIGKILL：终止，不能被捕获或忽略
