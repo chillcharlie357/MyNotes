@@ -73,15 +73,38 @@ pid_t waitpid(pid_t  pid, int *status, int options)
 
 进程之间通信
 
+### 信号
+
 SIGKILL：终止，不能被捕获或忽略
 SIGINT：终端中断符
 SIGTERM：终止（kill发出的默认系统终止信号），可以改
 
+### 可靠性
 
 - 信号可靠性
-	1. 可能会丢失，SIG对应的int值较大对应早期Linux版本不可靠，int值较小对应早期版本
+	1. 连续重复信号能不能收到
+		1. 可能会丢失，SIG对应的int值较大对应早期Linux版本不可靠，int值较小对应早期版本;后期版本有可靠机制
 	2. 阻塞信号
 	3. 复位机制
 
 
 
+### 发信号
+
+1. kill
+2. raise
+3. alarm: set an alarm clock for delivery of a signal
+	1. 每个进程只能有一个闹钟
+	2. 可以用来做超时处理
+4. pause: wait for a signal
+	1. 挂起，等到有信号来才执行
+	2. e.g. CTRL+Z的实现
+
+
+### 可靠信号
+
+信号集
+
+给一个信号注册一个结构体，而不是直接注册处理函数
+
+- sigprocmask
