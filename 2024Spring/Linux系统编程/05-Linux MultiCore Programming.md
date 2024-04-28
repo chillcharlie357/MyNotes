@@ -73,5 +73,8 @@ pid_t waitpid(pid_t  pid, int *status, int options)
 
 进程之间通信
 
-
 SIGKILL：终止，不能被捕获或忽略
+SIGINT：终端中断符
+SIGTERM：终止（kill发出的默认系统终止信号），可以改
+
+
