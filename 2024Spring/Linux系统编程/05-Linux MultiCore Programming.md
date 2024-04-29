@@ -140,4 +140,37 @@ int sigsuspend(const sigset *sigmask);
 
 # 共享内存
 
+1. 共享内存是内核为进程创建的一个特殊内存段，它可连接(attach)到自己的地址空间，也可以连接到其它进程的地址空间
+2. **最快的进程间通信方式**
+3. 不提供任何同步功能
+## shared memory system calls
+
+1. key：区分共享内存。
+2. flag：
+	1. 0：必须找
+	2. IPC_CREAT：找不到就创建
+	3. IPC_EXCL：只创建不找
+
+```c
+int shmget(key_t key, int size, int flag);
+```
+
+
+## mmap/munmap
+
+把文件/设备，映射/取消映射到内存。
+
+```c
+void* mmap(void* addr,size_t length,int prot, int flags,int fd,off_t offset)
+
+int munmap(void* addr, size_t length)
+```
+
+- flages
+	1. MAP_SHARED
+	2. MAP_ANONYMOUS：忽略掉fd，虚拟了一个文件
+	3. MAP_PRIVATE：只有当前进程可以写
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F29%2F10-49-59-a380e5e4559554e6c4bd764939c0322a-20240429104958-5ac065.png)
+
 
