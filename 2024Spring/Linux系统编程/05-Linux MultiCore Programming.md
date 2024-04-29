@@ -91,8 +91,8 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 
 ### 发信号
 
-1. kill
-2. raise
+1. kill: send signal to a process
+2. raise: send a signal to the current process
 3. alarm: set an alarm clock for delivery of a signal
 	1. 每个进程只能有一个闹钟
 	2. 可以用来做超时处理
@@ -107,7 +107,7 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 
 给一个信号注册一个结构体，而不是直接注册处理函数
 
-- sigprocmask
+- sigprocmask：检测或更改(或两者)进程的信号掩码
 - **sigaction**：检查或修改与指定信号的关联处理动作
 
 
