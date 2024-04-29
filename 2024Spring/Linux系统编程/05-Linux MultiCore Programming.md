@@ -108,3 +108,33 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 给一个信号注册一个结构体，而不是直接注册处理函数
 
 - sigprocmask
+- **sigaction**：检查或修改与指定信号的关联处理动作
+
+
+
+```c
+#include <signal.h>
+int sigaction(int signum, const struct sigaction *act, struct 
+sigaction *oldact);
+//Returned Value: 0 is success, -1 if failure)
+```
+
+
+struct sigaction成员：
+```c
+handler_t sa_handler; /* addr of signal handler, or SIG_IGN, 
+or SIG_DEL */
+sigset_t sa_mask; /* additional signals to block */
+int sa_flags; /* signal options */
+```
+
+
+- `sigsuspend`：使用临时信号替代信号掩码，在捕获一个信号或发生终止该进程的信号前，进程挂起
+
+```c
+#include <signal.h>
+int sigsuspend(const sigset *sigmask);
+//Returned value: -1, errno is set to be EINTR
+```
+
+
