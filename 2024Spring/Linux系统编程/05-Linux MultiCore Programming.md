@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 05-Linux MultiCore Programming
 date:  2024-04-22 11:04
-modified:  2024-04-22 11:04
+modified:  2024-04-29 11:04
 ---
 
 # Linux进程
@@ -19,8 +19,6 @@ modified:  2024-04-22 11:04
 
 1. exec：直接执行新的程序
 2. fork：创建一个一样的新进程
-
-
 
 ## 进程退出方式
 
@@ -34,11 +32,9 @@ modified:  2024-04-22 11:04
 	2. 被信号取消
 	3. 线程被取消
 
-
 exit：最终会调用_exit，但之前会有一堆终止处理程序(aexit function)
 
 ## Process resources
-
 
 每个进程都有一个进程描述符
 
@@ -57,17 +53,16 @@ pid_t waitpid(pid_t  pid, int *status, int options)
 	2. 立即返回
 	3. 出错
 
-
-
 - waitpid
 	1. 指定pid
 	2. 非阻塞
 	3. waitpid的pid参数
 		1. \==-1：对应wait
-		2. >0: 指定pid
+
+		2. > 0: 指定pid
+
 		3. \==0：指定父进程的group
 		4. <0：指定group id，等待对应组里的进程
-
 
 ## signal
 
@@ -75,8 +70,8 @@ pid_t waitpid(pid_t  pid, int *status, int options)
 
 ### 信号
 
-SIGKILL：终止，不能被捕获或忽略
-SIGINT：终端中断符
+SIGKILL：终止，不能被捕获或忽略  
+SIGINT：终端中断符  
 SIGTERM：终止（kill发出的默认系统终止信号），可以改
 
 ### 可靠性
@@ -86,8 +81,6 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 		1. 可能会丢失，SIG对应的int值较大对应早期Linux版本不可靠，int值较小对应早期版本;后期版本有可靠机制
 	2. 阻塞信号
 	3. 复位机制
-
-
 
 ### 发信号
 
@@ -100,7 +93,6 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 	1. 挂起，等到有信号来才执行
 	2. e.g. CTRL+Z的实现
 
-
 ### 可靠信号
 
 信号集
@@ -110,8 +102,6 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 - sigprocmask：检测或更改(或两者)进程的信号掩码
 - **sigaction**：检查或修改与指定信号的关联处理动作
 
-
-
 ```c
 #include <signal.h>
 int sigaction(int signum, const struct sigaction *act, struct 
@@ -119,15 +109,14 @@ sigaction *oldact);
 //Returned Value: 0 is success, -1 if failure)
 ```
 
-
 struct sigaction成员：
+
 ```c
 handler_t sa_handler; /* addr of signal handler, or SIG_IGN, 
 or SIG_DEL */
 sigset_t sa_mask; /* additional signals to block */
 int sa_flags; /* signal options */
 ```
-
 
 - `sigsuspend`：使用临时信号替代信号掩码，在捕获一个信号或发生终止该进程的信号前，进程挂起
 
@@ -137,24 +126,11 @@ int sigsuspend(const sigset *sigmask);
 //Returned value: -1, errno is set to be EINTR
 ```
 
-
 # 共享内存
 
 1. 共享内存是内核为进程创建的一个特殊内存段，它可连接(attach)到自己的地址空间，也可以连接到其它进程的地址空间
 2. **最快的进程间通信方式**
 3. 不提供任何同步功能
-## shared memory system calls
-
-1. key：区分共享内存。
-2. flag：
-	1. 0：必须找
-	2. IPC_CREAT：找不到就创建
-	3. IPC_EXCL：只创建不找
-
-```c
-int shmget(key_t key, int size, int flag);
-```
-
 
 ## mmap/munmap
 
@@ -173,4 +149,171 @@ int munmap(void* addr, size_t length)
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F29%2F10-49-59-a380e5e4559554e6c4bd764939c0322a-20240429104958-5ac065.png)
 
+## shared memory system calls
 
+### 申请共享内存
+
+```c
+int shmget(key_t key, int size, int flag);
+```
+
+1. key：区分共享内存。
+2. flag：
+	1. 0：必须找
+	2. IPC_CREAT：找不到就创建
+	3. IPC_EXCL：只创建不找
+
+### 共享内存地址映射
+
+使用共享内存的时候也需要map，和文件类似:
+
+```c
+void *shmat(int shmid, void *addr, int flag);
+```
+
+1. addr
+2. flag: 
+	1. SHM_RND：可读可写
+	2. SHM_RDONLY：只读
+
+```c
+shared_memory = shmat(shmid, (void *)0, 0);
+if (shared_memory == (void *)-1) {
+		fprintf(stderr, "shmat failed\n");
+		exit(EXIT_FAILURE);
+}
+
+```
+
+### 共享内存解除映射
+
+```c
+int shmdt(void * addr);
+```
+
+```c
+if (shmdt(shared_memory) == -1) {
+	fprintf(stderr, "shmdt failed\n");
+	exit(EXIT_FAILURE);
+}
+```
+
+### 共享内存释放
+
+```c
+int shmctl(int shmid, int cmd, struct shmid_ds *buf);
+```
+
+1. cmd：
+	1. IPC_STAT：获取共享内存属性
+	2. IPC_SET：为共享内存设置属性
+	3. **IPC_RMID：释放**，buf参数
+
+e.g.:
+
+```c
+if (shmctl(shmid, IPC_RMID, 0) == -1) {
+	fprintf(stderr, "shmctl(IPC_RMID) failed\n");
+	exit(EXIT_FAILURE);
+}
+```
+
+# POSIX thread
+
+1. POSIX thread不是系统调用，是Linux下的标准库
+2. Linux下可以用clone创建thread，但是比较复杂很少用
+
+线程共享地址空间，轻量级
+
+- pthread library
+	- /usr/lib/libpthread.so, /usr/lib/libpthread.a
+- pthread.h header file
+	- /usr/include/pthread.h
+- Compiler options
+	- gcc thread.c –o thread –lpthread
+	- -l: link
+
+## 命名
+
+pthread下的所有函数都以`pthread_`开头
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F29%2F11-31-51-7c6da78deef9bd2d44a457253224f8cc-20240429113150-2588f6.png)
+
+## 线程操作
+### 生命周期
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F29%2F11-40-13-c1cd41e1edb023fd1ea6491d58ea4140-20240429114012-6287c9.png)
+
+### pthread_create 
+
+创建线程
+
+```c
+#include <pthread.h>
+int pthread_create(
+pthread_t *thread, 
+pthread_attr_t *attr, 
+void *(*start_routine)(void *), 
+void *arg)
+```
+
+1. thread：输出线程ID
+2. attr：创建线程的时候可以传属性，默认可以传`NULL`
+3. `start_routine`：线程的入口函数
+4. arg
+
+### pthread_exit 
+
+结束线程
+
+```c
+void pthread_exit(void * retval);
+```
+
+可以在线程里调用`pthread_exit`，也可以在线程`main`函数`return`
+
+### pthread_join
+
+- 等待另一个线程结束
+	- pthread库并没有限制只能主线程join子线程，但是推荐
+
+```c
+int pthread_join(pthread_t th, void **thread_return);
+```
+
+1. `th`：需要等待的线程
+2. `thread_return`：指向线程返回值的指针
+	- 返回值是`void*`
+
+### pthread_detach
+
+- 线程自己回收自己的资源，不和任何线程做join
+
+```c
+int pthread_detach(pthread_t th);
+```
+
+
+## 线程同步
+
+### 信号量
+
+```c
+#include <semaphore.h>
+int sem_init(sem_t *sem, int pshared, unsigned int 
+value);
+int sem_wait(sem_t *sem);
+int sem_post(sem_t *sem);
+int sem_destroy(sem_t *sem);
+int sem_trywait(sem_t *sem);
+int sem_getvalue(sem_t *sem, int *sval);
+```
+
+
+
+### 互斥量
+
+
+
+
+### 条件变量
