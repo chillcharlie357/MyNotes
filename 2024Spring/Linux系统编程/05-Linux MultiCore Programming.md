@@ -302,15 +302,19 @@ int pthread_detach(pthread_t th);
 #include <semaphore.h>
 int sem_init(sem_t *sem, int pshared, unsigned int 
 value);
-int sem_wait(sem_t *sem);
-int sem_post(sem_t *sem);
+int sem_wait(sem_t *sem); //P
+int sem_post(sem_t *sem); //V
 int sem_destroy(sem_t *sem);
-int sem_trywait(sem_t *sem);
+int sem_trywait(sem_t *sem); //不阻塞的P
 int sem_getvalue(sem_t *sem, int *sval);
 ```
 
 
-
+- sem_init
+	1. sem：指向信号量指针
+	2. pshared：是否共享
+	3. value：初始值
+- 
 ### 互斥量
 
 
