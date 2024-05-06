@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 05-Linux MultiCore Programming
 date:  2024-04-22 11:04
-modified:  2024-05-06 10:05
+modified:  2024-05-06 11:05
 ---
 
 # 1. Linux进程
@@ -319,7 +319,7 @@ int sem_getvalue(sem_t *sem, int *sval);
 	2. pshared：是否共享
 	3. value：初始值
 
-### 3.3.2. 互斥量 
+### 3.3.2. 互斥量
 
 ```c
 #include <pthread.h>
@@ -333,7 +333,31 @@ int pthread_mutex_trylock(pthread_mutex_t *mutex);
 
 互斥量里只有一份资源，内部是Boolean变量。
 
-
-
 ### 3.3.3. 条件变量
+
+ 等待某个变量满足条件
+
+#### 3.3.3.1. 初始化
+
+1. 静态初始化`pthread_cond_t convar = PTHREAD_COND_INITIALIZER;`
+2. `pthread_cond_init()`
+
+```c
+int pthread_cond_init(pthread_cond_t *cond, pthread_condattr_t *cond_attr);
+int pthread_cond_destory(pthread_cond_t cond);
+```
+
+#### 3.3.3.2. 操作
+
+```c
+int pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t mutex); 
+int pthread_cond_signal(pthread_cond_t cond); 
+int pthread_cond_broadcast(pthread_cond_t cond);
+```
+
+1. 等待：等到条件变量被通知或广播，等待时会unlock互斥量（原子操作）
+	- 当重新开始执行，会lock互斥量
+2. 通知：随机唤醒
+3. 广播：唤醒所有
+
 
