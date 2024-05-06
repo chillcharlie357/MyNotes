@@ -13,14 +13,14 @@ date:  2024-04-22 11:04
 modified:  2024-04-29 11:04
 ---
 
-# Linux进程
+# 1. Linux进程
 
-## exec和fork
+## 1.1. exec和fork
 
 1. exec：直接执行新的程序
 2. fork：创建一个一样的新进程
 
-## 进程退出方式
+## 1.2. 进程退出方式
 
 1. 正常退出
 	1. return from main
@@ -34,11 +34,11 @@ modified:  2024-04-29 11:04
 
 exit：最终会调用_exit，但之前会有一堆终止处理程序(aexit function)
 
-## Process resources
+## 1.3. Process resources
 
 每个进程都有一个进程描述符
 
-## wait & waitpid
+## 1.4. wait & waitpid
 
 ```c
 pid_t wait(int * status)
@@ -64,17 +64,17 @@ pid_t waitpid(pid_t  pid, int *status, int options)
 		3. \==0：指定父进程的group
 		4. <0：指定group id，等待对应组里的进程
 
-## signal
+## 1.5. signal
 
 进程之间通信
 
-### 信号
+### 1.5.1. 信号
 
 SIGKILL：终止，不能被捕获或忽略  
 SIGINT：终端中断符  
 SIGTERM：终止（kill发出的默认系统终止信号），可以改
 
-### 可靠性
+### 1.5.2. 可靠性
 
 - 信号可靠性
 	1. 连续重复信号能不能收到
@@ -82,7 +82,7 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 	2. 阻塞信号
 	3. 复位机制
 
-### 发信号
+### 1.5.3. 发信号
 
 1. kill: send signal to a process
 2. raise: send a signal to the current process
@@ -93,7 +93,7 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 	1. 挂起，等到有信号来才执行
 	2. e.g. CTRL+Z的实现
 
-### 可靠信号
+### 1.5.4. 可靠信号
 
 信号集
 
@@ -126,13 +126,13 @@ int sigsuspend(const sigset *sigmask);
 //Returned value: -1, errno is set to be EINTR
 ```
 
-# 共享内存
+# 2. 共享内存
 
 1. 共享内存是内核为进程创建的一个特殊内存段，它可连接(attach)到自己的地址空间，也可以连接到其它进程的地址空间
 2. **最快的进程间通信方式**
 3. 不提供任何同步功能
 
-## mmap/munmap
+## 2.1. mmap/munmap
 
 把文件/设备，映射/取消映射到内存。
 
@@ -149,9 +149,9 @@ int munmap(void* addr, size_t length)
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F29%2F10-49-59-a380e5e4559554e6c4bd764939c0322a-20240429104958-5ac065.png)
 
-## shared memory system calls
+## 2.2. shared memory system calls
 
-### 申请共享内存
+### 2.2.1. 申请共享内存
 
 ```c
 int shmget(key_t key, int size, int flag);
@@ -163,7 +163,7 @@ int shmget(key_t key, int size, int flag);
 	2. IPC_CREAT：找不到就创建
 	3. IPC_EXCL：只创建不找
 
-### 共享内存地址映射
+### 2.2.2. 共享内存地址映射
 
 使用共享内存的时候也需要map，和文件类似:
 
@@ -185,7 +185,7 @@ if (shared_memory == (void *)-1) {
 
 ```
 
-### 共享内存解除映射
+### 2.2.3. 共享内存解除映射
 
 ```c
 int shmdt(void * addr);
@@ -198,7 +198,7 @@ if (shmdt(shared_memory) == -1) {
 }
 ```
 
-### 共享内存释放
+### 2.2.4. 共享内存释放
 
 ```c
 int shmctl(int shmid, int cmd, struct shmid_ds *buf);
@@ -218,7 +218,7 @@ if (shmctl(shmid, IPC_RMID, 0) == -1) {
 }
 ```
 
-# POSIX thread
+# 3. POSIX thread
 
 1. POSIX thread不是系统调用，是Linux下的标准库
 2. Linux下可以用clone创建thread，但是比较复杂很少用
@@ -233,18 +233,18 @@ if (shmctl(shmid, IPC_RMID, 0) == -1) {
 	- gcc thread.c –o thread –lpthread
 	- -l: link
 
-## 命名
+## 3.1. 命名
 
 pthread下的所有函数都以`pthread_`开头
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F29%2F11-31-51-7c6da78deef9bd2d44a457253224f8cc-20240429113150-2588f6.png)
 
-## 线程操作
-### 生命周期
+## 3.2. 线程操作
+### 3.2.1. 生命周期
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F29%2F11-40-13-c1cd41e1edb023fd1ea6491d58ea4140-20240429114012-6287c9.png)
 
-### pthread_create 
+### 3.2.2. pthread_create
 
 创建线程
 
@@ -262,7 +262,7 @@ void *arg)
 3. `start_routine`：线程的入口函数
 4. arg
 
-### pthread_exit 
+### 3.2.3. pthread_exit
 
 结束线程
 
@@ -272,7 +272,7 @@ void pthread_exit(void * retval);
 
 可以在线程里调用`pthread_exit`，也可以在线程`main`函数`return`
 
-### pthread_join
+### 3.2.4. pthread_join
 
 - 等待另一个线程结束
 	- pthread库并没有限制只能主线程join子线程，但是推荐
@@ -285,7 +285,7 @@ int pthread_join(pthread_t th, void **thread_return);
 2. `thread_return`：指向线程返回值的指针
 	- 返回值是`void*`
 
-### pthread_detach
+### 3.2.5. pthread_detach
 
 - 线程自己回收自己的资源，不和任何线程做join
 
@@ -294,9 +294,9 @@ int pthread_detach(pthread_t th);
 ```
 
 
-## 线程同步
+## 3.3. 线程同步
 
-### 信号量
+### 3.3.1. 信号量
 
 ```c
 #include <semaphore.h>
@@ -315,9 +315,9 @@ int sem_getvalue(sem_t *sem, int *sval);
 	2. pshared：是否共享
 	3. value：初始值
 - 
-### 互斥量
+### 3.3.2. 互斥量
 
 
 
 
-### 条件变量
+### 3.3.3. 条件变量
