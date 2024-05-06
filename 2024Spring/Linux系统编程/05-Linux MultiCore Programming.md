@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 05-Linux MultiCore Programming
 date:  2024-04-22 11:04
-modified:  2024-04-29 11:04
+modified:  2024-05-06 10:05
 ---
 
 # 1. Linux进程
@@ -231,7 +231,12 @@ if (shmctl(shmid, IPC_RMID, 0) == -1) {
 	- /usr/include/pthread.h
 - Compiler options
 	- gcc thread.c –o thread –lpthread
-	- -l: link
+	- -l: link，链接本地二进制码
+
+```c
+gcc a.c -lpthread
+//libpthread.so,libpthread.a
+```
 
 ## 3.1. 命名
 
@@ -240,6 +245,7 @@ pthread下的所有函数都以`pthread_`开头
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F29%2F11-31-51-7c6da78deef9bd2d44a457253224f8cc-20240429113150-2588f6.png)
 
 ## 3.2. 线程操作
+
 ### 3.2.1. 生命周期
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F29%2F11-40-13-c1cd41e1edb023fd1ea6491d58ea4140-20240429114012-6287c9.png)
@@ -293,7 +299,6 @@ int pthread_join(pthread_t th, void **thread_return);
 int pthread_detach(pthread_t th);
 ```
 
-
 ## 3.3. 线程同步
 
 ### 3.3.1. 信号量
@@ -309,15 +314,11 @@ int sem_trywait(sem_t *sem); //不阻塞的P
 int sem_getvalue(sem_t *sem, int *sval);
 ```
 
-
 - sem_init
 	1. sem：指向信号量指针
 	2. pshared：是否共享
 	3. value：初始值
-- 
+
 ### 3.3.2. 互斥量
-
-
-
 
 ### 3.3.3. 条件变量
