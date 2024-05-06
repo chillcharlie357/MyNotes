@@ -309,7 +309,7 @@ int sem_init(sem_t *sem, int pshared, unsigned int
 value);
 int sem_wait(sem_t *sem); //P
 int sem_post(sem_t *sem); //V
-int sem_destroy(sem_t *sem);
+int sem_destroy(sem_t *sem);// 释放
 int sem_trywait(sem_t *sem); //不阻塞的P
 int sem_getvalue(sem_t *sem, int *sval);
 ```
@@ -319,6 +319,20 @@ int sem_getvalue(sem_t *sem, int *sval);
 	2. pshared：是否共享
 	3. value：初始值
 
-### 3.3.2. 互斥量
+### 3.3.2. 互斥量 
+
+```c
+#include <pthread.h>
+int pthread_mutex_init(pthread_mutex_t *mutex, const 
+pthread_mutexattr_t *mutexattr);
+int pthread_mutex_lock(pthread_mutex_t *mutex);
+int pthread_mutex_unlock(pthread_mutex_t *mutex);
+int pthread_mutex_destroy(pthread_mutex_t *mutex);
+int pthread_mutex_trylock(pthread_mutex_t *mutex);
+```
+
+互斥量里只有一份资源，内部是Boolean变量。
+
+
 
 ### 3.3.3. 条件变量
