@@ -403,3 +403,22 @@ void increment_count() {
 - 初始化：`int pthread_attr_init(pthread_attr * attr);`
 - get/set族函数，获取/设置属性
 
+e.g.修改detachstate，schedpolicy属性
+
+## Thread cancellation
+
+
+线程强制终止。
+
+```c
+int pthread_cancel(pthread_t thread);
+int pthread_setcancelstate(int state, int 
+*oldstate);
+int pthread_setcanceltype(int type, int *oldtype);
+```
+
+## Multithread program
+
+- 容易出现错误
+	1. 共享变量缺乏保护，未互斥使用
+	2. 特别的，创建线程时传递指针，指针指向的变量可能时共享的
