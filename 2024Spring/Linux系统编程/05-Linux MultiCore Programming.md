@@ -422,3 +422,33 @@ int pthread_setcanceltype(int type, int *oldtype);
 - 容易出现错误
 	1. 共享变量缺乏保护，未互斥使用
 	2. 特别的，创建线程时传递指针，指针指向的变量可能时共享的
+
+系统不隔离，用起来方便，但不安全
+
+
+## Thread Local Storage (TLS)
+
+线程局部存储：变量是**线程私有**的，对于线程内部的函数是全局变量
+
+函数内的局部变量在线程的函数调用栈里，本来就不存在全局共享
+
+
+```c
+int pthread_key_create(pthread_key_t *key, void (*destructor)(void*));
+
+int pthread_key_delete(pthread_key_t key);
+
+void *pthread_getspecific(pthread_key_t key);
+
+int pthread_setspecific(pthread_key_t key, const void *value);
+```
+
+
+1. pthread_key_create：key相当于变量名，每一个线程都创建了这个变量，只是隔离了
+	- 在每个线程中**同时创建，同时释放**
+2. delete：会调用create时传入的析构函数                                                  
+3. get/set：对TLS读写操作
+
+
+
+
