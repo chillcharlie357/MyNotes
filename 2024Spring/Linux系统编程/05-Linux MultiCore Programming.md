@@ -335,7 +335,7 @@ int pthread_mutex_trylock(pthread_mutex_t *mutex);
 
 ### 3.3.3. 条件变量
 
- 等待某个变量满足条件
+ 等待某个变量满足条件，和**互斥量一起使用**
 
 #### 3.3.3.1. 初始化
 
@@ -367,4 +367,39 @@ int pthread_cond_broadcast(pthread_cond_t cond);
 
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F13%2F10-14-29-585bba0567fdf55505009b82a7129584-20240513101428-8e6943.png)
+
+---
+
+
+
+```c
+pthread_mutex_t mutex;
+pthread_cond_t condition;
+int count = 0;
+
+void decrement_count() {
+    pthread_mutex_lock(&mutex);
+    while (count == 0)
+        pthread_cond_wait(&condition, &mutex);
+    count = count - 1;
+    pthread_mutex_unlock(&mutex);
+}
+
+void increment_count() {
+    pthread_mutex_lock(&mutex);
+    if (count == 0)
+        pthread_cond_signal(&condition);
+    count = count + 1;
+    pthread_mutex_unlock(&mutex);
+}
+```
+
+`pthread_cond_wait`之后的代码仍然在互斥区里，不用担心等待被唤醒后有并发问题。
+
+
+## Thread attributes
+
+- 线程属性对象
+- 初始化：`int pthread_attr_init(pthread_attr * attr);`
+- get/set族函数，获取/设置属性
 
