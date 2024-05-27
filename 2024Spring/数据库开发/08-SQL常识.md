@@ -62,3 +62,47 @@ mysql: 正则表达式，regexp
 
 
 
+# 数值操作
+
+## 计算平均值
+
+难点在于空值
+
+```sql
+%% 统计空值 %%
+select avg(coalesce(sal,0))
+from t2
+
+
+
+%% 不统计空值 %%
+select avg(sal)
+from t2
+```
+
+
+
+## 累计求和
+
+sum over
+
+```sql
+select ename, sal
+sum(sal) over (order by sal,empno)
+	as running_total
+from emp
+order by 2 //select中的第二个字段
+```
+
+
+## 计算众数
+
+group by
+count
+
+
+## 计算中位数
+
+
+oracle: median()
+mysql：分组，记录个数，找到中间位置的值
