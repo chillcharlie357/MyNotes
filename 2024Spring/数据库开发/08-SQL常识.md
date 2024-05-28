@@ -106,3 +106,37 @@ count
 
 oracle: median()
 mysql：分组，记录个数，找到中间位置的值
+
+
+## 去掉最大值最小值，然后计算平均值
+
+
+where sal not in (min_sal, max_sal)
+
+
+
+# 日期处理
+
+## 年月日加减法
+
+oracle: add_mounths()
+mysql: date_add()
+
+## 两个日期之间的天数
+
+mysql: datediff
+oracle：两个日期直接相减
+
+## 两个日期之间的工作日天数
+
+
+需要获取日期是星期几，然后把星期六星期天去掉
+date_format,date_add
+
+
+## 判断闰年
+
+加一年，然后判断时间差是多少天；
+判断二月份第一天到最后一天是几天
+
+
