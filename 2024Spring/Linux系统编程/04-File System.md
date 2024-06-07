@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories: 
+tags:
+  - 2024_Spring_Linux系统编程
+  - 课程
+categories: 2024_Spring_Linux系统编程
 sticky: 
 thumbnail: 
 cover: 

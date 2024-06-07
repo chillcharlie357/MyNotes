@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories:
+tags:
+  - 2024_Spring_数据库开发
+  - 课程
+categories: 2024_Spring_数据库开发
 sticky:
 thumbnail:
 cover: 

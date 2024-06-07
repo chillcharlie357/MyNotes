@@ -1,16 +1,18 @@
 ---
 aliases: 
-tags: 
-categories:
-sticky:
-thumbnail:
+tags:
+  - 2024_Spring_Linux系统编程
+  - 课程
+categories: 2024_Spring_Linux系统编程
+sticky: 
+thumbnail: 
 cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 0-Linux Basic
-date:  2024-02-26 09:02
-modified:  2024-03-25 10:03
+date: 2024-02-26 09:02
+modified: 2024-03-25 10:03
 ---
 
 # 1. Linux
