@@ -1,6 +1,6 @@
 {
-  "uploadByClipSwitch": true,
-  "uploader": "PicGo-Core",
+  "uploadByClipSwitch": false,
+  "uploader": "PicGo",
   "uploadServer": "http://127.0.0.1:36677/upload",
   "deleteServer": "http://127.0.0.1:36677/delete",
   "imageSizeSuffix": "",
