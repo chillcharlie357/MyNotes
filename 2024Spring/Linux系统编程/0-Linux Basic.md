@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 0-Linux Basic
-date: 2024-02-26 09:02
-modified: 2024-03-25 10:03
+date:  2024-02-26 09:02
+modified:  2024-06-13 19:06
 ---
 
 # 1. Linux
@@ -65,26 +65,35 @@ gz：压缩，只压缩单个文件
 # 4. 👍文件类型
 
 Linux下的文件类型：
+
 1. regular file
 	- 普通文件
 	- text, code data, video;
 	- 没有特定的内部结构
-2. character special file
-	- 字符设备
-	- /dev
-3. block special file
-	- 块设备
-	- 位于/dev目录
-4. socket
-	- 网络接口
-5. symbolic file
-	- 符号链接
-6. directory
+2. directory
 	- 目录
 	- 会存放该目录下的文件列表
+3. character special file
+	- 字符设备
+	- /dev
+4. block special file
+	- 块设备
+	- 位于/dev目录
+5. socket
+	- 网络接口
+6. symbolic link
+	- 符号链接
 7. pipe
+	- 管道文件
+	- FIFO
 
 *字符设备和块设备的驱动不同*
+
+- hard link只能给regular file创建，不能跨分区和文件系统
+	- 硬链接依赖于inode号（索引节点号），而在不同的文件系统中，inode号是重新计算的
+	- 不同的磁盘分区有独立的文件系统
+
+[Hard links and soft links in Linux explained | Enable Sysadmin](https://www.redhat.com/sysadmin/linking-linux-explained)
 
 # 5. 目录结构
 
@@ -108,23 +117,23 @@ Linux下的文件类型：
 
 # 6. 👍基本命令
 
-1. ls
+1. ls：list the contents of directories
 	- -l：长列表格式显示
 	- -a：显示隐藏文件
 	- -R：递归显示子目录
 2. cd：change directory
 3. pwd：print work directory
-4. mkdir: make directo 
+4. mkdir: make directory 
 5. rmdir：remove a empty directory
 6. touch：只修改文件的更新时间为当前时间
 7. cp：copy files
 8. mv：move and rename files
 9. ln：link files
-	1. 硬：一个文件有两个名字，需要文件系统支持，不能跨分区
-	2. 软：快捷方式
+	1. hard link：一个文件有两个名字，需要文件系统支持，不能跨分区
+	2. symbolic link：快捷方式
 10. rm: remove files
 11. cat: print file contents
-12. more/less: display files page-by page
+12. more/less: display files page by page
 
 # 7. 文件权限
 
