@@ -2,12 +2,12 @@
   "cm6RenderAll": true,
   "renderImages": true,
   "renderPDF": true,
-  "renderIframe": false,
-  "renderExcalidraw": false,
-  "renderMsgFile": false,
+  "renderIframe": true,
+  "renderExcalidraw": true,
+  "renderMsgFile": true,
   "renderRichLink": false,
-  "renderTransclusion": false,
-  "previewOnHoverInternalLink": false,
+  "renderTransclusion": true,
+  "previewOnHoverInternalLink": true,
   "refreshImagesAfterChange": false,
   "WYSIWYG": false
 }
