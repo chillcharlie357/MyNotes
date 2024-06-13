@@ -54,6 +54,9 @@ GPL许可证：可以随便用，但不能拿去卖钱
 # 3. 安装软件
 
 1. 从源码安装，make/cmake
+	1. cmake： 用于生成makefile
+	2. make：编译
+	3. make install：从Makefile中读取指令，将编译好的文件复制到指定的安装目录中
 2. 安装包
 
 tar：打包  
@@ -61,9 +64,9 @@ gz：压缩，只压缩单个文件
 
 # 4. 👍文件类型
 
-LInux下的文件类型：
-
+Linux下的文件类型：
 1. regular file
+	- 普通文件
 	- text, code data, video;
 	- 没有特定的内部结构
 2. character special file
@@ -75,7 +78,7 @@ LInux下的文件类型：
 4. socket
 	- 网络接口
 5. symbolic file
-	- 符号连接
+	- 符号链接
 6. directory
 	- 目录
 	- 会存放该目录下的文件列表

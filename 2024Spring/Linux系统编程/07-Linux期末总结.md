@@ -30,7 +30,8 @@ modified:  2024-06-03 10:06
 	- title, root, kernel, initrd
 7. 安装软件步骤
 	1. cmake： 用于生成makefile
-	2. make install：从Makefile中读取指令，将编译好的文件复制到指定的安装目录中
+	3. make：编译
+	4. make install：从Makefile中读取指令，将编译好的文件复制到指定的安装目录中
 8. 虚拟终端切换
 	-  Alt-Fn (or Ctrl-Alt-Fn if in X)
 9. 命令行提示符
