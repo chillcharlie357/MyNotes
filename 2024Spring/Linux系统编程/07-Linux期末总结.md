@@ -20,18 +20,23 @@ modified:  2024-06-03 10:06
 	- 类Unix，开源，免费，GNU协议，支持多平台
 2. 常见Linux发行版有哪些？
 3. GPL版权的特点
+	1. 开放源代码
+	2. 自由使用
+	3. 有传染性
 4. 文件系统和后面的文件一起考
 5. GRUB知道就行，细节不考
 6. 配置文件能读懂就行
 	- grun.conf
 	- title, root, kernel, initrd
 7. 安装软件步骤
-	1. cmake install
-	2. make install
+	1. cmake： 用于生成makefile
+	2. make install：从Makefile中读取指令，将编译好的文件复制到指定的安装目录中
 8. 虚拟终端切换
+	-  Alt-Fn (or Ctrl-Alt-Fn if in X)
 9. 命令行提示符
-	1. $,#
-	2. 和哪个环境变量有关
+	1. $：普通用户
+	2. # ：root用户
+	3. 和环境变量`PS1`有关
 10. **命令都要**，除了课上讲的不要求的命令
 11. 文件基本概念
 12. **7种文件类型**
