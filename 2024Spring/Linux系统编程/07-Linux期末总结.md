@@ -17,12 +17,14 @@ modified:  2024-06-03 10:06
 # 第一章
 
 1. 什么是Linux？
-	- 几个性质
+	- 类Unix，开源，免费，GNU协议，支持多平台
 2. 常见Linux发行版有哪些？
 3. GPL版权的特点
 4. 文件系统和后面的文件一起考
 5. GRUB知道就行，细节不考
 6. 配置文件能读懂就行
+	- grun.conf
+	- title, root, kernel, initrd
 7. 安装软件步骤
 	1. cmake install
 	2. make install
