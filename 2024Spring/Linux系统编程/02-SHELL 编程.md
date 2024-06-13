@@ -17,12 +17,12 @@ modified:  2024-03-25 10:03
 
 # 1. Shell
 
-## 概念
+## 1.1. 概念
 
 - 概念：用户和操作系统之间的接口，是核外程序。SHELL既是命令解释程序，又是独立的程序设计语言解释器。
 
 - SHELL里的变量的值都是字符串
-## 类型
+## 1.2. 类型
 
 1. bash
 2. zsh
@@ -31,9 +31,9 @@ modified:  2024-03-25 10:03
 5. tcsh
 6. ash
 
-## Shell脚本执行方式
+## 1.3. Shell脚本执行方式
 
-### 直接调用Shell解释器执行脚本
+### 1.3.1. 直接调用Shell解释器执行脚本
 
 ```shell
 sh ./script_file
@@ -42,7 +42,7 @@ sh ./script_file
 1. 脚本文件不需要执行权限
 2. 会忽略`#!/bin/bash`行(shebang行)，直接在`sh`种执行
 
-### 给脚本文件设置执行权限后执行
+### 1.3.2. 给脚本文件设置执行权限后执行
 
 
 ```shell
@@ -52,7 +52,7 @@ chmod +x script_file
 
 脚本的第一行（shebang）会被用来指定解释器的路径，脚本会在该解释器中运行
 
-### 使用source命令或点命令（.）执行脚本
+### 1.3.3. 使用source命令或点命令（.）执行脚本
 
 ```shell
 source script_file
@@ -63,17 +63,39 @@ source script_file
 
 
 
-# 环境变量
+# 2. 变量
+
+## 2.1. 环境变量
 
 - 登录时被读取
 - 命令：
 	1. export：命令用于将一个变量设置为环境变量，这意味着它可以被当前shell会话中的其他进程和子shell继承。
+		- `export PATH=$PATH:/new/path/to/bin`
 	2. env：于显示或设置环境变量
+		- `env | grep PATH`：会显示所有环境变量及其值
+		- `env PATH=/new/path/to/bin /usr/bin/python script.py`：会设置环境变量 `PATH` 为指定的路径，然后运行 `python` 脚本
 	3. set：显示或设置shell的参数变量
+		- `set [options] [arg1 [arg2 ...]]`
 
 
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F13%2F21-30-21-ce858745187734d22d58cf92668e2633-20240613213020-03773f.png)
 
-# 2. Read
+
+## 2.2. Read
+
+从Shell的输入流中读入数据。
+
+```shell
+read -p "Enter your name: " name # -p参数，允许read在命令行中直接指定一个提示
+echo name
+```
+
+
+## 引号用法
+- <span style="background:rgba(3, 135, 102, 0.2)">单引号</span>内的<span style="background:rgba(3, 135, 102, 0.2)">所有字符</span>都保持它本身字符的意思
+	- 而不会被bash进行解释例如，$就是$本身而不再是bash的变量引用符；\\就是\\本身而不再是bash的转义字符
+- 除了$、\`\`（反引号，不是单引号）和\\外，<span style="background:rgba(3, 135, 102, 0.2)">双引号</span>内的所有字符将保持字符本身的含义而不被bash解释
+
 
 # 3. 条件判断
 
