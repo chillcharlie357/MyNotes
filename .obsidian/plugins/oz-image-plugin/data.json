@@ -4,9 +4,9 @@
   "renderPDF": true,
   "renderIframe": true,
   "renderExcalidraw": true,
-  "renderMsgFile": true,
+  "renderMsgFile": false,
   "renderRichLink": false,
-  "renderTransclusion": true,
+  "renderTransclusion": false,
   "previewOnHoverInternalLink": true,
   "refreshImagesAfterChange": false,
   "WYSIWYG": false

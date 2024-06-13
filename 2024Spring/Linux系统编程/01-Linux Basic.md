@@ -10,9 +10,9 @@ cover:
 excerpt: false
 mathjax: true
 comment: true
-title: 0-Linux Basic
+title: 01-Linux Basic
 date:  2024-02-26 09:02
-modified:  2024-06-13 19:06
+modified:  2024-06-13 20:06
 ---
 
 # 1. Linux
@@ -185,6 +185,9 @@ Linux下的文件类型：
 3. jobs, fg, bg, <\ctrl-z>: job controlling
 4. <span style="background:rgba(3, 135, 102, 0.2)">kill: Send </span><span style="background:rgba(3, 135, 102, 0.2)">the processes</span> identified by PID or JOBSPEC the <span style="background:rgba(3, 135, 102, 0.2)">signal</span> named by  
     SIGSPEC or SIGNUM.
+	1. `kill {{process_id}}`，默认发送SIGTERM，终止进程
+	2. `kill -{{9|KILL}} {{process_id}}`，发送SIGTERM
+	3. `kill -{{17|STOP}} {{process_id}}`，停止进程，知道收到SIGCONT信号
 5. nohup: run a command, ignoring hangup signals
 6. nice, renice: 调整进程优先级
 	- nice: 修改默认优先级
@@ -193,10 +196,14 @@ Linux下的文件类型：
 8. 列出文件: ls
 9. 创建特殊文件: mkdir
 10. 文件操作:cp, mv, rm
-11. 修改文件熟悉: chmod, chown, chgrp, touch
+11. 修改文件: chmod, chown, chgrp, touch
 12. 查找文件: locate, find
+	- find / -name "\*.txt "
+	- find / -type f -exec ls -lh {} \\;
 13. 字符串匹配: grep, egrep
+	- grep "{{search_pattern}}" {{path/to/file}}
 14. 其他: who, whoami, passwd, uname
+	- who: 用于显示当前登录到系统的所有用户的信息
 
 # 9. 系统层次
 
@@ -210,9 +217,14 @@ Linux下的文件类型：
 # 10. 重定向
 
 - 标准输入，标准输出，标准错误
-	- shell提供发功能，不是命令提供
+	- shell提供的功能，不是命令提供
 	- 对应文件描述符：0,1,2
 	- C语言变量：stdin, stdout, stderr
+
+```shell
+kill –HUP 1234 > killout.txt 2> killerr.txt
+kill –HUP 1234 > killout.txt 2>& 1
+```
 
 # 11. 管道
 
@@ -235,7 +247,11 @@ PATH里的目录下的可执行文件都能直接在shell中调用
 # 13. 高级命令和正则表达式
 
 1. find
+	- `find {{root_path}} -name '{{*.ext}}'`
+	- `find / -type f -exec ls -lh {} \\;`
 2. grep
 	- 在文件里查找字符串
+	- `grep "{{search_pattern}}" {{path/to/file}}`
 3. sed
 	- 可以用来替换
+	- `sed 's/apple/mango/g'`
