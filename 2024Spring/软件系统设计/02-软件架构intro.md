@@ -49,8 +49,8 @@ modified:  2024-06-14 15:06
 
 ## 4+1 view model
 
-Logical view  
-Process view  
+Logical view ：架构的重要元素和他们之间的关系
+Process view  ：
 Physical view  
 Development view
 
