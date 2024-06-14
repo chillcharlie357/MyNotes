@@ -91,7 +91,7 @@ echo name
 ```
 
 
-## 引号用法
+## 2.3. 引号用法
 - <span style="background:rgba(3, 135, 102, 0.2)">单引号</span>内的<span style="background:rgba(3, 135, 102, 0.2)">所有字符</span>都保持它本身字符的意思
 	- 而不会被bash进行解释例如，$就是$本身而不再是bash的变量引用符；\\就是\\本身而不再是bash的转义字符
 - 除了$、\`\`（反引号，不是单引号）和\\外，<span style="background:rgba(3, 135, 102, 0.2)">双引号</span>内的所有字符将保持字符本身的含义而不被bash解释
