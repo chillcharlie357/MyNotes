@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: 02-软件架构intro
 date:  2024-04-16 14:04
-modified:  2024-04-16 14:04
+modified:  2024-06-14 15:06
 ---
 
 - 软件的四个本质难题
@@ -20,6 +20,8 @@ modified:  2024-04-16 14:04
 	4. 不可见性：没有几何结构
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F16%2F14-49-29-00d7cb1dc073a5a241fb8794c7cb365d-20240416144928-c3fd7b.png)
+
+# 架构来源
 
 - Architecture:
 	1. Component interfaces
@@ -31,19 +33,25 @@ modified:  2024-04-16 14:04
 	1. Data passing
 	2. Control flow
 
+## NFR
+
 - 架构强调非功能需求NFR：how well a system works
+- 包括
+	1. 技术限制
+	2. 商业限制
+	3. 质量属性
 
 
 # architecture views
 
-有多个视图
+有多个视图  
 解决不可见
 
 ## 4+1 view model
 
-Logical view
-Process view
-Physical view
+Logical view  
+Process view  
+Physical view  
 Development view
 
 Architecture use cases: 四个视图是关于某个场景的
@@ -57,9 +65,7 @@ Architecture use cases: 四个视图是关于某个场景的
 5. Iteration: Incremental Refinement
 6. Reuseable elements，重用现有的设计
 
-
 # what does a software architect do?
-
 
 1. Liaison
 	1. 调和用户、市场、开发等
@@ -67,11 +73,6 @@ Architecture use cases: 四个视图是关于某个场景的
 3. technology knowledge
 4. risk management
 
-
- 
- 
- 
- 
 # 架构设计过程
 
 1. 识别和架构相关的重要需求
