@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 02-SHELL 编程
 date:  2024-03-21 10:03
-modified:  2024-03-25 10:03
+modified:  2024-06-14 22:06
 ---
 
 # 1. Shell
@@ -22,6 +22,7 @@ modified:  2024-03-25 10:03
 - 概念：用户和操作系统之间的接口，是核外程序。SHELL既是命令解释程序，又是独立的程序设计语言解释器。
 
 - SHELL里的变量的值都是字符串
+
 ## 1.2. 类型
 
 1. bash
@@ -44,7 +45,6 @@ sh ./script_file
 
 ### 1.3.2. 给脚本文件设置执行权限后执行
 
-
 ```shell
 chmod +x script_file
 ./script_file
@@ -61,8 +61,6 @@ source script_file
 
 可以在当前的shell环境中执行脚本，而不是启动一个新的shell进程。这允许脚本中的变量和函数定义在脚本执行完毕后仍然有效。
 
-
-
 # 2. 变量
 
 ## 2.1. 环境变量
@@ -77,9 +75,7 @@ source script_file
 	3. set：显示或设置shell的参数变量
 		- `set [options] [arg1 [arg2 ...]]`
 
-
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F13%2F21-30-21-ce858745187734d22d58cf92668e2633-20240613213020-03773f.png)
-
 
 ## 2.2. Read
 
@@ -90,8 +86,8 @@ read -p "Enter your name: " name # -p参数，允许read在命令行中直接指
 echo name
 ```
 
-
 ## 2.3. 引号用法
+
 - <span style="background:rgba(3, 135, 102, 0.2)">单引号</span>内的<span style="background:rgba(3, 135, 102, 0.2)">所有字符</span>都保持它本身字符的意思
 	- 而不会被bash进行解释例如，$就是$本身而不再是bash的变量引用符；\\就是\\本身而不再是bash的转义字符
 - 除了$、\`\`（反引号，不是单引号）和\\外，<span style="background:rgba(3, 135, 102, 0.2)">双引号</span>内的所有字符将保持字符本身的含义而不被bash解释
@@ -100,7 +96,6 @@ echo name
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F14%2F21-46-28-8005590f606ef66fa6d3f0a700578794-20240614214627-3b9bf4.png)
 
-
 # 3. 条件判断
 
 <span style="background:rgba(3, 135, 102, 0.2)">SHELL脚本本身不支持条件判断</span>
@@ -108,7 +103,7 @@ echo name
 - test命令
 	- 调用test或一个叫\[的程序，<font color="#c00000">本质是执行一个程序，需要有空格</font>
 	- `test expression`
-	- `[ expression ]`
+	- `[ expression ]`，使用的更多
 
 - test命令支持的条件测试，**运算符之间都要都空格**
 	- 字符串比较
@@ -120,10 +115,12 @@ echo name
 
 ### 3.1.1. 字符串比较
 
-str1 = str2 两个字符串相同则结果为真  
-str1 != srt2  
--z str 字符串为空则结果为真  
--n str 字符串不为空则为真
+| 字符串比较        | 结果           |
+| ------------ | ------------ |
+| str1 = str2  | 两个字符串相同则结果为真 |
+| str1 != srt2 | 不相同          |
+| -z str       | 字符串为空则结果为真   |
+| -n str       | 字符串不为空则为真    |
 
 ### 3.1.2. 算术比较
 
@@ -136,20 +133,23 @@ expr1 -le expr2
 
 ### 3.1.3. 与文件相关的条件测试
 
--e file 文件存在  
--d file 文件是目录  
--f file 文件是普通文件  
--s file 文件长度不为零
-
--r file 文件可读  
--w file 文件可写  
--x file 文件可执行
+| 文件测试    | 结果          |
+| ------- | ----------- |
+| -e file | 文件存在        |
+| -d file | 文件是目录       |
+| -f file | 文件是普通文件     |
+| -s file | **文件长度不为零** |
+| -r file | 文件可读        |
+| -w file | 文件可写        |
+| -x file | 文件可执行       |
 
 ### 3.1.4. 逻辑操作
 
-! expr NOT  
-expr1 -a expr2 AND  
-expr1 -o expr2 OR
+| 逻辑操作           | 结果  |
+| -------------- | --- |
+| ! expr         | NOT |
+| expr1 -a expr2 | AND |
+| expr1 -o expr2 | OR  |
 
 ## 3.2. 条件语句
 
@@ -178,7 +178,7 @@ fi
 ### 3.2.2. case语句
 
 - 形式
-	- 分支语句结尾是`;;`
+	- <span style="background:rgba(3, 135, 102, 0.2)"> 分支语句结尾</span>是`;;`
 
 ```shell
 case str in
@@ -413,6 +413,7 @@ exit 0
 ```
 
 # 8. 参数扩展
+
 替换字符串
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F21%2F11-53-56-80673f6b51040b22e1c0a9aa2dd72cc5-20240321115355-3b2b2d.png)
@@ -434,6 +435,7 @@ exit 0
 	- `${param%.*}`，这里`*`是通配符，不是正则表达式
 	- `${param%.cpp}`，只去掉`.cpp`扩展名
 	- `${param%.cpp}.o`，只去掉`.cpp`扩展名，扩展名变成`.o`
+
 # 9. 即时文档
 
 在shell脚本中向一条命令传送输入数据
@@ -445,5 +447,3 @@ cat >> file.txt << !CATINPUT!
 Hello, this is a here document.
 !CATINPUT!
 ```
-
-
