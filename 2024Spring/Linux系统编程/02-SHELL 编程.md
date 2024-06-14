@@ -259,7 +259,7 @@ done
 
 ## 4.3. until语句
 
-不推荐使用
+**不推荐使用**
 
 - 形式
 	- 条件为假时执行循环
@@ -304,10 +304,10 @@ break跳出的是select循环
 
 ## 5.1. 命令表/命令组合
 
-- 分号串联
+1. 分号串联
 	- 把多个命令放在同一行
 	- command1;command2;...
-- 条件组合
+2. 条件组合
 	- AND命令表
 		- 前面成功了，后面才会继续执行。
 		- statement1 && statement2 && statement3 && …
@@ -327,7 +327,7 @@ break跳出的是select循环
 }
 ```
 
-## 5.3. 函数
+# 6. 函数
 
 - 形式
 
@@ -369,7 +369,7 @@ yesno()
 }
 ```
 
-# 6. 杂项命令
+# 7. 杂项命令
 
 1. break: 从for/while/until/select循环退出
 2. continue: 跳到下一个循环继续执行
@@ -383,16 +383,18 @@ yesno()
 9. “:”(冒号命令): 空命令
 10. “.”(句点命令)或source: 在当前shell中执行命令
 
-# 7. 捕获命令输出
+# 8. 捕获命令输出
 
-${}和反引号
+- 语法
+	1. $(command)
+	2. 反引号
 
 ```shell
 echo “The current directory is $PWD”
 echo “The current directory is $(pwd)”
 ```
 
-# 8. 算术扩展
+# 9. 算术扩展
 
 - $((...))
 
@@ -409,9 +411,9 @@ exit 0
 
 ```
 
-# 9. 参数扩展
+# 10. 参数扩展
 
-替换字符串
+<span style="background:rgba(3, 135, 102, 0.2)">替换字符串</span>
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F21%2F11-53-56-80673f6b51040b22e1c0a9aa2dd72cc5-20240321115355-3b2b2d.png)
 
@@ -433,9 +435,14 @@ exit 0
 	- `${param%.cpp}`，只去掉`.cpp`扩展名
 	- `${param%.cpp}.o`，只去掉`.cpp`扩展名，扩展名变成`.o`
 
-# 10. 即时文档
+# 11. 即时文档
 
 在shell脚本中向一条命令传送输入数据
+
+```shell
+<<
+```
+
 
 ```shell
 #!/bin/bash
