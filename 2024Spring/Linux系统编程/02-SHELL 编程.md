@@ -96,10 +96,14 @@ echo name
 	- 而不会被bash进行解释例如，$就是$本身而不再是bash的变量引用符；\\就是\\本身而不再是bash的转义字符
 - 除了$、\`\`（反引号，不是单引号）和\\外，<span style="background:rgba(3, 135, 102, 0.2)">双引号</span>内的所有字符将保持字符本身的含义而不被bash解释
 
+## 2.4. 参数变量
+
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F14%2F21-46-28-8005590f606ef66fa6d3f0a700578794-20240614214627-3b9bf4.png)
+
 
 # 3. 条件判断
 
-SHELL脚本本身不支持条件判断
+<span style="background:rgba(3, 135, 102, 0.2)">SHELL脚本本身不支持条件判断</span>
 
 - test命令
 	- 调用test或一个叫\[的程序，<font color="#c00000">本质是执行一个程序，需要有空格</font>
