@@ -27,7 +27,7 @@ modified: 2024-04-18 12:04
 	1. regular file
 	2. character special file，字符设备文件
 	3. block special file，块设备文件
-	4. fifo，管道：没有文件名的文件
+	4. fifo/pipe：管道文件，没有文件名的文件
 	5. socket：网络接口
 	6. symbolic link
 	7. directory
