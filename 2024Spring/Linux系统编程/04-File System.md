@@ -131,7 +131,10 @@ int creat(const char *pathname, mode_t mode);
 //Return: a new file descriptor if success; -1 if failure
 ```
 
-- flags: `O_RDONLY`, `O_WRONLY`, `O_RDWR`
+- flags: `O_RDONLY`, `O_WRONLY`, `O_RDWR`，`O_TRUNC:`， `O_APPEND`
+- mode: 指定权限
+	- ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F15%2F19-58-41-b7c02ff2b68a05537120b877293752e3-20240615195840-fe85a4.png)
+
 - `creat`：`open` with flags`O_CREAT|O_WRONLY|O_TRUNC`
 
 ## 5.3. close
@@ -160,6 +163,14 @@ ssize_t write(int fd, const void *buf, size_t count);
 //返回值: 若成功为已写的字节数，若出错为-1
 ```
 
+```c
+while ((n = read(STDIN_FILENO, buf, BUFSIZE)) > 0)
+if (write(STDOUT_FILENO, buf, n) != n)
+	err_sys(“write error”);
+if (n<0)
+	err_sys(“read error”);
+```
+
 ## 5.5. seek
 
 - 设置read/write的偏移量
@@ -170,6 +181,11 @@ ssize_t write(int fd, const void *buf, size_t count);
 off_t lseek(int fildes, off_t offset, int whence);
 //Return: the resulting offset location if success; -1 if failure)
 ```
+
+- whence: seek从哪里开始加偏移量
+	1. SEEK_SET: the offset is set to “offset” bytes
+	2. SEEK_CUR: the offset is set to its current location plus “offset” bytes
+	3. SEEK_END: the offset if set to the size of the file plus “offset“ bytes
 
 ## 5.6. dup/dup2 Function
 
@@ -186,7 +202,7 @@ int dup2(int oldfd, int newfd);
 
 ```c
 int fd = open(...)
-dup(fd,1)
+dup2(fd,1)
 ```
 
 ## 5.7. fcntl Function
@@ -199,7 +215,7 @@ dup(fd,1)
 int fcntl(int fd, int cmd);
 int fcntl(int fd, int cmd, long arg);
 int fcntl(int fd, int cmd, struct flock *lock);
-//返回值: 若成功则依赖于cmd，若出错为-1
+//返回值: 若成功则返回值依赖于cmd，若出错为-1
 ```
 
 - cmd取值
