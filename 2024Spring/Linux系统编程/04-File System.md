@@ -86,12 +86,14 @@ modified: 2024-04-18 12:04
 	2. 提供较复杂功能
 	3. 例：标准I/O库
 
-## 5.1. Basic I/O System Calls
+- Basic I/O System Calls
+	1. 没有缓冲区（buffer）
+	2. 使用File descriptor
 
-没有缓冲区（buffer）
 
 
-## 5.2. File Descriptor
+
+## 5.1. File Descriptor
 
 **用户态程序访问文件最底层的句柄**，再往下就是内核。  
 可以理解成下标，数组再内核态（如果存在）
@@ -117,7 +119,7 @@ main(){
 }
 ```
 
-## 5.3. opne/creat function
+## 5.2. opne/creat function
 
 ```c
 #include <sys/types.h> 
@@ -132,7 +134,7 @@ int creat(const char *pathname, mode_t mode);
 - flags: `O_RDONLY`, `O_WRONLY`, `O_RDWR`
 - `creat`：`open` with flags`O_CREAT|O_WRONLY|O_TRUNC`
 
-## 5.4. close
+## 5.3. close
 
 ```c
 #include <unistd.h>
@@ -140,7 +142,7 @@ int close(int fd);
 //Return: 0 if success; -1 if failure
 ```
 
-## 5.5. read/write
+## 5.4. read/write
 
 read from a file descriptor
 
@@ -158,7 +160,7 @@ ssize_t write(int fd, const void *buf, size_t count);
 //返回值: 若成功为已写的字节数，若出错为-1
 ```
 
-## 5.6. seek
+## 5.5. seek
 
 - 设置read/write的偏移量
 
@@ -169,7 +171,7 @@ off_t lseek(int fildes, off_t offset, int whence);
 //Return: the resulting offset location if success; -1 if failure)
 ```
 
-## 5.7. dup/dup2 Function
+## 5.6. dup/dup2 Function
 
 - 复制文件描述符
 
@@ -187,7 +189,7 @@ int fd = open(...)
 dup(fd,1)
 ```
 
-## 5.8. fcntl Function
+## 5.7. fcntl Function
 
 - 控制文件描述符
 
@@ -208,7 +210,7 @@ int fcntl(int fd, int cmd, struct flock *lock);
 		- 可以向文件发几个信号。
 	5. F_GETLK/F_SETLK/F_SETLKW: Get/set the **file lock**
 
-## 5.9. ioctl function
+## 5.8. ioctl function
 
 ```c
 #include <sys/ioctl.h>
@@ -316,12 +318,12 @@ int fprintf(FILE *stream, const char *format, ...);
 int sprintf(char *str, const char *format, ...);
 ```
 
-# File lock
+# 7. File lock
 
 
 作用：几个进程同时操作一个文件
 
-## 分类
+## 7.1. 分类
 
 - 记录锁：往文件加锁时，是否要锁整个文件，还是只锁一部分（记录锁）
 
