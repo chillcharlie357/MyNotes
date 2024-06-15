@@ -96,7 +96,7 @@ modified: 2024-04-18 12:04
 ## 5.1. File Descriptor
 
 **用户态程序访问文件最底层的句柄**，再往下就是内核。  
-可以理解成下标，数组再内核态（如果存在）
+可以理解成下标，数组在内核态（如果存在）
 
 1. 是一个int值
 	- `unistd.h`：STDIN_FILENO (0), STDOUT_FILENO (1), STDERR_FILENO (2)
