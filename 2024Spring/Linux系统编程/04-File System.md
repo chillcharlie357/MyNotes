@@ -119,7 +119,7 @@ int creat(const char *pathname, mode_t mode);
 //Return: a new file descriptor if success; -1 if failure
 ```
 
-- flags: `O_RDONLY`, `O_WRONLY`, `O_EDWR`
+- flags: `O_RDONLY`, `O_WRONLY`, `O_RDWR`
 - `creat`：`open` with flags`O_CREAT|O_WRONLY|O_TRUNC`
 
 ## 5.4. close
