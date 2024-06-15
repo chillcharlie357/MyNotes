@@ -55,31 +55,41 @@ modified: 2024-04-18 12:04
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F10-36-57-db71799c0c080f4b2b107653f0779545-20240415103657-f29555.png)
 
-# 4. 符号链接
+# 4. 硬链接和符号链接
 
 - Hard Link
 	1. 不同文件共用一个inode
 		- 两个文件没有主次关系删掉一个没有影响
 	2. 不能跨文件系统/分区
-	3. 对应**系统调用link**
+	3. 只能对regular file创建
+	4. 对应**系统调用link**
+	5. `ln {{/path/to/file}} {{path/to/hardlink}}`
 - Symbolic link
 	1. 存储被链接文件的文件名（而不是inode）实现链接
 	2. 可以跨文件系统
-	3. 对应**系统调用symlink**
+	3. 可以对任何文件类型创建
+	4. 对应**系统调用symlink**
+	5. `ln -s {{/path/to/file_or_directory}} {{path/to/symlink}}`
 
 - ls -l查看链接数目
 	- ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F11-17-25-fc0746aebea93640a4b72174da722b7c-20240415111724-a9fb6d.png)
 
 # 5. 系统调用
 
-- 都以C函数的形式出现
-- 系统调用
-	- Linux内核的对外接口; 用户程序和内核之间唯一的接口; 提供最小接口
-- 库函数
-	- 依赖于系统调用; 提供较复杂功能
-	- 例：标准I/O库
+- 都以**C函数**的形式出现
+- **系统调用**
+	1. Linux内核的对外接口;
+	2. 用户程序和内核之间唯一的接口;
+	3.  提供最小接口
+- **库函数**
+	1. 依赖于系统调用
+	2. 提供较复杂功能
+	3. 例：标准I/O库
 
 ## 5.1. Basic I/O System Calls
+
+没有缓冲区（buffer）
+
 
 ## 5.2. File Descriptor
 
