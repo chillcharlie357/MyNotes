@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 04-File System
 date:  2024-04-15 10:04
-modified:  2024-06-16 14:06
+modified:  2024-06-16 15:06
 ---
 
 # 1. 文件系统
@@ -490,7 +490,46 @@ FILE *tmpfile(void);
 	- stat/fstat/lstat, ...
 - Handling directory
 
+## 7.1. stat/fstat/lstat
 
+获取文件状态。
+
+```C
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+int stat(const char *filename, struct stat *buf);
+int fstat(int filedes, struct stat *buf);
+int lstat(const char *file_name, struct stat *buf);
+//Return: 0 if success; -1 if failure
+```
+
+```c
+struct stat {
+	mode_t st_mode; /*file type & mode*/
+	ino_t st_ino; /*inode number (serial number)*/
+	dev_t st_rdev; /*device number (file system)*/ 
+	nlink_t st_nlink; /*link count*/
+	uid_t st_uid; /*user ID of owner*/
+	gid_t st_gid; /*group ID of owner*/
+	off_t st_size; /*size of file, in bytes*/
+	time_t st_atime; /*time of last access*/
+	time_t st_mtime; /*time of last modification*/
+	time_t st_ctime; /*time of last file status change*/
+	long st_blksize; /*Optimal block size for I/O*/
+	long st_blocks; /*number 512-byte blocks allocated*/
+};
+```
+
+## 7.2. umask
+
+为进程设置文件存取权限屏蔽字，并返回以前的值
+
+```C
+#include <sys/types.h>
+#include <sys/stat.h>
+mode_t umask(mode_t mask);
+```
 
 # 8. File lock
 
