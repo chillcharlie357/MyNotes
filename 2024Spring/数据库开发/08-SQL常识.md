@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 08-SQL常识
 date:  2024-05-28 14:05
-modified:  2024-06-07 16:06
+modified:  2024-06-16 21:06
 ---
 
 # 1. Group by
@@ -30,15 +30,32 @@ group by是一个过程化操作
 
 数据透视表(T1,T10,T100,...)
 
+返回部分数据的笛卡尔积
+
 ```sql
-select substr(e.ename,iter.pos, 1) as C
-from (select ename)
+select ename, iter.pos
+
+from (select ename
+
+from emp
+
+where ename = 'KING') e,
+
+(select id as pos from t10) iter
+
+where iter.pos <= length(e.ename)
 ```
 
 ## 2.2. 内嵌引号
 
+想在字符串常量中嵌入引号
+
 ```sql
-' " '
+select 'g''day mate' qmarks from t1 union all
+
+select 'beavers'' teeth' from t1 union all
+
+select '''' from t1
 ```
 
 ## 2.3. 统计字符出现的个数
@@ -47,7 +64,7 @@ from (select ename)
 
 **repalce**+**length**
 
-len(replace) / len(',')
+(len - len(replace)) / len(',')
 
 ## 2.4. 删除不想要的字符
 
@@ -59,9 +76,33 @@ mysql：嵌套`replace`
 oracle: translate对原来的字段处理两次  
 mysql：正则表达式`REGEXP_REPLACE`
 
+```mysql
+SELECT
+
+data,
+
+REGEXP_REPLACE(data, ‘[0-9]’, ‘’) AS characters,
+
+REGEXP_REPLACE(data, '[^0-9]', '') AS digits
+
+FROM emp
+```
+
 ## 2.6. 判断含有数字和字母的数值
 
 mysql: 正则表达式，regexp
+
+从表里筛选出部分行数据，筛选条件是只包含字母和数字字符:
+
+```mysql
+select data
+from V
+where data regexp '[^0-9a-zA-Z]' = 0
+%% `[^0-9a-zA-Z]`表示匹配任何不是数字（0-9）或字母（a-zA-Z）的字符 %%
+%% `0`表示这个正则表达式匹配的次数为0 %%
+```
+
+
 
 ## 2.7. 提取姓名首字母
 
@@ -133,9 +174,7 @@ date_format,date_add
 加一年，然后判断时间差是多少天；  
 判断二月份第一天到最后一天是几天
 
-
 # 5. 常见SQL连接模式
-
 
 ## 5.1. 叠加行集（Union & Union all）
 
@@ -148,7 +187,7 @@ date_format,date_add
 
 ## 5.2. 查找只存在于一张表的数据（差）
 
-MySQL: not in
+MySQL: not in  
 Oracle: minus
 
 ```mysql
@@ -160,6 +199,7 @@ where deptno not in (
 ```
 
 如果`deptno`不是主键：
+
 ```mysql
 select distinct deptno
 from dept
@@ -169,6 +209,7 @@ where deptno not in (
 ```
 
 如果`not in`嵌套查询里有空值:
+
 ```mysql
 select deptno
 from dept
@@ -179,7 +220,7 @@ no=20 not in (10, 50, null)->(F or F or null)=null，查询结果为空
 
 ## 5.3. 从一个表检索另一个不相关的行（外连接）
 
-左外连接
+左外连接  
 右外连接
 
 ## 5.4. 确定两个表是否有相同的数据
