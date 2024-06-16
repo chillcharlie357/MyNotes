@@ -574,7 +574,7 @@ int main() {
 }
 ```
 
-## directory
+## 7.3. directory
 
 - 数据结构
 	1. DIR：文件夹
@@ -647,7 +647,7 @@ closedir(dp);
 - 排他锁
 
 
-## fcntl记录锁
+## 8.2. fcntl记录锁
 
 ```c
 #include <unistd.h>
