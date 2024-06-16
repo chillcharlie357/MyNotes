@@ -332,7 +332,9 @@ int fclose(FILE *stream);
 2. `fgetc`
 3. `getchar
 4. `ungetc`：把字符放到stream中
-5. error：ferror, feof, clearerr
+5. `ferror(FILE *stream)`: 检查指定的文件流 `stream` 是否发生了错误。
+6. `feof(FILE *stream)`: stream是否已经到达EOF
+7. `clearerr(FILE *stream)`：清除指定文件流 `stream` 的错误标志和 EOF 标志。
 
 ```c
 #include <stdio.h>
@@ -361,6 +363,8 @@ int putchar(int c);
 char *fgets(char *s, int size, FILE *stream);
 char *gets(char *s); //not recommended.
 ```
+
+fgets最多读取size-1个字符到stream，读到EOF或换行符停止，结尾会存一个`\0`
 
 ## 6.7. Output of a Line of String
 
