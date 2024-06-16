@@ -504,6 +504,15 @@ int lstat(const char *file_name, struct stat *buf);
 //Return: 0 if success; -1 if failure
 ```
 
+
+- <span style="background:rgba(3, 135, 102, 0.2)">lstate和stat的区别</span>在于对符号链接的处理：
+	1. `stat` 会跟随符号链接并获取链接目标的文件状态信息
+	2. `lstat` 则获取**链接本身**的文件状态信息。当你需要确定一个文件是不是符号链接，或者你需要获取符号链接本身的信息（比如权限、所有者等），这时应该使用 `lstat`。
+
+
+---
+
+
 ```c
 struct stat {
 	mode_t st_mode; /*file type & mode*/
@@ -521,14 +530,102 @@ struct stat {
 };
 ```
 
+- types
+	- ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F16%2F15-44-56-d242d33e62d872278b310f72104be0f3-20240616154455-89aee9.png)
+- mode
+	- ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F16%2F15-44-31-651ec3334b5d75bec36c65ffcd3cc500-20240616154430-2690d8.png)
+
 ## 7.2. umask
 
-为进程设置文件存取权限屏蔽字，并返回以前的值
+为进程设置文件存取权限屏蔽字，并返回以前的值。  
+定义了文件系统创建文件和目录时**默认应该屏蔽掉的权限位**
 
 ```C
 #include <sys/types.h>
 #include <sys/stat.h>
 mode_t umask(mode_t mask);
+```
+
+```c
+#include <sys/stat.h>
+#include <stdio.h>
+
+int main() {
+    struct stat statbuf;
+    if (stat("example.txt", &statbuf) == 0) {
+        printf("File size: %ld bytes\n", statbuf.st_size);
+    } else {
+        perror("stat failed");
+    }
+
+    // 设置umask
+    umask(S_IWGRP | S_IWOTH); // 屏蔽组和其他用户的写权限
+
+    // 创建文件，权限将自动应用umask
+    FILE *fp = fopen("newfile.txt", "w");
+    if (fp != NULL) {
+        fprintf(fp, "Hello, World!");
+        fclose(fp);
+    } else {
+        perror("fopen failed");
+    }
+
+    return 0;
+}
+```
+
+## directory
+
+- 数据结构
+	1. DIR：文件夹
+	2. struct dirent：文件夹中的目录项
+
+- DIR
+
+```c
+//in <dirent.h>
+//The data type of directory stream objects
+typedef struct __dirstream DIR;
+```
+
+- struct dirent
+
+```c
+//in <dirent.h>
+//Directory item
+ino_t d_ino; /* inode number */
+char d_name[NAME_MAX + 1]; /* file name */
+```
+
+---
+
+- 操作:
+
+```c
+#include <sys/types.h>
+#include <dirent.h>
+DIR *opendir(const char *name);
+int closedir(DIR *dir);
+struct dirent *readdir(DIR *dir);
+off_t telldir(DIR *dir);
+void seekdir(DIR *dir, off_t offset);
+```
+
+---
+
+```c
+DIR *dp;
+struct dirent *entry;
+if ( (dp = opendir(dir)) == NULL )
+	err_sys(…);
+while ( (entry = readdir(dp)) != NULL ) {
+	lstat(entry->d_name, &statbuf);
+	if ( S_ISDIR(statbuf.st_mode) ) 
+		…
+	else
+		…
+}
+closedir(dp);
 ```
 
 # 8. File lock
@@ -549,3 +646,30 @@ mode_t umask(mode_t mask);
 - 共享锁
 - 排他锁
 
+
+## fcntl记录锁
+
+```c
+#include <unistd.h>
+#include <fcntl.h>
+int fcntl(int fd, int cmd, struct flock *lock);
+//返回值: 若成功则依赖于cmd，若出错为-1
+```
+
+```c
+struct flock{
+	...
+	short l_type; /* Type of lock: F_RDLCK, F_WRLCK, F_UNLCK */
+	short l_whence; /* How to interpret l_start: SEEK_SET, SEEK_CUR, 
+	SEEK_END */
+	off_t l_start; /* Starting offset for lock */
+	off_t l_len; /* Number of bytes to lock */
+	pid_t l_pid; /* PID of process blocking our lock (F_GETLK only) */
+	...
+}
+```
+
+- cmd参数
+	1. F_GETLK：获得文件的封锁信息
+	2. F_SETLK：对文件的某个区域封锁或解除封锁
+	3. F_SETLKW：功能同F_SETLK, wait方式
