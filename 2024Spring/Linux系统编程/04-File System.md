@@ -220,12 +220,50 @@ int fcntl(int fd, int cmd, struct flock *lock);
 
 - cmd取值
 	1. F_DUPFD: **Duplicate** a file descriptor
-	2. F_GETFD/F_SETFD: Get/set the **file descriptor’s close-on-exec flag**.调用exec时文件描述符会不会关闭。
+	2. F_GETFD/F_SETFD: Get/set the **file descriptor’s close-on-exec flag**
+		- close-on-exec flag: 调用exec时文件描述符会不会关闭
+		- 为解决fork子进程执行其他任务(exec等)导致父进程的文件描述符被复制到子进程中，使得对应文件描述符无法被之后需要的进程获取。
 	3. F_GETFL/F_SETFL: Get/set the **file descriptor’s flags**
+		- open/creat中的flags 参数
 	4. F_GETOWN/F_SETOWN: **Manage I/O availability signals**
-		- 可以向文件发几个信号。
+		- 可以向文件发几个信号
+		- 获得或设置当前文件描述符会接受SIGIO和SIGURG信号的进程或进程组编号
 	5. F_GETLK/F_SETLK/F_SETLKW: Get/set the **file lock**
+		- S_SETLKW同S_SETLK，但是在锁无法设置时会阻塞等待任务完成。
 
+```c
+//file:fcntl
+int main()
+{
+	pid_t pid;
+	fd =open("test.txt",0_RDWR|0_APPEND);if(fd ==-1)
+	//printf("open err/n");
+	printf("fd =%d",fd);
+	printf("fork!/n");
+	fcntl(fd,F_SETFD,1);
+	char *s="0000000000000000000";
+	pid =fork();
+	if(pid ==θ)
+	execl("ass","./ass",&fd,NULL);
+	wait(NULL);
+	write(fd,s,strlen(s));
+	close(fd);
+	return θ;
+}
+
+//file:ass.c
+int main(int argc,char *argv[]){
+	int fd;
+	printf("argc =%d“,argc);
+	fd =*argv[1];
+	printf("fd =%d",fd);
+	char *s ="zzzzzzzzzzzzzzzzzzz";
+	write(fd,(void *)s,strlen(s));
+	close(fd);
+	return θ;
+}
+
+```
 ## 5.8. ioctl function
 
 ```c
