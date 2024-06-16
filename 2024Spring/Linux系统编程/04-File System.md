@@ -288,7 +288,7 @@ int ioctl(int d, int request, ...);
 	2. Line buffer
 	3. No buffer
 
-## Stream Buffering Operations
+## 6.2. Stream Buffering Operations
 
 - buffer类型
 	1. block buffered (fully buffered)
@@ -308,7 +308,7 @@ int setvbuf(FILE *stream, char *buf, int mode, size_t size);
 	- `_IOLBF`(行缓冲）
 	- `_IONBF`(无缓冲）
 
-## 6.2. Stream open/close
+## 6.3. Stream open/close
 
 ```c
 #include <stdio.h>
@@ -324,7 +324,7 @@ int fclose(FILE *stream);
 	5. w+
 	6. a+
 
-## 6.3. Input of a character
+## 6.4. Input of a character
 
 1. `getc`是宏定义，速度比`fgetc`快
 2. `fgetc`
@@ -338,7 +338,7 @@ int getchar(void);
 //Result: Reads the next character from a stream and returns it as an unsigned char cast to an int, or EOF on end of file or error.
 ```
 
-## 6.4. Output of a Character
+## 6.5. Output of a Character
 
 ```c
 #include <stdio.h>
@@ -348,7 +348,7 @@ int putchar(int c);
 //Return: the character if success; -1 if failure
 ```
 
-## 6.5. Input of a Line of String
+## 6.6. Input of a Line of String
 
 ```c
 #include <stdio.h>
@@ -356,7 +356,7 @@ char *fgets(char *s, int size, FILE *stream);
 char *gets(char *s); //not recommended.
 ```
 
-## 6.6. Output of a Line of String
+## 6.7. Output of a Line of String
 
 ```c
 #include <stdio.h>
@@ -364,7 +364,7 @@ int fputs(const char *s, FILE *stream);
 int puts(const char *s
 ```
 
-## 6.7. Binary Stream Input/Output
+## 6.8. Binary Stream Input/Output
 
 ```c
 #include <stdio.h>
@@ -375,7 +375,7 @@ size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
 
 fwrite: 向磁盘写入数组，数组首地址ptr，数组每个格子大小size, 数组元素个数nmemb
 
-## 6.8. Formatted I/O
+## 6.9. Formatted I/O
 
 ```c
 #include <stdio.h>
