@@ -75,7 +75,7 @@ modified:  2024-06-16 14:06
 - ls -l查看链接数目
 	- ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F11-17-25-fc0746aebea93640a4b72174da722b7c-20240415111724-a9fb6d.png)
 
-# 5. 系统调用
+# 5. System Calls
 
 - 都以**C函数**的形式出现
 - **系统调用**
@@ -345,7 +345,6 @@ int getchar(void);
 //Result: Reads the next character from a stream and returns it as an unsigned char cast to an int, or EOF on end of file or error.
 ```
 
-
 ## 6.5. Output of a Character
 
 ```c
@@ -385,6 +384,28 @@ size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
 
 fwrite: 向磁盘写入数组，数组首地址ptr，数组每个格子大小size, 数组元素个数nmemb
 
+- 写一个数组：
+
+```c
+float data[10];
+if ( fwrite(&data[2], sizeof(float), 4, fp) != 4 )
+	err_sys(“fwrite error”);
+```
+
+- 写一个结构体
+
+```C
+struct {
+	short count; 
+	long total; 
+	char name[NAMESIZE];
+}item;
+if ( fwrite(&item, sizeof(item), 1, fp) != 1)
+	err_sys(“fwrite error”);
+```
+
+[c - correct way to use fwrite and fread - Stack Overflow](https://stackoverflow.com/questions/43348672/correct-way-to-use-fwrite-and-fread)
+
 ## 6.9. Formatted I/O
 
 ```c
@@ -394,7 +415,9 @@ int fscanf(FILE *stream, const char *format, ...);
 int sscanf(const char *str, const char *format, ...);
 ```
 
-使用`fgets`然后解析字符串
+使用`fgets`, 然后解析字符串
+
+---
 
 ```c
 #include <stdio.h>
@@ -403,11 +426,77 @@ int fprintf(FILE *stream, const char *format, ...);
 int sprintf(char *str, const char *format, ...);
 ```
 
-# 7. File lock
+## 6.10. Reposition a stream
+
+```C
+#include <stdio.h>
+int fseek(FILE *stream, long int offset, int whence);
+long ftell(FILE *stream);
+void rewind(FILE *stream);
+```
+
+```C
+#include <stdio.h>
+int fgetpos(FILE *fp, fpos_t *pos);
+int fsetpos(FILE *fp, const fpos_t *pos);
+```
+
+## 6.11. Flush a stream
+
+刷写文件流，把流里的数据立刻写入文件
+
+```c
+#include <stdio.h>
+int fflush(FILE *stream);
+```
+
+## 6.12. Stream and File Descriptor
+
+- 确定流使用的底层文件描述符
+
+```c
+#include <stdio.h>
+int fileno(FILE *fp);
+```
+
+- 根据已打开文件描述符创建一个流
+
+```c
+#include <stdio.h>
+FILE *fdopen(int fildes, const char *mode);
+```
+
+## 6.13. Temporary File
+
+- 为临时文件创建名称
+	- 返回值：指向唯一路径名的指针
+
+```c
+#include <stdio.h>
+char *tmpnam(char *s);
+```
+
+- 创建临时文件
+	- 返回值：如果成功返回文件指针，否则为NULL
+
+```c
+#include <stdio.h>
+FILE *tmpfile(void);
+```
+
+# 7. Advanced System Calls
+
+- Handling file attributes
+	- stat/fstat/lstat, ...
+- Handling directory
+
+
+
+# 8. File lock
 
 作用：几个进程同时操作一个文件
 
-## 7.1. 分类
+## 8.1. 分类
 
 - 记录锁：往文件加锁时，是否要锁整个文件，还是只锁一部分（记录锁）
 
