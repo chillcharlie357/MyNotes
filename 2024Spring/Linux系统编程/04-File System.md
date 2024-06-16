@@ -46,6 +46,7 @@ modified: 2024-04-18 12:04
 		- e.g.只读，ext4
 	2. i-node object
 		- 描述文件，磁盘上**所有的文件都有一个唯一的inode**
+		- **记录真正的文件，文件存储在磁盘上时是按照索引号访问文件的，软链接是不同的文件，但是硬链接是相同的inode号，同一个文件。**
 	3. file object
 		- **打开文件**，如果文件没有被打开，不会有file object
 		- 文件对象需要释放
@@ -265,6 +266,8 @@ int main(int argc,char *argv[]){
 
 ```
 ## 5.8. ioctl function
+
+- 控制设备
 
 ```c
 #include <sys/ioctl.h>
