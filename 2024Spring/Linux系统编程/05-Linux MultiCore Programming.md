@@ -144,7 +144,7 @@ void* mmap(void* addr,size_t length,int prot, int flags,int fd,off_t offset)
 int munmap(void* addr, size_t length)
 ```
 
-- flages
+- flags
 	1. MAP_SHARED
 	2. MAP_ANONYMOUS：忽略掉fd，虚拟了一个文件
 	3. MAP_PRIVATE：只有当前进程可以写

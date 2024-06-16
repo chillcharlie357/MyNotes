@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 08-SQL常识
 date:  2024-05-28 14:05
-modified:  2024-06-16 21:06
+modified:  2024-06-16 22:06
 ---
 
 # 1. Group by
@@ -102,8 +102,6 @@ where data regexp '[^0-9a-zA-Z]' = 0
 %% `0`表示这个正则表达式匹配的次数为0 %%
 ```
 
-
-
 ## 2.7. 提取姓名首字母
 
 需要找到空格的位置或大写的位置，然后把那个位置的字母提出来
@@ -143,10 +141,33 @@ order by 2 //select中的第二个字段
 group by  
 count
 
+```MYSQL
+select sal
+from emp
+where deptno = 20
+group by sal
+having count(*) >= all ( select count(*)
+from emp
+where deptno = 20
+	 group by sal )
+```
+
 ## 3.4. 计算中位数
 
 oracle: median()  
 mysql：分组，记录个数，找到中间位置的值
+
+```mysql
+select avg(sal)
+from (
+select e.sal
+from emp e, emp d
+where e.deptno = d.deptno
+and e.deptno = 20
+group by e.sal
+having sum(case when e.sal = d.sal then 1 else 0 end)
+>= abs(sum(sign(e.sal - d.sal))) ) x
+```
 
 ## 3.5. 去掉最大值最小值，然后计算平均值
 
@@ -154,22 +175,45 @@ where sal not in (min_sal, max_sal)
 
 # 4. 日期处理
 
-## 4.1. 年月日加减法
+## 4.1. 使用索引的三种写法
+
+### 4.1.1. 使用`DATE`类型和`BETWEEN`操作符
+
+```mysql
+SELECT * FROM your_table 
+WHERE your_date_column BETWEEN '2024-06-01' AND '2024-06-30';
+```
+
+### 4.1.2. 使用`DATE`类型和`>`或`<`操作符
+
+```mysql
+SELECT * FROM your_table 
+WHERE your_date_column > '2024-06-01';
+```
+
+### 4.1.3. 使用`DATE`类型和`LIKE`操作符
+
+```mysql
+SELECT * FROM your_table 
+WHERE your_date_column LIKE '2024-06-%';
+```
+
+## 4.2. 年月日加减法
 
 oracle: add_mounths()  
 mysql: date_add()
 
-## 4.2. 两个日期之间的天数
+## 4.3. 两个日期之间的天数
 
 mysql: datediff  
 oracle：两个日期直接相减
 
-## 4.3. 两个日期之间的工作日天数
+## 4.4. 两个日期之间的工作日天数
 
 需要获取日期是星期几，然后把星期六星期天去掉  
 date_format,date_add
 
-## 4.4. 判断闰年
+## 4.5. 判断闰年
 
 加一年，然后判断时间差是多少天；  
 判断二月份第一天到最后一天是几天
