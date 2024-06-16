@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 04-File System
 date:  2024-04-15 10:04
-modified:  2024-06-16 10:06
+modified:  2024-06-16 14:06
 ---
 
 # 1. 文件系统
@@ -310,6 +310,8 @@ int setvbuf(FILE *stream, char *buf, int mode, size_t size);
 
 ## 6.3. Stream open/close
 
+- 创建/销毁stream
+
 ```c
 #include <stdio.h>
 FILE *fopen(const char *filename, const char *mode);
@@ -317,26 +319,30 @@ int fclose(FILE *stream);
 ```
 
 - mode
-	1. r
-	2. w
-	3. a
-	4. r+
-	5. w+
-	6. a+
+	1. r: reading
+	2. w: Truncate file to zero length or create text file for writing.
+	3. a: appending
+	4. r+: reading and writing
+	5. w+: Open for reading and writing. The file is created if it does not exist, otherwise it is truncated.
+	6. a+: Open for reading and appending. The file is created if does not exist.
 
 ## 6.4. Input of a character
 
 1. `getc`是宏定义，速度比`fgetc`快
 2. `fgetc`
-3. getchar`
+3. `getchar
+4. `ungetc`：把字符放到stream中
+5. error：ferror, feof, clearerr
 
 ```c
 #include <stdio.h>
 int getc(FILE *fp);
 int fgetc(FILE *fp);
 int getchar(void);
+
 //Result: Reads the next character from a stream and returns it as an unsigned char cast to an int, or EOF on end of file or error.
 ```
+
 
 ## 6.5. Output of a Character
 
