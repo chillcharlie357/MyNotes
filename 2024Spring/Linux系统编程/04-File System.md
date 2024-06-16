@@ -11,8 +11,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 04-File System
-date: 2024-04-15 10:04
-modified: 2024-04-18 12:04
+date:  2024-04-15 10:04
+modified:  2024-06-16 10:06
 ---
 
 # 1. 文件系统
@@ -81,7 +81,7 @@ modified: 2024-04-18 12:04
 - **系统调用**
 	1. Linux内核的对外接口;
 	2. 用户程序和内核之间唯一的接口;
-	3.  提供最小接口
+	3. 提供最小接口
 - **库函数**
 	1. 依赖于系统调用
 	2. 提供较复杂功能
@@ -90,9 +90,6 @@ modified: 2024-04-18 12:04
 - Basic I/O System Calls
 	1. 没有缓冲区（buffer）
 	2. 使用File descriptor
-
-
-
 
 ## 5.1. File Descriptor
 
@@ -265,6 +262,7 @@ int main(int argc,char *argv[]){
 }
 
 ```
+
 ## 5.8. ioctl function
 
 - 控制设备
@@ -281,7 +279,7 @@ int ioctl(int d, int request, ...);
 
 ## 6.1. File Stream
 
-使用用户态的结构体`FILE`，而不是文件描述符。`FILE`结构体内部保存文件描述符。
+使用用户态的**结构体**`FILE`，而不是文件描述符。`FILE`结构体内部保存文件描述符。
 
 有预先定义好的stdin, stdout, stderr
 
@@ -289,6 +287,26 @@ int ioctl(int d, int request, ...);
 	1. Full buffer
 	2. Line buffer
 	3. No buffer
+
+## Stream Buffering Operations
+
+- buffer类型
+	1. block buffered (fully buffered)
+	2. line buffered
+	3. unbuffered
+
+```c
+#include <stdio.h>
+
+void setbuf(FILE *stream, char *buf);
+
+int setvbuf(FILE *stream, char *buf, int mode, size_t size);
+```
+
+- type:
+	- `_IOFBF`(满缓冲）
+	- `_IOLBF`(行缓冲）
+	- `_IONBF`(无缓冲）
 
 ## 6.2. Stream open/close
 
@@ -377,7 +395,6 @@ int sprintf(char *str, const char *format, ...);
 
 # 7. File lock
 
-
 作用：几个进程同时操作一个文件
 
 ## 7.1. 分类
@@ -393,5 +410,4 @@ int sprintf(char *str, const char *format, ...);
 
 - 共享锁
 - 排他锁
-
 
