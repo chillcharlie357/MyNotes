@@ -99,22 +99,31 @@ pid_t waitpid(pid_t  pid, int *status, int options)
 	1. 指定pid
 	2. **非阻塞**
 	3. waitpid的pid参数
-		1. \==-1：对应wait
-
-		2. > 0: 指定pid
-
-		3. \==0：指定父进程的group
-		4. <0：指定group id，等待对应组里的进程
+		1. pid\==-1：对应wait
+		2. pid> 0: 指定pid
+		3. pid\==0：指定父进程的group
+		4. pid<0：指定group id，等待对应组里的进程
 
 ## 1.6. signal
 
 进程之间通信
 
+```c
+signal.h
+```
+
 ### 1.6.1. 信号
 
 SIGKILL：终止，不能被捕获或忽略  
-SIGINT：终端中断符  
+SIGINT：终端中断符 , 等价于ctrl + c  
 SIGTERM：终止（kill发出的默认系统终止信号），可以改
+
+```c
+#include <signal.h>
+typedef void (*sighandler_t)(int);
+sighandler_t signal(int signum, sighandler_t handler);
+//Returned Value: the previous handler if success, SIG_ERR if error
+```
 
 ### 1.6.2. 可靠性
 
@@ -126,14 +135,40 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 
 ### 1.6.3. 发信号
 
-1. kill: send signal to a process
-2. raise: send a signal to the current process
-3. alarm: set an alarm clock for delivery of a signal
+- **kill**: send signal to a process
+```c
+#include <sys/types.h>
+#include <signal.h>
+int kill(pid_t pid, int sig);
+//Returned Value: 0 if success, -1 if failure pid:取值
+```
+
+
+- **raise**: send a signal to the **current process**
+```c
+#include <signal.h>
+int raise(int sig);
+//Returned Value: 0 if success, -1 if failure
+```
+
+- alarm: set an alarm clock for delivery of a signal
 	1. 每个进程只能有一个闹钟
 	2. 可以用来做超时处理
-4. pause: wait for a signal
+```c
+#include <unistd.h>
+unsigned int alarm(unsigned int seconds);
+//Returned value: 0, or the number of seconds remaining of previous alarm 
+//SIGALRM
+```
+
+- pause: wait for a signal
 	1. 挂起，等到有信号来才执行
 	2. e.g. CTRL+Z的实现
+```c
+#include <unistd.h>
+int pause(void);
+//Returned value: -1, errno is set to be EINTR
+```
 
 ### 1.6.4. 可靠信号
 
@@ -167,6 +202,16 @@ int sa_flags; /* signal options */
 int sigsuspend(const sigset *sigmask);
 //Returned value: -1, errno is set to be EINTR
 ```
+
+## 可重入函数
+
+- 可重入：可以被打断的函数
+- 不可重入函数：
+	1. 系统资源
+	2. 全局变量
+	3. 使用静态数据结构
+	4. 调用malloc或者free
+	5. 标准IO函数
 
 # 2. 共享内存
 
