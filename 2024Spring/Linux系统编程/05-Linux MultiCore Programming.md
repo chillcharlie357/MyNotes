@@ -173,6 +173,23 @@ int pause(void);
 //Returned value: -1, errno is set to be EINTR
 ```
 
+---
+
+- 例子：
+
+```c
+void sig_alrm(int signo){
+	printf(“alarm received\n”);
+}
+unsigned int sleep1(unsigned int nsecs) {
+	if ( signal(SIGALARM, sig_alrm) == SIG_ERR)
+		return(nsecs);
+	alarm(nsecs); /* start the timer */
+	pause(); /*next caught signal wakes us up*/
+	return(alarm(0) ); /*turn off timer, return unslept time */
+}
+```
+
 ### 1.6.4. 可靠信号
 
 - 信号集
@@ -194,11 +211,13 @@ int sigismember(const sigset_t *set, int signum);
 ---
 
 - sigprocmask：检测或更改(或两者)进程的信号掩码
+
 ```c
 #include <signal.h>
 int sigprocmask(int how, const sigset_t *set, sigset_t *oldset);
 //Return Value: 0 is success, -1 if failure
 ```
+
 - 参数“**how**”决定对信号掩码的操作
 	1. SIG_BLOCK: 将set中的信号**添加**到信号掩码(并集)
 	2. SIG_UNBLOCK: 从信号掩码中**去掉**set中的信号(差集)
@@ -244,6 +263,7 @@ int sa_flags; /* signal options */
 int sigsuspend(const sigset *sigmask);
 //Returned value: -1, errno is set to be EINTR
 ```
+
 
 ## 1.7. 可重入函数
 
@@ -347,10 +367,12 @@ if (shmctl(shmid, IPC_RMID, 0) == -1) {
 }
 ```
 
+
 # 3. POSIX thread
 
-1. POSIX thread不是系统调用，是Linux下的标准库
-2. Linux下可以用clone创建thread，但是比较复杂很少用
+- 和普通thread区别
+	1. POSIX thread不是系统调用，是Linux下的标准库
+	2. Linux下可以用clone创建thread，但是比较复杂很少用
 
 线程共享地址空间，轻量级
 
@@ -362,7 +384,7 @@ if (shmctl(shmid, IPC_RMID, 0) == -1) {
 	- gcc thread.c –o thread –lpthread
 	- -l: link，链接本地二进制码
 
-```c
+```shell
 gcc a.c -lpthread
 //libpthread.so,libpthread.a
 ```
@@ -386,10 +408,10 @@ pthread下的所有函数都以`pthread_`开头
 ```c
 #include <pthread.h>
 int pthread_create(
-pthread_t *thread, 
-pthread_attr_t *attr, 
-void *(*start_routine)(void *), 
-void *arg)
+	pthread_t *thread, 
+	pthread_attr_t *attr, 
+	void *(*start_routine)(void *), 
+	void *arg)；
 ```
 
 1. thread：输出线程ID
