@@ -517,6 +517,7 @@ int pthread_cond_broadcast(pthread_cond_t cond);
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F13%2F10-14-29-585bba0567fdf55505009b82a7129584-20240513101428-8e6943.png)
 
+*这代码不知道哪来的，好像不是ppt上的*
 ```c
 pthread_mutex_t mutex;
 pthread_cond_t condition;
@@ -532,9 +533,9 @@ void decrement_count() {
 
 void increment_count() {
     pthread_mutex_lock(&mutex);
-    if (count == 0)
-        pthread_cond_signal(&condition);
     count = count + 1;
+    if (count > 0)
+        pthread_cond_signal(&condition);
     pthread_mutex_unlock(&mutex);
 }
 ```
