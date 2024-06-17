@@ -465,7 +465,7 @@ int sem_trywait(sem_t *sem); //不阻塞的P
 int sem_getvalue(sem_t *sem, int *sval);
 ```
 
-- sem_init
+- sem_init参数
 	1. sem：指向信号量指针
 	2. pshared：是否共享
 	3. value：初始值
