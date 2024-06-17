@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 05-Linux MultiCore Programming
 date:  2024-04-22 11:04
-modified:  2024-06-17 21:06
+modified:  2024-06-17 22:06
 ---
 
 # 1. Linux进程
@@ -136,6 +136,7 @@ sighandler_t signal(int signum, sighandler_t handler);
 ### 1.6.3. 发信号
 
 - **kill**: send signal to a process
+
 ```c
 #include <sys/types.h>
 #include <signal.h>
@@ -143,8 +144,8 @@ int kill(pid_t pid, int sig);
 //Returned Value: 0 if success, -1 if failure pid:取值
 ```
 
-
 - **raise**: send a signal to the **current process**
+
 ```c
 #include <signal.h>
 int raise(int sig);
@@ -154,6 +155,7 @@ int raise(int sig);
 - alarm: set an alarm clock for delivery of a signal
 	1. 每个进程只能有一个闹钟
 	2. 可以用来做超时处理
+
 ```c
 #include <unistd.h>
 unsigned int alarm(unsigned int seconds);
@@ -164,6 +166,7 @@ unsigned int alarm(unsigned int seconds);
 - pause: wait for a signal
 	1. 挂起，等到有信号来才执行
 	2. e.g. CTRL+Z的实现
+
 ```c
 #include <unistd.h>
 int pause(void);
@@ -172,21 +175,58 @@ int pause(void);
 
 ### 1.6.4. 可靠信号
 
-信号集
+- 信号集
 
 给一个信号注册一个结构体，而不是直接注册处理函数
 
+```c
+#include <signal.h>
+int sigemptyset(sigset_t *set);
+int sigfillset(sigset_t *set);
+int sigaddset(sigset_t *set, int signum);
+int sigdelset(sigset_t *set, int signum);
+//Return value: 0 if success, -1 if error
+
+int sigismember(const sigset_t *set, int signum);
+//Return value: 1 if true, 0 if false
+```
+
+---
+
 - sigprocmask：检测或更改(或两者)进程的信号掩码
+```c
+#include <signal.h>
+int sigprocmask(int how, const sigset_t *set, sigset_t *oldset);
+//Return Value: 0 is success, -1 if failure
+```
+- 参数“**how**”决定对信号掩码的操作
+	1. SIG_BLOCK: 将set中的信号**添加**到信号掩码(并集)
+	2. SIG_UNBLOCK: 从信号掩码中**去掉**set中的信号(差集)
+	3. SIG_SETMASK: 把信号掩码**设置为**set中的信号
+- 在sigprocmask调用后任何未阻塞并且pending的信号，在函数返回前，至少有一个信号会送达进程
+- 例外: SIGKILL, SIGSTOP
+
+---
+
+- sigpending: 返回当前未决的信号集
+
+```c
+#include <signal.h>
+int sigpending(sigset_t *set);
+//Returned Value: 0 is success, -1 if failure
+```
+
+---
+
 - **sigaction**：检查或修改与指定信号的关联处理动作
 
 ```c
 #include <signal.h>
-int sigaction(int signum, const struct sigaction *act, struct 
-sigaction *oldact);
+int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact);
 //Returned Value: 0 is success, -1 if failure)
 ```
 
-struct sigaction成员：
+- struct sigaction成员：
 
 ```c
 handler_t sa_handler; /* addr of signal handler, or SIG_IGN, 
@@ -194,6 +234,8 @@ or SIG_DEL */
 sigset_t sa_mask; /* additional signals to block */
 int sa_flags; /* signal options */
 ```
+
+---
 
 - `sigsuspend`：使用临时信号替代信号掩码，在捕获一个信号或发生终止该进程的信号前，进程挂起
 
@@ -203,7 +245,7 @@ int sigsuspend(const sigset *sigmask);
 //Returned value: -1, errno is set to be EINTR
 ```
 
-## 可重入函数
+## 1.7. 可重入函数
 
 - 可重入：可以被打断的函数
 - 不可重入函数：
