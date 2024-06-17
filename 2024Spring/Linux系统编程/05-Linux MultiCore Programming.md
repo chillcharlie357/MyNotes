@@ -264,7 +264,6 @@ int sigsuspend(const sigset *sigmask);
 //Returned value: -1, errno is set to be EINTR
 ```
 
-
 ## 1.7. 可重入函数
 
 - 可重入：可以被打断的函数
@@ -366,7 +365,6 @@ if (shmctl(shmid, IPC_RMID, 0) == -1) {
 	exit(EXIT_FAILURE);
 }
 ```
-
 
 # 3. POSIX thread
 
@@ -506,9 +504,11 @@ int pthread_cond_signal(pthread_cond_t cond);
 int pthread_cond_broadcast(pthread_cond_t cond);
 ```
 
-1. 等待：等到条件变量被通知或广播，**等待时会unlock互斥量（原子操作）**
+1. 等待：等到条件变量被通知或广播
+	- **等待时会unlock互斥量（原子操作）**
 	- 当重新开始执行，会lock互斥量
 2. 通知：随机唤醒
+	1. 调用时互斥量必须是被加锁的，signal会释放互斥量
 3. 广播：唤醒所有
 
 #### 3.3.3.3. 例子
@@ -516,8 +516,6 @@ int pthread_cond_broadcast(pthread_cond_t cond);
 加数据，拿数据并发修改index，len
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F13%2F10-14-29-585bba0567fdf55505009b82a7129584-20240513101428-8e6943.png)
-
----
 
 ```c
 pthread_mutex_t mutex;
