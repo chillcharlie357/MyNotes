@@ -12,17 +12,54 @@ mathjax: true
 comment: true
 title: 05-Linux MultiCore Programming
 date:  2024-04-22 11:04
-modified:  2024-05-06 11:05
+modified:  2024-06-17 21:06
 ---
 
 # 1. Linux进程
 
-## 1.1. exec和fork
+## 1.1. exec
 
 1. exec：直接执行新的程序
-2. fork：创建一个一样的新进程
 
-## 1.2. 进程退出方式
+```c
+#include <unistd.h>
+
+int execl(const char *path, const char *arg0, ..., (char *)0);
+
+int execlp(const char *file, const char *arg0, ..., (char *)0);
+
+int execle(const char *path, const char *arg0, ..., (char *)0, char *const
+
+envp[]);
+
+int execv(const char *path, char *const argv[]);
+
+int execvp(const char *file, char *const argv[]);
+
+int execve(const char *path, char *const argv[], char *const envp[])
+```
+
+## 1.2. fork
+
+1. fork：创建一个一样的新进程
+
+```c
+#include <sys/types.h>
+#include <unistd.h>
+
+pid_t fork(void);
+```
+
+使用：
+
+```c
+if(fork()==0)
+	{子进程执行的代码段；}
+else
+	{父进程执行的代码段；}
+```
+
+## 1.3. 进程退出方式
 
 1. 正常退出
 	1. return from main
@@ -36,13 +73,16 @@ modified:  2024-05-06 11:05
 
 exit：最终会调用_exit，但之前会有一堆终止处理程序(aexit function)
 
-## 1.3. Process resources
+## 1.4. Process resources
 
 每个进程都有一个进程描述符
 
-## 1.4. wait & waitpid
+## 1.5. wait & waitpid
 
 ```c
+#include <sys/types.h>
+#include <sys/wait.h>
+
 pid_t wait(int * status)
 pid_t waitpid(pid_t  pid, int *status, int options)
 ```
@@ -57,7 +97,7 @@ pid_t waitpid(pid_t  pid, int *status, int options)
 
 - waitpid
 	1. 指定pid
-	2. 非阻塞
+	2. **非阻塞**
 	3. waitpid的pid参数
 		1. \==-1：对应wait
 
@@ -66,17 +106,17 @@ pid_t waitpid(pid_t  pid, int *status, int options)
 		3. \==0：指定父进程的group
 		4. <0：指定group id，等待对应组里的进程
 
-## 1.5. signal
+## 1.6. signal
 
 进程之间通信
 
-### 1.5.1. 信号
+### 1.6.1. 信号
 
 SIGKILL：终止，不能被捕获或忽略  
 SIGINT：终端中断符  
 SIGTERM：终止（kill发出的默认系统终止信号），可以改
 
-### 1.5.2. 可靠性
+### 1.6.2. 可靠性
 
 - 信号可靠性
 	1. 连续重复信号能不能收到
@@ -84,7 +124,7 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 	2. 阻塞信号
 	3. 复位机制
 
-### 1.5.3. 发信号
+### 1.6.3. 发信号
 
 1. kill: send signal to a process
 2. raise: send a signal to the current process
@@ -95,7 +135,7 @@ SIGTERM：终止（kill发出的默认系统终止信号），可以改
 	1. 挂起，等到有信号来才执行
 	2. e.g. CTRL+Z的实现
 
-### 1.5.4. 可靠信号
+### 1.6.4. 可靠信号
 
 信号集
 
@@ -362,17 +402,13 @@ int pthread_cond_broadcast(pthread_cond_t cond);
 2. 通知：随机唤醒
 3. 广播：唤醒所有
 
-
-#### 例子
+#### 3.3.3.3. 例子
 
 加数据，拿数据并发修改index，len
-
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F13%2F10-14-29-585bba0567fdf55505009b82a7129584-20240513101428-8e6943.png)
 
 ---
-
-
 
 ```c
 pthread_mutex_t mutex;
@@ -398,8 +434,7 @@ void increment_count() {
 
 `pthread_cond_wait`之后的代码仍然在互斥区里，不用担心等待被唤醒后有并发问题。
 
-
-## Thread attributes
+## 3.4. Thread attributes
 
 - 线程属性对象
 - 初始化：`int pthread_attr_init(pthread_attr * attr);`
@@ -407,8 +442,7 @@ void increment_count() {
 
 e.g.修改detachstate，schedpolicy属性
 
-## Thread cancellation
-
+## 3.5. Thread cancellation
 
 线程强制终止。
 
@@ -419,7 +453,7 @@ int pthread_setcancelstate(int state, int
 int pthread_setcanceltype(int type, int *oldtype);
 ```
 
-## Multithread program
+## 3.6. Multithread program
 
 - 容易出现错误
 	1. 共享变量缺乏保护，未互斥使用
@@ -427,13 +461,11 @@ int pthread_setcanceltype(int type, int *oldtype);
 
 系统不隔离，用起来方便，但不安全
 
-
-## Thread Local Storage (TLS)
+## 3.7. Thread Local Storage (TLS)
 
 线程局部存储：变量是**线程私有**的，对于线程内部的函数是全局变量
 
 函数内的局部变量在线程的函数调用栈里，本来就不存在全局共享
-
 
 ```c
 int pthread_key_create(pthread_key_t *key, void (*destructor)(void*));
@@ -445,12 +477,8 @@ void *pthread_getspecific(pthread_key_t key);
 int pthread_setspecific(pthread_key_t key, const void *value);
 ```
 
-
 1. pthread_key_create：key相当于变量名，每一个线程都创建了这个变量，只是隔离了
 	- 在每个线程中**同时创建，同时释放**
 2. delete：会调用create时传入的析构函数                                                  
 3. get/set：对TLS读写操作
-
-
-
 
