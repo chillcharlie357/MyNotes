@@ -137,7 +137,7 @@ int creat(const char *pathname, mode_t mode);
 //Return: a new file descriptor if success; -1 if failure
 ```
 
-- flags: `O_RDONLY`, `O_WRONLY`, `O_RDWR`，`O_TRUNC:`， `O_APPEND`
+- flags: `O_RDONLY`, `O_WRONLY`, `O_RDWR`，`O_TRUNC`， `O_APPEND`
 - mode: 指定权限
 	- ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F15%2F19-58-41-b7c02ff2b68a05537120b877293752e3-20240615195840-fe85a4.png)
 
