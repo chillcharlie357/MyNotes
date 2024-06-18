@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 01-Linux Basic
 date:  2024-02-26 09:02
-modified:  2024-06-13 20:06
+modified:  2024-06-18 14:06
 ---
 
 # 1. Linux
@@ -224,6 +224,22 @@ Linux下的文件类型：
 ```shell
 kill –HUP 1234 > killout.txt 2> killerr.txt
 kill –HUP 1234 > killout.txt 2>& 1
+```
+
+- 输入重定向类型
+	1. command < file
+	2. **here-doc**: <<
+	3. **进程替换**: command <(another_command)
+
+```c
+cat << EOF > file.txt
+Multi-line
+text input
+EOF
+```
+
+```c
+grep "pattern" <(ls -l)
 ```
 
 # 11. 管道
