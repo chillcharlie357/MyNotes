@@ -165,11 +165,16 @@ module_exit(hello_exit);
 
 ## 3.1. 驱动程序的初始化加载过程
 
-1. 申请设备号
-2. 定义文件操作结构体 file_operations
-3. 创建并初始化定义结构体 cdev
-4. 将cdev注册到系统，并和对应的设备号绑定
-5. 在/dev文件系统中用mknod创建设备文件，并将该文件绑定到设备号上
+1. **申请设备号**
+2. 定义**文件操作结构体** file_operations
+3. 创建并初始化定义**结构体 cdev**
+	1. `struct cdev *my_cdev = cdev_alloc();`
+	2. `my_cdev->ops = &my_fops;`
+	3. `void cdev_init(struct cdev *cdev, struct file_operations *fops);`
+4. 将**cdev注册到系统**，并和对应的**设备号绑定**
+	- `int cdev_add(struct cdev *dev, dev_t num, unsigned int count);`
+5. 在/dev文件系统中用**mknod创建设备文件**，并将该文件**绑定到设备号上**
+	- `mknod {{path/to/device_file}} c {{major_device_number}} {{minor_device_number}}`
 
 ## 3.2. 主设备号和次设备号
 

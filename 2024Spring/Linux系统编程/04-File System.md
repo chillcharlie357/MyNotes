@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 04-File System
 date:  2024-04-15 10:04
-modified:  2024-06-16 15:06
+modified:  2024-06-18 14:06
 ---
 
 # 1. 文件系统
@@ -504,14 +504,11 @@ int lstat(const char *file_name, struct stat *buf);
 //Return: 0 if success; -1 if failure
 ```
 
-
 - <span style="background:rgba(3, 135, 102, 0.2)">lstate和stat的区别</span>在于对符号链接的处理：
 	1. `stat` 会跟随符号链接并获取链接目标的文件状态信息
 	2. `lstat` 则获取**链接本身**的文件状态信息。当你需要确定一个文件是不是符号链接，或者你需要获取符号链接本身的信息（比如权限、所有者等），这时应该使用 `lstat`。
 
-
 ---
-
 
 ```c
 struct stat {
@@ -634,20 +631,24 @@ closedir(dp);
 
 ## 8.1. 分类
 
-- 记录锁：往文件加锁时，是否要锁整个文件，还是只锁一部分（记录锁）
+- 记录锁：往文件加锁时，是否要锁整个文件，还是只锁一部分（记录锁）。**允许只对文件特点部分上锁**。
+
+---
 
 - 劝告锁：
 	- 检查，加锁由应用程序控制
-	- 系统会给进程发信号，告诉他这个文件被上锁，但是可以强行操作文件
+	- 系统会给进程发信号，告诉他这个文件被上锁，但是**可以强行操作文件**
 - 强制锁：
 	- 检查，加锁由内核控制
+	- **不允许违反锁规则访问**
 	- 影响open,write,read等操作
+
+---
 
 - 共享锁
 - 排他锁
 
-
-## 8.2. fcntl记录锁
+## 8.2. fcntl
 
 ```c
 #include <unistd.h>
@@ -672,11 +673,16 @@ struct flock{
 - cmd参数
 	1. F_GETLK：获得文件的封锁信息
 	2. F_SETLK：对文件的某个区域封锁或解除封锁
-	3. F_SETLKW：功能同F_SETLK, wait方式
+	3. F_SETLKW：功能同F_SETLK, **wait方式**
+- l_type
+	1. F_RDLCK：**共享锁（Shared Lock）**,read lock
+	2. F_WRLCK：**排他锁（Exclusive Lock）**,write lock
+	3. F_UNLCK：**解锁（Unlock）**
+- l_whence
+	- 起始位置的参考点，通常是`SEEK_SET`（文件开头）、`SEEK_CUR`（当前位置）或`SEEK_END`（文件结尾）
+- l_len：锁的长度，0通常表示直到文件末尾。
+- l_start：锁的起始位置，可以指定为字节偏移量。
+- **记录锁（Record Lock）** 的实现：
+	- 通过设置 `l_start`、`l_len` 和 `l_whence` 字段来定义锁的范围
 
-
-## flock
-
-```c
-int flock(int fd, int operation);
-```
+[fcntl实现强制锁和劝告锁](https://cn.linux-console.net/?p=23446#:~:text=%E5%BC%BA%E5%88%B6%E9%94%81%E6%98%AF%E6%96%87%E4%BB%B6%E9%94%81%EF%BC%8C%E5%8F%AF%E9%98%B2%E6%AD%A2%E5%85%B6%E4%BB%96%E8%BF%9B%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%88%96%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%EF%BC%8C%E7%9B%B4%E5%88%B0%E9%94%81%E8%A2%AB%E9%87%8A%E6%94%BE%E3%80%82%20%E5%BC%BA%E5%88%B6%E9%94%81%E7%94%B1%E5%86%85%E6%A0%B8%E8%AE%BE%E7%BD%AE%EF%BC%8C%E4%B8%8D%E8%83%BD%E8%A2%AB%E8%BF%9B%E7%A8%8B%E8%A6%86%E7%9B%96%E3%80%82%20%E5%BD%93%E6%96%87%E4%BB%B6%E5%BE%88%E5%85%B3%E9%94%AE%E5%B9%B6%E4%B8%94%E4%B8%8D%E8%83%BD%E8%A2%AB%E4%BB%BB%E4%BD%95%E5%85%B6%E4%BB%96%E8%BF%9B%E7%A8%8B%E4%BF%AE%E6%94%B9%E6%97%B6%EF%BC%8C%E5%BC%BA%E5%88%B6%E9%94%81%E5%BE%88%E6%9C%89%E7%94%A8%E3%80%82%20fcntl,%28%29%20%E5%87%BD%E6%95%B0%E8%BF%98%E7%94%A8%E4%BA%8E%E5%AF%B9%E6%96%87%E4%BB%B6%E8%AE%BE%E7%BD%AE%E5%BC%BA%E5%88%B6%E9%94%81%E5%AE%9A%E3%80%82%20F_SETLK%20%E6%A0%87%E5%BF%97%E7%94%A8%E4%BA%8E%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%8A%E8%AE%BE%E7%BD%AE%E5%BC%BA%E5%88%B6%E9%94%81%E5%AE%9A%E3%80%82)
