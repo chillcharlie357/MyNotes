@@ -170,7 +170,7 @@ module_exit(hello_exit);
 3. 创建并初始化定义**结构体 cdev**
 	1. `struct cdev *my_cdev = cdev_alloc();`
 	2. `my_cdev->ops = &my_fops;`
-	3. `void cdev_init(struct cdev *cdev, struct file_operations *fops);`
+	3. `void cdev_init(struct cdev *cdev, struct file_operations *fops);`和2功能差不多。
 4. 将**cdev注册到系统**，并和对应的**设备号绑定**
 	- `int cdev_add(struct cdev *dev, dev_t num, unsigned int count);`
 5. 在/dev文件系统中用**mknod创建设备文件**，并将该文件**绑定到设备号上**
