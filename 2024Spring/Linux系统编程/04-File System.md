@@ -673,3 +673,10 @@ struct flock{
 	1. F_GETLK：获得文件的封锁信息
 	2. F_SETLK：对文件的某个区域封锁或解除封锁
 	3. F_SETLKW：功能同F_SETLK, wait方式
+
+
+## flock
+
+```c
+int flock(int fd, int operation);
+```
