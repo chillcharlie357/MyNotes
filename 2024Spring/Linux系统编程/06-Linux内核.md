@@ -106,10 +106,72 @@ e.g. U盘驱动
 3. 小内核栈
 	- 内核一般不用递归否则会占用大量内存空间
 4. 并发考虑
+5. 内核代码/Shell脚本没有类型浮点支持
+
+
+```c
+#include <linux/kernel.h>
+#include <linux/module.h>
+#include <linux/init.h>
+static int __init hello_init(void)
+{
+	printk(KERN_INFO "Hello world\n");
+	return 0;
+}
+static void __exit hello_exit(void)
+{
+	printk(KERN_INFO "Goodbye world\n");
+}
+module_init(hello_init);
+module_exit(hello_exit);
+```
 
 
 ## 2.6. 编译
 
 
 内核Makefile和一般的不一样，而且经常更新
+
+
+
+## 模块参数传递
+
+- 传递方式
+	1. 参数在模块加载时传递
+		- shell: `insmod hello.ko test=2`
+	2. 参数需要使用module_param宏来声明
+		- `module_param(变量名称，类型, 访问许可掩码)`
+- 支持参数类型
+	- Byte, short, ushort, int, uint, long, ulong, bool, charp
+	- Array (module_param_array(name, type, nump, perm))
+
+```c
+#include <linux/kernel.h>
+#include <linux/module.h>
+#include <linux/init.h>
+#include <linux/moduleparam.h>
+
+static int test;
+module_param(test, int, 0644);
+
+static int __init hello_init(void)
+{
+	printk(KERN_INFO “Hello world test=%d \n” , test);
+	return 0;
+}
+static void __exit hello_exit(void)
+{
+	printk(KERN_INFO "Goodbye world\n");
+}
+
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Test");
+MODULE_AUTHOR("xxx");
+module_init(hello_init);
+module_exit(hello_exit);
+```
+
+
+
+# 字符型设备
 
