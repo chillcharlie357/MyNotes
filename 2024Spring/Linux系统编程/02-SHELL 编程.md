@@ -193,9 +193,9 @@ esac
 
 ```shell
 #!/bin/sh
-echo “Is this morning? Please answer yes or no.”
+echo "Is this morning? Please answer yes or no."
 read answer
-case “$answer” in
+case "$answer" in
 	yes | y | Yes | YES) echo “Good morning!” ;;
 	no | n | No | NO) echo “Good afternoon!” ;;
 	*) echo “Sorry, answer not recognized.” ;;
@@ -246,14 +246,14 @@ done
 
 ```shell
 quit=n
-while [ “$quit” != “y” ]; do
+while [ "$quit" != "y" ]; do
 	read menu_choice
-	case “$menu_choice” in
+	case "$menu_choice" in
 		a) do_something;;
 		b) do_anotherthing;;
 		…
 		q|Q) quit=y;;
-		*) echo “Sorry, choice not recognized.”;;
+		*) echo "Sorry, choice not recognized.";;
 	esac
 done
 ```
@@ -291,7 +291,7 @@ done
 clear
 select item in Continue Finish
 do
-	case “$item” in
+	case "$item" in
 		Continue) ;;
 		Finish) break ;;
 		*) echo “Wrong choice! Please select again!” ;;
@@ -339,7 +339,7 @@ statements
 }
 ```
 
-- 局部变量
+- **局部变量**
 	- local关键字
 - 默认全局变量
 - 函数调用
@@ -358,10 +358,10 @@ yesno()
 	msg=“$1”
 	def=“$2”
 	while true; do
-		echo ” ”
-		echo “$msg”
+		echo ""
+		echo "$msg"
 		read answer
-		if [ -n “$answer” ]; then
+		if [ -n "$answer" ]; then
 			...
 		else
 			return $def
@@ -404,7 +404,7 @@ echo “The current directory is $(pwd)”
 ```shell
 #!/bin/sh
 x=0
-while [ “$x” –ne 10 ]; do
+while [ "$x" –ne 10 ]; do
 	echo $x
 	x=$(($x+1))
 done
@@ -424,8 +424,8 @@ exit 0
 ```shell
 #!/bin/sh
 i=1
-while [ “$i” –ne 10 ]; do
-	touch “${i}_tmp”
+while [ "$i" –ne 10 ]; do
+	touch "${i}_tmp"
 	i=$(($i+1))
 done
 exit 0
