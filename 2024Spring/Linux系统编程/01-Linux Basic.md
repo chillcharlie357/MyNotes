@@ -168,7 +168,7 @@ Linux下的文件类型：
 
 ## 8.1. 概述
 
-进程是一个正在执行的程序实例。由执行程序、它的当前值、状态信息以及通过操作系 统管理此进程执行情况的资源组成。
+进程是一个正在执行的程序实例。由执行程序、它的当前值、状态信息以及通过操作系统管理此进程执行情况的资源组成。
 
 - Linux中每个进程都有父进程(除了init/init.rb)，形成<span style="background:rgba(3, 135, 102, 0.2)">树状结构</span>
 	- init是kernel启动的第一个用户进程，PID 1
@@ -187,7 +187,7 @@ Linux下的文件类型：
     SIGSPEC or SIGNUM.
 	1. `kill {{process_id}}`，默认发送SIGTERM，终止进程
 	2. `kill -{{9|KILL}} {{process_id}}`，发送SIGTERM
-	3. `kill -{{17|STOP}} {{process_id}}`，停止进程，知道收到SIGCONT信号
+	3. `kill -{{17|STOP}} {{process_id}}`，停止进程，直到收到SIGCONT信号
 5. nohup: run a command, ignoring hangup signals
 6. nice, renice: 调整进程优先级
 	- nice: 修改默认优先级
