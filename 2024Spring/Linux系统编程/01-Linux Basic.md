@@ -247,8 +247,8 @@ PATH里的目录下的可执行文件都能直接在shell中调用
 # 13. 高级命令和正则表达式
 
 1. find
-	- `find {{root_path}} -name '{{*.ext}}'`
-	- `find / -type f -exec ls -lh {} \;`
+	- `find {{root_path}} -name "{{*.ext}}"`
+	- find / -type f -exec ls -lh {} \\;
 2. grep
 	- 在文件里查找字符串
 	- `grep "{{search_pattern}}" {{path/to/file}}`

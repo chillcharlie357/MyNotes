@@ -42,6 +42,7 @@ sh ./script_file
 
 1. 脚本文件不需要执行权限
 2. 会忽略`#!/bin/bash`行(shebang行)，直接在`sh`种执行
+	- Shebang 的名称来源于SHArp和bang，即“井号”和“感叹号”的缩写
 
 ### 1.3.2. 给脚本文件设置执行权限后执行
 
