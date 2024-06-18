@@ -125,7 +125,7 @@ main(){
 }
 ```
 
-## 5.2. opne/creat function
+## 5.2. open/creat function
 
 ```c
 #include <sys/types.h> 
