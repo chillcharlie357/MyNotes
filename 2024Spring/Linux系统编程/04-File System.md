@@ -36,6 +36,14 @@ modified:  2024-06-18 14:06
 
 # 3. Virtual File system Switch(VFS)
 
+- 作用
+	1. 抽象接口，上层程序可以通过统一的系统调用访问不同文件系统
+	2. 多文件系统共存
+	3. 维护文件和目录的树状结构
+	4. 文件权限控制
+	5. 文件缓存和读写优化，VFS与内核的内存管理子系统协作，支持文件数据的缓存和页缓存机制
+	6. 网络文件支持
+
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F15%2F10-27-12-c665556f9e0546a59447cd52982131cb-20240415102711-2fedd7.png)
 
 **位于内核态**，比系统调用更加底层。
