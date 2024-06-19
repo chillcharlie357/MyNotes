@@ -1,7 +1,9 @@
 ---
 aliases: 
-tags: 
-categories: 
+tags:
+  - 2024_Spring_软件系统设计
+  - 课程
+categories: 2024_Spring_软件系统设计
 sticky: 
 thumbnail: 
 cover: 
