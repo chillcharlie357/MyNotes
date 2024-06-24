@@ -213,5 +213,5 @@ modified:  2024-06-23 20:06
 1. 命令模式：GUI对象给业务逻辑对象发请求执行一些逻辑
 	- ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F23%2F15-23-40-e03f2709770c5dce4e1aa23be3920ae4-20240623152339-81aaeb.png)
 
-2. 观察者模式: MVC使用了观察者模式
-3. 组合模式：GUI界面的元素可以嵌套，呈现树状结构
+1. 观察者模式: MVC使用了观察者模式
+2. 组合模式：GUI界面的元素可以嵌套，呈现树状结构
