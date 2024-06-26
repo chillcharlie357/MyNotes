@@ -1,11 +1,3 @@
 {
-  "accentColor": "",
-  "theme": "system",
-  "cssTheme": "PLN",
-  "interfaceFontFamily": "",
-  "textFontFamily": "",
-  "monospaceFontFamily": "",
-  "baseFontSize": 17,
-  "nativeMenus": false,
-  "translucency": false
+  "cssTheme": "PLN"
 }
