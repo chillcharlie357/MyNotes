@@ -89,4 +89,5 @@ z_q = e + (z - e).detach()
 - 在训练过程中和encoder、decoder一起更新参数
 - 初始数据：第一个batch中encoder输出的latent embedding，使用kmeans得到聚类中心作为初始的codebook
 	- 可以避免codebook类别不均匀，提高codebook的使用率
+	- 也可以直接随机初始化
 - vq-vae只有一个codebook，rq-vae有多个并且粒度越来越细
