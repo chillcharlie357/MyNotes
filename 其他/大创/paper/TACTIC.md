@@ -1,4 +1,4 @@
-annotation-target::![[TACTIC.pdf]]
+annotation-target::![[assets/TACTIC.pdf]]
 
 >%%
 >```annotation-json
