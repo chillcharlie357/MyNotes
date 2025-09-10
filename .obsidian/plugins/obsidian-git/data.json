@@ -1,13 +1,17 @@
 {
   "commitMessage": "vault backup: {{date}}  numfiles:{{numFiles}}",
+  "autoCommitMessage": "vault backup: {{date}}",
+  "commitMessageScript": "",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 1,
   "autoPushInterval": 0,
   "autoPullInterval": 5,
   "autoPullOnBoot": true,
+  "autoCommitOnlyStaged": false,
   "disablePush": false,
   "pullBeforePush": true,
   "disablePopups": false,
+  "showErrorNotices": true,
   "disablePopupsForNoChanges": false,
   "listChangedFilesInMessageBody": true,
   "showStatusBar": true,
@@ -29,6 +33,7 @@
   "showFileMenu": true,
   "authorInHistoryView": "full",
   "dateInHistoryView": true,
+  "diffStyle": "split",
   "lineAuthor": {
     "show": false,
     "followMovement": "inactive",
@@ -53,6 +58,5 @@
     "gutterSpacingFallbackLength": 12,
     "lastShownAuthorDisplay": "initials",
     "lastShownDateTimeFormatOptions": "date"
-  },
-  "autoCommitMessage": "vault backup: {{date}}"
+  }
 }
