@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: myc2rust
 date:  2025-09-17 16:09
-modified:  2025-09-17 17:09
+modified:  2025-09-18 20:09
 ---
 
 # 项目环境配置
@@ -18,6 +18,7 @@ modified:  2025-09-17 17:09
 1. 需要Linux环境
 2. 配置c2rust环境：[GitHub - immunant/c2rust: Migrate C code to Rust](https://github.com/immunant/c2rust)
 3. 安装Bear: [GitHub - rizsotto/Bear: Bear is a tool that generates a compilation database for clang tooling.](https://github.com/rizsotto/Bear)，生成`compile_commands.json`
+	- 安装`libclang-dev` 和 `llvm-dev` 包
 
 # 架构
 
