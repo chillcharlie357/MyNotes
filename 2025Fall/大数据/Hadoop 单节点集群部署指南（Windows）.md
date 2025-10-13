@@ -27,22 +27,11 @@ modified:  2025-10-13 14:10
 
 ### 2.2 必需软件
 
-#### 2.2.1 Java 环境
-
-- **Java 版本**：推荐使用 OpenJDK 8 [1]
-- **环境变量**：需要正确配置 `JAVA_HOME`
-
-#### 2.2.2 SSH 服务
-
-- **ssh**：用于远程连接和管理 Hadoop 守护进程
-- **sshd**：SSH 守护进程必须运行
-- **pdsh**：（可选）用于更好的 SSH 资源管理 [2]
-
-#### 2.2.3 **Windows终端**
+#### 2.2.1 **Windows终端**
 
 - 可从微软商店下载：[Windows Terminal - Windows官方下载 \| 微软应用商店 \| Microsoft Store](https://apps.microsoft.com/detail/9n0dx20hk701?hl=zh-CN&gl=CN)。
 
-#### 2.2.4 **WSL**
+#### 2.2.2 **WSL**
 
 - 安装方式：在Windows终端中输入`wsl --install`。
 	- [安装 WSL \| Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/wsl/install)
