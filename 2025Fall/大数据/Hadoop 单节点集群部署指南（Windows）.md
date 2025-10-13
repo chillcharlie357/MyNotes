@@ -303,6 +303,9 @@ sudo apt install xfsprogs -y
 
 - 在Windows中新建一个虚拟磁盘，并挂在到WSL
 
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2025%2F10%2F13%2F20-40-28-a234a669b7266d8f77cfbd120ca55cf1-20251013204027-fd0e25.png)
+
+
 ```PowerShell
 
 ```
