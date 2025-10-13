@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: Hadoop 单节点集群部署指南（Windows）
 date:  2025-10-13 11:10
-modified:  2025-10-13 20:10
+modified:  2025-10-13 21:10
 ---
 
 # Hadoop 单节点集群部署指南（Windows）
@@ -301,38 +301,24 @@ nano $HADOOP_HOME/etc/hadoop/yarn-site.xml
 sudo apt install xfsprogs -y
 ```
 
-- 在Windows中新建一个虚拟磁盘，并挂在到WSL
-	1. 打开 `diskmgmt.msc`（磁盘管理）
-	2. 菜单：**操作 → 创建 VHD**
-	3. 选择路径（如 `D:\env\WSL\hadoop.vhdx`）
-	4. 指定大小和 **固定/动态**
-	5. 点击确定 → 系统会生成一个新的 VHD/VHDX
-	6. 然后在 WSL 使用：`wsl --mount "D:\env\WSL\hadoop.vhdx" --bare`
-		- `--bare` 表示挂载为裸块设备，不自动挂载到 Linux 文件系统
-
-![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2025%2F10%2F13%2F20-55-16-47617ba6bb86e137df59311facf644be-20251013205515-d2160c.png)
+- 在WSL 内创建loop device，并挂载到/mnt/hadoop
 
 ```PowerShell
+# WSL 内创建 5GB 文件
+fallocate -l 5G ~/hadoop_disk.img
 
-```
+# 挂载到 loop 设备
+sudo losetup -fP ~/hadoop_disk.img
 
-```shell
-# 列出所有块设备（block devices）
-lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT
+# 查看 loop 设备
+lsblk
 
-# NAME
-#    FSTYPE   SIZE MOUNTPOINT
-# sda ext4   388.4M
-# sdb ext4     186M
-# sdc swap       4G [SWAP]
-# sdd ext4       1T /mnt/wslg/distro
-# sde ext4       1T
-
-# 如果磁盘尚未格式化为 xfs，先进行格式化
-# sudo mkfs.xfs -f /dev/sdb  # 根据实际设备名调整，-f 强制格式化
+# 格式化 XFS
+sudo mkfs.xfs /dev/loop0
 
 # 确保磁盘已挂载到 /mnt/hadoop（使用 xfs 优化选项）
-# sudo mount -t xfs -o noatime,nodiratime,logbufs=8,logbsize=32k /dev/sdb /mnt/hadoop
+sudo mkdir -p /mnt/hadoop
+sudo mount -t xfs -o noatime,nodiratime,logbufs=8,logbsize=32k /dev/loop0 /mnt/hadoop
 
 # 验证挂载状态和文件系统类型
 df -h /mnt/hadoop
@@ -359,10 +345,154 @@ chmod 755 /mnt/hadoop/tmp
 
 ## 6 SSH 无密码登录配置
 
-## 7 验证安装
+### 6.1 生成 SSH 密钥
 
-## 8 常用管理命令
+```shell
+# 生成 SSH 密钥对
+ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 
-## 9 故障排除
+# 将公钥添加到授权文件
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
-## 10 总结
+# 设置正确的权限
+chmod 0600 ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+```
+
+### 6.2 测试 SSH 连接
+
+```shell
+# 测试无密码 SSH 连接
+ssh localhost
+
+# 如果成功，应该能够无密码登录
+# 退出 SSH 会话
+exit
+```
+
+## 7 启动 Hadoop 集群
+
+### 7.1 格式化 HDFS
+
+```shell
+# 验证数据目录是否存在
+ls -la /mnt/hadoop/data/
+
+# 格式化 NameNode（仅在首次启动时执行）
+hdfs namenode -format
+
+# 确认格式化操作，输入 'Y' 并按回车
+# 格式化成功后会在 /mnt/hadoop/data/namenode 目录下创建相关文件
+```
+
+### 7.2 启动 HDFS 服务
+
+```shell
+# 启动 HDFS 守护进程
+start-dfs.sh
+
+# 验证进程是否启动
+jps
+```
+
+预期输出应包含：
+
+- NameNode
+- DataNode
+- SecondaryNameNode
+
+### 7.3 启动 YARN 服务
+
+```shell
+# 启动 YARN 守护进程
+start-yarn.sh
+
+# 再次验证进程
+jps
+```
+
+预期输出应包含：
+
+- NameNode
+- DataNode
+- SecondaryNameNode
+- ResourceManager
+- NodeManager
+
+## 8 验证安装
+
+### 8.1 Web 界面访问
+
+#### 8.1.1 本地访问
+
+如果您在本地机器上部署 Hadoop，可以直接访问以下地址：
+
+- **HDFS Web UI**：[http://localhost:9870/](http://localhost:9870/)
+- **YARN Web UI**：[http://localhost:8088/](http://localhost:8088/)
+
+#### 8.1.3 Web UI 功能说明
+
+- **HDFS Web UI**：查看 HDFS 状态、文件系统信息、DataNode 状态等
+- **YARN Web UI**：查看 YARN 集群状态、应用程序信息、资源使用情况等
+
+### 8.2 系统状态检查
+
+```shell
+# 检查磁盘使用情况
+df -h /mnt/hadoop
+
+# 检查 Hadoop 数据目录
+ls -la /mnt/hadoop/data/
+
+# 查看 HDFS 状态报告
+hdfs dfsadmin -report
+```
+
+### 8.3 HDFS 基本操作测试
+
+```shell
+# 创建用户目录
+hdfs dfs -mkdir -p /user/hadoop
+
+# 创建测试目录
+hdfs dfs -mkdir /user/hadoop/input
+
+# 上传测试文件
+hdfs dfs -put $HADOOP_HOME/etc/hadoop/*.xml /user/hadoop/input
+
+# 查看上传的文件
+hdfs dfs -ls /user/hadoop/input
+
+# 查看文件内容
+hdfs dfs -cat /user/hadoop/input/core-site.xml
+```
+
+### 8.4 运行 MapReduce 示例
+
+**重要提醒**：如果您在配置 `mapred-site.xml` 时添加了 `HADOOP_MAPRED_HOME` 环境变量，需要重启 Hadoop 服务：
+
+```shell
+# 停止所有服务
+stop-all.sh
+
+# 启动所有服务
+start-all.sh
+
+# 验证服务状态
+jps
+```
+
+然后运行 MapReduce 示例：
+
+```shell
+# 运行 grep 示例程序
+hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.4.2.jar grep /user/hadoop/input /user/hadoop/output 'dfs[a-z.]+'
+
+# 查看输出结果
+hdfs dfs -cat /user/hadoop/output/*
+
+# 将结果下载到本地
+hdfs dfs -get /user/hadoop/output output
+cat output/*
+```
+
