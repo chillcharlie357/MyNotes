@@ -8,9 +8,9 @@ cover:
 excerpt: false
 mathjax: true
 comment: true
-title: Hadoop 单节点集群部署指南（WSL）
+title: Hadoop 单节点集群部署指南（Windows）
 date:  2025-10-13 11:10
-modified:  2025-10-13 14:10
+modified:  2025-10-13 19:10
 ---
 
 # Hadoop 单节点集群部署指南（Windows）
@@ -158,6 +158,176 @@ hadoop version
 ```
 
 ## 5 Hadoop 配置
+
+### 5.1  配置 Hadoop 环境
+
+编辑 `$HADOOP_HOME/etc/hadoop/hadoop-env.sh` 文件：
+
+```shell
+# 编辑 hadoop-env.sh
+nano $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+
+# 添加或修改以下行
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+```
+
+### 5.2 配置核心组件
+
+#### 5.2.1 配置 core-site.xml
+
+```shell
+# 编辑 core-site.xml
+nano $HADOOP_HOME/etc/hadoop/core-site.xml
+```
+
+添加以下配置内容：
+
+```xml
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+        <description>默认文件系统 URI</description>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/mnt/hadoop/tmp</value>
+        <description>Hadoop 临时目录（使用独立磁盘避免填满根分区）</description>
+    </property>
+</configuration>
+```
+
+#### 5.2.2 配置 hdfs-site.xml
+
+```shell
+# 编辑 hdfs-site.xml
+nano $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+```
+
+添加以下配置内容：
+
+```xml
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+        <description>数据块副本数量（单节点设置为1）</description>
+    </property>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>/mnt/hadoop/data/namenode</value>
+        <description>NameNode 数据存储目录（使用独立磁盘）</description>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>/mnt/hadoop/data/datanode</value>
+        <description>DataNode 数据存储目录（使用独立磁盘）</description>
+    </property>
+</configuration>
+```
+
+#### 5.2.3 配置 mapred-site.xml
+
+```shell
+# 编辑 mapred-site.xml
+nano $HADOOP_HOME/etc/hadoop/mapred-site.xml
+```
+
+添加以下配置内容：
+
+```xml
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+        <description>MapReduce 框架名称</description>
+    </property>
+    <property>
+        <name>yarn.app.mapreduce.am.env</name>
+        <value>HADOOP_MAPRED_HOME=/home/hadoop/hadoop</value>
+        <description>ApplicationMaster 环境变量</description>
+    </property>
+    <property>
+        <name>mapreduce.map.env</name>
+        <value>HADOOP_MAPRED_HOME=/home/hadoop/hadoop</value>
+        <description>Map 任务环境变量</description>
+    </property>
+    <property>
+        <name>mapreduce.reduce.env</name>
+        <value>HADOOP_MAPRED_HOME=/home/hadoop/hadoop</value>
+        <description>Reduce 任务环境变量</description>
+    </property>
+</configuration>
+```
+
+**重要提示**：
+
+- 配置文件中只能有一个 `<configuration>` 标签
+- 请根据实际的 Hadoop 安装路径调整 `HADOOP_MAPRED_HOME` 的值
+- 必须使用绝对路径
+
+#### 5.2.4 配置 yarn-site.xml
+
+```shell
+# 编辑 yarn-site.xml
+nano $HADOOP_HOME/etc/hadoop/yarn-site.xml
+```
+
+添加以下配置内容：
+
+```xml
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+        <description>NodeManager 辅助服务</description>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>localhost</value>
+        <description>ResourceManager 主机名</description>
+    </property>
+</configuration>
+```
+
+### 5.3 准备磁盘和创建必要目录
+
+#### 5.3.1 挂载独立磁盘（开发测试环境）
+
+```Shell
+%% 安装XFS 文件系统的工具集 %%
+sudo apt install xfsprogs -y
+```
+
+```shell
+# 如果磁盘尚未格式化为 xfs，先进行格式化
+# sudo mkfs.xfs -f /dev/sdb1  # 根据实际设备名调整，-f 强制格式化
+
+# 确保磁盘已挂载到 /mnt/hadoop（使用 xfs 优化选项）
+# sudo mount -t xfs -o noatime,nodiratime,logbufs=8,logbsize=32k /dev/sdb1 /mnt/hadoop
+
+# 验证挂载状态和文件系统类型
+df -h /mnt/hadoop
+mount | grep /mnt/hadoop
+
+# 设置挂载点权限
+sudo chown -R $USER:$USER /mnt/hadoop
+sudo chmod 755 /mnt/hadoop
+```
+
+#### 5.3.2 创建 Hadoop 数据目录
+
+```shell
+# 创建 Hadoop 数据目录（使用独立磁盘）
+mkdir -p /mnt/hadoop/data/namenode
+mkdir -p /mnt/hadoop/data/datanode
+mkdir -p /mnt/hadoop/tmp
+
+# 设置目录权限
+chmod 755 /mnt/hadoop/data/namenode
+chmod 755 /mnt/hadoop/data/datanode
+chmod 755 /mnt/hadoop/tmp
+```
 
 ## 6 SSH 无密码登录配置
 
