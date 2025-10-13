@@ -302,9 +302,15 @@ sudo apt install xfsprogs -y
 ```
 
 - 在Windows中新建一个虚拟磁盘，并挂在到WSL
+	1. 打开 `diskmgmt.msc`（磁盘管理）
+	2. 菜单：**操作 → 创建 VHD**
+	3. 选择路径（如 `D:\env\WSL\hadoop.vhdx`）
+	4. 指定大小和 **固定/动态**
+	5. 点击确定 → 系统会生成一个新的 VHD/VHDX
+	6. 然后在 WSL 使用：`wsl --mount "D:\env\WSL\hadoop.vhdx" --bare`
+		- `--bare` 表示挂载为裸块设备，不自动挂载到 Linux 文件系统
 
-![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2025%2F10%2F13%2F20-40-28-a234a669b7266d8f77cfbd120ca55cf1-20251013204027-fd0e25.png)
-
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2025%2F10%2F13%2F20-55-16-47617ba6bb86e137df59311facf644be-20251013205515-d2160c.png)
 
 ```PowerShell
 
