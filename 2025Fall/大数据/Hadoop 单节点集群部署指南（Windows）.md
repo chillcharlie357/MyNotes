@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: Hadoop 单节点集群部署指南（Windows）
 date:  2025-10-13 11:10
-modified:  2025-10-13 19:10
+modified:  2025-10-13 20:10
 ---
 
 # Hadoop 单节点集群部署指南（Windows）
@@ -294,17 +294,32 @@ nano $HADOOP_HOME/etc/hadoop/yarn-site.xml
 
 #### 5.3.1 挂载独立磁盘（开发测试环境）
 
+- 安装XFS工具集
+
 ```Shell
 %% 安装XFS 文件系统的工具集 %%
 sudo apt install xfsprogs -y
 ```
 
+- 在Windows
+
 ```shell
+# 列出所有块设备（block devices）
+lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT
+
+# NAME
+#    FSTYPE   SIZE MOUNTPOINT
+# sda ext4   388.4M
+# sdb ext4     186M
+# sdc swap       4G [SWAP]
+# sdd ext4       1T /mnt/wslg/distro
+# sde ext4       1T
+
 # 如果磁盘尚未格式化为 xfs，先进行格式化
-# sudo mkfs.xfs -f /dev/sdb1  # 根据实际设备名调整，-f 强制格式化
+# sudo mkfs.xfs -f /dev/sdb  # 根据实际设备名调整，-f 强制格式化
 
 # 确保磁盘已挂载到 /mnt/hadoop（使用 xfs 优化选项）
-# sudo mount -t xfs -o noatime,nodiratime,logbufs=8,logbsize=32k /dev/sdb1 /mnt/hadoop
+# sudo mount -t xfs -o noatime,nodiratime,logbufs=8,logbsize=32k /dev/sdb /mnt/hadoop
 
 # 验证挂载状态和文件系统类型
 df -h /mnt/hadoop
