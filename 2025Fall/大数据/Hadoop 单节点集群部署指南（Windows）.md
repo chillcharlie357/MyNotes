@@ -301,7 +301,11 @@ nano $HADOOP_HOME/etc/hadoop/yarn-site.xml
 sudo apt install xfsprogs -y
 ```
 
-- 在Windows
+- 在Windows中新建一个虚拟磁盘，并挂在到WSL
+
+```PowerShell
+
+```
 
 ```shell
 # 列出所有块设备（block devices）
