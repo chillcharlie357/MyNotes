@@ -5,7 +5,7 @@
 
 本文档详细介绍如何在 **Windows 系统上的WSL环境**搭建 Hadoop 单节点集群，采用 Pseudo-Distributed Operation（伪分布式）模式。在此模式下，每个 Hadoop 守护进程运行在独立的 Java 进程中，模拟分布式环境，适用于开发和测试场景。
 
-WSL中操作与Ubuntu基本一致，Ubuntu环境部署可参考[Big-Data-Theory-and-Practice/env-setup/single-node-cluster.md at main · ForceInjection/Big-Data-Theory-and-Practice · GitHub](https://github.com/ForceInjection/Big-Data-Theory-and-Practice/blob/main/env-setup/single-node-cluster.md)。
+WSL中操作与Ubuntu基本一致，主要区别在5.3。Ubuntu环境部署可参考[Big-Data-Theory-and-Practice/env-setup/single-node-cluster.md at main · ForceInjection/Big-Data-Theory-and-Practice · GitHub](https://github.com/ForceInjection/Big-Data-Theory-and-Practice/blob/main/env-setup/single-node-cluster.md)。
 
 ## 2 系统要求
 
@@ -17,7 +17,7 @@ WSL中操作与Ubuntu基本一致，Ubuntu环境部署可参考[Big-Data-Theory-
 
 #### 2.2.1 **Windows终端**
 
-- 可从微软商店下载：[Windows Terminal - Windows官方下载 \| 微软应用商店 \| Microsoft Store](https://apps.microsoft.com/detail/9n0dx20hk701?hl=zh-CN&gl=CN)。
+- [Windows Terminal - Windows官方下载 \| 微软应用商店 \| Microsoft Store](https://apps.microsoft.com/detail/9n0dx20hk701?hl=zh-CN&gl=CN)。
 
 #### 2.2.2 **WSL**
 
