@@ -1,23 +1,11 @@
----
-aliases: 
-tags: 
-categories:
-sticky:
-thumbnail:
-cover: 
-excerpt: false
-mathjax: true
-comment: true
-title: Hadoop 单节点集群部署指南（Windows）
-date:  2025-10-13 11:10
-modified:  2025-10-13 21:10
----
 
 # Hadoop 单节点集群部署指南（Windows）
 
 ## 1 概述
 
-本文档详细介绍如何在 Windows 系统上的WSL环境搭建 Hadoop 单节点集群，采用 Pseudo-Distributed Operation（伪分布式）模式。在此模式下，每个 Hadoop 守护进程运行在独立的 Java 进程中，模拟分布式环境，适用于开发和测试场景。
+本文档详细介绍如何在 **Windows 系统上的WSL环境**搭建 Hadoop 单节点集群，采用 Pseudo-Distributed Operation（伪分布式）模式。在此模式下，每个 Hadoop 守护进程运行在独立的 Java 进程中，模拟分布式环境，适用于开发和测试场景。
+
+WSL中操作与Ubuntu基本一致，Ubuntu环境部署可参考[Big-Data-Theory-and-Practice/env-setup/single-node-cluster.md at main · ForceInjection/Big-Data-Theory-and-Practice · GitHub](https://github.com/ForceInjection/Big-Data-Theory-and-Practice/blob/main/env-setup/single-node-cluster.md)。
 
 ## 2 系统要求
 
@@ -301,7 +289,21 @@ nano $HADOOP_HOME/etc/hadoop/yarn-site.xml
 sudo apt install xfsprogs -y
 ```
 
-- 在WSL 内创建loop device，并挂载到/mnt/hadoop
+- 查看挂载的磁盘
+
+```Shell
+lsblk
+
+# NAME  MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+# sda     8:0    0 388.4M  1 disk
+# sdb     8:16   0   186M  1 disk
+# sdc     8:32   0     4G  0 disk [SWAP]
+# sdd     8:48   0     1T  0 disk /mnt/wslg/distro
+                                /
+# 发现无可用磁盘，sda、sdb为只读设备，其他磁盘都已经被挂载
+```
+
+- 如果没有可用的独立磁盘，则在WSL 内创建loop device，并挂载到/mnt/hadoop
 
 ```PowerShell
 # WSL 内创建 5GB 文件
@@ -430,7 +432,7 @@ jps
 - **HDFS Web UI**：[http://localhost:9870/](http://localhost:9870/)
 - **YARN Web UI**：[http://localhost:8088/](http://localhost:8088/)
 
-#### 8.1.3 Web UI 功能说明
+#### 8.1.2 Web UI 功能说明
 
 - **HDFS Web UI**：查看 HDFS 状态、文件系统信息、DataNode 状态等
 - **YARN Web UI**：查看 YARN 集群状态、应用程序信息、资源使用情况等
@@ -495,4 +497,3 @@ hdfs dfs -cat /user/hadoop/output/*
 hdfs dfs -get /user/hadoop/output output
 cat output/*
 ```
-
