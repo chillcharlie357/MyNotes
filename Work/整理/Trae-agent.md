@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: Trae-agent
 date:  2025-11-26 21:11
-modified:  2025-11-26 21:11
+modified:  2025-11-27 17:11
 ---
 
 # Trae-agent
@@ -123,3 +123,7 @@ self.agent.new_task(task, extra_args, tool_names)
 // 执行创建的task
 execution = await self.agent.execute_task()
 ```
+
+# 日志记录
+
+[Search \| DeepWiki](https://deepwiki.com/search/llm-agent_9d0d1871-c8ba-4b35-a5ce-ff97a64d5066?mode=fast)
