@@ -17,6 +17,8 @@ modified:  2025-11-26 21:11
 
 Trae Agent是一个基于LLM的软件工程任务代理系统，采用模块化、可扩展的架构设计。
 
+[Search \| DeepWiki](https://deepwiki.com/search/trae-agent_1b601bed-e58d-4174-b16a-2dd1dd7d9111)
+
 ## 架构特点
 
 1. **模块化设计**: 各组件职责清晰，易于扩展和维护
@@ -56,9 +58,6 @@ Trae Agent是一个基于LLM的软件工程任务代理系统，采用模块化�
 - **TrajectoryRecorder**: 记录LLM交互和agent执行步骤，支持调试和分析
 - 自动记录输入消息、响应、工具调用、执行结果等详细信息
 
-
-
-
 ## 工作流程
 
 ```mermaid
@@ -77,4 +76,50 @@ flowchart TB
     工具执行器 --> MCP工具
 ```
 
+### trae-cli
 
+1. trae-cli解析命令行参数，创建Agent实例
+
+```python
+    agent = Agent(
+        agent_type,
+        config,
+        trajectory_file,
+        cli_console,
+        docker_config=docker_config,
+        docker_keep=docker_keep,
+    )
+```
+
+2. trae-cli启动异步任务
+
+```python
+_ = asyncio.run(agent.run(task, task_args))
+```
+
+### agent工厂类
+
+1. 根据agent_type构造具体Agent是实现类
+
+```python
+match self.agent_type:
+    case AgentType.TraeAgent:
+        if config.trae_agent is None:
+            raise ValueError("trae_agent_config is required for TraeAgent")
+        from .trae_agent import TraeAgent
+
+        self.agent_config: AgentConfig = config.trae_agent
+        self.agent: TraeAgent = TraeAgent(
+        self.agent_config, docker_config=docker_config, docker_keep=docker_keep)
+```
+
+2. 初始化待执行的新任务
+3. 初始化MCP
+4. 执行任务
+
+```python
+// Trae Agent把待执行的任务抽象为task
+self.agent.new_task(task, extra_args, tool_names)
+// 执行创建的task
+execution = await self.agent.execute_task()
+```

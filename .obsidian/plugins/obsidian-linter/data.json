@@ -115,9 +115,10 @@
       "no-bare-uris": false
     },
     "ordered-list-style": {
-      "enabled": true,
+      "enabled": false,
       "number-style": "ascending",
-      "list-end-style": "."
+      "list-end-style": ".",
+      "preserve-start": true
     },
     "proper-ellipsis": {
       "enabled": false
