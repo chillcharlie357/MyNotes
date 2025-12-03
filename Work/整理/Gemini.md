@@ -20,27 +20,31 @@ modified:  2025-12-03 20:12
 ### 安装Node
 
 - mac/linux/wsl可使用nvm安装node
-    
     - [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 
+```shell
 wget -qOhttps://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash  
 nvm install --lts
+```
 
 - windows：
-    
     - [https://nodejs.org/en/download/current](https://nodejs.org/en/download/current)
 
 ### 安装gemini-cli
 
 - 使用npm安装gemini-cli
 
+```shell
 npm install -g @google/gemini-cli
+```
 
 ## 运行
 
 - 在终端执行：
 
+```shell
 geimni
+```
 
 ### API选择
 
@@ -65,47 +69,50 @@ geimni
 - 自动更新至最新模型
 
 - 需要配置`GOOGLE_CLOUD_PROJE`或`GOOGLE_CLOUD_PROJECT_ID`环境变量：
-    
     1. 打开Google Cloud Console: `https://console.cloud.google.com`
-        
     2. 新建一个项目或者选择一个已有的项目，复制项目ID
-        
     3. 启用`Gemini for Google Cloud`服务
-        
         - [https://console.cloud.google.com/marketplace/product/google/cloudaicompanion.googleapis.com](https://console.cloud.google.com/marketplace/product/google/cloudaicompanion.googleapis.com)
-            
     4. 配置环境变量
 
 # 方法1： 配置用户环境变量配置文件，如~/.bashrc  
 
+```shell
 echo 'export GOOGLE_CLOUD_PROJECT="YOUR_PROJECT_ID"' >> ~/.bashrc  
-source ~/.bashrc  
+source ~/.bashrc
+```
 
 # 方法2：使用.env文件  
 
+```shell
 mkdir -p ~/.gemini  
 cat >> ~/.gemini/.env <<'EOF'  
 GOOGLE_CLOUD_PROJECT="your-project-id"  
 
 # Add other variables like GEMINI_API_KEY as needed  
 
-EOF  
+EOF
+```
 
 ## 2. 使用Gemini API Key
 
 - 需要在环境便利配置API Key
 
+```shell
 # Get your key from https://aistudio.google.com/apikey  
 
 export GEMINI_API_KEY="YOUR_API_KEY"  
 gemini
+```
 
 ## 3. 使用Vertex AI
 
 - 需要配置环境变量
 
+```shell
 # Get your key from Google Cloud Console  
 
 export GOOGLE_API_KEY="YOUR_API_KEY"  
 export GOOGLE_GENAI_USE_VERTEXAI=true  
 gemini
+```
