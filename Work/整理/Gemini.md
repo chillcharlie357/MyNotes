@@ -61,13 +61,9 @@ geimni
 #### 1. 使用Google账号登陆（最推荐）
 
 - 免费套餐：每分钟 60 次请求，每天 1000 次请求
-
 - Gemini 2.5 Pro，100 万令牌上下文窗口
-    
 - 无需管理 API 密钥 - 只需使用Google 帐户登录
-    
 - 自动更新至最新模型
-
 - 需要配置`GOOGLE_CLOUD_PROJE`或`GOOGLE_CLOUD_PROJECT_ID`环境变量：
     1. 打开Google Cloud Console: `https://console.cloud.google.com`
     2. 新建一个项目或者选择一个已有的项目，复制项目ID
