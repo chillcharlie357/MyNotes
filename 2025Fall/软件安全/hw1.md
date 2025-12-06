@@ -1,29 +1,39 @@
----
-aliases: 
-tags: 
-categories:
-sticky:
-thumbnail:
-cover: 
-excerpt: false
-mathjax: true
-comment: true
-title: hw1
-date:  2025-11-29 14:11
-modified:  2025-11-29 15:11
----
+# 第一次实验
 
-![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2025%2F11%2F29%2F14-47-09-a4505fbbb46ffebd7d54dcfca8e0245f-20251129144706-ff1805.png)
+## 题目
 
-# 1. 在IDEA中安装插件并配置规则库
+用 Find Security Bugs (http://find-sec-bugs.github.io) 工具静态分析 WebGoat。WebGoat 是 OWASP 组织研制出的用于进行 Web 漏洞实验的应用平台，官方网址是http: //www.owasp.org.en/owasp-project/webscan-platform。WebGoat 运行在带有 Java 虚拟机的平台之上，当前提供的训练课程有 30 多个，其中包括：跨站点脚本攻击 (XSS)、 访问控制、线程安全、操作隐藏字段、操纵参数、弱会话 Cookie、SQL 盲注、数字型 SQL 注入、宇符串型 SQL 注入和 Web 服务等。完成实验报告
 
-- 安装idea插件  
-![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2025%2F11%2F29%2F15-27-12-102c6de15b4151a4702a978f683c77f0-20251129152710-7c81fb.png)
 
-- 配置规则库  
-![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2025%2F11%2F29%2F15-28-29-fba33d7103b6d9516bb3d36e72fc3e24-20251129152827-2dad1f.png)
 
-# 2. 下载WebGoat源码
+# 实验过程
 
-![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2025%2F11%2F29%2F15-06-21-dd0af6b363fb5d5cb8049a811ca85ee4-20251129150619-79e019.png)
 
+
+### 1. 安装Find Security Bugs插件，配置规则库
+
+![image-20251130141030155](./hw1.assets/image-20251130141030155.png)
+
+
+
+![image-20251130141521819](./hw1.assets/image-20251130141521819.png)
+
+
+
+
+
+### 2. 下载WebGoat源码
+
+
+
+
+
+![image-20251130141857625](./hw1.assets/image-20251130141857625.png)
+
+
+
+### 3. 执行SpotBugs静态分析
+
+
+
+![image-20251130160102905](./hw1.assets/image-20251130160102905.png)
