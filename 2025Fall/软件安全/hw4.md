@@ -19,15 +19,17 @@
 
 
 
-### 2. 使用IDA打开
+### 2. 使用xdg32打开
 
-![[assets/Pasted image 20251207131006.png]]
-
-
+![[assets/Pasted image 20251207133425.png]]
 
 
 
 ### 3. 进行逆向
 
 
+- 直接搜索字符串，发现“注册成功”注释
+![[assets/Pasted image 20251207133605.png]]
 
+- 这行代码附件有一个跳转
+![[assets/Pasted image 20251207134008.png]]
