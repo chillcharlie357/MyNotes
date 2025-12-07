@@ -15,14 +15,19 @@
 ### 1. 下载crakme程序
 
 
+![[assets/Pasted image 20251207130755.png]]
+
+
+
+### 2. 使用IDA打开
+
+![[assets/Pasted image 20251207131006.png]]
 
 
 
 
-## 2. 使用IDA打开Acid burn
+
+### 3. 进行逆向
 
 
 
-
-
-![image-20251206174842950](./hw4.assets/image-20251206174842950.png)
