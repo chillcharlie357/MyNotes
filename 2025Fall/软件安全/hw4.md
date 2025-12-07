@@ -33,3 +33,9 @@
 
 - 这行代码附件有一个跳转
 ![[assets/Pasted image 20251207134008.png]]
+
+- 把跳转修改为nop使其失效
+![[assets/Pasted image 20251207134924.png]]
+
+- 注册成功
+![[assets/Pasted image 20251207135133.png]]

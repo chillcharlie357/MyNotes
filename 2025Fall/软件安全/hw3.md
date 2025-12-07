@@ -133,7 +133,5 @@ screenshot
 
 
 
-
-
 ![image-20251206170529433](./hw3.assets/image-20251206170529433.png)
 
