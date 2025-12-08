@@ -54,11 +54,15 @@ graph TD
 
 -   **核心作用**：保存和管理状态 (`state`)。这个状态不仅包括对话历史，还可以是中间计算结果、Agent的下一步计划等。
 -   **持久化**：`Thread` 的状态是持久的，即使应用重启，也能从上次中断的地方无缝恢复会话。
+	- `graph`中每个节点都是一个`super-step`
+	- `checkpointer`会保存每个`super-step`的`checkpoint`，包含该`node`的元数据和状态
+	- `checkpoint`的集合组成`thread`
 -   **主要用途**：
     1.  **多轮对话**：为每个用户或每个对话创建一个 `Thread`，实现上下文理解。
     2.  **长时任务**：保存复杂任务的每一步进度，支持任务中断和恢复。
     3.  **用户隔离**：在多用户应用中，每个用户的 `Thread` 互相隔离，保证数据安全和个性化体验。
 
+![[assets/Pasted image 20251208174750.png]]
 ### 管理 Thread
 
 通过 `langgraph_sdk` 可以管理 `Thread`：
