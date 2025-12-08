@@ -6,7 +6,11 @@
 
 
 
-# Thread State
+# Thread
+
+- thread: 多轮对话中
+
+[docs.langchain.com/mcp](https://docs.langchain.com/mcp)
 
 
 [Use threads - Docs by LangChain](https://docs.langchain.com/langsmith/use-threads)

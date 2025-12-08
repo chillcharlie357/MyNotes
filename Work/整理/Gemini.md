@@ -28,7 +28,8 @@ nvm install --lts
 ```
 
 - windows：
-    - [https://nodejs.org/en/download/current](https://nodejs.org/en/download/current)
+    - 使用[nvm-windows](https://github.com/coreybutler/nvm-windows)
+    - 或直接安装Node: [https://nodejs.org/en/download/current](https://nodejs.org/en/download/current)
 
 ### 安装gemini-cli
 
