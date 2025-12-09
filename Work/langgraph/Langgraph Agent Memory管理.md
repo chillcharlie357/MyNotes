@@ -367,7 +367,7 @@ MEMORY_CONFIG = {
 **核心价值**：通过有效的记忆管理，AI智能体能够实现真正的连贯性、上下文感知和个性化交互，显著提升用户体验和系统智能水平。
 
 
-# 参考
+# 参考链接
 
 - [让AI智能体拥有像人类的持久记忆：基于LangGraph的长短期记忆管理实践指南](https://mp.weixin.qq.com/s/sARM1GWhKQAHEInhEheZiA)
 - [Short-term memory - Docs by LangChain](https://docs.langchain.com/oss/python/langchain/short-term-memory#trim-messages)

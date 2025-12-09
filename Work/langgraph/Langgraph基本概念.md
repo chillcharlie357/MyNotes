@@ -1,10 +1,12 @@
 
+
+# 低层
 - Graph API
 - Agents
 - Tools
 - Middleware
 
-# 核心概念：Assistant, Thread, Run
+# 高层：Assistant, Thread, Run
 
 LangGraph 通过三个核心概念来管理和执行有状态的 AI 应用：`Thread`（线程）、`Assistant`（助理）和 `Run`（运行）。
 
@@ -51,8 +53,12 @@ graph TD
 
 ## Assistant (助理)
 
-`Assistant` 是一个无状态的配置单元。它定义了 AI 应用的行为逻辑，但本身不存储任何会话状态。这使得逻辑和数据可以完全分离。
-ba
+- `Assistant` 是一个无状态的配置单元。它定义了 AI 应用的行为逻辑，但本身不存储任何会话状态。这使得逻辑和数据可以完全分离。
+
+> [!NOTE] Assistants
+> Assistants 是 [LangSmith Deployment](https://docs.langchain.com/langsmith/deployments) 的概念，不包含在LangGraph开源库。
+
+
 -   **核心作用**：定义**如何处理**一次交互，包括：
     -   **模型 (LLM)**：使用哪个大语言模型。
     -   **工具 (Tools)**：授权 Agent 可以调用哪些工具。
@@ -64,7 +70,6 @@ ba
 -   **应用场景**：
     -   **A/B 测试**：创建两个使用不同模型或 Prompt 的 `Assistant` 版本，测试哪个效果更好。
     -   **多租户/多环境**：为不同的客户或开发/生产环境配置不同的 `Assistant`。
-    - 
 ## Thread (线程)
 
 `Thread` 是一个独立的、持久化的对话会话容器，用于存储特定对话的所有上下文和历史状态，是实现状态管理的核心。
