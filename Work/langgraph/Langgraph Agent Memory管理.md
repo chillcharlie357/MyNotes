@@ -1,16 +1,12 @@
 
-原文：[让AI智能体拥有像人类的持久记忆：基于LangGraph的长短期记忆管理实践指南](https://mp.weixin.qq.com/s/sARM1GWhKQAHEInhEheZiA)
 
-# AI智能体记忆管理技术指南：基于LangGraph的长短期记忆实现
 
 ## 一、Agent Memory 概述
 
 ### 1.1 基本概念
 
 - **Agent Memory定义**：赋予AI智能体记忆能力的技术架构
-    
 - **核心价值**：使Agent能够记住过往交互，保持上下文一致性，适应用户偏好
-    
 - **记忆分类**：短期记忆（会话级别）和长期记忆（应用级别）
     
 
@@ -25,22 +21,21 @@
 ### 2.1 双轨记忆系统
 
 - **短期记忆**：通过Checkpointer实现，维护对话上下文
-    
 - **长期记忆**：通过Store实现，跨会话持久化存储
     
 
 ### 2.2 核心组件
 
-|组件|功能|特点|
-|---|---|---|
-|Checkpointer|状态快照管理|自动化保存图状态|
-|Thread|对话线程管理|唯一标识符区分会话|
-|Store|长期存储|键值数据库，支持语义检索|
+| 组件           | 功能     | 特点                   |
+| ------------ | ------ | -------------------- |
+| Checkpointer | 状态快照管理 | 自动化保存图状态             |
+| Thread       | 对话线程管理 | 唯一标识符（thread_id）区分会话 |
+| Store        | 长期存储   | 键值数据库，支持语义检索         |
 
 ## 三、短期记忆实现详解
 
 
-- [Short-term memory - Docs by LangChain](https://docs.langchain.com/oss/python/langchain/short-term-memory#trim-messages)
+
 
 ### 3.1 内存存储（InMemorySaver）
 
@@ -112,11 +107,12 @@ with PostgresSaver.from_conn_string(DB_URI) as checkpointer:
 
 ### 3.3 记忆管理策略对比
 
-|策略|实现方式|适用场景|优缺点|
-|---|---|---|---|
-|**修剪消息**​|trim_messages()|上下文窗口有限|简单高效，但信息丢失|
-|**删除消息**​|RemoveMessage|清理冗余信息|精确控制，需自定义逻辑|
-|**总结消息**​|SummarizationNode|长期对话|保留语义，计算成本高|
+| 策略        | 实现方式              | 适用场景    | 优缺点         |
+| --------- | ----------------- | ------- | ----------- |
+| **修剪消息**​ | trim_messages()   | 上下文窗口有限 | 简单高效，但信息丢失  |
+| **删除消息**​ | RemoveMessage     | 清理冗余信息  | 精确控制，需自定义逻辑 |
+| **总结消息**​ | SummarizationNode | 长期对话    | 保留语义，计算成本高  |
+
 
 ## 四、长期记忆实现详解
 
@@ -369,3 +365,9 @@ MEMORY_CONFIG = {
 本文详细阐述了基于LangGraph框架的AI智能体长短期记忆管理完整解决方案，从基础概念到生产环境实践，涵盖了记忆存储、检索、更新和管理的各个方面，为构建具有持久记忆能力的智能体系统提供了全面指导。
 
 **核心价值**：通过有效的记忆管理，AI智能体能够实现真正的连贯性、上下文感知和个性化交互，显著提升用户体验和系统智能水平。
+
+
+# 参考
+
+- [让AI智能体拥有像人类的持久记忆：基于LangGraph的长短期记忆管理实践指南](https://mp.weixin.qq.com/s/sARM1GWhKQAHEInhEheZiA)
+- [Short-term memory - Docs by LangChain](https://docs.langchain.com/oss/python/langchain/short-term-memory#trim-messages)
