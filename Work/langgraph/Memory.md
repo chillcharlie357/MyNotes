@@ -39,6 +39,9 @@
 
 ## 三、短期记忆实现详解
 
+
+- [Short-term memory - Docs by LangChain](https://docs.langchain.com/oss/python/langchain/short-term-memory#trim-messages)
+
 ### 3.1 内存存储（InMemorySaver）
 
 ```
