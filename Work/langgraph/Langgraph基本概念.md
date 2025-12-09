@@ -4,7 +4,7 @@
 - Tools
 - Middleware
 
-# 核心概念：Thread, Assistant, Run
+# 核心概念：Assistant, Thread, Run
 
 LangGraph 通过三个核心概念来管理和执行有状态的 AI 应用：`Thread`（线程）、`Assistant`（助理）和 `Run`（运行）。
 
@@ -48,6 +48,23 @@ graph TD
     style R_Process fill:#cfc,stroke:#333,stroke-width:2px
 ```
 
+
+## Assistant (助理)
+
+`Assistant` 是一个无状态的配置单元。它定义了 AI 应用的行为逻辑，但本身不存储任何会话状态。这使得逻辑和数据可以完全分离。
+ba
+-   **核心作用**：定义**如何处理**一次交互，包括：
+    -   **模型 (LLM)**：使用哪个大语言模型。
+    -   **工具 (Tools)**：授权 Agent 可以调用哪些工具。
+    -   **指令 (Prompts)**：系统的核心指令和行为准则。
+-   **特性**：
+    -   **可复用**：同一个 `Assistant` 可以被应用在无数个不同的 `Thread` 上。
+    -   **版本化**：可以为 `Assistant` 创建不同版本，方便进行 A/B 测试或功能迭代，而无需改动底层代码。
+    -   **动态更新**：可以在不重新部署代码的情况下，通过 API 或 UI 更新 `Assistant` 的配置。
+-   **应用场景**：
+    -   **A/B 测试**：创建两个使用不同模型或 Prompt 的 `Assistant` 版本，测试哪个效果更好。
+    -   **多租户/多环境**：为不同的客户或开发/生产环境配置不同的 `Assistant`。
+    - 
 ## Thread (线程)
 
 `Thread` 是一个独立的、持久化的对话会话容器，用于存储特定对话的所有上下文和历史状态，是实现状态管理的核心。
@@ -72,21 +89,6 @@ graph TD
 -   `client.threads.get_state()`：查看 `Thread` 的当前状态。
 -   `client.threads.get_history()`：查看 `Thread` 的完整历史状态记录。
 
-## Assistant (助理)
-
-`Assistant` 是一个无状态的配置单元。它定义了 AI 应用的行为逻辑，但本身不存储任何会话状态。这使得逻辑和数据可以完全分离。
-ba
--   **核心作用**：定义**如何处理**一次交互，包括：
-    -   **模型 (LLM)**：使用哪个大语言模型。
-    -   **工具 (Tools)**：授权 Agent 可以调用哪些工具。
-    -   **指令 (Prompts)**：系统的核心指令和行为准则。
--   **特性**：
-    -   **可复用**：同一个 `Assistant` 可以被应用在无数个不同的 `Thread` 上。
-    -   **版本化**：可以为 `Assistant` 创建不同版本，方便进行 A/B 测试或功能迭代，而无需改动底层代码。
-    -   **动态更新**：可以在不重新部署代码的情况下，通过 API 或 UI 更新 `Assistant` 的配置。
--   **应用场景**：
-    -   **A/B 测试**：创建两个使用不同模型或 Prompt 的 `Assistant` 版本，测试哪个效果更好。
-    -   **多租户/多环境**：为不同的客户或开发/生产环境配置不同的 `Assistant`。
 
 ## Run (运行)
 
