@@ -1,30 +1,55 @@
+---
+aliases: 
+tags: 
+categories:
+sticky:
+thumbnail:
+cover: 
+excerpt: false
+mathjax: true
+comment: true
+title: Langgraph Agent Memory管理
+date:  2025-12-08 17:12
+modified:  2025-12-10 10:12
+---
 
+# 一、Agent Memory 概述
 
-
-## 一、Agent Memory 概述
-
-### 1.1 基本概念
+## 1.1 基本概念
 
 - **Agent Memory定义**：赋予AI智能体记忆能力的技术架构
 - **核心价值**：使Agent能够记住过往交互，保持上下文一致性，适应用户偏好
 - **记忆分类**：短期记忆（会话级别）和长期记忆（应用级别）
-    
 
-### 1.2 记忆工作机制
+## 1.2 记忆工作机制
 
 ```
 记忆存储 → 记忆更新 → 记忆检索
 ```
 
-## 二、LangGraph记忆架构
+# 二、LangGraph记忆架构
 
-### 2.1 双轨记忆系统
+## 2.1 记忆类型
+
+### 短期记忆
 
 - **短期记忆**：通过Checkpointer实现，维护对话上下文
-- **长期记忆**：通过Store实现，跨会话持久化存储
-    
+	- 对话messages
 
-### 2.2 核心组件
+### 长期记忆
+
+- **长期记忆**：通过Store实现，跨会话持久化存储
+	- 事实 facts ([semantic memory](https://docs.langchain.com/oss/python/concepts/memory#semantic-memory))，如用户画像
+	- 经验 experiences ([episodic memory](https://docs.langchain.com/oss/python/concepts/memory#episodic-memory))，过去成功完成任务的事件或行动
+	- 规则 rules ([procedural memory](https://docs.langchain.com/oss/python/concepts/memory#procedural-memory)).
+
+| Memory Type                                                                           | What is Stored | Human Example              | Agent Example       |
+| ------------------------------------------------------------------------------------- | -------------- | -------------------------- | ------------------- |
+| [Semantic](https://docs.langchain.com/oss/python/concepts/memory#semantic-memory)     | Facts          | Things I learned in school | Facts about a user  |
+| [Episodic](https://docs.langchain.com/oss/python/concepts/memory#episodic-memory)     | Experiences    | Things I did               | Past agent actions  |
+| [Procedural](https://docs.langchain.com/oss/python/concepts/memory#procedural-memory) | Instructions   | Instincts or motor skills  | Agent system prompt |
+
+## 2.2 核心组件
 
 | 组件           | 功能     | 特点                   |
 | ------------ | ------ | -------------------- |
@@ -32,14 +57,11 @@
 | Thread       | 对话线程管理 | 唯一标识符（thread_id）区分会话 |
 | Store        | 长期存储   | 键值数据库，支持语义检索         |
 
-## 三、短期记忆实现详解
+# 三、短期记忆实现详解
 
+## 3.1 内存存储（InMemorySaver）
 
-
-
-### 3.1 内存存储（InMemorySaver）
-
-```
+```python
 from langgraph.checkpoint.memory import InMemorySaver
 from langchain.chat_models import init_chat_model
 from langgraph.prebuilt import create_react_agent
@@ -78,9 +100,9 @@ response2 = agent.invoke(
 )
 ```
 
-### 3.2 数据库持久化存储
+## 3.2 数据库持久化存储
 
-```
+```python
 from langgraph.checkpoint.postgres import PostgresSaver
 from langgraph.graph import StateGraph, MessagesState, START
 
@@ -105,7 +127,7 @@ with PostgresSaver.from_conn_string(DB_URI) as checkpointer:
     graph.invoke({"messages": [{"role": "user", "content": "Hello"}]}, config)
 ```
 
-### 3.3 记忆管理策略对比
+## 3.3 记忆管理策略对比
 
 | 策略        | 实现方式              | 适用场景    | 优缺点         |
 | --------- | ----------------- | ------- | ----------- |
@@ -113,12 +135,11 @@ with PostgresSaver.from_conn_string(DB_URI) as checkpointer:
 | **删除消息**​ | RemoveMessage     | 清理冗余信息  | 精确控制，需自定义逻辑 |
 | **总结消息**​ | SummarizationNode | 长期对话    | 保留语义，计算成本高  |
 
+# 四、长期记忆实现详解
 
-## 四、长期记忆实现详解
+## 4.1 Store架构设计
 
-### 4.1 Store架构设计
-
-```
+```python
 from langgraph.store.memory import InMemoryStore
 from typing import Annotated
 from langgraph.config import get_store
@@ -155,9 +176,9 @@ def get_user_profile(config: RunnableConfig) -> str:
     return profile.value if profile else "未找到用户信息"
 ```
 
-### 4.2 语义搜索实现
+## 4.2 语义搜索实现
 
-```
+```python
 from langgraph.store.base import BaseStore
 from langchain.embeddings import HuggingFaceEmbeddings
 
@@ -195,9 +216,9 @@ class SemanticMemoryStore:
         return similarities[:limit]
 ```
 
-### 4.3 记忆更新机制
+## 4.3 记忆更新机制
 
-```
+```python
 from langgraph.types import Command
 
 def update_user_memory(
@@ -225,11 +246,11 @@ def update_user_memory(
     })
 ```
 
-## 五、记忆管理策略详解
+# 五、记忆管理策略详解
 
-### 5.1 智能修剪实现
+## 5.1 智能修剪实现
 
-```
+```python
 from langchain_core.messages.utils import trim_messages
 import tiktoken
 
@@ -268,9 +289,9 @@ def smart_trim_messages(messages: List[BaseMessage],
         )
 ```
 
-### 5.2 分层记忆管理
+## 5.2 分层记忆管理
 
-```
+```python
 class HierarchicalMemoryManager:
     def __init__(self):
         self.short_term = InMemorySaver()  # 短期记忆
@@ -299,9 +320,9 @@ class HierarchicalMemoryManager:
         }
 ```
 
-### 5.3 记忆检索优化
+## 5.3 记忆检索优化
 
-```
+```python
 def advanced_memory_retrieval(query: str, 
                              user_id: str, 
                              context: Dict) -> List[Any]:
@@ -333,9 +354,9 @@ def advanced_memory_retrieval(query: str,
     return scored_results[:5]  # 返回Top-5最相关记忆
 ```
 
-### 5.4 生产环境配置示例
+## 5.4 生产环境配置示例
 
-```
+```python
 # 生产环境记忆管理系统配置
 MEMORY_CONFIG = {
     "short_term": {
@@ -359,15 +380,14 @@ MEMORY_CONFIG = {
 }
 ```
 
-
-## 八、总结
+# 八、总结
 
 本文详细阐述了基于LangGraph框架的AI智能体长短期记忆管理完整解决方案，从基础概念到生产环境实践，涵盖了记忆存储、检索、更新和管理的各个方面，为构建具有持久记忆能力的智能体系统提供了全面指导。
 
 **核心价值**：通过有效的记忆管理，AI智能体能够实现真正的连贯性、上下文感知和个性化交互，显著提升用户体验和系统智能水平。
 
-
 # 参考链接
 
 - [让AI智能体拥有像人类的持久记忆：基于LangGraph的长短期记忆管理实践指南](https://mp.weixin.qq.com/s/sARM1GWhKQAHEInhEheZiA)
 - [Short-term memory - Docs by LangChain](https://docs.langchain.com/oss/python/langchain/short-term-memory#trim-messages)
+- [Memory overview - Docs by LangChain](https://docs.langchain.com/oss/python/concepts/memory)
