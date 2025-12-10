@@ -1,6 +1,7 @@
 
 
 # 低层
+
 - Graph API
 - Agents
 - Tools
@@ -8,7 +9,7 @@
 
 # 高层：Assistant, Thread, Run
 
-LangGraph 通过三个核心概念来管理和执行有状态的 AI 应用：`Thread`（线程）、`Assistant`（助理）和 `Run`（运行）。
+LangSimth 是LangGraph团队提供的LLMOps平台，通过三个核心概念来管理和执行有状态的 AI 应用：`Thread`（线程）、`Assistant`（助理）和 `Run`（运行）。
 
 ```mermaid
 graph TD
