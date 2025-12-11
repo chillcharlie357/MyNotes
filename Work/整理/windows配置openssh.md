@@ -2,6 +2,8 @@
 
 [Win11 启用 OpenSSH Server - Eslzzyl - 博客园](https://www.cnblogs.com/eslzzyl/p/18516206)
 
+家庭版好像无法添加
+
 
 ```powershell
 Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
@@ -32,6 +34,11 @@ if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyCon
     Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
 }
 
-# 测试连接
-ssh username@servername
+
+
+
 ```
+
+
+[Windows11 安装OpenSSH服务器 - lqqgis - 博客园](https://www.cnblogs.com/lqqgis/p/17365809.html)
+
