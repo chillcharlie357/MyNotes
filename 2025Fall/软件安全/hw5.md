@@ -28,3 +28,10 @@ modified:  2025-12-14 14:12
 - 使用windows xp镜像创建虚拟机
 - 提前创建一个快照方便恢复  
 
+![[assets/Pasted image 20251214144718.png]]
+
+![[assets/Pasted image 20251214144722.png]]
+
+
+- 创建共享文件夹，把熊猫烧香文件传入虚拟机
+
