@@ -1,9 +1,23 @@
+---
+aliases: 
+tags: 
+categories:
+sticky:
+thumbnail:
+cover: 
+excerpt: false
+mathjax: true
+comment: true
+title: windows配置openssh
+date:  2025-12-11 10:12
+modified:  2025-12-13 17:12
+---
+
 [适用于 Windows 的 OpenSSH Server 入门 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell&pivots=windows-11)
 
 [Win11 启用 OpenSSH Server - Eslzzyl - 博客园](https://www.cnblogs.com/eslzzyl/p/18516206)
 
 家庭版好像无法添加
-
 
 ```powershell
 Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
@@ -39,6 +53,4 @@ if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyCon
 
 ```
 
-
 [Windows11 安装OpenSSH服务器 - lqqgis - 博客园](https://www.cnblogs.com/lqqgis/p/17365809.html)
-
