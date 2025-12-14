@@ -35,3 +35,12 @@ modified:  2025-12-14 14:12
 
 - 创建共享文件夹，把熊猫烧香文件传入虚拟机
 
+![[assets/Pasted image 20251214145458.png]]![[assets/Pasted image 20251214145517.png]]
+
+
+### 熊猫烧香病毒入侵
+
+- 解压病毒
+![[assets/Pasted image 20251214145651.png]]
+
+- 
