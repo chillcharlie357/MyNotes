@@ -27,8 +27,8 @@
   "submoduleRecurseCheckout": false,
   "gitDir": "",
   "showFileMenu": true,
-  "authorInHistoryView": "hide",
-  "dateInHistoryView": false,
+  "authorInHistoryView": "full",
+  "dateInHistoryView": true,
   "lineAuthor": {
     "show": false,
     "followMovement": "inactive",
