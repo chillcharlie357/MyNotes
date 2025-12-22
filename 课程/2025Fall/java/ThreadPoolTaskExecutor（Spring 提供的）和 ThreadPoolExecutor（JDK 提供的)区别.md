@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: ThreadPoolTaskExecutor（Spring 提供的）和 ThreadPoolExecutor（JDK 提供的)区别
 date:  2025-07-22 14:07
-modified:  2025-12-20 15:12
+modified:  2025-12-22 18:12
 ---
 
 当然！下面是对 `ThreadPoolTaskExecutor`（Spring 提供的）和 `ThreadPoolExecutor`（JDK 提供的）之间**详细的对比和分析**，包括设计理念、使用场景、生命周期管理、可扩展性等方面：
