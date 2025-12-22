@@ -1,4 +1,17 @@
-
+---
+aliases: 
+tags: 
+categories:
+sticky:
+thumbnail:
+cover: 
+excerpt: false
+mathjax: true
+comment: true
+title: Stream API
+date:  2025-12-20 15:12
+modified:  2025-12-22 18:12
+---
 
 [docs.langchain.com/langsmith/streaming.md](https://docs.langchain.com/langsmith/streaming.md)
 
@@ -41,7 +54,6 @@ LangGraph是一个低级别的编排框架和运行时环境，专注于构建�
 1. **助理标识（`assistant_id`）：** 该参数明确指定了要执行的已部署图配置 [3]。它将流式请求链接到Agent Server上托管的特定、版本化的代理逻辑，从而起到了版本控制的作用，由`AssistantsClient`进行管理 [4]。
     
 2. **线程标识（`thread_id`）：** 这是远程流式传输中的强制性状态上下文。必须通过`client.threads.create()`预先建立一个Thread，并获取其`thread_id` [3]。Thread封装了完整的会话状态历史，是实现持久性、执行恢复和多轮交互的关键 [1]。
-    
 
 **持久性架构中的状态检查点引用**
 
@@ -147,7 +159,6 @@ LangGraph SDK的`LangGraphClient`通过其内置的`HttpClient`封装，有效�
 2. **运维优势：** SSE协议基于标准HTTP，无需连接升级，简化了防火墙和代理的配置。此外，SSE内置了客户端自动重连机制，提高了连接的鲁棒性 [11]。
     
 3. **架构解耦：** 选择SSE协议表明，尽管代理执行是有状态和持久的（需要持续输出流），但任何客户端控制指令（如中断或修改状态）都可以通过使用 `thread_id` 的单独标准 REST API 调用来处理 [3]。这种解耦提高了流式传输本身的稳定性。
-    
 
 ### 5.3 技术实现：SDK客户端的SSE解析管理
 
@@ -162,7 +173,6 @@ LangGraph SDK的`LangGraphClient`通过其内置的`HttpClient`封装，有效�
 - **低延迟UI的最佳实践：** 为了提供实时、响应式的体验，应结合使用`messages`模式进行即时LLM Token显示，并使用`updates`模式来获取必要的、低带宽的状态变化通知（例如，节点转换或工具调用的完成）。
     
 - **审计与分析实践：** `values`或`debug`模式虽然提供了全面的上下文，但由于数据开销大，应仅限于故障排除或关键流程审计使用，不宜作为常态化的生产流。
-    
 
 ### 6.2 整合流式输出到前端/UI层
 
@@ -191,6 +201,5 @@ LangGraph SDK的`LangGraphClient`通过其内置的`HttpClient`封装，有效�
 2. **细粒度输出控制：** `stream_mode` 参数提供了从高效率的 `updates` 模式到实时用户体验所需的 `messages` 模式的全面控制，允许工程师根据应用需求精确调整带宽和响应速度 [8]。
     
 3. **协议优化：** 服务器发送事件（SSE）协议被选为流式传输机制，它利用标准 HTTP 的简单性和内建的重连优势，为代理状态的单向推送提供了优化且可靠的通道 [11]。
-    
 
 对于致力于构建和部署企业级 AI 代理的工程师而言，深入理解 `client.runs.stream()` 的工作原理及其对持久状态的依赖，是实现可靠、高效和可追溯的 AI 工作流的必要条件。
