@@ -10,7 +10,7 @@ mathjax: true
 comment: true
 title: hw3
 date:  2025-12-20 15:12
-modified:  2025-12-22 10:12
+modified:  2025-12-23 14:12
 ---
 
 # 第三次实验
