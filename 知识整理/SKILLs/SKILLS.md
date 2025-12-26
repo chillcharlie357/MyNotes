@@ -1,21 +1,26 @@
 ---
-aliases: 
-tags: 
+aliases:
+tags:
+  - 技术分享
+  - SKILL
+  - Agent
 categories:
 sticky:
 thumbnail:
-cover: 
+cover:
 excerpt: false
 mathjax: true
 comment: true
 title: SKILLS
-date:  2025-12-22 11:12
-modified:  2025-12-22 16:12
+date: 2025-12-22 11:12
+modified: 2025-12-26 20:12
 ---
 
 # Overview
 
-![[assets/NotebookLM Mind Map (1).png]]
+
+![](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image/2025/12/26/20-59-37-a6687ab9b8077d9eba2275d265bf3d93-%7Borigin%7D-pEGPmF.png)
+
 
 # 技术架构
 
