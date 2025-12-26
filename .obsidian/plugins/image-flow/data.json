@@ -1,0 +1,29 @@
+{
+  "renameEnabled": true,
+  "renamePattern": "{date}-{time}-{random}",
+  "saveLocationMode": "filename_assets",
+  "customLocationPattern": "{vault}/assets/{date}/",
+  "imageSyntaxMode": "markdown",
+  "uploadEnabled": true,
+  "uploaderType": "piclist",
+  "uploaderCommandPath": "/Applications/PicList.app/Contents/MacOS/PicList",
+  "deleteLocalAfterUpload": true,
+  "uploaderConfigs": {
+    "piclist": {
+      "docUrl": "https://piclist.cn/en/app.html"
+    },
+    "picgo": {
+      "docUrl": "https://picgo.github.io/PicGo-Doc/en/guide/"
+    }
+  },
+  "uploaderProfiles": [
+    {
+      "id": "default",
+      "name": "Mac",
+      "uploaderType": "piclist",
+      "uploaderCommandPath": "/Applications/PicList.app/Contents/MacOS/PicList",
+      "deleteLocalAfterUpload": true
+    }
+  ],
+  "activeUploaderProfileId": "default"
+}
