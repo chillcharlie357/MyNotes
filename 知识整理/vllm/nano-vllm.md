@@ -1,16 +1,19 @@
 ---
-aliases: 
-tags: 
+aliases:
+tags:
+  - 技术分享
+  - vllm
+  - AIInfra
 categories:
 sticky:
 thumbnail:
-cover: 
+cover:
 excerpt: false
 mathjax: true
 comment: true
 title: nano-vllm
-date:  2025-12-25 16:12
-modified:  2025-12-26 20:12
+date: 2025-12-25 16:12
+modified: 2025-12-29 11:12
 ---
 
 Nano-vLLM 是一个从零开始构建的轻量级 vLLM (Virtual Large Language Model) 实现。它的核心目标是在保持极简代码库（约 1200 行 Python 代码）的同时，提供与原始 vLLM 相当的高性能推理能力。
