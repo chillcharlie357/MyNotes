@@ -8,19 +8,18 @@
   "hideStatusBar": "focused",
   "interceptLogging": true,
   "language": "",
-  "newInstanceBehavior": "newHorizontalSplit",
+  "newInstanceBehavior": "newRightSplit",
   "noticeTimeout": 5,
   "openChangelogOnUpdate": true,
   "pinNewInstance": true,
   "preferredRenderer": "webgl",
   "profiles": {
-    "a35f005b-1f21-41b9-9122-46acb714900c": {
+    "9c3a0db3-00ed-4fa6-b440-49cf49d145e9": {
       "args": [],
       "executable": "/bin/zsh",
-      "name": "zsh",
+      "name": "mac",
       "platforms": {
-        "darwin": true,
-        "linux": true
+        "darwin": true
       },
       "pythonExecutable": "python3",
       "restoreHistory": false,
